@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 type TimeLeft = {
   days: number;
@@ -13,6 +13,13 @@ type TimeLeft = {
 
 export default function CountdownPage() {
   const TARGET_DATE = "2025-01-21T23:59:59"; // 可以動態設置
+  const [isHovered, setIsHovered] = useState(false);
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   // 客戶端倒數計時邏輯
   function calculateTimeLeft(): TimeLeft {
@@ -31,12 +38,6 @@ export default function CountdownPage() {
       seconds: Math.floor((difference / 1000) % 60),
     };
   }
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -49,6 +50,17 @@ export default function CountdownPage() {
   function formatToTwoDigits(num: number): string {
     return num.toString().padStart(2, "0");
   }
+
+  const bounceAnimation = {
+    x: [0, 20, -10, 0], // 定義 X 軸的彈跳路徑
+    y: [0, -20, 10, 0], // 定義 Y 軸的彈跳路徑
+    transition: {
+      duration: 0.6, // 動畫持續時間
+      ease: "easeOut",
+      type: "spring", // 使用 spring 彈跳效果
+      stiffness: 100,
+    },
+  };
 
   return (
     <div className="flex h-[289px] w-[642px] flex-col justify-between lg:w-[840px]">
@@ -92,27 +104,50 @@ export default function CountdownPage() {
             <p>即日起至2024年1月21日(六) 23：59</p>
           </div>
         </div>
-        <Link
-          href={"#"}
-          className="flex h-full w-[246px] items-center rounded-2xl bg-light-brown lg:w-[264]"
+        <motion.div
+          onHoverStart={() => setIsHovered(true)}
+          onHoverEnd={() => setIsHovered(false)}
+          className="h-full w-[246px] rounded-2xl bg-light-brown lg:w-[264]"
         >
-          <h3 className="flex h-full w-1/2 items-center justify-center text-h3 font-bold text-red">
-            立刻投稿
-          </h3>
-          <Image
-            src="/north_east.svg"
-            width={40}
-            height={40}
-            alt="up_right_arrow"
-            className="mr-5"
-          />
-          <Image
-            src="/north_east.svg"
-            width={40}
-            height={40}
-            alt="up_right_arrow"
-          />
-        </Link>
+          <Link
+            className="flex h-full w-full items-center justify-center"
+            href={"#"}
+          >
+            <h3 className="flex h-full w-1/2 items-center justify-center text-h3 font-bold text-red">
+              立刻投稿
+            </h3>
+            <motion.div
+              animate={{
+                x: !isHovered ? 0 : 10,
+                y: !isHovered ? 0 : -10,
+                scale: !isHovered ? 1 : 1.2,
+              }}
+            >
+              <Image
+                src="/north_east.svg"
+                width={40}
+                height={40}
+                alt="up_right_arrow"
+                className="mr-5"
+              />
+            </motion.div>
+            <motion.div
+              animate={{
+                x: !isHovered ? 0 : 10,
+                y: !isHovered ? 0 : -10,
+                scale: !isHovered ? 1 : 1.2,
+              }}
+              transition={{ delay: 0.2 }}
+            >
+              <Image
+                src="/north_east.svg"
+                width={40}
+                height={40}
+                alt="up_right_arrow"
+              />
+            </motion.div>
+          </Link>
+        </motion.div>
       </div>
     </div>
   );
