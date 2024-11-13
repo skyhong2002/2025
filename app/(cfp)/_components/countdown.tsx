@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 type TimeLeft = {
   days: number;
@@ -30,7 +31,6 @@ export default function CountdownPage() {
       seconds: Math.floor((difference / 1000) % 60),
     };
   }
-
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -40,11 +40,11 @@ export default function CountdownPage() {
 
   useEffect(() => {
     const timerId = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      setTimeLeft(calculateTimeLeft()); // 更新倒數時間
     }, 1000);
 
     return () => clearInterval(timerId); // 清除計時器
-  }, []);
+  }, [timeLeft]); // 當 timeLeft 更新時觸發
 
   function formatToTwoDigits(num: number): string {
     return num.toString().padStart(2, "0");
@@ -58,13 +58,21 @@ export default function CountdownPage() {
         </h3>
         <div className="mt-5 flex w-full justify-between">
           {Object.entries(timeLeft).map(([key, value]) => (
-            <div key={key} className="mb-2 flex flex-col items-center">
-              <span className="text-6xl text-light-brown">
-                {formatToTwoDigits(value)}
-              </span>
-              <p className="text-normal font-light text-light-brown">
-                {key.toUpperCase()}
-              </p>
+            <div key={key} className="relative">
+              <div className="mb-2 flex flex-col items-center">
+                <motion.span
+                  key={value}
+                  initial={{ y: -30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ type: "spring", stiffness: 100 }}
+                  className="text-6xl text-light-brown"
+                >
+                  {formatToTwoDigits(value)}
+                </motion.span>
+                <p className="text-normal font-light text-light-brown">
+                  {key.toUpperCase()}
+                </p>
+              </div>
             </div>
           ))}
         </div>
