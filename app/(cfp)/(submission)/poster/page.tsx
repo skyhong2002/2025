@@ -25,7 +25,7 @@ export default function Page() {
   };
 
   return (
-    <div className="bg-blue py-4 font-bold text-light-brown">
+    <div className="bg-blue py-8 font-bold text-light-brown">
       <div className="relative left-[396px] min-h-screen max-w-[840px] space-y-14">
         <h1 className="text-h1">海報徵稿</h1>
 
@@ -278,6 +278,7 @@ export default function Page() {
           </section>
         </div>
       </div>
+      <div className="py-3" />
     </div>
   );
 }
