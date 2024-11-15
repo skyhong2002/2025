@@ -20,9 +20,9 @@ export default function Page() {
 
           <section className="space-y-[48px]">
             <h2 className="mb-4 text-h2">投稿方式</h2>
-            <div>
+            <div className="space-y-[16px]">
               <h3 className="mb-2 text-h3 font-bold">稿件資訊</h3>
-              <ul className="list-inside list-disc space-y-2 font-normal">
+              <ul className="ml-5 space-y-2 font-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.6em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>題目 Project Title：必填、公開。長度請自行斟酌。</li>
                 <li>
                   摘要 Abstract：必填、公開。建議約 350
@@ -57,11 +57,11 @@ export default function Page() {
             </div>
             <div>
               <h3 className="mb-2 text-h3">個人資料</h3>
-              <ul className="list-inside list-disc space-y-2 font-normal">
-                <li>
-                  除了暱稱 /
-                  名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
-                </li>
+              <p>
+                除了暱稱 /
+                名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
+              </p>
+              <ul className="ml-5 space-y-2 font-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.6em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>
                   電子郵件
                   Email：必填。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
@@ -85,7 +85,7 @@ export default function Page() {
             </div>
             <div>
               <h3 className="mb-2 text-h3">海報格式參考</h3>
-              <ul className="list-inside list-disc space-y-2 font-normal">
+              <ul className="ml-5 space-y-2 font-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.6em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>
                   中文名稱：字體大小範圍為 70 號字〜90
                   號字，且建議最多不超過兩行，置中對齊方式。
@@ -121,7 +121,7 @@ export default function Page() {
 
           <section>
             <h2 className="mb-6 text-h2">投稿注意事項</h2>
-            <ul className="list-inside list-disc space-y-2 font-normal">
+            <ul className="ml-5 space-y-2 font-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.6em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
               <li>
                 除非內容明顯偏離講題、違反 CoC
                 或不符事實，我們不會強制要求講者對演講內容進行修正。
