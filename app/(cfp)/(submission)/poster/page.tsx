@@ -112,8 +112,27 @@ export default function Page() {
           </section>
 
           <section className="space-y-4">
+            <h2 className="text-h2">審稿方式</h2>
+            <p className="text-normal leading-loose">
+              稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由
+              SITCON 工作人員、業界人士及學界人士組成。
+              審稿委員將針對以下項目進行篩選：
+            </p>
+            <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <li>
+                題材創新性：研究專案內容與方法具原創與可行性，產生貢獻或影響之潛力。
+              </li>
+              <li>
+                作品完整度：提供的資料是否具備基本學術倫理、適切性、系統性。我們偏好完整的資料，讓審稿委員更清楚了解專案細節。
+              </li>
+              <li>表達完整性：文句暢通，且文意清楚周全。</li>
+            </ul>
+            <div className="py-1" />
+          </section>
+
+          <section className="space-y-4">
             <h2 className="text-h2">CODE OF CONDUCT</h2>
-            <p className="text-normal">
+            <p className="text-normal leading-loose">
               SITCON
               歡迎不同身分、來自不同背景的與會者，我們鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快地參加
               SITCON，我們要求所有參與者閱讀年會的 行為準則（Code of
