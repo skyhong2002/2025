@@ -221,11 +221,7 @@ export default function Page() {
             </p>
           </section>
 
-          <section className="space-y-4">
-            <h2 className="text-h2">Q&A</h2>
-            <p>Q1. 投稿主題是否有必要切合年會主題？</p>
-            <p>Q2. 還有疑問怎麼辦？</p>
-          </section>
+          {/* TODO: ADD FAQ HERE */}
         </div>
       </div>
       <div className="py-3" />
