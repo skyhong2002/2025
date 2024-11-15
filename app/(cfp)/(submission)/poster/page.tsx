@@ -1,29 +1,8 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
-
 import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
 
 export default function Page() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const qaItems = [
-    {
-      question: "Q1. 投稿主題是否有必要切合年會主題？",
-      answer: "這裡還沒有東西。請之後加字在這...",
-    },
-    {
-      question: "Q2. 還有疑問怎麼辦？",
-      answer: "這裡還沒有東西。請之後加字在這...",
-    },
-  ];
-
-  const toggleQuestion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <div className="bg-blue py-8 font-bold text-light-brown">
       <div className="relative left-[396px] min-h-screen max-w-[840px] space-y-14">
@@ -244,37 +223,8 @@ export default function Page() {
 
           <section className="space-y-4">
             <h2 className="text-h2">Q&A</h2>
-            <div className="space-y-4">
-              {qaItems.map((item, index) => (
-                <div
-                  key={index}
-                  className={`group overflow-hidden ${openIndex === index ? "rounded-3xl" : "rounded-full"} bg-light-brown transition-all duration-300 hover:bg-light-brown/90`}
-                >
-                  <button
-                    onClick={() => toggleQuestion(index)}
-                    className="flex w-full items-center justify-between px-6 py-4 text-left"
-                  >
-                    <span className="text-normal font-extrabold leading-loose tracking-wider text-red">
-                      {item.question}
-                    </span>
-                  </button>
-
-                  <div
-                    className={`grid transition-all duration-300 ${
-                      openIndex === index
-                        ? "grid-rows-[1fr]"
-                        : "grid-rows-[0fr]"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <div className="bg-white px-6 py-4">
-                        <p className="text-gray-600">{item.answer}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p>Q1. 投稿主題是否有必要切合年會主題？</p>
+            <p>Q2. 還有疑問怎麼辦？</p>
           </section>
         </div>
       </div>
