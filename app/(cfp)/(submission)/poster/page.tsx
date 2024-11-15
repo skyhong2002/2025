@@ -109,7 +109,7 @@ export default function Page() {
             </div>
           </section>
 
-          <section className="bg-blue text-white">
+          <section>
             <h2 className="mb-6 text-h2">CODE OF CONDUCT</h2>
             <p className="text-normal">
               SITCON
