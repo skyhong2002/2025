@@ -13,7 +13,7 @@ export default function Page() {
 
           <section className="space-y-4">
             <h2 className="text-h2 font-extrabold">投稿說明</h2>
-            <p className="text-normal leading-loose">
+            <p className="text-normal font-normal leading-loose">
               海報投稿以靜態海報展出學生個人或團隊專案，作品以資訊相關領域為主，不限語言，不接受一稿多投，若為延伸作品需於投稿時載明。期望透過此方式使更多學生能有展現自我的機會，同時為會眾帶來不同形式的學習與交流。
             </p>
           </section>
@@ -22,7 +22,7 @@ export default function Page() {
             <h2 className="text-h2">投稿方式</h2>
             <div className="space-y-4">
               <h3 className="text-h3">稿件資訊</h3>
-              <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <ul className="ml-2 text-normal font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>題目 Project Title：必填、公開。長度請自行斟酌。</li>
                 <li>
                   摘要 Abstract：必填、公開。建議約 350
@@ -62,7 +62,7 @@ export default function Page() {
                   除了暱稱 /
                   名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
                 </p>
-                <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+                <ul className="ml-2 text-normal font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                   <li>
                     電子郵件
                     Email：必填。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
@@ -87,7 +87,7 @@ export default function Page() {
             </div>
             <div className="space-y-4">
               <h3 className="text-h3">海報格式參考</h3>
-              <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <ul className="ml-2 text-normal font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>
                   中文名稱：字體大小範圍為 70 號字〜90
                   號字，且建議最多不超過兩行，置中對齊方式。
@@ -113,12 +113,12 @@ export default function Page() {
 
           <section className="space-y-4">
             <h2 className="text-h2">審稿方式</h2>
-            <p className="text-normal leading-loose">
+            <p className="text-normal font-normal leading-loose">
               稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由
               SITCON 工作人員、業界人士及學界人士組成。
               審稿委員將針對以下項目進行篩選：
             </p>
-            <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+            <ul className="ml-2 text-normal font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
               <li>
                 題材創新性：研究專案內容與方法具原創與可行性，產生貢獻或影響之潛力。
               </li>
@@ -132,7 +132,7 @@ export default function Page() {
 
           <section className="space-y-4">
             <h2 className="text-h2">CODE OF CONDUCT</h2>
-            <p className="text-normal leading-loose">
+            <p className="text-normal font-normal leading-loose">
               SITCON
               歡迎不同身分、來自不同背景的與會者，我們鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快地參加
               SITCON，我們要求所有參與者閱讀年會的 行為準則（Code of
@@ -142,7 +142,7 @@ export default function Page() {
 
           <section className="space-y-4">
             <h2 className="text-h2">投稿注意事項</h2>
-            <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+            <ul className="ml-2 text-normal font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
               <li>
                 除非內容明顯偏離講題、違反 CoC
                 或不符事實，我們不會強制要求講者對演講內容進行修正。
@@ -178,7 +178,7 @@ export default function Page() {
 
           <section className="space-y-4">
             <h2 className="text-h2">授權</h2>
-            <p className="text-normal leading-loose">
+            <p className="text-normal font-normal leading-loose">
               投稿作者同意以 創用 CC「姓名標示」4.0
               授權大會方進行紙本印刷、宣傳、展覽、數位化、重製等審稿、佈展、官方網站上線工作必要流程。投稿作者仍擁有投稿專案著作之著作權。且擔保本著作係著作人之原創性著作，未侵害任何第三人之智慧財產權。
             </p>
@@ -187,7 +187,7 @@ export default function Page() {
 
           <section className="space-y-4">
             <h2 className="text-h2">試講</h2>
-            <p className="text-normal leading-loose">
+            <p className="text-normal font-normal leading-loose">
               請以直版寬841 mm、高 1189 mm （A0 大小）規格製作為 pdf
               檔案，一篇投稿一面看板，請於收到錄取通知後依據郵件說明上傳最終版海報檔案，統一由大會進行印製與佈展。
               佈展方式與地點：地點於 2 樓梯廳，其餘細節將於稿件錄取後通知。
