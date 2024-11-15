@@ -13,7 +13,7 @@ export default function Page() {
 
           <section className="space-y-4">
             <h2 className="text-h2 font-extrabold">投稿說明</h2>
-            <p className="text-normal">
+            <p className="text-normal leading-loose">
               海報投稿以靜態海報展出學生個人或團隊專案，作品以資訊相關領域為主，不限語言，不接受一稿多投，若為延伸作品需於投稿時載明。期望透過此方式使更多學生能有展現自我的機會，同時為會眾帶來不同形式的學習與交流。
             </p>
           </section>
@@ -21,8 +21,8 @@ export default function Page() {
           <section className="space-y-12">
             <h2 className="text-h2">投稿方式</h2>
             <div className="space-y-4">
-              <h3 className="text-h3 font-bold">稿件資訊</h3>
-              <ul className="ml-2 space-y-2 font-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.6em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <h3 className="text-h3">稿件資訊</h3>
+              <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>題目 Project Title：必填、公開。長度請自行斟酌。</li>
                 <li>
                   摘要 Abstract：必填、公開。建議約 350
@@ -61,7 +61,7 @@ export default function Page() {
                 除了暱稱 /
                 名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
               </p>
-              <ul className="ml-2 space-y-2 font-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.6em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>
                   電子郵件
                   Email：必填。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
@@ -85,7 +85,7 @@ export default function Page() {
             </div>
             <div className="space-y-4">
               <h3 className="text-h3">海報格式參考</h3>
-              <ul className="ml-2 space-y-2 font-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.6em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>
                   中文名稱：字體大小範圍為 70 號字〜90
                   號字，且建議最多不超過兩行，置中對齊方式。
@@ -121,7 +121,7 @@ export default function Page() {
 
           <section>
             <h2 className="text-h2">投稿注意事項</h2>
-            <ul className="ml-2 space-y-2 font-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.6em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+            <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
               <li>
                 除非內容明顯偏離講題、違反 CoC
                 或不符事實，我們不會強制要求講者對演講內容進行修正。
