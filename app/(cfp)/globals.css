@@ -8,15 +8,16 @@
   }
 }
 
-html, body {
+html,
+body {
   @apply bg-light-brown;
 }
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 24px; /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -34,5 +35,34 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 
   /* Support for IE. */
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 點擊目錄滑動效果 */
+}
+
+.tableContentItem {
+  transition: 0.4s;
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 12px;
+  ::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #d3c4b7;
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+  }
+  :hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }
