@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
+import CodeOfConduct from "../_components/code-of-conduct";
 
 export default function Page() {
   return (
@@ -140,21 +141,7 @@ export default function Page() {
             <div className="py-1" />
           </section>
 
-          <section className="space-y-4">
-            <h2 className="text-h2">CODE OF CONDUCT</h2>
-            <p className="text-normal font-normal leading-loose tracking-wider">
-              SITCON
-              歡迎不同身分、來自不同背景的與會者，我們鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快地參加
-              SITCON，我們要求所有參與者閱讀年會的{" "}
-              <Link
-                href={"https://sitcon.org/code-of-conduct/"}
-                className="text-orange underline underline-offset-2"
-              >
-                行為準則（Code of Conduct）
-              </Link>
-              ，共同創造一個友善的環境。
-            </p>
-          </section>
+          <CodeOfConduct />
 
           <section className="space-y-4">
             <h2 className="text-h2">投稿注意事項</h2>
