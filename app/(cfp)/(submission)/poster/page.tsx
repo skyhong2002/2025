@@ -57,31 +57,33 @@ export default function Page() {
             </div>
             <div className="space-y-4">
               <h3 className="text-h3">個人資料</h3>
-              <p>
-                除了暱稱 /
-                名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
-              </p>
-              <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
-                <li>
-                  電子郵件
-                  Email：必填。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
-                </li>
-                <li>
-                  暱稱 / 名字 Name：必填、公開。公開於講者海報及網站的稱呼。
-                </li>
-                <li>
-                  自我介紹 Self
-                  Introduction：必填、公開。公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
-                </li>
-                <li>
-                  手機號碼 Phone：必填。用於大會聯絡、確認資訊用的電話號碼。
-                </li>
-                <li>
-                  其他聯絡方式 Other Contact
-                  Information：必填。其他任何我們能聯絡您的方式（如 Telegram
-                  ID、住處電話等），以利我們在審稿時即時向您釐清投稿資訊。
-                </li>
-              </ul>
+              <div>
+                <p className="leading-loose">
+                  除了暱稱 /
+                  名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
+                </p>
+                <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+                  <li>
+                    電子郵件
+                    Email：必填。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
+                  </li>
+                  <li>
+                    暱稱 / 名字 Name：必填、公開。公開於講者海報及網站的稱呼。
+                  </li>
+                  <li>
+                    自我介紹 Self
+                    Introduction：必填、公開。公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
+                  </li>
+                  <li>
+                    手機號碼 Phone：必填。用於大會聯絡、確認資訊用的電話號碼。
+                  </li>
+                  <li>
+                    其他聯絡方式 Other Contact
+                    Information：必填。其他任何我們能聯絡您的方式（如 Telegram
+                    ID、住處電話等），以利我們在審稿時即時向您釐清投稿資訊。
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="space-y-4">
               <h3 className="text-h3">海報格式參考</h3>
@@ -109,7 +111,7 @@ export default function Page() {
             </div>
           </section>
 
-          <section>
+          <section className="space-y-4">
             <h2 className="text-h2">CODE OF CONDUCT</h2>
             <p className="text-normal">
               SITCON
@@ -119,7 +121,7 @@ export default function Page() {
             </p>
           </section>
 
-          <section>
+          <section className="space-y-4">
             <h2 className="text-h2">投稿注意事項</h2>
             <ul className="ml-2 font-normal leading-loose [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
               <li>
@@ -155,24 +157,25 @@ export default function Page() {
             </ul>
           </section>
 
-          <section>
+          <section className="space-y-4">
             <h2 className="text-h2">授權</h2>
-            <p className="text-normal">
+            <p className="text-normal leading-loose">
               投稿作者同意以 創用 CC「姓名標示」4.0
               授權大會方進行紙本印刷、宣傳、展覽、數位化、重製等審稿、佈展、官方網站上線工作必要流程。投稿作者仍擁有投稿專案著作之著作權。且擔保本著作係著作人之原創性著作，未侵害任何第三人之智慧財產權。
             </p>
+            <div className="py-1" />
           </section>
 
-          <section>
+          <section className="space-y-4">
             <h2 className="text-h2">試講</h2>
-            <p className="text-normal">
+            <p className="text-normal leading-loose">
               請以直版寬841 mm、高 1189 mm （A0 大小）規格製作為 pdf
               檔案，一篇投稿一面看板，請於收到錄取通知後依據郵件說明上傳最終版海報檔案，統一由大會進行印製與佈展。
               佈展方式與地點：地點於 2 樓梯廳，其餘細節將於稿件錄取後通知。
             </p>
           </section>
 
-          <section>
+          <section className="space-y-4">
             <h2 className="text-h2">Q&A</h2>
             <p>Q1. 投稿主題是否有必要切合年會主題？</p>
             <p>Q2. 還有疑問怎麼辦？</p>
