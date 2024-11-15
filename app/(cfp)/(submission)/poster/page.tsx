@@ -4,23 +4,23 @@ import Timeline from "../_components/timeline";
 export default function Page() {
   return (
     <div className="bg-blue py-4 font-bold text-light-brown">
-      <div className="relative left-[396px] min-h-screen max-w-[840px] space-y-[56px]">
+      <div className="relative left-[396px] min-h-screen max-w-[840px] space-y-14">
         <h1 className="text-h1">海報徵稿</h1>
 
-        <div className="space-y-[64px]">
+        <div className="space-y-16">
           <Countdown />
           <Timeline />
 
-          <section className="space-y-[16px]">
+          <section className="space-y-4">
             <h2 className="text-h2 font-extrabold">投稿說明</h2>
             <p className="text-normal">
               海報投稿以靜態海報展出學生個人或團隊專案，作品以資訊相關領域為主，不限語言，不接受一稿多投，若為延伸作品需於投稿時載明。期望透過此方式使更多學生能有展現自我的機會，同時為會眾帶來不同形式的學習與交流。
             </p>
           </section>
 
-          <section className="space-y-[48px]">
+          <section className="space-y-12">
             <h2 className="text-h2">投稿方式</h2>
-            <div className="space-y-[16px]">
+            <div className="space-y-4">
               <h3 className="text-h3 font-bold">稿件資訊</h3>
               <ul className="ml-2 space-y-2 font-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.6em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>題目 Project Title：必填、公開。長度請自行斟酌。</li>
@@ -55,7 +55,7 @@ export default function Page() {
                 </li>
               </ul>
             </div>
-            <div className="space-y-[16px]">
+            <div className="space-y-4">
               <h3 className="text-h3">個人資料</h3>
               <p>
                 除了暱稱 /
@@ -83,7 +83,7 @@ export default function Page() {
                 </li>
               </ul>
             </div>
-            <div className="space-y-[16px]">
+            <div className="space-y-4">
               <h3 className="text-h3">海報格式參考</h3>
               <ul className="ml-2 space-y-2 font-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.6em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>
