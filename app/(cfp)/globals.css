@@ -49,6 +49,7 @@ html {
   text-decoration: none;
   position: relative;
   margin-bottom: 12px;
+  width: 100%;
   ::after {
     content: "";
     position: absolute;
