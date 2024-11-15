@@ -6,25 +6,27 @@ import CodeOfConduct from "../_components/code-of-conduct";
 export default function Page() {
   return (
     <div className="bg-blue py-8 font-bold text-light-brown">
-      <div className="relative left-[396px] min-h-screen max-w-[840px] space-y-14">
-        <h1 className="text-h1">海報徵稿</h1>
+      <div className="mx-auto w-11/12 max-w-[840px] space-y-14 md:w-10/12 lg:w-9/12">
+        <h1 className="text-h1-mobile md:text-h1">海報徵稿</h1>
 
-        <div className="space-y-16">
+        <div className="space-y-12 md:space-y-16">
           <Countdown />
           <Timeline />
 
           <section className="space-y-4">
-            <h2 className="text-h2 font-extrabold">投稿說明</h2>
-            <p className="text-normal font-normal leading-loose tracking-wider">
+            <h2 className="text-h2-mobile font-extrabold md:text-h2">
+              投稿說明
+            </h2>
+            <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
               海報投稿以靜態海報展出學生個人或團隊專案，作品以資訊相關領域為主，不限語言，不接受一稿多投，若為延伸作品需於投稿時載明。期望透過此方式使更多學生能有展現自我的機會，同時為會眾帶來不同形式的學習與交流。
             </p>
           </section>
 
-          <section className="space-y-12">
-            <h2 className="text-h2">投稿方式</h2>
+          <section className="space-y-8 md:space-y-12">
+            <h2 className="text-h2-mobile md:text-h2">投稿方式</h2>
             <div className="space-y-4">
-              <h3 className="text-h3">稿件資訊</h3>
-              <ul className="ml-2 text-normal font-normal leading-loose tracking-wider [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <h3 className="text-h3-mobile md:text-h3">稿件資訊</h3>
+              <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>題目 Project Title：必填、公開。長度請自行斟酌。</li>
                 <li>
                   摘要 Abstract：必填、公開。建議約 350
@@ -66,13 +68,13 @@ export default function Page() {
               </ul>
             </div>
             <div className="space-y-4">
-              <h3 className="text-h3">個人資料</h3>
+              <h3 className="text-h3-mobile md:text-h3">個人資料</h3>
               <div>
                 <p className="leading-loose tracking-wider">
                   除了暱稱 /
                   名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
                 </p>
-                <ul className="ml-2 text-normal font-normal leading-loose tracking-wider [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+                <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                   <li>
                     電子郵件
                     Email：必填。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
@@ -96,8 +98,8 @@ export default function Page() {
               </div>
             </div>
             <div className="space-y-4">
-              <h3 className="text-h3">海報格式參考</h3>
-              <ul className="ml-2 text-normal font-normal leading-loose tracking-wider [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <h3 className="text-h3-mobile md:text-h3">海報格式參考</h3>
+              <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>
                   中文名稱：字體大小範圍為 70 號字〜90
                   號字，且建議最多不超過兩行，置中對齊方式。
@@ -122,14 +124,16 @@ export default function Page() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-h2">審稿方式</h2>
-            <p className="text-normal font-normal leading-loose tracking-wider">
+            <h2 className="text-h2-mobile font-extrabold md:text-h2">
+              審稿方式
+            </h2>
+            <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
               稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由
               SITCON 工作人員、業界人士及學界人士組成。
               <br />
               審稿委員將針對以下項目進行篩選：
             </p>
-            <ul className="ml-2 text-normal font-normal leading-loose tracking-wider [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+            <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
               <li>
                 題材創新性：研究專案內容與方法具原創與可行性，產生貢獻或影響之潛力。
               </li>
@@ -144,9 +148,11 @@ export default function Page() {
           <CodeOfConduct />
 
           <section className="space-y-4">
-            <h2 className="text-h2">投稿注意事項</h2>
+            <h2 className="text-h2-mobile font-extrabold md:text-h2">
+              投稿注意事項
+            </h2>
             <div>
-              <ul className="ml-2 text-normal font-normal leading-loose tracking-wider [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>
                   除非內容明顯偏離講題、違反 CoC
                   或不符事實，我們不會強制要求講者對演講內容進行修正。
@@ -176,7 +182,7 @@ export default function Page() {
                   名字」欄位標示所有講者的稱呼，並在「演講大綱」詳細說明各個講者如何分配演講內容。稿件經接受者，無論講者人數，皆只提供一組可轉贈的入場票邀請碼、一份講者識別證與一份講者專屬迎賓禮，大會方保有最終發放之權力。未佩戴識別證的講者，僅能在自己的演講時，於該議程時段進入議程所在的會議廳。
                 </li>
               </ul>
-              <p className="text-normal font-normal leading-loose tracking-wider">
+              <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
                 若有任何問題或投稿建議，請來信 SITCON 議程組信箱
                 session@sitcon.org。
               </p>
@@ -184,8 +190,8 @@ export default function Page() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-h2">授權</h2>
-            <p className="text-normal font-normal leading-loose tracking-wider">
+            <h2 className="text-h2-mobile font-extrabold md:text-h2">授權</h2>
+            <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
               投稿作者同意以{" "}
               <Link
                 href={"https://creativecommons.org/licenses/by/4.0/"}
@@ -199,8 +205,8 @@ export default function Page() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-h2">試講</h2>
-            <p className="text-normal font-normal leading-loose tracking-wider">
+            <h2 className="text-h2-mobile font-extrabold md:text-h2">試講</h2>
+            <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
               請以直版寬841 mm、高 1189 mm （A0 大小）規格製作為 pdf
               檔案，一篇投稿一面看板，請於收到錄取通知後依據郵件說明上傳最終版海報檔案，統一由大會進行印製與佈展。
               <br />
