@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
 
@@ -40,8 +41,16 @@ export default function Page() {
                   Problem；（二）研究方法與過程
                   Methodology；（三）研究結果與討論 Results and Interpretation
                   of these results；（四）結論應用及展望 Conclusions 等，以
-                  600~1500 字為限。可參考 臺灣國際科學展覽會實施要點 第 17
-                  頁說明。
+                  600~1500 字為限。可參考{" "}
+                  <Link
+                    href={
+                      "https://twsf.ntsec.gov.tw/FileAtt.ashx?fcode=AC1C403BD297CA5A6A628EBAD362874E&lang=1"
+                    }
+                    className="underline underline-offset-2"
+                  >
+                    臺灣國際科學展覽會實施要點
+                  </Link>{" "}
+                  第 17 頁說明。
                 </li>
                 <li>
                   海報內容 Poster
@@ -135,8 +144,14 @@ export default function Page() {
             <p className="text-normal font-normal leading-loose">
               SITCON
               歡迎不同身分、來自不同背景的與會者，我們鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快地參加
-              SITCON，我們要求所有參與者閱讀年會的 行為準則（Code of
-              Conduct），共同創造一個友善的環境。
+              SITCON，我們要求所有參與者閱讀年會的{" "}
+              <Link
+                href={"https://sitcon.org/code-of-conduct/"}
+                className="text-orange underline underline-offset-2"
+              >
+                行為準則（Code of Conduct）
+              </Link>
+              ，共同創造一個友善的環境。
             </p>
           </section>
 
@@ -179,7 +194,13 @@ export default function Page() {
           <section className="space-y-4">
             <h2 className="text-h2">授權</h2>
             <p className="text-normal font-normal leading-loose">
-              投稿作者同意以 創用 CC「姓名標示」4.0
+              投稿作者同意以{" "}
+              <Link
+                href={"https://creativecommons.org/licenses/by/4.0/"}
+                className="underline underline-offset-2"
+              >
+                創用 CC「姓名標示」4.0
+              </Link>{" "}
               授權大會方進行紙本印刷、宣傳、展覽、數位化、重製等審稿、佈展、官方網站上線工作必要流程。投稿作者仍擁有投稿專案著作之著作權。且擔保本著作係著作人之原創性著作，未侵害任何第三人之智慧財產權。
             </p>
             <div className="py-1" />
