@@ -1,8 +1,41 @@
 export default function Timeline() {
-  const events = [
-    {
-      date: "11.12.2024",
-      icon: <span className="material-icons">flag</span>,
+  return (
+    <div className="max-w-[840px] p-8">
+      <h2 className="mb-12 text-h2">重要時程</h2>
+      <div className="relative flex flex-col">
+        <div className="relative mb-8 h-8">
+          <svg className="h-8 w-full" viewBox="0 0 800 32">
+            {/* Main horizontal line */}
+            <line
+              x1="20"
+              y1="16"
+              x2="740"
+              y2="16"
+              stroke="#D3C4B7"
+              strokeWidth="2"
+            />
+            
+            {/* Arrow */}
+            <path
+              d="M740 16 L760 16 M750 8 L760 16 L750 24"
+              stroke="#D3C4B7"
+              strokeWidth="2"
+              fill="none"
+            />
+          </svg>
+        </div>
+
+        {/* 時程 */}
+        <div className="flex">
+          <div className="bg-black">
+            <svg className="h-10">
+              <circle key={1} cx={10} cy="16" r="6" fill="#CC9232" />
+            </svg>
+            <span className="material-icons-big text-4xl" >flag</span>
+          </div>
+
+      {/* date: "11.12.2024",
+      icon: ,
       text: "開始徵稿",
     },
     {
@@ -29,48 +62,8 @@ export default function Timeline() {
       date: "03.08",
       icon: <span className="material-icons text-orange">groups</span>,
       text: "年會",
-    },
-  ];
+    }, */}
 
-  return (
-    <div className="w-full p-8">
-      <h2 className="mb-12 text-2xl">重要時程</h2>
-      <div className="relative flex flex-col">
-        <div className="relative mb-8 h-8">
-          <svg className="h-8 w-full" viewBox="0 0 800 32">
-            {/* Main horizontal line */}
-            <line
-              x1="20"
-              y1="16"
-              x2="740"
-              y2="16"
-              stroke="#D3C4B7"
-              strokeWidth="2"
-            />
-
-            {/* Dots */}
-            {[0, 1, 2, 3, 4, 5].map((i) => (
-              <circle key={i} cx={20 + i * 130} cy="16" r="6" fill="#CC9232" />
-            ))}
-
-            {/* Arrow */}
-            <path
-              d="M740 16 L760 16 M750 8 L760 16 L750 24"
-              stroke="#D3C4B7"
-              strokeWidth="2"
-              fill="none"
-            />
-          </svg>
-        </div>
-
-        <div className="flex px-4">
-          {events.map((event, index) => (
-            <div key={index} className="flex flex-1 flex-col items-center">
-              <div className="mb-2 text-4xl">{event.icon}</div>
-              <div className="mb-2 text-sm">{event.date}</div>
-              <div className="text-center text-sm">{event.text}</div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
