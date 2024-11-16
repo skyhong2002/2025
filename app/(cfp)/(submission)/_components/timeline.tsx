@@ -7,27 +7,27 @@ export default function Timeline() {
     },
     {
       date: "01.21",
-      icon: <span className="material-icons">flag</span>,
+      icon: <span className="material-icons text-red">event_busy</span>,
       text: "投稿截止",
     },
     {
       date: "一月下旬",
-      icon: <span className="material-icons">flag</span>,
+      icon: <span className="material-icons">email</span>,
       text: "議程錄取通知",
     },
     {
       date: "二月上旬至下旬",
-      icon: <span className="material-icons">flag</span>,
+      icon: <span className="material-icons">mic_none</span>,
       text: "試講",
     },
     {
       date: "03.07",
-      icon: <span className="material-icons">flag</span>,
+      icon: <span className="material-icons">route</span>,
       text: "彩排",
     },
     {
       date: "03.08",
-      icon: <span className="material-icons">flag</span>,
+      icon: <span className="material-icons text-orange">groups</span>,
       text: "年會",
     },
   ];
