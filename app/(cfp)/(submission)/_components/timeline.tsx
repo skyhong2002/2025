@@ -44,19 +44,19 @@ export default function Timeline() {
               y1="16"
               x2="740"
               y2="16"
-              stroke="#E6D5B0"
+              stroke="#D3C4B7"
               strokeWidth="2"
             />
 
             {/* Dots */}
             {[0, 1, 2, 3, 4, 5].map((i) => (
-              <circle key={i} cx={20 + i * 130} cy="16" r="6" fill="#E6D5B0" />
+              <circle key={i} cx={20 + i * 130} cy="16" r="6" fill="#CC9232" />
             ))}
 
             {/* Arrow */}
             <path
               d="M740 16 L760 16 M750 8 L760 16 L750 24"
-              stroke="#E6D5B0"
+              stroke="#D3C4B7"
               strokeWidth="2"
               fill="none"
             />
