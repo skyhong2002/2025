@@ -50,7 +50,7 @@ export default function Timeline() {
 
             {/* Dots */}
             {[0, 1, 2, 3, 4, 5].map((i) => (
-              <circle key={i} cx={20 + i * 144} cy="16" r="6" fill="#E6D5B0" />
+              <circle key={i} cx={20 + i * 130} cy="16" r="6" fill="#E6D5B0" />
             ))}
 
             {/* Arrow */}
@@ -66,7 +66,7 @@ export default function Timeline() {
         <div className="flex px-4">
           {events.map((event, index) => (
             <div key={index} className="flex flex-1 flex-col items-center">
-              <div className="mb-4">{event.icon}</div>
+              <div className="mb-2 text-4xl">{event.icon}</div>
               <div className="mb-2 text-sm">{event.date}</div>
               <div className="text-center text-sm">{event.text}</div>
             </div>
