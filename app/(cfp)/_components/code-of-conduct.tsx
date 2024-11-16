@@ -68,7 +68,9 @@ export default function CodeOfConduct() {
       </div>
       <div className="mb-16">
         <h2 className="text-h2-mobile md:text-h2">Q&A</h2>
-        <div>Q1. tst</div>
+        <div className="rounded-full bg-light-brown px-6 py-4 text-red">
+          Q1. tst
+        </div>
         {/* TODO: `Q${index}. ${content} */}
         <div>{/* TODO: query from array */}</div>
       </div>
