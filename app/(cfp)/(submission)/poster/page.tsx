@@ -6,7 +6,7 @@ import CodeOfConduct from "../_components/code-of-conduct";
 export default function Page() {
   return (
     <div className="bg-blue py-8 font-bold text-light-brown">
-      <div className="mx-auto w-11/12 max-w-[840px] space-y-14 md:w-10/12 lg:w-9/12">
+      <div className="mx-auto w-11/12 space-y-14 md:w-10/12 lg:w-9/12">
         <h1 className="text-h1-mobile md:text-h1">海報徵稿</h1>
 
         <div className="space-y-12 md:space-y-16">
