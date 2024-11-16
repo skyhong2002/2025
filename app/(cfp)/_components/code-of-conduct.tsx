@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function CodeOfConduct() {
   return (
-    <div>
+    <div className="space-y-16">
       <section className="space-y-4">
         <h2 className="text-h2-mobile font-extrabold md:text-h2">
           CODE OF CONDUCT
@@ -90,6 +90,7 @@ export default function CodeOfConduct() {
         <div className="rounded-full bg-light-brown px-6 py-4 text-red">
           Q1. Placeholder
         </div>
+        {/* `Q${index}. ${Content}` */}
       </section>
     </div>
   );
