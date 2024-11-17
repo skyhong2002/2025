@@ -53,7 +53,7 @@ export default function Home() {
   return (
     <>
       <div
-        className="max-[820px]:bg-gray relative h-[calc(100svh-64px)] min-h-[600px] bg-white bg-cover bg-[left_20%_center] max-sm:h-[calc(100svh-140px)] lg:bg-center"
+        className="relative h-[calc(100svh-64px)] min-h-[600px] bg-white bg-cover bg-[left_20%_center] max-[820px]:bg-gray lg:bg-center"
         style={{
           backgroundImage: `url('')`,
         }}
@@ -154,13 +154,13 @@ export default function Home() {
             <div className="flex gap-4 pt-14 max-[820px]:grid max-[820px]:grid-cols-3 max-[820px]:gap-5 max-sm:grid-cols-2">
               <Link
                 href="https://groups.google.com/g/sitcon-general/"
-                className="bg-gray w-[140px] rounded-[50px] py-3 text-center font-bold max-[820px]:col-span-2 max-[820px]:w-auto max-[820px]:rounded-lg max-[820px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
+                className="w-[140px] rounded-[50px] bg-gray py-3 text-center font-bold max-[820px]:col-span-2 max-[820px]:w-auto max-[820px]:rounded-lg max-[820px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
               >
                 訂閱郵件論壇
               </Link>
               <Link
                 href="https://gitlab.com/sitcon-tw/2024/board"
-                className="bg-gray w-[140px] rounded-[50px] py-3 text-center font-bold max-[820px]:col-span-1 max-[820px]:w-auto max-[820px]:rounded-lg max-[820px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
+                className="w-[140px] rounded-[50px] bg-gray py-3 text-center font-bold max-[820px]:col-span-1 max-[820px]:w-auto max-[820px]:rounded-lg max-[820px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
               >
                 查看 GitLab
               </Link>
@@ -178,6 +178,8 @@ export default function Home() {
 
       {/* Phone Layout */}
       <PhoneLayout />
+
+      <div className="pb-12"></div>
     </>
   );
 }
