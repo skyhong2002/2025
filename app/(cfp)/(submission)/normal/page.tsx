@@ -2,8 +2,8 @@ import Image from "next/image";
 import CodeOfConduct from "../_components/code-of-conduct";
 import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
-import PresentationIcon from "../_assets/presentation.svg";
-import EspressoIcon from "../_assets/espresso.svg";
+import PresentationIcon from "../../_assets/presentation.svg";
+import EspressoIcon from "../../_assets/espresso.svg";
 
 export default function Page() {
   return (
