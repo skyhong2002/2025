@@ -23,6 +23,11 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
+          rel="stylesheet"
+        />
+        {/* 兩個資源不能合併 */}
       </head>
       <body className={inter.className}>
         <Navbar />
