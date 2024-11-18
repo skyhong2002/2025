@@ -15,9 +15,9 @@ export default function TableOfContent({
   return (
     <>
       {/* pc & tablet */}
-      <nav className="md: absolute right-0 top-6 hidden w-min md:block">
+      <nav className="md: absolute right-0 top-[80px] hidden w-min md:block">
         <h2 className="mb-3 font-medium text-light-brown">本頁目錄</h2>
-        <div className="mb-3 h-[1px] w-[143px] bg-light-brown lg:w-[264px]" />
+        <div className="mb-3 h-[1px] bg-light-brown" />
         <ul>
           {sections.map((section) => (
             <Link
@@ -25,7 +25,10 @@ export default function TableOfContent({
               key={section.id}
               className="tableContentItem"
             >
-              <li key={section.id} className="mb-3 text-light-brown">
+              <li
+                key={section.id}
+                className="mb-3 mr-3 text-nowrap text-light-brown"
+              >
                 {section.title}
               </li>
             </Link>
@@ -65,7 +68,7 @@ export default function TableOfContent({
               >
                 <Link
                   href={`#${section.id}`}
-                  className={`text-gray flex w-full justify-center rounded-lg bg-black p-0 py-4 transition duration-300 ${theme === "light" ? "hover:bg-gray hover:text-black" : "hover:bg-light-brown hover:text-red"} `}
+                  className={`flex w-full justify-center rounded-lg bg-black p-0 py-4 text-gray transition duration-300 ${theme === "light" ? "hover:bg-gray hover:text-black" : "hover:bg-light-brown hover:text-red"} `}
                   onClick={() => setShowDropdown(false)}
                 >
                   <div className=" ">{section.title}</div>
