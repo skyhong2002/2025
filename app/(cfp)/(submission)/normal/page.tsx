@@ -1,35 +1,35 @@
 import Image from "next/image";
-import CodeOfConduct from "../_components/code-of-conduct";
 import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
 import PresentationIcon from "../../_assets/presentation.svg";
 import EspressoIcon from "../../_assets/espresso.svg";
+import CodeOfConduct from "../../_components/code-of-conduct";
 
 export default function Page() {
   return (
-    <div className="text-normal-mobile md:text-normal">
-      <h1 className="text-h1-mobile md:text-h1">一般議程徵稿</h1>
-      <div className="hidden md:block">
+    <div className="md:text-normal text-normal-mobile">
+      <h1 className="md:text-h1 text-h1-mobile">一般議程徵稿</h1>
+      <div className="md:block hidden">
         <Countdown />
       </div>
       <div className="md:mb-16">
-        <h2 className="text-h2-mobile md:text-h2">重要時程</h2>
+        <h2 className="md:text-h2 text-h2-mobile">重要時程</h2>
         <Timeline />
       </div>
       <div className="md:mb-16">
-        <h2 className="text-h2-mobile md:text-h2">議程種類</h2>
-        <div className="mb-6 mt-4 grid grid-rows-2 gap-3 lg:grid-cols-2 lg:grid-rows-1">
-          <div className="flex flex-col items-center rounded-lg border bg-white p-6 text-orange md:border-orange md:bg-light-brown">
+        <h2 className="md:text-h2 text-h2-mobile">議程種類</h2>
+        <div className="lg:grid-cols-2 lg:grid-rows-1 mb-6 mt-4 grid grid-rows-2 gap-3">
+          <div className="md:border-orange md:bg-light-brown flex flex-col items-center rounded-lg border bg-white p-6 text-orange">
             <Image priority src={PresentationIcon} alt="PRESENTATION" />
-            <h3 className="text-h3-mobile md:text-h3">Presentation</h3>
+            <h3 className="md:text-h3 text-h3-mobile">Presentation</h3>
             <p>
               Presentation 共 40 分鐘，包含完整 30 分鐘的議程與 10
               分鐘的問答時間，讓您有充分的時間展示想法、描述經歷、和與會者交流。
             </p>
           </div>
-          <div className="flex flex-col items-center rounded-lg border bg-white p-6 text-red md:border-red md:bg-light-brown">
+          <div className="md:border-red md:bg-light-brown flex flex-col items-center rounded-lg border bg-white p-6 text-red">
             <Image priority src={EspressoIcon} alt="PRESENTATION" />
-            <h3 className="text-h3-mobile md:text-h3">Espresso</h3>
+            <h3 className="md:text-h3 text-h3-mobile">Espresso</h3>
             <p>
               Espresso 僅有 10
               分鐘，挑戰最為濃縮與精華的議程，為與會者帶來短而精緻的知識洗禮。
@@ -38,7 +38,7 @@ export default function Page() {
         </div>
       </div>
       <div className="md:mb-16">
-        <h2 className="text-h2-mobile md:text-h2">投稿主題範例</h2>
+        <h2 className="md:text-h2 text-h2-mobile">投稿主題範例</h2>
         <p>
           SITCON
           作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
@@ -46,20 +46,20 @@ export default function Page() {
           除此之外，您也可以透過參與投稿者小聚或前往 SITCON
           歷年網站（2013、2014、2015、2016、2017、2018、2019、2020、2021、2022、2024）查看過去的議程。
         </p>
-        <h3 className="text-h3-mobile md:text-h3">PRESENTATION</h3>
+        <h3 className="md:text-h3 text-h3-mobile">PRESENTATION</h3>
         <p>
           Presentation 包含完整 30 分鐘的議程與 10 分鐘的問答時間，共 40
           分鐘，讓您有充分的時間展示想法、描述經歷、和與會者交流。
         </p>
-        <h3 className="text-h3-mobile md:text-h3">ESPRESSO</h3>
+        <h3 className="md:text-h3 text-h3-mobile">ESPRESSO</h3>
         <p>
           Espresso 僅有 10
           分鐘，挑戰最為濃縮與精華的議程，為與會者帶來短而精緻的知識洗禮。
         </p>
       </div>
       <div className="md:mb-16">
-        <h2 className="text-h2-mobile md:text-h2">投稿方式</h2>
-        <h3 className="text-h3-mobile md:text-h3">稿件資訊</h3>
+        <h2 className="md:text-h2 text-h2-mobile">投稿方式</h2>
+        <h3 className="md:text-h3 text-h3-mobile">稿件資訊</h3>
         <ul className="list-inside list-disc">
           <li>
             投稿類型
@@ -102,7 +102,7 @@ export default function Page() {
             Attachment：選填。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
           </li>
         </ul>
-        <h3 className="text-h3-mobile md:text-h3">個人資料</h3>
+        <h3 className="md:text-h3 text-h3-mobile">個人資料</h3>
         <p>
           除了暱稱 /
           名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
@@ -126,7 +126,7 @@ export default function Page() {
         </ul>
       </div>
       <div className="md:mb-16">
-        <h2 className="text-h2-mobile md:text-h2">審稿方式</h2>
+        <h2 className="md:text-h2 text-h2-mobile">審稿方式</h2>
         <p>
           稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由 SITCON
           工作人員、業界人士及學界人士組成。

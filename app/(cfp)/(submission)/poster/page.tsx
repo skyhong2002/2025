@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
-import CodeOfConduct from "../_components/code-of-conduct";
+import CodeOfConduct from "../../_components/code-of-conduct";
 
 export default function Page() {
   return (
