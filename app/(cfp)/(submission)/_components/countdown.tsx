@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import CalendarSvg from "@/public/calender.svg";
+import UpRightArrowSvg from "@/public/north_east.svg";
+
 type TimeLeft = {
   days: number;
   hours: number;
@@ -82,7 +85,7 @@ export default function CountdownPage() {
         <div className="flex h-full w-[57%] items-center justify-between rounded-2xl border border-light-brown px-5">
           {/* calender icon */}
           <Image
-            src="/calender.svg"
+            src={CalendarSvg}
             width={48}
             height={48}
             alt="calendar"
@@ -113,7 +116,7 @@ export default function CountdownPage() {
               }}
             >
               <Image
-                src="/north_east.svg"
+                src={UpRightArrowSvg}
                 width={40}
                 height={40}
                 alt="up_right_arrow"
@@ -129,7 +132,7 @@ export default function CountdownPage() {
               transition={{ delay: 0.2 }}
             >
               <Image
-                src="/north_east.svg"
+                src={UpRightArrowSvg}
                 width={40}
                 height={40}
                 alt="up_right_arrow"

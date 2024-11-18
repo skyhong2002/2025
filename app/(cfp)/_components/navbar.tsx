@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "@/public/assets/logo.png";
 
 export default function Navbar() {
   return (
@@ -7,7 +8,7 @@ export default function Navbar() {
       <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
         <ul className="flex w-full items-center justify-between p-4 max-[750px]:justify-center">
           <Image
-            src="/assets/logo.png"
+            src={Logo}
             alt="logo"
             className="-translate-y-1"
             width={130}

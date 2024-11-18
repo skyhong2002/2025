@@ -6,6 +6,7 @@ import InstagramLogo from "./logos/instagram";
 import TelegramLogo from "./logos/telegram";
 import TwitterLogo from "./logos/twitter";
 import YoutubeLogo from "./logos/youtube";
+import LogoBlue from "@/public/assets/logo-blue.png";
 
 export default function Footer() {
   return (
@@ -112,7 +113,7 @@ function Brand() {
   return (
     <div className="item-between flex flex-row gap-6 max-mobile:flex-col mobile:items-end">
       <Image
-        src="/assets/logo-blue.png"
+        src={LogoBlue}
         className="-translate-y-1"
         alt="SITCON"
         width={200}
@@ -214,7 +215,7 @@ function RadioLinkButton({
   return (
     <Link
       href={href}
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-blue px-3 py-1 text-blue hover:bg-blue hover:text-white max-[420px]:h-10 max-[420px]:w-10"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-blue px-3 py-1 text-blue hover:bg-blue hover:text-white"
     >
       {logo}
     </Link>

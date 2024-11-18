@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 html,
 body {
   @apply bg-light-brown;
@@ -69,10 +63,10 @@ html {
 }
 
 .material-icons-big {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 64px;  /* Preferred icon size */
+  font-size: 64px; /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -90,5 +84,5 @@ html {
   -moz-osx-font-smoothing: grayscale;
 
   /* Support for IE. */
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
 }
