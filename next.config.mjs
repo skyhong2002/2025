@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: "dist",
+  output: "export",
+  basePath: "/2025",
+  trailingSlash: true,
 };
 
 export default nextConfig;
