@@ -3,10 +3,10 @@ export default function CodeOfConduct() {
   return (
     <div className="space-y-16">
       <section className="space-y-4">
-        <h2 className="md:text-h2 text-h2-mobile font-extrabold">
+        <h2 className="text-h2-mobile font-extrabold md:text-h2">
           CODE OF CONDUCT
         </h2>
-        <p className="md:text-normal text-normal-mobile font-normal leading-loose tracking-wider">
+        <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
           SITCON
           歡迎不同身分、來自不同背景的與會者，我們鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快地參加
           SITCON，我們要求所有參與者閱讀年會的{" "}
@@ -21,11 +21,11 @@ export default function CodeOfConduct() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="md:text-h2 text-h2-mobile font-extrabold">
+        <h2 className="text-h2-mobile font-extrabold md:text-h2">
           投稿注意事項
         </h2>
         <div>
-          <ul className="md:text-normal ml-2 text-normal-mobile font-normal leading-loose tracking-wider [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+          <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
             <li>
               除非內容明顯偏離講題、違反 CoC
               或不符事實，我們不會強制要求講者對演講內容進行修正。
@@ -53,7 +53,7 @@ export default function CodeOfConduct() {
               名字」欄位標示所有講者的稱呼，並在「演講大綱」詳細說明各個講者如何分配演講內容。稿件經接受者，無論講者人數，皆只提供一組可轉贈的入場票邀請碼、一份講者識別證與一份講者專屬迎賓禮，大會方保有最終發放之權力。未佩戴識別證的講者，僅能在自己的演講時，於該議程時段進入議程所在的會議廳。
             </li>
           </ul>
-          <p className="md:text-normal text-normal-mobile font-normal leading-loose tracking-wider">
+          <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
             若有任何問題或投稿建議，請來信 SITCON 議程組信箱
             session@sitcon.org。
           </p>
@@ -61,8 +61,8 @@ export default function CodeOfConduct() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="md:text-h2 text-h2-mobile font-extrabold">授權</h2>
-        <p className="md:text-normal text-normal-mobile font-normal leading-loose tracking-wider">
+        <h2 className="text-h2-mobile font-extrabold md:text-h2">授權</h2>
+        <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
           投稿作者同意以{" "}
           <Link
             href={"https://creativecommons.org/licenses/by/4.0/"}
@@ -76,8 +76,8 @@ export default function CodeOfConduct() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="md:text-h2 text-h2-mobile font-extrabold">試講</h2>
-        <p className="md:text-normal text-normal-mobile font-normal leading-loose tracking-wider">
+        <h2 className="text-h2-mobile font-extrabold md:text-h2">試講</h2>
+        <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
           請以直版寬841 mm、高 1189 mm （A0 大小）規格製作為 pdf
           檔案，一篇投稿一面看板，請於收到錄取通知後依據郵件說明上傳最終版海報檔案，統一由大會進行印製與佈展。
           <br />
@@ -86,7 +86,7 @@ export default function CodeOfConduct() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="md:text-h2 text-h2-mobile font-extrabold">Q&A</h2>
+        <h2 className="text-h2-mobile font-extrabold md:text-h2">Q&A</h2>
         <div className="rounded-full bg-light-brown px-6 py-4 text-red">
           Q1. Placeholder
         </div>
