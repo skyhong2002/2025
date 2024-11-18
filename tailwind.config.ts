@@ -7,18 +7,12 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: "1rem",
-      screens: {
-        sm: "345px",
-        md: "645px",
-        lg: "840px",
-        xl: "1000px",
-        "2xl": "1000px",
-      },
-    },
     extend: {
+      screens: {
+        desktop: "1920px",
+        tablet: "1024px",
+        mobile: "375px",
+      },
       fontSize: {
         h1: "48px",
         h2: "32px",
