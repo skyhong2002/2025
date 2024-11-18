@@ -9,7 +9,7 @@ import YoutubeLogo from "./logos/youtube";
 
 export default function Footer() {
   return (
-    <footer className="text-blue space-y-7 py-16">
+    <footer className="space-y-7 py-16 text-blue">
       <LinksSection />
       <hr className="border-blue pb-7" />
       <SocialMediasSection />
@@ -158,7 +158,7 @@ function RadioLinkButton({
   return (
     <Link
       href={href}
-      className="text-blue border-blue hover:bg-blue flex h-12 w-12 items-center justify-center rounded-full border px-3 py-1 hover:text-white"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-blue px-3 py-1 text-blue hover:bg-blue hover:text-white"
     >
       {logo}
     </Link>
