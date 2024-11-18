@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "@/public/assets/logo.png";
 
 export default function Navbar() {
   return (
     <nav className="sticky left-0 right-0 top-0 z-10 flex justify-center bg-blue">
       <ul className="container flex items-center justify-between p-4">
         <Image
-          src="/assets/logo.png"
+          src={Logo}
           alt="logo"
           className="-translate-y-1"
           width={130}

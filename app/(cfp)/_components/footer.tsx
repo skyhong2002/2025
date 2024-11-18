@@ -6,6 +6,7 @@ import InstagramLogo from "./logos/instagram";
 import TelegramLogo from "./logos/telegram";
 import TwitterLogo from "./logos/twitter";
 import YoutubeLogo from "./logos/youtube";
+import LogoBlue from "@/public/assets/logo-blue.png";
 
 export default function Footer() {
   return (
@@ -68,7 +69,7 @@ function SocialMediasSection() {
     <div className="flex justify-between">
       <div className="flex items-end gap-6">
         <Image
-          src="/assets/logo-blue.png"
+          src={LogoBlue}
           className="-translate-y-1"
           alt="SITCON"
           width={200}
