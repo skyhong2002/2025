@@ -337,11 +337,11 @@ function TabletLayout() {
       <div className="row-span-1 grid grid-cols-3 gap-4">
         <div
           className="col-span-2 h-[360px] rounded-[32px] border-2 border-blue bg-white bg-cover bg-center p-6"
-          style={{ backgroundImage: `url('/cfp/stats/2.jpg')` }}
+          style={{ backgroundImage: `url('/2025/cfp/stats/2.jpg')` }}
         ></div>
         <div
           className="col-span-1 h-[360px] rounded-[32px] border-2 border-blue bg-white bg-cover bg-center p-6"
-          style={{ backgroundImage: `url('/cfp/stats/1.jpg')` }}
+          style={{ backgroundImage: `url('/2025/cfp/stats/1.jpg')` }}
         ></div>
       </div>
     </div>
@@ -389,13 +389,13 @@ function DesktopLayout() {
           <From2013 />
           <div
             className="col-span-1 rounded-[32px] border-2 border-blue bg-white bg-cover bg-center p-6"
-            style={{ backgroundImage: `url('/cfp/stats/1.jpg')` }}
+            style={{ backgroundImage: `url('/2025/cfp/stats/1.jpg')` }}
           ></div>
         </div>
         <div className="grid grid-cols-3 gap-4">
           <div
             className="col-span-1 rounded-[32px] border-2 border-blue bg-white bg-cover bg-center p-6"
-            style={{ backgroundImage: `url('/cfp/stats/2.jpg')` }}
+            style={{ backgroundImage: `url('/2025/cfp/stats/2.jpg')` }}
           ></div>
           <CloseTouchSection />
         </div>
