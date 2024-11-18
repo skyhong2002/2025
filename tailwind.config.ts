@@ -7,6 +7,17 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "1rem",
+      screens: {
+        sm: "345px",
+        md: "645px",
+        lg: "840px",
+        xl: "1000px",
+        "2xl": "1000px",
+      },
+    },
     extend: {
       fontSize: {
         h1: "48px",
