@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        desktop: "1920px",
+        tablet: "1024px",
+        mobile: "375px",
+      },
       fontSize: {
         h1: "48px",
         h2: "32px",

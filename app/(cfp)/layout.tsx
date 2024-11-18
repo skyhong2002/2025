@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
-        <div className="container mx-auto">
+        <div className="mx-auto max-w-[1120px]">
           <Footer />
         </div>
       </body>
