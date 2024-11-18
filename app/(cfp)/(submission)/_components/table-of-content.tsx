@@ -5,34 +5,27 @@ import { motion } from "framer-motion";
 
 export default function TableOfContent({
   theme = "light",
+  sections = [],
 }: {
   theme: "red" | "light";
+  sections: { id: string; title: string }[];
 }) {
   const [showDropdown, setShowDropdown] = useState(false);
-  const sections = [
-    { id: "important-dates", title: "重要時程" },
-    { id: "session-types", title: "議程種類" },
-    { id: "submission-topics", title: "投稿主題範例" },
-    { id: "submission-format", title: "投稿格式" },
-    { id: "review-process", title: "審稿方式" },
-    { id: "code-of-conduct", title: "Code of Conduct" },
-    { id: "submission-guidelines", title: "投稿注意事項" },
-    { id: "license", title: "授權" },
-    { id: "practice-talk", title: "試講" },
-    { id: "rehearsal", title: "彩排" },
-    { id: "qa", title: "QA" },
-  ];
 
   return (
     <>
       {/* pc & tablet */}
       <nav className="md: absolute right-0 top-6 hidden w-min md:block">
-        <h2 className="mb-3 font-medium">本頁目錄</h2>
+        <h2 className="mb-3 font-medium text-light-brown">本頁目錄</h2>
         <div className="mb-3 h-[1px] w-[143px] bg-light-brown lg:w-[264px]" />
         <ul>
           {sections.map((section) => (
-            <Link href={`#${section.id}`} className="tableContentItem">
-              <li key={section.id} className="mb-3">
+            <Link
+              href={`#${section.id}`}
+              key={section.id}
+              className="tableContentItem"
+            >
+              <li key={section.id} className="mb-3 text-light-brown">
                 {section.title}
               </li>
             </Link>
@@ -61,6 +54,7 @@ export default function TableOfContent({
           <div className="absolute top-[40px] z-10 w-full rounded-lg bg-black p-2 shadow-lg">
             {sections.map((section, index) => (
               <motion.div
+                key={section.id}
                 initial={{ opacity: 0, y: -20, backgroundColor: "#D3C4B7" }}
                 animate={{ opacity: 1, y: 0, backgroundColor: "#000000" }}
                 transition={{
