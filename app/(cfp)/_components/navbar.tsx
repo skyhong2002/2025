@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="sticky left-0 right-0 top-0 z-20 flex justify-center bg-blue">
       <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
-        <ul className="flex w-full items-center justify-between p-4">
+        <ul className="flex w-full items-center justify-between p-4 max-[750px]:justify-center">
           <Image
             src="/assets/logo.png"
             alt="logo"
@@ -13,7 +13,7 @@ export default function Navbar() {
             width={130}
             height={65}
           />
-          <ul className="flex items-center justify-end gap-8 text-light-brown">
+          <ul className="flex items-center justify-end gap-8 text-light-brown max-[750px]:hidden">
             <NavbarItem link="/">首頁</NavbarItem>
             <NavbarItem link="/theme">年會主題</NavbarItem>
             <NavbarItem link="/normal">一般議程徵稿</NavbarItem>
