@@ -7,26 +7,26 @@ export default function Page() {
   return (
     <div className="bg-blue py-8 font-bold text-light-brown">
       <div className="mx-auto space-y-14">
-        <h1 className="text-h1-mobile md:text-h1">海報徵稿</h1>
+        <h1 className="md:text-h1 text-h1-mobile">海報徵稿</h1>
 
-        <div className="space-y-12 md:space-y-16">
+        <div className="md:space-y-16 space-y-12">
           <Countdown />
           <Timeline />
 
           <section className="space-y-4">
-            <h2 className="text-h2-mobile font-extrabold md:text-h2">
+            <h2 className="md:text-h2 text-h2-mobile font-extrabold">
               投稿說明
             </h2>
-            <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
+            <p className="md:text-normal text-normal-mobile font-normal leading-loose tracking-wider">
               海報投稿以靜態海報展出學生個人或團隊專案，作品以資訊相關領域為主，不限語言，不接受一稿多投，若為延伸作品需於投稿時載明。期望透過此方式使更多學生能有展現自我的機會，同時為會眾帶來不同形式的學習與交流。
             </p>
           </section>
 
-          <section className="space-y-8 md:space-y-12">
-            <h2 className="text-h2-mobile md:text-h2">投稿方式</h2>
+          <section className="md:space-y-12 space-y-8">
+            <h2 className="md:text-h2 text-h2-mobile">投稿方式</h2>
             <div className="space-y-4">
-              <h3 className="text-h3-mobile md:text-h3">稿件資訊</h3>
-              <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <h3 className="md:text-h3 text-h3-mobile">稿件資訊</h3>
+              <ul className="md:text-normal ml-2 text-normal-mobile font-normal leading-loose tracking-wider [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>題目 Project Title：必填、公開。長度請自行斟酌。</li>
                 <li>
                   摘要 Abstract：必填、公開。建議約 350
@@ -68,13 +68,13 @@ export default function Page() {
               </ul>
             </div>
             <div className="space-y-4">
-              <h3 className="text-h3-mobile md:text-h3">個人資料</h3>
+              <h3 className="md:text-h3 text-h3-mobile">個人資料</h3>
               <div>
                 <p className="leading-loose tracking-wider">
                   除了暱稱 /
                   名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
                 </p>
-                <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+                <ul className="md:text-normal ml-2 text-normal-mobile font-normal leading-loose tracking-wider [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                   <li>
                     電子郵件
                     Email：必填。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
@@ -98,8 +98,8 @@ export default function Page() {
               </div>
             </div>
             <div className="space-y-4">
-              <h3 className="text-h3-mobile md:text-h3">海報格式參考</h3>
-              <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+              <h3 className="md:text-h3 text-h3-mobile">海報格式參考</h3>
+              <ul className="md:text-normal ml-2 text-normal-mobile font-normal leading-loose tracking-wider [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
                 <li>
                   中文名稱：字體大小範圍為 70 號字〜90
                   號字，且建議最多不超過兩行，置中對齊方式。
@@ -124,16 +124,16 @@ export default function Page() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-h2-mobile font-extrabold md:text-h2">
+            <h2 className="md:text-h2 text-h2-mobile font-extrabold">
               審稿方式
             </h2>
-            <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
+            <p className="md:text-normal text-normal-mobile font-normal leading-loose tracking-wider">
               稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由
               SITCON 工作人員、業界人士及學界人士組成。
               <br />
               審稿委員將針對以下項目進行篩選：
             </p>
-            <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+            <ul className="md:text-normal ml-2 text-normal-mobile font-normal leading-loose tracking-wider [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
               <li>
                 題材創新性：研究專案內容與方法具原創與可行性，產生貢獻或影響之潛力。
               </li>
