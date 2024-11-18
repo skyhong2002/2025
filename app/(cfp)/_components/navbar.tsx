@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <nav className="sticky left-0 right-0 top-0 z-20 flex justify-center bg-blue">
-      <div className="w-full max-w-[840px] desktop:max-w-[1000px]">
+      <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
         <ul className="flex w-full items-center justify-between p-4">
           <Image
             src="/assets/logo.png"
