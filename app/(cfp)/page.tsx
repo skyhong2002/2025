@@ -151,7 +151,7 @@ export default function Home() {
                 </div>
                 <div
                   className="h-full rounded-[32px] bg-white bg-cover bg-center p-6"
-                  style={{ backgroundImage: `url('/2025/cfp/stats/1.jpg')` }}
+                  style={{ backgroundImage: `url('/2025/cfp/about/1.png')` }}
                 ></div>
               </div>
               <div className="pt-8 grid grid-cols-2 gap-14">
@@ -184,7 +184,7 @@ export default function Home() {
                 </div>
                 <div
                   className="h-full rounded-[32px] bg-white bg-cover bg-center p-6"
-                  style={{ backgroundImage: `url('/2025/cfp/stats/1.jpg')` }}
+                  style={{ backgroundImage: `url('/2025/cfp/about/2.png')` }}
                 ></div>
               </div>
             </div>
