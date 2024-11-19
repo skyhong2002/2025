@@ -29,7 +29,7 @@ export default function Page() {
         id="important-dates"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           重要時程
         </h2>
         <Timeline />
@@ -39,7 +39,7 @@ export default function Page() {
         id="session-types"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           議程說明
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
@@ -51,7 +51,7 @@ export default function Page() {
         id="what-is-open-session"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           什麼是開放式議程？
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
@@ -82,7 +82,7 @@ export default function Page() {
         id="submission-topics"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           投稿方式
         </h2>
         <div className="space-y-4">
@@ -163,7 +163,7 @@ export default function Page() {
         id="review-process"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           審稿方式
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">

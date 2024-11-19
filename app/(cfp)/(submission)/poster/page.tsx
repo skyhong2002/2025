@@ -29,7 +29,7 @@ export default function Page() {
         id="important-dates"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           重要時程
         </h2>
         <Timeline />
@@ -39,7 +39,7 @@ export default function Page() {
         id="session-types"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           投稿說明
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
@@ -51,11 +51,11 @@ export default function Page() {
         id="submission-topics"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           投稿方式
         </h2>
         <div className="space-y-4">
-          <h3 className="text-light-blue text-h3-mobile md:text-h3">
+          <h3 className="text-h3-mobile text-light-blue md:text-h3">
             稿件資訊
           </h3>
           <ul className="ml-2 text-normal-mobile font-normal leading-10 tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
@@ -97,7 +97,7 @@ export default function Page() {
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-light-blue text-h3-mobile md:text-h3">
+          <h3 className="text-h3-mobile text-light-blue md:text-h3">
             個人資料
           </h3>
           <div>
@@ -129,7 +129,7 @@ export default function Page() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-light-blue text-h3-mobile md:text-h3">
+          <h3 className="text-h3-mobile text-light-blue md:text-h3">
             海報格式參考
           </h3>
           <ul className="ml-2 text-normal-mobile font-normal leading-10 tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
@@ -159,7 +159,7 @@ export default function Page() {
         id="review-process"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           審稿方式
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">

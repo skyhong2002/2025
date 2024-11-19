@@ -35,7 +35,7 @@ export default function CodeOfConduct() {
         id="code-of-conduct"
         className="my-4 -mt-[80px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           CODE OF CONDUCT
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
@@ -56,7 +56,7 @@ export default function CodeOfConduct() {
         id="submission-guidelines"
         className="-mt-[80px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           投稿注意事項
         </h2>
         <div>
@@ -96,7 +96,7 @@ export default function CodeOfConduct() {
       </section>
 
       <section id="license" className="-mt-[80px] space-y-4 pt-[80px]">
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           授權
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
@@ -113,7 +113,7 @@ export default function CodeOfConduct() {
       </section>
 
       <section id="practice-talk" className="-mt-[80px] space-y-4 pt-[80px]">
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           試講
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
@@ -125,7 +125,7 @@ export default function CodeOfConduct() {
       </section>
 
       <section id="rehearsal" className="-mt-[80px] space-y-4 pt-[80px]">
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           彩排
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
@@ -142,7 +142,7 @@ export default function CodeOfConduct() {
       </section>
 
       <section id="qa" className="-mt-[80px] space-y-4 pt-[80px]">
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           Q&A
         </h2>
         {QA.map((qa, index) => (

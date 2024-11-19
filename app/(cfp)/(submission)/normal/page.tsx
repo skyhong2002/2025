@@ -33,7 +33,7 @@ export default function Page() {
         id="important-dates"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           重要時程
         </h2>
         <Timeline />
@@ -43,7 +43,7 @@ export default function Page() {
         id="session-types"
         className="my-4 -mt-[80px] pt-[80px] md:mb-16"
       >
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           議程種類
         </h2>
         <div className="mb-6 mt-4 grid grid-rows-2 gap-3 lg:grid-cols-2 lg:grid-rows-1">
@@ -66,7 +66,7 @@ export default function Page() {
         </div>
       </section>
       <section id="submission-topics" className="-mt-[80px] pt-[80px] md:mb-16">
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           投稿主題範例
         </h2>
         <p className="leading-10">
@@ -90,10 +90,10 @@ export default function Page() {
         </p>
       </section>
       <section id="submission-format" className="-mt-[80px] pt-[80px] md:mb-16">
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           投稿方式
         </h2>
-        <h3 className="text-light-blue my-4 text-h3-mobile md:text-h3">
+        <h3 className="my-4 text-h3-mobile text-light-blue md:text-h3">
           稿件資訊
         </h3>
         <ul className="list-inside list-disc leading-10">
@@ -138,7 +138,7 @@ export default function Page() {
             Attachment：選填。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
           </li>
         </ul>
-        <h3 className="text-light-blue my-4 text-h3-mobile md:text-h3">
+        <h3 className="my-4 text-h3-mobile text-light-blue md:text-h3">
           個人資料
         </h3>
         <p>
@@ -164,7 +164,7 @@ export default function Page() {
         </ul>
       </section>
       <section id="review-process" className="-mt-[80px] pt-[80px] md:mb-16">
-        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           審稿方式
         </h2>
         <p className="leading-10">
