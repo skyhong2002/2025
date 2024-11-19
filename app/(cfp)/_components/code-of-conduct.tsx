@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { section } from "framer-motion/client";
 export default function CodeOfConduct() {
   const QA = [
     {
@@ -32,8 +31,11 @@ export default function CodeOfConduct() {
 
   return (
     <div className="space-y-16">
-      <section id="code-of-conduct" className="-mt-[80px] space-y-4 pt-[80px]">
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">
+      <section
+        id="code-of-conduct"
+        className="my-4 -mt-[80px] space-y-4 pt-[80px]"
+      >
+        <h2 className="my-4 text-h2-mobile font-extrabold md:text-h2">
           CODE OF CONDUCT
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
