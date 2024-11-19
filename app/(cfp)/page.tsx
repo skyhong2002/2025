@@ -60,10 +60,18 @@ export default function Home() {
       >
         <div className="absolute bottom-14 flex w-full flex-col gap-4">
           <div className="flex flex-col items-center justify-center">
-            <div>
-              <p className="text-normal max-[820px]:text-h3 max-sm:text-[22px]">
-                距離海報投稿截止還有
-              </p>
+            <div className="flex flex-row gap-3 pb-3">
+              <div className="rounded-[11px] bg-blue px-[10px] py-[4px] text-[48px] font-semibold text-[#FFFFFF]">
+                <p>稿件徵求中</p>
+              </div>
+            </div>
+            <div className="flex flex-row gap-3 pb-5">
+              <div className="rounded-[11px] bg-black px-[9px] py-[2px] text-h3 text-[#FFFFFF]">
+                <p>2025 / 03 / 08</p>
+              </div>
+              <div className="rounded-[11px] bg-black px-[9px] py-[2px] text-h3 text-[#FFFFFF]">
+                <p>中央研究院人文社會科學館</p>
+              </div>
             </div>
             <div className="flex flex-row max-sm:w-[80%] max-sm:justify-center max-sm:rounded-[208px] max-sm:border-2 max-sm:border-black max-sm:p-3">
               {Object.entries(timeLeft).map(([key, value]) => (
@@ -112,64 +120,75 @@ export default function Home() {
           <div className="flex flex-row justify-center gap-5 max-sm:grid max-sm:grid-cols-2 max-sm:px-4">
             <Link
               href="#"
-              className="w-[140px] rounded-[50px] bg-[#FFFFFF] py-1 text-center max-[820px]:text-[18px] max-[820px]:font-semibold max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
+              className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[820px]:text-[18px] max-[820px]:font-semibold max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
             >
               前往投稿
             </Link>
             <Link
               href="#"
-              className="w-[140px] rounded-[50px] bg-[#FFFFFF] py-1 text-center max-[820px]:text-[18px] max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
+              className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[820px]:text-[18px] max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
             >
-              加入行事曆
+              把 Deadline 加入行事曆
             </Link>
           </div>
         </div>
       </div>
 
       <div className="flex flex-col items-center justify-center">
-        <div className="relative grid max-w-[1120px] grid-cols-2 bg-light-brown bg-cover bg-[left_20%_center] px-10 max-[820px]:px-6 max-sm:grid-cols-none max-sm:bg-blue max-sm:text-center lg:bg-center">
+        <div className="relative max-w-[1120px] gap-9 bg-black bg-cover bg-[left_20%_center] px-10 max-[820px]:px-6 max-sm:grid-cols-none max-sm:bg-blue max-sm:text-center lg:bg-center">
           <div className="flex">
-            <div className="gap-24 py-32">
-              <div>
-                <h1 className="text-h1 font-black tracking-[2px] text-blue max-[820px]:text-black max-sm:text-h1-mobile max-sm:font-semibold">
-                  關於 SITCON
-                </h1>
-                <p className="text-justify text-normal leading-7 text-blue max-sm:leading-9 max-sm:text-black">
-                  學生計算機年會（Students’ Information Technology
-                  Conference）自 2013
-                  年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。
-                </p>
+            <div className="py-32">
+              <div className="grid grid-cols-2 gap-14">
+                <div>
+                  <h1 className="text-h1 font-extrabold tracking-widest text-light-blue max-[820px]:text-black max-sm:text-h1-mobile max-sm:font-semibold">
+                    關於 SITCON
+                  </h1>
+                  <p className="text-justify text-normal leading-8 text-white max-sm:leading-9 max-sm:text-black">
+                    學生計算機年會（Students’ Information Technology
+                    Conference）自 2013
+                    年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。
+                  </p>
+                </div>
+                <div
+                  className="h-full rounded-[32px] bg-white bg-cover bg-center p-6"
+                  style={{ backgroundImage: `url('/2025/cfp/stats/1.jpg')` }}
+                ></div>
               </div>
-              <div>
-                <h1 className="pt-16 text-h1 font-black tracking-[2px] text-blue max-[820px]:text-black max-sm:text-h1-mobile max-sm:font-semibold">
-                  參與討論
-                </h1>
-                <p className="text-justify text-normal leading-7 text-blue max-sm:leading-9 max-sm:text-black">
-                  SITCON
-                  是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱
-                  SITCON 的郵件論壇並貢獻你的想法！
-                  <br />
-                  <br /> 若你想進一步了解過往討論的內容，也歡迎到 GitLab 上查看
-                  SITCON 2024 的籌備歷程。
-                </p>
-              </div>
-              <div className="flex gap-4 pt-14 max-[820px]:grid max-[820px]:grid-cols-3 max-[820px]:gap-5 max-sm:grid-cols-2">
-                <Link
-                  href="https://groups.google.com/g/sitcon-general/"
-                  className="w-[140px] rounded-[50px] bg-gray py-3 text-center font-bold max-[820px]:col-span-2 max-[820px]:w-auto max-[820px]:rounded-lg max-[820px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
-                >
-                  訂閱郵件論壇
-                </Link>
-                <Link
-                  href="https://gitlab.com/sitcon-tw/2024/board"
-                  className="w-[140px] rounded-[50px] bg-gray py-3 text-center font-bold max-[820px]:col-span-1 max-[820px]:w-auto max-[820px]:rounded-lg max-[820px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
-                >
-                  查看 GitLab
-                </Link>
+              <div className="pt-8 grid grid-cols-2 gap-14">
+                <div>
+                  <h1 className="text-h1 font-extrabold tracking-widest text-light-blue max-[820px]:text-black max-sm:text-h1-mobile max-sm:font-semibold">
+                    參與討論
+                  </h1>
+                  <p className="text-justify text-normal leading-8 text-white max-sm:leading-9 max-sm:text-black">
+                    SITCON
+                    是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱
+                    SITCON 的郵件論壇並貢獻你的想法！
+                    <br />
+                    <br /> 若你想進一步了解過往討論的內容，也歡迎到 GitLab
+                    上查看 SITCON 2024 的籌備歷程。
+                  </p>
+                  <div className="flex gap-6 pt-14 max-[820px]:grid max-[820px]:grid-cols-3 max-[820px]:gap-5 max-sm:grid-cols-2">
+                    <Link
+                      href="https://groups.google.com/g/sitcon-general/"
+                      className="w-[140px] rounded-[50px] bg-gray py-3 text-center font-bold max-[820px]:col-span-2 max-[820px]:w-auto max-[820px]:rounded-lg max-[820px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
+                    >
+                      訂閱郵件論壇
+                    </Link>
+                    <Link
+                      href="https://gitlab.com/sitcon-tw/2024/board"
+                      className="w-[140px] rounded-[50px] bg-gray py-3 text-center font-bold max-[820px]:col-span-1 max-[820px]:w-auto max-[820px]:rounded-lg max-[820px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
+                    >
+                      查看 GitLab
+                    </Link>
+                  </div>
+                </div>
+                <div
+                  className="h-full rounded-[32px] bg-white bg-cover bg-center p-6"
+                  style={{ backgroundImage: `url('/2025/cfp/stats/1.jpg')` }}
+                ></div>
               </div>
             </div>
           </div>
-          <div className="flex"></div>
         </div>
 
         {/* Desktop Layout */}
