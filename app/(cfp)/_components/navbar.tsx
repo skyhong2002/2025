@@ -4,7 +4,6 @@ import Link from "next/link";
 import Logo from "@/public/assets/logo_black.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { pre } from "framer-motion/client";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
