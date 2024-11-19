@@ -2,15 +2,30 @@ import Link from "next/link";
 import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
 import CodeOfConduct from "../../_components/code-of-conduct";
+import TableOfContent from "../_components/table-of-content";
 
 export default function Page() {
+  const sections = [
+    { id: "important-dates", title: "重要時程" },
+    { id: "session-types", title: "投稿說明" },
+    { id: "submission-topics", title: "投稿方式" },
+    { id: "review-process", title: "審稿方式" },
+    { id: "code-of-conduct", title: "Code of Conduct" },
+    { id: "poster-format", title: "海報格式範例" },
+    { id: "submission-guidelines", title: "投稿注意事項" },
+    { id: "license", title: "授權" },
+    { id: "practice-talk", title: "試講" },
+    { id: "rehearsal", title: "彩排" },
+    { id: "qa", title: "Q & A" },
+  ];
   return (
     <div className="bg-blue py-8 font-bold text-light-brown">
       <div className="mx-auto space-y-14">
-        <h1 className="text-h1-mobile md:text-h1">海報徵稿</h1>
-
+        <h1 className="text-h1-mobile font-extrabold md:text-h1">海報徵稿</h1>
+        <TableOfContent sections={sections} theme="red" />
         <div className="space-y-12 md:space-y-16">
           <Countdown />
+          <h2></h2>
           <Timeline />
 
           <section className="space-y-4">
