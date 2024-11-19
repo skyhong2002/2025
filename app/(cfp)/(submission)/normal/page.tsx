@@ -33,7 +33,9 @@ export default function Page() {
         id="important-dates"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-h2-mobile font-bold md:text-h2">重要時程</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          重要時程
+        </h2>
         <Timeline />
       </section>
 
@@ -41,7 +43,9 @@ export default function Page() {
         id="session-types"
         className="my-4 -mt-[80px] pt-[80px] md:mb-16"
       >
-        <h2 className="my-4 text-h2-mobile font-bold md:text-h2">議程種類</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          議程種類
+        </h2>
         <div className="mb-6 mt-4 grid grid-rows-2 gap-3 lg:grid-cols-2 lg:grid-rows-1">
           <div className="flex flex-col items-center rounded-lg border bg-white p-6 text-orange md:border-orange md:bg-light-brown">
             <Image priority src={PresentationIcon} alt="PRESENTATION" />
@@ -62,7 +66,7 @@ export default function Page() {
         </div>
       </section>
       <section id="submission-topics" className="-mt-[80px] pt-[80px] md:mb-16">
-        <h2 className="my-4 text-h2-mobile font-bold md:text-h2">
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
           投稿主題範例
         </h2>
         <p className="leading-10">
@@ -86,8 +90,12 @@ export default function Page() {
         </p>
       </section>
       <section id="submission-format" className="-mt-[80px] pt-[80px] md:mb-16">
-        <h2 className="my-8 text-h2-mobile font-bold md:text-h2">投稿方式</h2>
-        <h3 className="my-4 text-h3-mobile md:text-h3">稿件資訊</h3>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          投稿方式
+        </h2>
+        <h3 className="text-light-blue my-4 text-h3-mobile md:text-h3">
+          稿件資訊
+        </h3>
         <ul className="list-inside list-disc leading-10">
           <li>
             投稿類型
@@ -130,7 +138,9 @@ export default function Page() {
             Attachment：選填。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
           </li>
         </ul>
-        <h3 className="my-4 text-h3-mobile md:text-h3">個人資料</h3>
+        <h3 className="text-light-blue my-4 text-h3-mobile md:text-h3">
+          個人資料
+        </h3>
         <p>
           除了暱稱 /
           名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
@@ -154,7 +164,9 @@ export default function Page() {
         </ul>
       </section>
       <section id="review-process" className="-mt-[80px] pt-[80px] md:mb-16">
-        <h2 className="my-4 text-h2-mobile font-bold md:text-h2">審稿方式</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          審稿方式
+        </h2>
         <p className="leading-10">
           稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由 SITCON
           工作人員、業界人士及學界人士組成。

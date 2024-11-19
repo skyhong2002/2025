@@ -29,7 +29,9 @@ export default function Page() {
         id="important-dates"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-h2-mobile font-bold md:text-h2">重要時程</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          重要時程
+        </h2>
         <Timeline />
       </section>
 
@@ -37,7 +39,9 @@ export default function Page() {
         id="session-types"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">議程說明</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          議程說明
+        </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
           開放式議程分為 40 分鐘和 90
           分鐘兩種時長，該議程不限定進行方式，希望跳脫傳統議程框架，透過雙向互動、實作等，任何您想得到的非傳統形式進行此場議程。
@@ -47,7 +51,7 @@ export default function Page() {
         id="what-is-open-session"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
           什麼是開放式議程？
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
@@ -78,7 +82,9 @@ export default function Page() {
         id="submission-topics"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-h2-mobile font-bold md:text-h2">投稿方式</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          投稿方式
+        </h2>
         <div className="space-y-4">
           <h3 className="text-h3-mobile md:text-h3">稿件資訊</h3>
           <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
@@ -157,7 +163,9 @@ export default function Page() {
         id="review-process"
         className="my-4 -mt-[60px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">審稿方式</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          審稿方式
+        </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
           稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由 SITCON
           工作人員、業界人士及學界人士組成。

@@ -35,7 +35,7 @@ export default function CodeOfConduct() {
         id="code-of-conduct"
         className="my-4 -mt-[80px] space-y-4 pt-[80px]"
       >
-        <h2 className="my-4 text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
           CODE OF CONDUCT
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
@@ -56,7 +56,7 @@ export default function CodeOfConduct() {
         id="submission-guidelines"
         className="-mt-[80px] space-y-4 pt-[80px]"
       >
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
           投稿注意事項
         </h2>
         <div>
@@ -96,7 +96,9 @@ export default function CodeOfConduct() {
       </section>
 
       <section id="license" className="-mt-[80px] space-y-4 pt-[80px]">
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">授權</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          授權
+        </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
           投稿作者同意以{" "}
           <Link
@@ -111,7 +113,9 @@ export default function CodeOfConduct() {
       </section>
 
       <section id="practice-talk" className="-mt-[80px] space-y-4 pt-[80px]">
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">試講</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          試講
+        </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
           請以直版寬841 mm、高 1189 mm （A0 大小）規格製作為 pdf
           檔案，一篇投稿一面看板，請於收到錄取通知後依據郵件說明上傳最終版海報檔案，統一由大會進行印製與佈展。
@@ -121,7 +125,9 @@ export default function CodeOfConduct() {
       </section>
 
       <section id="rehearsal" className="-mt-[80px] space-y-4 pt-[80px]">
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">彩排</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          彩排
+        </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
           本屆 SITCON
           將在年會前一天提供入選講者彩排的機會。彩排能讓講者熟悉現場設備環境、攝影機位置，並且測試
@@ -136,7 +142,9 @@ export default function CodeOfConduct() {
       </section>
 
       <section id="qa" className="-mt-[80px] space-y-4 pt-[80px]">
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">Q&A</h2>
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          Q&A
+        </h2>
         {QA.map((qa, index) => (
           <div
             key={qa.title}
