@@ -85,7 +85,7 @@ export default function Page() {
           分鐘，挑戰最為濃縮與精華的議程，為與會者帶來短而精緻的知識洗禮。
         </p>
       </section>
-      <section id="review-process" className="-mt-[80px] pt-[80px] md:mb-16">
+      <section id="submission-format" className="-mt-[80px] pt-[80px] md:mb-16">
         <h2 className="my-8 text-h2-mobile font-bold md:text-h2">投稿方式</h2>
         <h3 className="my-4 text-h3-mobile md:text-h3">稿件資訊</h3>
         <ul className="list-inside list-disc leading-10">
@@ -153,7 +153,7 @@ export default function Page() {
           </li>
         </ul>
       </section>
-      <div className="md:mb-16">
+      <section id="review-process" className="-mt-[80px] pt-[80px] md:mb-16">
         <h2 className="my-4 text-h2-mobile font-bold md:text-h2">審稿方式</h2>
         <p className="leading-10">
           稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由 SITCON
@@ -170,7 +170,7 @@ export default function Page() {
             大多數的與會者。經我們評估比較熱門的議程，將安排在較大的演講廳。
           </li>
         </ul>
-      </div>
+      </section>
       <div>
         <CodeOfConduct />
       </div>
