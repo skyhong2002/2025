@@ -4,10 +4,25 @@ import Timeline from "../_components/timeline";
 import PresentationIcon from "../../_assets/presentation.svg";
 import EspressoIcon from "../../_assets/espresso.svg";
 import CodeOfConduct from "../../_components/code-of-conduct";
+import TableOfContent from "../_components/table-of-content";
 
 export default function Page() {
+  const sections = [
+    { id: "important-dates", title: "重要時程" },
+    { id: "session-types", title: "議程種類" },
+    { id: "submission-topics", title: "投稿主題範例" },
+    { id: "submission-format", title: "投稿格式" },
+    { id: "review-process", title: "審稿方式" },
+    { id: "code-of-conduct", title: "Code of Conduct" },
+    { id: "submission-guidelines", title: "投稿注意事項" },
+    { id: "license", title: "授權" },
+    { id: "practice-talk", title: "試講" },
+    { id: "rehearsal", title: "彩排" },
+    { id: "qa", title: "Q & A" },
+  ];
   return (
     <div className="text-normal-mobile md:text-normal">
+      <TableOfContent theme="red" sections={sections} />
       <h1 className="text-h1-mobile md:text-h1">一般議程徵稿</h1>
       <div className="hidden md:block">
         <Countdown />

@@ -2,7 +2,6 @@ export default function Timeline() {
   return (
     <>
       <div className="mx-auto hidden w-full md:block">
-        <h2 className="mb-2 text-h2">重要時程</h2>
         <div className="relative">
           <div className="absolute mb-8 h-8 w-full">
             <svg

@@ -1,8 +1,11 @@
 import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
 import CodeOfConduct from "../../_components/code-of-conduct";
+import TableOfContent from "../_components/table-of-content";
 
 export default function Page() {
+  const sections = [];
+
   return (
     <div className="bg-blue py-8 font-bold text-light-brown">
       <div className="mx-auto space-y-14">
