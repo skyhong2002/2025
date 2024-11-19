@@ -15,7 +15,7 @@ export default function TableOfContent({
   return (
     <>
       {/* pc & tablet */}
-      <nav className="md: absolute right-0 top-[80px] hidden w-min md:block">
+      <nav className="md: absolute right-0 top-[100px] hidden w-min md:block lg:w-[15%]">
         <h2 className="mb-3 font-medium text-light-brown">本頁目錄</h2>
         <div className="mb-3 h-[1px] bg-light-brown" />
         <ul>
@@ -36,7 +36,7 @@ export default function TableOfContent({
         </ul>
       </nav>
       {/* mobile */}
-      <nav className="relative mx-4 md:hidden">
+      <nav className="relative md:hidden">
         <div
           onClick={() => setShowDropdown((prev) => !prev)}
           className={`${theme === "light" ? "bg-gray" : "bg-light-brown"} flex h-[40px] items-center justify-between rounded-xl px-4`}
@@ -54,7 +54,9 @@ export default function TableOfContent({
         </div>
         {/* dropDown */}
         {showDropdown && (
-          <div className="absolute top-[40px] z-10 w-full rounded-lg bg-black p-2 shadow-lg">
+          <div
+            className={`absolute top-[40px] z-10 w-full rounded-lg ${theme === "light" ? "bg-gray" : "bg-light-brown"} p-2 shadow-lg`}
+          >
             {sections.map((section, index) => (
               <motion.div
                 key={section.id}
@@ -68,7 +70,7 @@ export default function TableOfContent({
               >
                 <Link
                   href={`#${section.id}`}
-                  className={`flex w-full justify-center rounded-lg bg-black p-0 py-4 text-gray transition duration-300 ${theme === "light" ? "hover:bg-gray hover:text-black" : "hover:bg-light-brown hover:text-red"} `}
+                  className={`flex w-full justify-center border-b p-0 py-4 transition duration-300 ${theme === "light" ? "bg-gray text-black" : "bg-light-brown text-red"}`}
                   onClick={() => setShowDropdown(false)}
                 >
                   <div className=" ">{section.title}</div>

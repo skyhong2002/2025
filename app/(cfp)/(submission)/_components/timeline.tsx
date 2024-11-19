@@ -2,7 +2,6 @@ export default function Timeline() {
   return (
     <>
       <div className="mx-auto hidden w-full md:block">
-        <h2 className="mb-2 text-h2">重要時程</h2>
         <div className="relative">
           <div className="absolute mb-8 h-8 w-full">
             <svg
@@ -91,12 +90,11 @@ export default function Timeline() {
       </div>
 
       <div className="mx-auto tracking-wider md:hidden">
-        <h2 className="mb-4 text-h2">重要時程</h2>
-        <div className="space-y-4 text-center text-xl">
+        <div className="space-y-4 text-xl">
           <p>2024 年 11 月 22 日：開始徵稿</p>
           <p>2025 年 1 月 21 日：投稿截止</p>
           <p>2025 年一月下旬：海報錄取通知</p>
-          <p>2025 年 2 月 16 日：錄取海報檔案上傳截止</p>
+          <p className="leading-9">2025 年 2 月 16 日：錄取海報檔案上傳截止</p>
           <p>2025 年 3 月 8 日：年會</p>
         </div>
       </div>

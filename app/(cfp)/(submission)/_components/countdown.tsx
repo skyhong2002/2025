@@ -55,7 +55,7 @@ export default function CountdownPage() {
   }
 
   return (
-    <div className="mx-auto flex h-[289px] w-full flex-col justify-between">
+    <div className="mx-auto hidden h-[289px] w-full flex-col justify-between md:flex">
       <div className="flex h-[200px] w-full flex-col items-center rounded-3xl border border-light-brown px-24 py-5">
         <h3 className="text-normal tracking-widest text-light-brown">
           距 離 投 稿 截 止 還 有 :
@@ -99,7 +99,7 @@ export default function CountdownPage() {
         <motion.div
           onHoverStart={() => setIsHovered(true)}
           onHoverEnd={() => setIsHovered(false)}
-          className="h-full w-[37%] rounded-2xl bg-light-brown"
+          className="h-full w-[40%] rounded-2xl bg-light-brown"
         >
           <Link
             className="flex h-full w-full items-center justify-center"

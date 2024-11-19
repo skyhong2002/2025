@@ -1,12 +1,44 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 export default function CodeOfConduct() {
+  const QA = [
+    {
+      title: "Q1. Placeholder",
+      answer: "A1. Placeholder",
+    },
+    {
+      title: "Q2. Placeholder",
+      answer: "A2. Placeholder",
+    },
+    {
+      title: "Q3. Placeholder",
+      answer: "A3. Placeholder",
+    },
+    {
+      title: "Q4. Placeholder",
+      answer: "A4. Placeholder",
+    },
+    {
+      title: "Q5. Placeholder",
+      answer: "A5. Placeholder",
+    },
+  ];
+  const [qaList, setQaList] = useState<Array<boolean>>(
+    Array(QA.length).fill(false),
+  ); //
+
   return (
     <div className="space-y-16">
-      <section className="space-y-4">
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">
+      <section
+        id="code-of-conduct"
+        className="my-4 -mt-[80px] space-y-4 pt-[80px]"
+      >
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
           CODE OF CONDUCT
         </h2>
-        <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
+        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
           SITCON
           歡迎不同身分、來自不同背景的與會者，我們鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快地參加
           SITCON，我們要求所有參與者閱讀年會的{" "}
@@ -20,12 +52,15 @@ export default function CodeOfConduct() {
         </p>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">
+      <section
+        id="submission-guidelines"
+        className="-mt-[80px] space-y-4 pt-[80px]"
+      >
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
           投稿注意事項
         </h2>
         <div>
-          <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+          <ul className="ml-2 text-normal-mobile font-normal leading-10 tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
             <li>
               除非內容明顯偏離講題、違反 CoC
               或不符事實，我們不會強制要求講者對演講內容進行修正。
@@ -53,16 +88,18 @@ export default function CodeOfConduct() {
               名字」欄位標示所有講者的稱呼，並在「演講大綱」詳細說明各個講者如何分配演講內容。稿件經接受者，無論講者人數，皆只提供一組可轉贈的入場票邀請碼、一份講者識別證與一份講者專屬迎賓禮，大會方保有最終發放之權力。未佩戴識別證的講者，僅能在自己的演講時，於該議程時段進入議程所在的會議廳。
             </li>
           </ul>
-          <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
+          <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
             若有任何問題或投稿建議，請來信 SITCON 議程組信箱
             session@sitcon.org。
           </p>
         </div>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">授權</h2>
-        <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
+      <section id="license" className="-mt-[80px] space-y-4 pt-[80px]">
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          授權
+        </h2>
+        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
           投稿作者同意以{" "}
           <Link
             href={"https://creativecommons.org/licenses/by/4.0/"}
@@ -75,9 +112,11 @@ export default function CodeOfConduct() {
         <div className="py-1" />
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">試講</h2>
-        <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
+      <section id="practice-talk" className="-mt-[80px] space-y-4 pt-[80px]">
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          試講
+        </h2>
+        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
           請以直版寬841 mm、高 1189 mm （A0 大小）規格製作為 pdf
           檔案，一篇投稿一面看板，請於收到錄取通知後依據郵件說明上傳最終版海報檔案，統一由大會進行印製與佈展。
           <br />
@@ -85,12 +124,61 @@ export default function CodeOfConduct() {
         </p>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-h2-mobile font-extrabold md:text-h2">Q&A</h2>
-        <div className="rounded-full bg-light-brown px-6 py-4 text-red">
-          Q1. Placeholder
-        </div>
-        {/* `Q${index}. ${Content}` */}
+      <section id="rehearsal" className="-mt-[80px] space-y-4 pt-[80px]">
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          彩排
+        </h2>
+        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+          本屆 SITCON
+          將在年會前一天提供入選講者彩排的機會。彩排能讓講者熟悉現場設備環境、攝影機位置，並且測試
+          Live Demo 情境。希望講者能夠共同參與彩排，一起使年會議程品質更加完美。
+          日期：2025 年 3 月 7 日（五）。
+          場地：使用場地與正式年會相同，細節將於稿件錄取後通知。 時間：一人約
+          5~10 分鐘。若有 Live Demo 或特殊需求，可提前與議程組安排時間。
+          流程：講者操作設備，測試 Live Demo
+          連結及切換方式，也可以演練部分簡報內容。
+          提供設備：與年會當天場地的設備相同，例如麥克風、倒數計時器等。
+        </p>
+      </section>
+
+      <section id="qa" className="-mt-[80px] space-y-4 pt-[80px]">
+        <h2 className="text-light-blue text-h2-mobile font-extrabold md:text-h2">
+          Q&A
+        </h2>
+        {QA.map((qa, index) => (
+          <div
+            key={qa.title}
+            className={`${qaList[index] ? "rounded-t-2xl" : "rounded-full"}`}
+          >
+            <div
+              onClick={() =>
+                setQaList((prev) =>
+                  prev.map((_, i) => (i === index ? !prev[i] : false)),
+                )
+              }
+              className={`${qaList[index] ? "rounded-t-2xl" : "rounded-full"} flex justify-between bg-light-brown px-6 py-4 text-black`}
+            >
+              <p>{qa.title}</p>
+              <span className={`material-symbols-outlined`}>
+                {qaList[index] ? "keyboard_arrow_up" : "keyboard_arrow_down"}
+              </span>
+            </div>
+            <AnimatePresence>
+              {qaList[index] && (
+                <motion.div
+                  key={qaList[index] ? "open" : "close"}
+                  initial={{ opacity: 0, y: -20 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className={`rounded-b-2xl bg-[#DDD8CB] px-6 py-4 text-black ${qaList[index] ? "block" : "hidden"}`}
+                >
+                  {qa.answer}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
       </section>
     </div>
   );
