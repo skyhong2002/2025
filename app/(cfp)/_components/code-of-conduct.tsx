@@ -1,5 +1,34 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 export default function CodeOfConduct() {
+  const QA = [
+    {
+      title: "Q1. Placeholder",
+      answer: "A1. Placeholder",
+    },
+    {
+      title: "Q2. Placeholder",
+      answer: "A2. Placeholder",
+    },
+    {
+      title: "Q3. Placeholder",
+      answer: "A3. Placeholder",
+    },
+    {
+      title: "Q4. Placeholder",
+      answer: "A4. Placeholder",
+    },
+    {
+      title: "Q5. Placeholder",
+      answer: "A5. Placeholder",
+    },
+  ];
+  const [qaList, setQaList] = useState<Array<boolean>>(
+    Array(QA.length).fill(false),
+  ); //
+
   return (
     <div className="space-y-16">
       <section className="space-y-4">
@@ -20,12 +49,12 @@ export default function CodeOfConduct() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section id="" className="space-y-4">
         <h2 className="text-h2-mobile font-extrabold md:text-h2">
           投稿注意事項
         </h2>
         <div>
-          <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+          <ul className="ml-2 text-normal-mobile font-normal leading-10 tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
             <li>
               除非內容明顯偏離講題、違反 CoC
               或不符事實，我們不會強制要求講者對演講內容進行修正。
@@ -85,12 +114,42 @@ export default function CodeOfConduct() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section id="qa" className="space-y-4">
         <h2 className="text-h2-mobile font-extrabold md:text-h2">Q&A</h2>
-        <div className="rounded-full bg-light-brown px-6 py-4 text-red">
-          Q1. Placeholder
-        </div>
-        {/* `Q${index}. ${Content}` */}
+        {QA.map((qa, index) => (
+          <div
+            key={qa.title}
+            className={`${qaList[index] ? "rounded-t-2xl" : "rounded-full"}`}
+          >
+            <div
+              onClick={() =>
+                setQaList((prev) =>
+                  prev.map((_, i) => (i === index ? !prev[i] : false)),
+                )
+              }
+              className={`${qaList[index] ? "rounded-t-2xl" : "rounded-full"} flex justify-between bg-light-brown px-6 py-4 text-red`}
+            >
+              <p>{qa.title}</p>
+              <span className={`material-symbols-outlined`}>
+                {qaList[index] ? "keyboard_arrow_up" : "keyboard_arrow_down"}
+              </span>
+            </div>
+            <AnimatePresence>
+              {qaList[index] && (
+                <motion.div
+                  key={qaList[index] ? "open" : "close"}
+                  initial={{ opacity: 0, y: -20 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className={`rounded-b-2xl bg-[#DDD8CB] px-6 py-4 text-black ${qaList[index] ? "block" : "hidden"}`}
+                >
+                  {qa.answer}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
       </section>
     </div>
   );
