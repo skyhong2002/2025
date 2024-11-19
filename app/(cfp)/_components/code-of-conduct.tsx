@@ -156,7 +156,7 @@ export default function CodeOfConduct() {
                   prev.map((_, i) => (i === index ? !prev[i] : false)),
                 )
               }
-              className={`${qaList[index] ? "rounded-t-2xl" : "rounded-full"} flex justify-between bg-light-brown px-6 py-4 text-red`}
+              className={`${qaList[index] ? "rounded-t-2xl" : "rounded-full"} flex justify-between bg-light-brown px-6 py-4 text-black`}
             >
               <p>{qa.title}</p>
               <span className={`material-symbols-outlined`}>
