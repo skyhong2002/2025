@@ -86,3 +86,14 @@ html {
   /* Support for IE. */
   font-feature-settings: "liga";
 }
+
+.hightlight {
+  color: #ff0000;
+  font-size: bold;
+}
+
+.subTitle {
+  /* text-lg font-extrabold */
+  font-size: 1.125rem;
+  font-weight: 800;
+}
