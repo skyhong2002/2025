@@ -3,6 +3,7 @@ import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
 import CodeOfConduct from "../../_components/code-of-conduct";
 import TableOfContent from "../_components/table-of-content";
+import FAQ from "../../_components/faq";
 
 export default function Page() {
   const sections = [
@@ -181,8 +182,24 @@ export default function Page() {
       </section>
 
       <CodeOfConduct />
-
-      {/* TODO: ADD FAQ HERE */}
+      <FAQ
+        QA={[
+          {
+            title: "是否一定要是學術研究的成果？",
+            answer:
+              "不用。本次投稿接受各類型的專案展示，包括學術研究及實務應用成果，歡迎學生分享各種形式的內容。",
+          },
+          {
+            title: "投稿主題是否有必要切合年會主題？",
+            answer:
+              "不用。審稿時僅會依照上文所述標準審查，不會因為呼應主題就拿到比較高分，或因為與主題無關就被扣分。",
+          },
+          {
+            title: "還有疑問怎麼辦？",
+            answer: "歡迎寄信至 session@sitcon.org 詢問，我們會儘速回應。",
+          },
+        ]}
+      />
     </div>
   );
 }
