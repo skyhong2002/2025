@@ -8,11 +8,11 @@ import { useState } from "react";
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const menuItems = [
-    { link: "/", label: "首頁" },
-    { link: "/theme", label: "年會主題" },
-    { link: "/normal", label: "一般議程徵稿" },
-    { link: "/undefined", label: "開放式議程徵稿" },
-    { link: "/poster", label: "海報徵稿" },
+    { link: "/cfp/", label: "首頁" },
+    { link: "/cfp/theme", label: "年會主題" },
+    { link: "/cfp/normal", label: "一般議程徵稿" },
+    { link: "/cfp/undefined", label: "開放式議程徵稿" },
+    { link: "/cfp/poster", label: "海報徵稿" },
   ];
   return (
     <nav className="sticky left-0 right-0 top-0 z-20 flex justify-center bg-blue">
