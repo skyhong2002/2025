@@ -76,7 +76,7 @@ export default function Home() {
             <p className="hidden text-h3-mobile max-[1024px]:block">
               距離海報投稿截止還有
             </p>
-            <div className="flex flex-row rounded-[11px] bg-[#FFFFFF] px-[9px] py-[2px] max-[1024px]:bg-inherit max-sm:w-[80%] max-sm:justify-center max-sm:rounded-[208px] max-sm:border-2 max-sm:border-black max-sm:p-3">
+            <div className="flex flex-row rounded-[11px] bg-[#FFFFFF] px-[14px] py-[8px] max-[1024px]:bg-inherit max-sm:w-[80%] max-sm:justify-center max-sm:rounded-[208px] max-sm:border-2 max-sm:border-black max-sm:p-3">
               {Object.entries(timeLeft).map(([key, value]) => (
                 <div key={key}>
                   <div className="flex flex-row items-center justify-center">
@@ -215,7 +215,7 @@ export default function Home() {
 
 function CloseTouchSection() {
   return (
-    <div className="bg-light-brown p-8 max-[1024px]:bg-white max-sm:bg-[url('/2025/cfp/stats/3.png')] max-sm:bg-center max-sm:bg-cover sm:relative sm:col-span-2 sm:rounded-[32px] sm:border-2 sm:border-blue sm:p-6">
+    <div className="bg-light-brown p-8 max-[1024px]:bg-white max-sm:bg-[url('/2025/cfp/stats/3.png')] max-sm:bg-cover max-sm:bg-center sm:relative sm:col-span-2 sm:rounded-[32px] sm:border-2 sm:border-blue sm:p-6">
       <h1 className="text-[26px] font-semibold tracking-widest text-black max-[1024px]:text-blue max-sm:text-[#FFFFFF] min-[1024px]:text-h2">
         此外，我們也樂見企業與學生的近距離交流，成為我們的合作夥伴您可以：
       </h1>
@@ -236,7 +236,7 @@ function From2013() {
   return (
     <>
       {/* Phone Layout */}
-      <div className="bg-gray p-8 sm:hidden bg-[url('/2025/cfp/about/1.png')] bg-center bg-cover">
+      <div className="bg-gray bg-[url('/2025/cfp/about/1.png')] bg-cover bg-center p-8 sm:hidden">
         <h1 className="text-[26px] font-semibold tracking-[2px] text-[#FFFFFF]">
           自 2013 以來，我們帶領了無數學子進入資訊的殿堂，更做到：
         </h1>
