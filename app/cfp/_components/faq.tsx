@@ -60,7 +60,7 @@ export default function FAQ({ QA }: { QA: QA[] }) {
                 animate={{
                   opacity: 1,
                   // y: 0,
-                  maxHeight: "100px",
+                  maxHeight: "400px",
                   paddingTop: "1rem",
                   paddingBottom: "1rem",
                   borderBottomRightRadius: "1rem",
