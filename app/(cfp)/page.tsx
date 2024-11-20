@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import mainThemeImage from "@/public/cfp/theme/main.jpg";
 
 type TimeLeft = {
   days: number;
@@ -53,9 +54,9 @@ export default function Home() {
   return (
     <>
       <div
-        className="relative h-[calc(100svh-64px)] min-h-[600px] bg-white bg-cover bg-[left_20%_center] max-[820px]:bg-gray lg:bg-center"
+        className="relative h-[calc(100svh-64px)] min-h-[600px] bg-black bg-cover bg-[left_20%_center] max-[820px]:bg-gray lg:bg-center"
         style={{
-          backgroundImage: `url('')`,
+          backgroundImage: `url('${mainThemeImage.src}')`,
         }}
       >
         <div className="absolute bottom-14 flex w-full flex-col gap-4">
@@ -73,7 +74,7 @@ export default function Home() {
                 <p>中央研究院人文社會科學館</p>
               </div>
             </div>
-            <div className="flex flex-row max-sm:w-[80%] max-sm:justify-center max-sm:rounded-[208px] max-sm:border-2 max-sm:border-black max-sm:p-3">
+            <div className="flex flex-row rounded-md bg-black p-3 text-[#FFF] max-sm:w-[80%] max-sm:justify-center max-sm:rounded-[208px] max-sm:border-2 max-sm:border-black max-sm:p-3">
               {Object.entries(timeLeft).map(([key, value]) => (
                 <div key={key}>
                   <div className="flex flex-row items-center justify-center">
@@ -134,7 +135,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center bg-black">
         <div className="relative max-w-[1120px] gap-9 bg-black bg-cover bg-[left_20%_center] px-10 max-[820px]:px-6 max-sm:grid-cols-none max-sm:bg-blue max-sm:text-center lg:bg-center">
           <div className="flex">
             <div className="py-32">
@@ -154,7 +155,7 @@ export default function Home() {
                   style={{ backgroundImage: `url('/2025/cfp/about/1.png')` }}
                 ></div>
               </div>
-              <div className="pt-8 grid grid-cols-2 gap-14">
+              <div className="grid grid-cols-2 gap-14 pt-8">
                 <div>
                   <h1 className="text-h1 font-extrabold tracking-widest text-light-blue max-[820px]:text-black max-sm:text-h1-mobile max-sm:font-semibold">
                     參與討論
@@ -318,7 +319,7 @@ function PhoneLayout() {
 
 function TabletLayout() {
   return (
-    <div className="relative grid max-w-[1120px] grid-rows-2 gap-4 bg-light-brown bg-cover bg-[left_20%_center] px-10 max-sm:hidden min-[820px]:hidden lg:bg-center">
+    <div className="relative grid max-w-[1120px] grid-rows-2 gap-4 bg-cover bg-[left_20%_center] px-10 max-sm:hidden min-[820px]:hidden lg:bg-center">
       <div className="row-span-1 grid h-auto grid-cols-2 gap-4">
         <div className="col-span-1 rounded-[32px] border-2 border-blue bg-white p-6">
           <h1 className="text-h1 font-black tracking-[2px] text-blue">
@@ -372,7 +373,7 @@ function TabletLayout() {
 
 function DesktopLayout() {
   return (
-    <div className="relative grid max-w-[1120px] grid-cols-3 gap-4 bg-light-brown bg-cover bg-[left_20%_center] px-10 max-[820px]:hidden lg:bg-center">
+    <div className="relative grid max-w-[1120px] grid-cols-3 gap-4 bg-cover bg-[left_20%_center] px-10 max-[820px]:hidden lg:bg-center">
       <div className="col-span-1 h-auto">
         <div className="rounded-[32px] border-2 border-blue bg-white p-6">
           <h1 className="text-h1 font-black tracking-[2px] text-blue">
