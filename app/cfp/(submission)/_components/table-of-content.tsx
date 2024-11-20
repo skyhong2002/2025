@@ -15,7 +15,7 @@ export default function TableOfContent({
   return (
     <>
       {/* pc & tablet */}
-      <nav className="md: absolute right-0 top-[100px] hidden w-min md:block lg:w-[15%]">
+      <nav className="md: fixed right-0 top-[100px] hidden w-min md:block lg:w-[15%]">
         <h2 className="mb-3 font-extrabold text-light-brown">本頁目錄</h2>
         <div className="mb-3 h-[1px] bg-light-brown" />
         <ul>
