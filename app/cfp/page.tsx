@@ -74,7 +74,7 @@ export default function Home() {
               </div>
             </div>
             <p className="hidden text-h3-mobile max-[1024px]:block">
-              距離投稿截止還有
+              距離海報投稿截止還有
             </p>
             <div className="flex flex-row rounded-[11px] bg-[#FFFFFF] px-[9px] py-[2px] max-[1024px]:bg-inherit max-sm:w-[80%] max-sm:justify-center max-sm:rounded-[208px] max-sm:border-2 max-sm:border-black max-sm:p-3">
               {Object.entries(timeLeft).map(([key, value]) => (
@@ -122,7 +122,7 @@ export default function Home() {
           </div>
           <div className="flex flex-row justify-center gap-5 max-sm:grid max-sm:grid-cols-2 max-sm:px-4">
             <Link
-              href="#"
+              href="/cfp/poster"
               className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:text-[18px] max-[1024px]:font-semibold max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
             >
               前往投稿
@@ -152,7 +152,7 @@ export default function Home() {
                   <h1 className="text-h1 font-extrabold tracking-widest text-light-blue max-sm:text-h1-mobile max-sm:font-semibold max-sm:text-white">
                     關於 SITCON
                   </h1>
-                  <p className="text-justify text-normal leading-8 text-white max-sm:leading-9">
+                  <p className="text-justify text-normal leading-8 text-white">
                     學生計算機年會（Students’ Information Technology
                     Conference）自 2013
                     年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。
@@ -168,7 +168,7 @@ export default function Home() {
                   <h1 className="text-h1 font-extrabold tracking-widest text-light-blue max-sm:text-h1-mobile max-sm:font-semibold max-sm:text-white">
                     參與討論
                   </h1>
-                  <p className="text-justify text-normal leading-8 text-white max-sm:leading-9">
+                  <p className="text-justify text-normal leading-8 text-white">
                     SITCON
                     是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱
                     SITCON 的郵件論壇並貢獻你的想法！
@@ -215,11 +215,11 @@ export default function Home() {
 
 function CloseTouchSection() {
   return (
-    <div className="bg-light-brown p-8 max-[1024px]:bg-white max-sm:bg-gray sm:relative sm:col-span-2 sm:rounded-[32px] sm:border-2 sm:border-blue sm:p-6">
-      <h1 className="text-[26px] font-semibold tracking-widest text-black max-[1024px]:text-blue max-sm:text-black min-[1024px]:text-h2">
+    <div className="bg-light-brown p-8 max-[1024px]:bg-white max-sm:bg-[url('/2025/cfp/stats/3.png')] max-sm:bg-center max-sm:bg-cover sm:relative sm:col-span-2 sm:rounded-[32px] sm:border-2 sm:border-blue sm:p-6">
+      <h1 className="text-[26px] font-semibold tracking-widest text-black max-[1024px]:text-blue max-sm:text-[#FFFFFF] min-[1024px]:text-h2">
         此外，我們也樂見企業與學生的近距離交流，成為我們的合作夥伴您可以：
       </h1>
-      <p className="pt-5 text-justify text-normal-mobile font-semibold leading-8 text-black max-[1024px]:text-blue max-sm:text-black sm:absolute sm:bottom-6 sm:left-6 sm:pt-0 sm:text-normal sm:font-normal sm:tracking-wider">
+      <p className="pt-5 text-justify text-normal-mobile font-semibold leading-8 text-black max-[1024px]:text-blue max-sm:text-[#FFFFFF] sm:absolute sm:bottom-6 sm:left-6 sm:pt-0 sm:text-normal sm:font-normal sm:tracking-wider">
         {">"} 接觸學生資訊人才
         <br />
         {">"} 提升品牌影響力
@@ -236,11 +236,11 @@ function From2013() {
   return (
     <>
       {/* Phone Layout */}
-      <div className="bg-gray p-8 sm:hidden">
-        <h1 className="text-[26px] font-semibold tracking-[2px] text-black">
+      <div className="bg-gray p-8 sm:hidden bg-[url('/2025/cfp/about/1.png')] bg-center bg-cover">
+        <h1 className="text-[26px] font-semibold tracking-[2px] text-[#FFFFFF]">
           自 2013 以來，我們帶領了無數學子進入資訊的殿堂，更做到：
         </h1>
-        <p className="pt-5 text-justify text-normal-mobile font-semibold leading-8 text-black">
+        <p className="pt-5 text-justify text-normal-mobile font-semibold leading-8 text-[#FFFFFF]">
           {">"} 累積逾 11,000 名與會者
           <br />
           {">"} 超過 400 位學生講者
@@ -288,14 +288,14 @@ function From2013() {
 
 function PhoneLayout() {
   return (
-    <div className="relative flex flex-col gap-4 bg-blue bg-cover bg-[left_20%_center] px-10 pb-6 sm:hidden lg:bg-center">
-      <h1 className="text-center text-h1-mobile font-semibold text-black">
+    <div className="relative flex flex-col gap-4 bg-black bg-cover bg-[left_20%_center] px-10 pb-6 sm:hidden lg:bg-center">
+      <h1 className="text-center text-h1-mobile font-semibold text-white">
         支持我們
       </h1>
       <From2013 />
       <CloseTouchSection />
       <div className="bg-gray p-8">
-        <p className="text-justify text-normal-mobile font-normal leading-6 text-black">
+        <p className="text-justify text-normal-mobile font-normal leading-8 text-black">
           SITCON
           秉持著不向與會者收費的原則，十年以來致力於推廣學生資訊教育，創造學生交流、教學互長的機會。
           <br />
@@ -307,7 +307,7 @@ function PhoneLayout() {
           若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用
           contact@sitcon.org 聯絡我們，商討更多的合作方式！
         </p>
-        <div className="flex-row pt-8">
+        <div className="flex-row pt-16">
           <a
             href="https://sitcon.org/donate"
             className="flex items-center justify-end text-[40px] font-bold text-black"
@@ -340,7 +340,7 @@ function TabletLayout() {
           <h1 className="text-h1 font-black tracking-[2px] text-blue">
             支持我們
           </h1>
-          <p className="text-justify text-normal leading-7 text-blue">
+          <p className="text-justify text-normal leading-8 text-blue">
             SITCON
             秉持著不向與會者收費的原則，十年以來致力於推廣學生資訊教育，創造學生交流、教學互長的機會。
             <br />
@@ -400,7 +400,7 @@ function DesktopLayout() {
           <h1 className="text-h1 font-black tracking-wider text-black">
             支持我們
           </h1>
-          <p className="pt-4 text-justify text-normal leading-7 text-black">
+          <p className="pt-4 text-justify text-normal leading-8 text-black">
             SITCON
             秉持著不向與會者收費的原則，十年以來致力於推廣學生資訊教育，創造學生交流、教學互長的機會。
             <br />
