@@ -103,13 +103,13 @@ export default function Home() {
                           filter: "blur(0.1em)",
                           transformOrigin: "bottom",
                         }}
-                        className="text-5xl text-black max-[1024px]:text-6xl max-sm:text-5xl"
+                        className="text-5xl text-black max-[1024px]:text-6xl max-sm:text-4xl max-sm:text-5xl"
                       >
                         {formatToTwoDigits(value)}
                       </motion.span>
                     </AnimatePresence>
                     {key != "seconds" ? (
-                      <span className="px-1 text-3xl text-black max-[1024px]:text-4xl">
+                      <span className="px-1 text-3xl text-black max-[1024px]:text-4xl max-sm:text-h2-mobile">
                         :
                       </span>
                     ) : (
@@ -123,19 +123,19 @@ export default function Home() {
           <div className="flex flex-row justify-center gap-5 max-sm:grid max-sm:grid-cols-2 max-sm:px-4">
             <Link
               href="/cfp/poster"
-              className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:text-[18px] max-[1024px]:font-semibold max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
+              className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:text-[18px] max-[1024px]:font-semibold max-sm:w-full max-sm:px-3 max-sm:py-2 max-sm:text-h2-mobile"
             >
               前往投稿
             </Link>
             <Link
               href="/cfp/deadline.ics"
-              className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:hidden max-[1024px]:text-[18px] max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
+              className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:hidden max-[1024px]:text-[18px] max-sm:w-full max-sm:py-2"
             >
               把 Deadline 加入行事曆
             </Link>
             <Link
               href="#"
-              className="hidden w-auto justify-center rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:flex max-[1024px]:text-[18px] max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
+              className="hidden w-auto justify-center rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:flex max-[1024px]:text-[18px] max-sm:w-full max-sm:px-3 max-sm:py-2 max-sm:text-h2-mobile"
             >
               加入行事曆
             </Link>
