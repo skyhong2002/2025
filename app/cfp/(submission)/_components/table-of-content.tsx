@@ -27,7 +27,7 @@ export default function TableOfContent({
             >
               <li
                 key={section.id}
-                className="mb-3 mr-3 h-[30px] text-nowrap font-bold text-light-brown"
+                className="mb-1 mr-3 h-[30px] text-nowrap font-bold text-light-brown"
               >
                 {section.title}
               </li>
