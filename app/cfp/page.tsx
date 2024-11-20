@@ -128,7 +128,7 @@ export default function Home() {
               前往投稿
             </Link>
             <Link
-              href="#"
+              href="/cfp/deadline.ics"
               className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:hidden max-[1024px]:text-[18px] max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
             >
               把 Deadline 加入行事曆
