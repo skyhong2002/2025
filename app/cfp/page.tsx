@@ -13,11 +13,14 @@ type TimeLeft = {
 
 export default function Home() {
   const TARGET_DATE = "2025-01-21T23:59:59"; // 可以動態設置
+  const now = new Date();
+  const target = new Date(TARGET_DATE);
+  const difference = target.getTime() - now.getTime();
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((difference / (1000 * 60)) % 60),
+    seconds: Math.floor((difference / 1000) % 60),
   });
 
   // 客戶端倒數計時邏輯
@@ -53,19 +56,27 @@ export default function Home() {
   return (
     <>
       <div
-        className="relative h-[calc(100svh-64px)] min-h-[600px] bg-white bg-cover bg-[left_20%_center] max-[820px]:bg-gray lg:bg-center"
-        style={{
-          backgroundImage: `url('')`,
-        }}
+        className={`relative h-[calc(100svh-64px)] min-h-[600px] bg-white bg-[url('/2025/cfp/theme/hero.png')] bg-cover bg-[left_20%_center] max-[1024px]:bg-gray max-[1024px]:bg-none lg:bg-center`}
       >
-        <div className="absolute bottom-14 flex w-full flex-col gap-4">
+        <div className="absolute bottom-[64px] flex w-full flex-col gap-4">
           <div className="flex flex-col items-center justify-center">
-            <div>
-              <p className="text-normal max-[820px]:text-h3 max-sm:text-[22px]">
-                距離海報投稿截止還有
-              </p>
+            <div className="flex flex-row gap-3 pb-3 max-[1024px]:hidden">
+              <div className="rounded-[11px] bg-blue px-[10px] py-[4px] text-[48px] font-semibold text-[#FFFFFF]">
+                <p>稿件徵求中</p>
+              </div>
             </div>
-            <div className="flex flex-row max-sm:w-[80%] max-sm:justify-center max-sm:rounded-[208px] max-sm:border-2 max-sm:border-black max-sm:p-3">
+            <div className="flex flex-row gap-3 pb-5 max-[1024px]:hidden">
+              <div className="rounded-[11px] bg-black px-[9px] py-[2px] text-h3 text-[#FFFFFF]">
+                <p>2025 / 03 / 08</p>
+              </div>
+              <div className="rounded-[11px] bg-black px-[9px] py-[2px] text-h3 text-[#FFFFFF]">
+                <p>中央研究院人文社會科學館</p>
+              </div>
+            </div>
+            <p className="hidden text-h3-mobile max-[1024px]:block">
+              距離海報投稿截止還有
+            </p>
+            <div className="flex flex-row rounded-[11px] bg-[#FFFFFF] px-[14px] py-[8px] max-[1024px]:bg-inherit max-sm:w-[80%] max-sm:justify-center max-sm:rounded-[208px] max-sm:border-2 max-sm:border-black max-sm:p-3">
               {Object.entries(timeLeft).map(([key, value]) => (
                 <div key={key}>
                   <div className="flex flex-row items-center justify-center">
@@ -92,13 +103,13 @@ export default function Home() {
                           filter: "blur(0.1em)",
                           transformOrigin: "bottom",
                         }}
-                        className="text-5xl max-[820px]:text-6xl max-sm:text-5xl"
+                        className="text-5xl text-black max-[1024px]:text-6xl max-sm:text-5xl"
                       >
                         {formatToTwoDigits(value)}
                       </motion.span>
                     </AnimatePresence>
                     {key != "seconds" ? (
-                      <span className="px-1 text-3xl max-[820px]:text-4xl">
+                      <span className="px-1 text-3xl text-black max-[1024px]:text-4xl">
                         :
                       </span>
                     ) : (
@@ -111,14 +122,20 @@ export default function Home() {
           </div>
           <div className="flex flex-row justify-center gap-5 max-sm:grid max-sm:grid-cols-2 max-sm:px-4">
             <Link
-              href="#"
-              className="w-[140px] rounded-[50px] bg-[#FFFFFF] py-1 text-center max-[820px]:text-[18px] max-[820px]:font-semibold max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
+              href="/cfp/poster"
+              className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:text-[18px] max-[1024px]:font-semibold max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
             >
               前往投稿
             </Link>
             <Link
+              href="/cfp/deadline.ics"
+              className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:hidden max-[1024px]:text-[18px] max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
+            >
+              把 Deadline 加入行事曆
+            </Link>
+            <Link
               href="#"
-              className="w-[140px] rounded-[50px] bg-[#FFFFFF] py-1 text-center max-[820px]:text-[18px] max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
+              className="hidden w-auto justify-center rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:flex max-[1024px]:text-[18px] max-sm:w-full max-sm:py-2 max-sm:text-h2-mobile"
             >
               加入行事曆
             </Link>
@@ -126,50 +143,61 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center">
-        <div className="relative grid max-w-[1120px] grid-cols-2 bg-light-brown bg-cover bg-[left_20%_center] px-10 max-[820px]:px-6 max-sm:grid-cols-none max-sm:bg-blue max-sm:text-center lg:bg-center">
+      <div className="flex flex-col items-center justify-center bg-black">
+        <div className="relative max-w-[1120px] gap-9 bg-black bg-cover bg-[left_20%_center] px-10 max-[1024px]:px-6 max-sm:grid-cols-none max-sm:text-center lg:bg-center">
           <div className="flex">
-            <div className="gap-24 py-32">
-              <div>
-                <h1 className="text-h1 font-black tracking-[2px] text-blue max-[820px]:text-black max-sm:text-h1-mobile max-sm:font-semibold">
-                  關於 SITCON
-                </h1>
-                <p className="text-justify text-normal leading-7 text-blue max-sm:leading-9 max-sm:text-black">
-                  學生計算機年會（Students’ Information Technology
-                  Conference）自 2013
-                  年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。
-                </p>
+            <div className="py-32">
+              <div className="gap-14 sm:grid sm:grid-cols-2">
+                <div>
+                  <h1 className="text-h1 font-extrabold tracking-widest text-light-blue max-sm:text-h1-mobile max-sm:font-semibold max-sm:text-white">
+                    關於 SITCON
+                  </h1>
+                  <p className="text-justify text-normal leading-8 text-white">
+                    學生計算機年會（Students’ Information Technology
+                    Conference）自 2013
+                    年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。
+                  </p>
+                </div>
+                <div
+                  className="h-full rounded-[32px] bg-cover bg-center bg-no-repeat p-6 max-[1024px]:rounded-none max-[1024px]:bg-contain max-[1024px]:bg-bottom max-[1024px]:p-0 max-sm:hidden"
+                  style={{ backgroundImage: `url('/2025/cfp/about/1.png')` }}
+                ></div>
               </div>
-              <div>
-                <h1 className="pt-16 text-h1 font-black tracking-[2px] text-blue max-[820px]:text-black max-sm:text-h1-mobile max-sm:font-semibold">
-                  參與討論
-                </h1>
-                <p className="text-justify text-normal leading-7 text-blue max-sm:leading-9 max-sm:text-black">
-                  SITCON
-                  是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱
-                  SITCON 的郵件論壇並貢獻你的想法！
-                  <br />
-                  <br /> 若你想進一步了解過往討論的內容，也歡迎到 GitLab 上查看
-                  SITCON 2024 的籌備歷程。
-                </p>
-              </div>
-              <div className="flex gap-4 pt-14 max-[820px]:grid max-[820px]:grid-cols-3 max-[820px]:gap-5 max-sm:grid-cols-2">
-                <Link
-                  href="https://groups.google.com/g/sitcon-general/"
-                  className="w-[140px] rounded-[50px] bg-gray py-3 text-center font-bold max-[820px]:col-span-2 max-[820px]:w-auto max-[820px]:rounded-lg max-[820px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
-                >
-                  訂閱郵件論壇
-                </Link>
-                <Link
-                  href="https://gitlab.com/sitcon-tw/2024/board"
-                  className="w-[140px] rounded-[50px] bg-gray py-3 text-center font-bold max-[820px]:col-span-1 max-[820px]:w-auto max-[820px]:rounded-lg max-[820px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
-                >
-                  查看 GitLab
-                </Link>
+              <div className="gap-14 pt-8 max-sm:pt-16 sm:grid sm:grid-cols-2">
+                <div>
+                  <h1 className="text-h1 font-extrabold tracking-widest text-light-blue max-sm:text-h1-mobile max-sm:font-semibold max-sm:text-white">
+                    參與討論
+                  </h1>
+                  <p className="text-justify text-normal leading-8 text-white">
+                    SITCON
+                    是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱
+                    SITCON 的郵件論壇並貢獻你的想法！
+                    <br />
+                    <br /> 若你想進一步了解過往討論的內容，也歡迎到 GitLab
+                    上查看 SITCON 2024 的籌備歷程。
+                  </p>
+                  <div className="flex gap-6 pt-14 max-[1024px]:grid max-[1024px]:grid-cols-8 max-[1024px]:gap-5 max-sm:grid-cols-2">
+                    <Link
+                      href="https://groups.google.com/g/sitcon-general/"
+                      className="w-[140px] rounded-[50px] bg-gray py-3 text-center font-bold max-[1024px]:col-span-5 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
+                    >
+                      訂閱郵件論壇
+                    </Link>
+                    <Link
+                      href="https://gitlab.com/sitcon-tw/2024/board"
+                      className="w-[140px] rounded-[50px] bg-gray py-3 text-center font-bold max-[1024px]:col-span-3 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
+                    >
+                      查看 GitLab
+                    </Link>
+                  </div>
+                </div>
+                <div
+                  className="h-full rounded-[32px] bg-cover bg-center bg-no-repeat p-6 max-[1024px]:rounded-none max-[1024px]:bg-contain max-[1024px]:bg-top max-[1024px]:p-0 max-sm:hidden"
+                  style={{ backgroundImage: `url('/2025/cfp/about/2.png')` }}
+                ></div>
               </div>
             </div>
           </div>
-          <div className="flex"></div>
         </div>
 
         {/* Desktop Layout */}
@@ -181,19 +209,17 @@ export default function Home() {
         {/* Phone Layout */}
         <PhoneLayout />
       </div>
-
-      <div className="pb-12"></div>
     </>
   );
 }
 
 function CloseTouchSection() {
   return (
-    <div className="bg-gray p-8 sm:relative sm:col-span-2 sm:rounded-[32px] sm:border-2 sm:border-blue sm:bg-white sm:p-6">
-      <h1 className="text-[26px] font-semibold tracking-[2px] text-black sm:text-blue min-[820px]:text-h2">
+    <div className="bg-light-brown p-8 max-[1024px]:bg-white max-sm:bg-[url('/2025/cfp/stats/3.png')] max-sm:bg-cover max-sm:bg-center sm:relative sm:col-span-2 sm:rounded-[32px] sm:border-2 sm:border-blue sm:p-6">
+      <h1 className="text-[26px] font-semibold tracking-widest text-black max-[1024px]:text-blue max-sm:text-[#FFFFFF] min-[1024px]:text-h2">
         此外，我們也樂見企業與學生的近距離交流，成為我們的合作夥伴您可以：
       </h1>
-      <p className="pt-5 text-justify text-normal-mobile font-semibold leading-8 text-black sm:absolute sm:bottom-6 sm:left-6 sm:pt-0 sm:text-normal sm:font-normal sm:text-blue">
+      <p className="pt-5 text-justify text-normal-mobile font-semibold leading-8 text-black max-[1024px]:text-blue max-sm:text-[#FFFFFF] sm:absolute sm:bottom-6 sm:left-6 sm:pt-0 sm:text-normal sm:font-normal sm:tracking-wider">
         {">"} 接觸學生資訊人才
         <br />
         {">"} 提升品牌影響力
@@ -209,11 +235,12 @@ function CloseTouchSection() {
 function From2013() {
   return (
     <>
-      <div className="bg-gray p-8 sm:hidden">
-        <h1 className="text-[26px] font-semibold tracking-[2px] text-black">
+      {/* Phone Layout */}
+      <div className="bg-gray bg-[url('/2025/cfp/about/1.png')] bg-cover bg-center p-8 sm:hidden">
+        <h1 className="text-[26px] font-semibold tracking-[2px] text-[#FFFFFF]">
           自 2013 以來，我們帶領了無數學子進入資訊的殿堂，更做到：
         </h1>
-        <p className="pt-5 text-justify text-normal-mobile font-semibold leading-8 text-black">
+        <p className="pt-5 text-justify text-normal-mobile font-semibold leading-8 text-[#FFFFFF]">
           {">"} 累積逾 11,000 名與會者
           <br />
           {">"} 超過 400 位學生講者
@@ -224,11 +251,12 @@ function From2013() {
         </p>
       </div>
 
-      <div className="relative col-span-2 rounded-[32px] border-2 border-blue bg-white p-6 max-[820px]:hidden">
-        <h1 className="text-h2 font-semibold tracking-[2px] text-blue">
+      {/* Desktop Layout */}
+      <div className="relative col-span-2 rounded-[32px] border-2 border-blue bg-light-brown p-6 max-[1024px]:hidden">
+        <h1 className="text-h2 font-semibold tracking-widest text-black">
           自 2013 以來，我們帶領了無數學子進入資訊的殿堂，更做到：
         </h1>
-        <p className="absolute bottom-6 left-6 text-justify text-normal leading-8 text-blue">
+        <p className="absolute bottom-6 left-6 text-justify text-normal leading-8 tracking-wider text-black">
           {">"} 累積逾 11,000 名與會者
           <br />
           {">"} 超過 400 位學生講者
@@ -239,7 +267,8 @@ function From2013() {
         </p>
       </div>
 
-      <div className="relative col-span-2 rounded-[32px] border-2 border-blue bg-white p-6 max-sm:hidden min-[820px]:hidden">
+      {/* Tablet Layout */}
+      <div className="relative col-span-2 rounded-[32px] border-2 border-blue bg-white p-6 max-sm:hidden min-[1024px]:hidden">
         <h1 className="text-[26px] font-semibold tracking-[2px] text-blue">
           自 2013 以來，我們帶領了無數學子進入資訊的殿堂，更做到：
         </h1>
@@ -259,14 +288,14 @@ function From2013() {
 
 function PhoneLayout() {
   return (
-    <div className="relative flex flex-col gap-4 bg-blue bg-cover bg-[left_20%_center] px-10 pb-6 sm:hidden lg:bg-center">
-      <h1 className="text-center text-h1-mobile font-semibold text-black">
+    <div className="relative flex flex-col gap-4 bg-black bg-cover bg-[left_20%_center] px-10 pb-6 sm:hidden lg:bg-center">
+      <h1 className="text-center text-h1-mobile font-semibold text-white">
         支持我們
       </h1>
       <From2013 />
       <CloseTouchSection />
       <div className="bg-gray p-8">
-        <p className="text-justify text-normal-mobile font-normal leading-6 text-black">
+        <p className="text-justify text-normal-mobile font-normal leading-8 text-black">
           SITCON
           秉持著不向與會者收費的原則，十年以來致力於推廣學生資訊教育，創造學生交流、教學互長的機會。
           <br />
@@ -278,14 +307,20 @@ function PhoneLayout() {
           若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用
           contact@sitcon.org 聯絡我們，商討更多的合作方式！
         </p>
-        <div className="flex-row pt-8">
-          <a className="flex items-center justify-end text-[40px] font-bold text-black">
+        <div className="flex-row pt-16">
+          <a
+            href="https://sitcon.org/donate"
+            className="flex items-center justify-end text-[40px] font-bold text-black"
+          >
             我要贊助
             <span className="material-icons" style={{ fontSize: "44px" }}>
               north_east
             </span>
           </a>
-          <a className="flex items-center justify-end text-[32px] font-bold text-black">
+          <a
+            href="https://i.sitcon.org/2025cfs-form"
+            className="flex items-center justify-end text-[32px] font-bold text-black"
+          >
             索取贊助徵求書
             <span className="material-icons" style={{ fontSize: "44px" }}>
               north_east
@@ -299,13 +334,13 @@ function PhoneLayout() {
 
 function TabletLayout() {
   return (
-    <div className="relative grid max-w-[1120px] grid-rows-2 gap-4 bg-light-brown bg-cover bg-[left_20%_center] px-10 max-sm:hidden min-[820px]:hidden lg:bg-center">
+    <div className="relative grid max-w-[1120px] grid-rows-2 gap-4 bg-black bg-cover bg-[left_20%_center] px-10 max-sm:hidden lg:bg-center min-[1024px]:hidden">
       <div className="row-span-1 grid h-auto grid-cols-2 gap-4">
         <div className="col-span-1 rounded-[32px] border-2 border-blue bg-white p-6">
           <h1 className="text-h1 font-black tracking-[2px] text-blue">
             支持我們
           </h1>
-          <p className="text-justify text-normal leading-7 text-blue">
+          <p className="text-justify text-normal leading-8 text-blue">
             SITCON
             秉持著不向與會者收費的原則，十年以來致力於推廣學生資訊教育，創造學生交流、教學互長的機會。
             <br />
@@ -318,13 +353,19 @@ function TabletLayout() {
             contact@sitcon.org 聯絡我們，商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
-            <a className="flex items-center justify-end text-h1 font-bold text-red">
+            <a
+              href="https://sitcon.org/donate"
+              className="flex items-center justify-end text-h1 font-bold text-red"
+            >
               我要贊助
               <span className="material-icons" style={{ fontSize: "62px" }}>
                 north_east
               </span>
             </a>
-            <a className="flex items-center justify-end text-h2 font-bold text-red">
+            <a
+              href="https://i.sitcon.org/2025cfs-form"
+              className="flex items-center justify-end text-h2 font-bold text-red"
+            >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "62px" }}>
                 north_east
@@ -353,13 +394,13 @@ function TabletLayout() {
 
 function DesktopLayout() {
   return (
-    <div className="relative grid max-w-[1120px] grid-cols-3 gap-4 bg-light-brown bg-cover bg-[left_20%_center] px-10 max-[820px]:hidden lg:bg-center">
+    <div className="relative grid max-w-[1120px] grid-cols-3 gap-4 bg-black bg-cover bg-[left_20%_center] px-10 max-[1024px]:hidden lg:bg-center">
       <div className="col-span-1 h-auto">
-        <div className="rounded-[32px] border-2 border-blue bg-white p-6">
-          <h1 className="text-h1 font-black tracking-[2px] text-blue">
+        <div className="rounded-[32px] border-2 border-blue bg-white pb-4 pl-5 pr-5 pt-6">
+          <h1 className="text-h1 font-black tracking-wider text-black">
             支持我們
           </h1>
-          <p className="text-justify text-normal leading-7 text-blue">
+          <p className="pt-4 text-justify text-normal leading-8 text-black">
             SITCON
             秉持著不向與會者收費的原則，十年以來致力於推廣學生資訊教育，創造學生交流、教學互長的機會。
             <br />
@@ -372,15 +413,21 @@ function DesktopLayout() {
             contact@sitcon.org 聯絡我們，商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
-            <a className="flex items-center justify-end text-h1 font-bold text-red">
+            <a
+              href="https://sitcon.org/donate"
+              className="flex items-center justify-end text-h1 font-bold text-red"
+            >
               我要贊助
-              <span className="material-icons" style={{ fontSize: "62px" }}>
+              <span className="material-icons" style={{ fontSize: "66px" }}>
                 north_east
               </span>
             </a>
-            <a className="flex items-center justify-end text-h2 font-bold text-red">
+            <a
+              href="https://i.sitcon.org/2025cfs-form"
+              className="flex items-center justify-end text-h2 font-bold text-red"
+            >
               索取贊助徵求書
-              <span className="material-icons" style={{ fontSize: "62px" }}>
+              <span className="material-icons" style={{ fontSize: "53px" }}>
                 north_east
               </span>
             </a>
@@ -391,18 +438,19 @@ function DesktopLayout() {
         <div className="grid grid-cols-3 gap-4">
           <From2013 />
           <div
-            className="col-span-1 rounded-[32px] border-2 border-blue bg-white bg-cover bg-center p-6"
+            className="col-span-1 rounded-[32px] bg-white bg-cover bg-center p-6"
             style={{ backgroundImage: `url('/2025/cfp/stats/1.jpg')` }}
           ></div>
         </div>
         <div className="grid grid-cols-3 gap-4">
           <div
-            className="col-span-1 rounded-[32px] border-2 border-blue bg-white bg-cover bg-center p-6"
+            className="col-span-1 rounded-[32px] bg-white bg-cover bg-center p-6"
             style={{ backgroundImage: `url('/2025/cfp/stats/2.jpg')` }}
           ></div>
           <CloseTouchSection />
         </div>
       </div>
+      <div className="pb-[120px]"></div>
     </div>
   );
 }
