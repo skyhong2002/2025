@@ -1,34 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 export default function CodeOfConduct() {
-  const QA = [
-    {
-      title: "Q1. Placeholder",
-      answer: "A1. Placeholder",
-    },
-    {
-      title: "Q2. Placeholder",
-      answer: "A2. Placeholder",
-    },
-    {
-      title: "Q3. Placeholder",
-      answer: "A3. Placeholder",
-    },
-    {
-      title: "Q4. Placeholder",
-      answer: "A4. Placeholder",
-    },
-    {
-      title: "Q5. Placeholder",
-      answer: "A5. Placeholder",
-    },
-  ];
-  const [qaList, setQaList] = useState<Array<boolean>>(
-    Array(QA.length).fill(false),
-  ); //
-
   return (
     <div className="space-y-16">
       <section
@@ -139,46 +111,6 @@ export default function CodeOfConduct() {
           連結及切換方式，也可以演練部分簡報內容。
           提供設備：與年會當天場地的設備相同，例如麥克風、倒數計時器等。
         </p>
-      </section>
-
-      <section id="qa" className="-mt-[80px] space-y-4 pt-[80px]">
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
-          Q&A
-        </h2>
-        {QA.map((qa, index) => (
-          <div
-            key={qa.title}
-            className={`${qaList[index] ? "rounded-t-2xl" : "rounded-full"}`}
-          >
-            <div
-              onClick={() =>
-                setQaList((prev) =>
-                  prev.map((_, i) => (i === index ? !prev[i] : false)),
-                )
-              }
-              className={`${qaList[index] ? "rounded-t-2xl" : "rounded-full"} flex justify-between bg-light-brown px-6 py-4 text-black`}
-            >
-              <p>{qa.title}</p>
-              <span className={`material-symbols-outlined`}>
-                {qaList[index] ? "keyboard_arrow_up" : "keyboard_arrow_down"}
-              </span>
-            </div>
-            <AnimatePresence>
-              {qaList[index] && (
-                <motion.div
-                  key={qaList[index] ? "open" : "close"}
-                  initial={{ opacity: 0, y: -20 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className={`rounded-b-2xl bg-[#DDD8CB] px-6 py-4 text-black ${qaList[index] ? "block" : "hidden"}`}
-                >
-                  {qa.answer}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        ))}
       </section>
     </div>
   );
