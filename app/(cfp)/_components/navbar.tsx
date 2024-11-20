@@ -15,7 +15,7 @@ export default function Navbar() {
     { link: "/poster", label: "海報徵稿" },
   ];
   return (
-    <nav className="sticky left-0 right-0 top-0 z-20 flex justify-center bg-blue">
+    <nav className="sticky left-0 right-0 top-0 z-20 flex justify-center bg-light-brown">
       <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
         <ul className="relative flex w-full items-center justify-between p-4 max-[750px]:justify-center">
           <Image
@@ -28,7 +28,13 @@ export default function Navbar() {
           <ul className="flex items-center justify-end gap-8 text-black max-[750px]:hidden">
             {menuItems.map(({ link, label }) => (
               <NavbarItem key={link} link={link}>
-                <p>{label}</p>
+                <motion.p
+                  initial={{ y: 0, scale: 1 }}
+                  whileHover={{ y: -2, scale: 1.2 }}
+                  className="font-bold hover:text-blue"
+                >
+                  {label}
+                </motion.p>
               </NavbarItem>
             ))}
           </ul>
