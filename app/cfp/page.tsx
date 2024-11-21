@@ -104,7 +104,7 @@ export default function Home() {
                     SITCON 的郵件論壇並貢獻你的想法！
                     <br />
                     <br /> 若你想進一步了解過往討論的內容，也歡迎到 GitLab
-                    上查看 SITCON 2024 的籌備歷程。
+                    上查看 SITCON 2025 的籌備歷程。
                   </p>
                   <div className="flex gap-6 pt-14 max-[1024px]:grid max-[1024px]:grid-cols-8 max-[1024px]:gap-5 max-sm:grid-cols-2">
                     <Link
@@ -114,7 +114,7 @@ export default function Home() {
                       訂閱郵件論壇
                     </Link>
                     <Link
-                      href="https://gitlab.com/sitcon-tw/2024/board"
+                      href="https://gitlab.com/sitcon-tw/2025/board/-/boards"
                       className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold max-[1024px]:col-span-3 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
                     >
                       查看 GitLab
