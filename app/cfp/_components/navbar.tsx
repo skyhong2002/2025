@@ -78,7 +78,7 @@ export default function Navbar() {
                     <motion.p
                       initial={{ opacity: 0, x: -40 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.2, delay: 0.2 * (index + 1) }}
+                      transition={{ duration: 0.2, delay: 0.05 * (index + 1) }}
                       className="border-b border-black p-2 text-blue"
                       onClick={() => setShowMenu((prev) => !prev)}
                     >
