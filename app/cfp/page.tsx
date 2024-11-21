@@ -90,7 +90,7 @@ export default function Home() {
                 </div>
                 <div
                   className="h-full rounded-[32px] bg-cover bg-center bg-no-repeat p-6 max-[1024px]:rounded-none max-[1024px]:bg-contain max-[1024px]:bg-bottom max-[1024px]:p-0 max-sm:hidden"
-                  style={{ backgroundImage: `url('/2025/cfp/about/1.png')` }}
+                  style={{ backgroundImage: `url('/2025/cfp/about/1.jpg')` }}
                 ></div>
               </div>
               <div className="gap-14 pt-8 max-sm:pt-16 sm:grid sm:grid-cols-2">
@@ -123,7 +123,7 @@ export default function Home() {
                 </div>
                 <div
                   className="h-full rounded-[32px] bg-cover bg-center bg-no-repeat p-6 max-[1024px]:rounded-none max-[1024px]:bg-contain max-[1024px]:bg-top max-[1024px]:p-0 max-sm:hidden"
-                  style={{ backgroundImage: `url('/2025/cfp/about/2.png')` }}
+                  style={{ backgroundImage: `url('/2025/cfp/about/2.jpg')` }}
                 ></div>
               </div>
             </div>
@@ -145,7 +145,7 @@ export default function Home() {
 
 function CloseTouchSection() {
   return (
-    <div className="bg-background-light p-8 max-[1024px]:bg-background-light max-sm:bg-[url('/2025/cfp/stats/3.png')] max-sm:bg-cover max-sm:bg-center sm:relative sm:col-span-2 sm:rounded-[32px] sm:p-6">
+    <div className="bg-background-light p-8 max-[1024px]:bg-background-light max-sm:bg-[url('/2025/cfp/stats/3.jpg')] max-sm:bg-cover max-sm:bg-center sm:relative sm:col-span-2 sm:rounded-[32px] sm:p-6">
       <h1 className="text-[26px] font-semibold tracking-widest text-foreground max-[1024px]:text-blue max-sm:text-[#FFFFFF] min-[1024px]:text-h2">
         此外，我們也樂見企業與學生的近距離交流，成為我們的合作夥伴您可以：
       </h1>
@@ -166,7 +166,7 @@ function From2013() {
   return (
     <>
       {/* Phone Layout */}
-      <div className="bg-gray bg-[url('/2025/cfp/about/1.png')] bg-cover bg-center p-8 sm:hidden">
+      <div className="bg-gray bg-[url('/2025/cfp/about/1.jpg')] bg-cover bg-center p-8 sm:hidden">
         <h1 className="text-[26px] font-semibold tracking-[2px] text-[#FFFFFF]">
           自 2013 以來，我們帶領了無數學子進入資訊的殿堂，更做到：
         </h1>
@@ -285,7 +285,7 @@ function TabletLayout() {
           <div className="flex-row pt-8">
             <a
               href="https://sitcon.org/donate"
-              className="flex items-center justify-end text-h1 font-bold text-accent transition hover:text-accent-light"
+              className="text-accent hover:text-accent-light flex items-center justify-end text-h1 font-bold transition"
             >
               我要贊助
               <span className="material-icons" style={{ fontSize: "62px" }}>
@@ -294,7 +294,7 @@ function TabletLayout() {
             </a>
             <a
               href="https://i.sitcon.org/2025cfs-form"
-              className="flex items-center justify-end text-h2 font-bold text-accent transition hover:text-accent-light"
+              className="text-accent hover:text-accent-light flex items-center justify-end text-h2 font-bold transition"
             >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "62px" }}>
@@ -345,7 +345,7 @@ function DesktopLayout() {
           <div className="flex-row pt-8">
             <a
               href="https://sitcon.org/donate"
-              className="flex items-center justify-end text-h1 font-bold text-accent transition hover:text-accent-light"
+              className="text-accent hover:text-accent-light flex items-center justify-end text-h1 font-bold transition"
             >
               我要贊助
               <span className="material-icons" style={{ fontSize: "66px" }}>
@@ -354,7 +354,7 @@ function DesktopLayout() {
             </a>
             <a
               href="https://i.sitcon.org/2025cfs-form"
-              className="flex items-center justify-end text-h2 font-bold text-accent transition hover:text-accent-light"
+              className="text-accent hover:text-accent-light flex items-center justify-end text-h2 font-bold transition"
             >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "53px" }}>

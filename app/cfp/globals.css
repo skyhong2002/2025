@@ -9,7 +9,7 @@ body {
 
 .hero {
   animation: heroFadeIn 2s forwards ease-in-out;
-  background: url("/2025/cfp/theme/hero.png") no-repeat center center;
+  background: url("/2025/cfp/theme/hero.jpg") no-repeat center center;
 }
 
 .hero-content {
