@@ -285,7 +285,7 @@ function TabletLayout() {
           <div className="flex-row pt-8">
             <a
               href="https://sitcon.org/donate"
-              className="text-accent hover:text-accent-light flex items-center justify-end text-h1 font-bold transition"
+              className="flex items-center justify-end text-h1 font-bold text-accent transition hover:text-accent-light"
             >
               我要贊助
               <span className="material-icons" style={{ fontSize: "62px" }}>
@@ -294,7 +294,7 @@ function TabletLayout() {
             </a>
             <a
               href="https://i.sitcon.org/2025cfs-form"
-              className="text-accent hover:text-accent-light flex items-center justify-end text-h2 font-bold transition"
+              className="flex items-center justify-end text-h2 font-bold text-accent transition hover:text-accent-light"
             >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "62px" }}>
@@ -345,7 +345,7 @@ function DesktopLayout() {
           <div className="flex-row pt-8">
             <a
               href="https://sitcon.org/donate"
-              className="text-accent hover:text-accent-light flex items-center justify-end text-h1 font-bold transition"
+              className="flex items-center justify-end text-h1 font-bold text-accent transition hover:text-accent-light"
             >
               我要贊助
               <span className="material-icons" style={{ fontSize: "66px" }}>
@@ -354,7 +354,7 @@ function DesktopLayout() {
             </a>
             <a
               href="https://i.sitcon.org/2025cfs-form"
-              className="text-accent hover:text-accent-light flex items-center justify-end text-h2 font-bold transition"
+              className="flex items-center justify-end text-h2 font-bold text-accent transition hover:text-accent-light"
             >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "53px" }}>
