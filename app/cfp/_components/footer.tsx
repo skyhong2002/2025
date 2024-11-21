@@ -3,7 +3,7 @@ import FacebookLogo from "./logos/facebook";
 import FlickrLogo from "./logos/flickr";
 import InstagramLogo from "./logos/instagram";
 import TelegramLogo from "./logos/telegram";
-import TwitterLogo from "./logos/twitter";
+import ThreadsLogo from "./logos/threads";
 import YoutubeLogo from "./logos/youtube";
 import SitconLogo from "./logos/sitcon";
 
@@ -123,8 +123,8 @@ function SocialLinks() {
     <div className="flex items-end gap-2 max-[710px]:w-full max-[710px]:justify-between min-[490px]:gap-5">
       <RadioLinkButton href="https://sitcon.org/fb" logo={<FacebookLogo />} />
       <RadioLinkButton
-        href="https://sitcon.org/twitter"
-        logo={<TwitterLogo />}
+        href="https://sitcon.org/threads"
+        logo={<ThreadsLogo />}
       />
       <RadioLinkButton href="https://sitcon.org/yt" logo={<YoutubeLogo />} />
       <RadioLinkButton
