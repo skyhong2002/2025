@@ -7,6 +7,21 @@ body {
   @apply bg-background;
 }
 
+.from2013-bg {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/2025/cfp/about/1.jpg") no-repeat center center;
+}
+
+@media (max-width: 640px) {
+  .closeTouch-bg {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("/2025/cfp/about/2.jpg") no-repeat center center;
+  }
+}
+
+
 .hero {
   animation: heroFadeIn 2s forwards ease-in-out;
   background: url("/2025/cfp/theme/hero.jpg") no-repeat center center;
@@ -29,7 +44,7 @@ body {
 
 @keyframes heroFadeIn {
   from {
-    opacity: 0.1;    
+    opacity: 0.1;
     background-size: 100% 100%;
     filter: blur(10px);
   }
