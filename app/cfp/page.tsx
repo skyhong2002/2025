@@ -41,27 +41,27 @@ export default function Home() {
               <div className="flex max-w-[800px] flex-col justify-center gap-3 sm:gap-5">
                 <div className="flex flex-row justify-center gap-3 sm:gap-5">
                   <Link
-                    href="/cfp/poster"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:px-3"
+                    href="/cfp/normal"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:px-3 hover:bg-foreground transition"
                   >
                     一般議程
                   </Link>
                   <Link
-                    href="/cfp/poster"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:px-3"
+                    href="/cfp/undefined"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:px-3 hover:bg-foreground transition"
                   >
                     開放式議程
                   </Link>
                   <Link
                     href="/cfp/poster"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:px-3"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:px-3 hover:bg-foreground transition"
                   >
                     靜態海報展
                   </Link>
                 </div>
                 <Link
                   href="/cfp/deadline.ics"
-                  className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:w-full"
+                  className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:w-full hover:bg-foreground transition"
                 >
                   把截止日期加入行事曆
                 </Link>
