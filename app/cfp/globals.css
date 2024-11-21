@@ -151,3 +151,7 @@ html {
   padding-left: 22px;
   text-indent: -22px;
 }
+
+.link {
+    @apply cursor-pointer text-primary underline;
+}

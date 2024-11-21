@@ -235,7 +235,7 @@ function PhoneLayout() {
           若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用{" "}
           <Link
             href="mailto:contact@sitcon.org"
-            className="cursor-pointer text-primary underline"
+            className="link"
           >
             contact@sitcon.org
           </Link>{" "}
