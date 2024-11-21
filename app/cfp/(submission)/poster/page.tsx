@@ -77,7 +77,7 @@ export default function Page() {
           投稿方式
         </h2>
         <div className="space-y-4">
-          <h3 className="text-h3-mobile text-primary md:text-h3">稿件資訊</h3>
+          <h3 className="text-h3-mobile text-primary md:text-h3 font-bold">稿件資訊</h3>
           <ul className="ml-2 text-normal-mobile font-normal leading-10 tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
             <li>
               <span className="subTitle">題目 Project Title：</span>
@@ -133,7 +133,7 @@ export default function Page() {
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-h3-mobile text-primary md:text-h3">個人資料</h3>
+          <h3 className="text-h3-mobile text-primary md:text-h3 font-bold">個人資料</h3>
           <div>
             <p className="leading-10 tracking-wider">
               除了暱稱 /

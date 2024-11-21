@@ -95,13 +95,12 @@ export default function Page() {
           投稿主題範例
         </h2>
         <p className="leading-10">
-          <span className="font-bold text-lime-400">SITCON </span>
-          作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
+          SITCON 作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
           不論是以技術探討形式，或輕鬆的分享方式，任何與資訊科技、電腦技術相關的講題，我們都非常歡迎投稿！
           除此之外，您也可以透過參與投稿者小聚或前往 SITCON
           歷年網站（2013、2014、2015、2016、2017、2018、2019、2020、2021、2022、2024）查看過去的議程。
         </p>
-        <h3 className="my-4 text-h3-mobile font-bold md:text-h3">
+        <h3 className="my-4 text-h3-mobile font-bold md:text-h3  text-primary">
           PRESENTATION
         </h3>
         <p className="leading-10">
@@ -111,7 +110,7 @@ export default function Page() {
           分鐘的問答時間，共 <span className="hightlight"> 40 </span>
           分鐘，讓您有充分的時間展示想法、描述經歷、和與會者交流。
         </p>
-        <h3 className="my-4 text-h3-mobile font-bold md:text-h3">ESPRESSO</h3>
+        <h3 className="my-4 text-h3-mobile font-bold md:text-h3  text-primary">ESPRESSO</h3>
         <p className="leading-10">
           Espresso 僅有 <span className="hightlight"> 10 </span>
           分鐘，挑戰最為濃縮與精華的議程，為與會者帶來短而精緻的知識洗禮。
@@ -121,7 +120,7 @@ export default function Page() {
         <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           投稿方式
         </h2>
-        <h3 className="my-4 text-h3-mobile text-primary md:text-h3">
+        <h3 className="my-4 text-h3-mobile text-primary md:text-h3 font-bold">
           稿件資訊
         </h3>
         <ul className="list-inside list-disc leading-10">
@@ -179,7 +178,7 @@ export default function Page() {
             選填。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
           </li>
         </ul>
-        <h3 className="my-4 text-h3-mobile text-primary md:text-h3">
+        <h3 className="my-4 text-h3-mobile text-primary md:text-h3 font-bold">
           個人資料
         </h3>
         <p className="mb-2">
