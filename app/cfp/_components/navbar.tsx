@@ -25,7 +25,6 @@ export default function Navbar() {
   const navBackground = useMotionTemplate`rgba(39, 48, 77, ${navBackgroundOpacity})`;
   const menuItems = [
     { link: "/cfp/", label: "首頁" },
-    { link: "/cfp/theme", label: "年會主題" },
     { link: "/cfp/normal", label: "一般議程徵稿" },
     { link: "/cfp/undefined", label: "開放式議程徵稿" },
     { link: "/cfp/poster", label: "海報徵稿" },
