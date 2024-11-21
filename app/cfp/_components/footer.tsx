@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import FacebookLogo from "./logos/facebook";
 import FlickrLogo from "./logos/flickr";
@@ -6,11 +5,11 @@ import InstagramLogo from "./logos/instagram";
 import TelegramLogo from "./logos/telegram";
 import TwitterLogo from "./logos/twitter";
 import YoutubeLogo from "./logos/youtube";
-import LogoBlue from "@/public/assets/logo-blue.png";
+import SitconLogo from "./logos/sitcon";
 
 export default function Footer() {
   return (
-    <footer className="space-y-7 px-10 pb-7 pt-0 text-blue mobile:py-16">
+    <footer className="space-y-7 bg-background-light px-10 pb-7 pt-0 text-foreground mobile:py-16">
       <>
         {/* Desktop Layout 820+ */}
         <div className="flex justify-between max-[820px]:hidden">
@@ -44,7 +43,7 @@ export default function Footer() {
           <PastEvents />
         </div>
       </>
-      <hr className="border-blue pb-7 max-mobile:hidden" />
+      <hr className="border-foreground pb-7 max-mobile:hidden" />
       <SocialMediasSection />
     </footer>
   );
@@ -112,13 +111,7 @@ function Contact() {
 function Brand() {
   return (
     <div className="item-between flex flex-row gap-6 max-mobile:flex-col mobile:items-end">
-      <Image
-        src={LogoBlue}
-        className="-translate-y-1"
-        alt="SITCON"
-        width={200}
-        height={100}
-      />
+      <SitconLogo height={60} width={200} />
       <p className="max-[1060px]:hidden">
         學生計算機年會 <br /> Student Information Technology Conference
       </p>
@@ -215,7 +208,7 @@ function RadioLinkButton({
   return (
     <Link
       href={href}
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-blue px-3 py-1 text-blue hover:bg-blue hover:text-white"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-foreground px-3 py-1 text-foreground hover:bg-blue hover:text-white"
     >
       {logo}
     </Link>

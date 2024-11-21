@@ -63,8 +63,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
-        <div className="mx-auto max-w-[1120px]">
-          <Footer />
+        <div className="w-full bg-background-light">
+          <div className="mx-auto max-w-[1120px]">
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
