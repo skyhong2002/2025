@@ -16,8 +16,8 @@ export default function TableOfContent({
     <>
       {/* pc & tablet */}
       <nav className="md: fixed right-0 top-[100px] hidden w-min md:block lg:w-[15%]">
-        <h2 className="mb-3 font-extrabold text-light-brown">本頁目錄</h2>
-        <div className="mb-3 h-[1px] bg-light-brown" />
+        <h2 className="mb-3 font-extrabold text-foreground">本頁目錄</h2>
+        <div className="mb-3 h-[1px] bg-foreground" />
         <ul>
           {sections.map((section) => (
             <Link
@@ -27,7 +27,7 @@ export default function TableOfContent({
             >
               <li
                 key={section.id}
-                className="mb-1 mr-3 h-[30px] text-nowrap font-bold text-light-brown"
+                className="mb-1 mr-3 h-[30px] text-nowrap font-bold text-foreground"
               >
                 {section.title}
               </li>
@@ -39,7 +39,7 @@ export default function TableOfContent({
       <nav className="relative md:hidden">
         <div
           onClick={() => setShowDropdown((prev) => !prev)}
-          className={`${theme === "light" ? "bg-gray" : "bg-light-brown"} flex h-[40px] items-center justify-between rounded-xl px-4`}
+          className={`${theme === "light" ? "bg-gray" : "bg-foreground"} flex h-[40px] items-center justify-between rounded-xl px-4`}
         >
           <h2
             className={`font-bold ${theme === "light" ? "text-black" : "text-red"}`}
