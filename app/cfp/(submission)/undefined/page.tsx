@@ -61,7 +61,7 @@ export default function Page() {
           作為學生展現自己的舞台，我們期待以學生為主體的投稿，無論是實作工作坊、議題交流、社群分享或更多您想像得到能讓議程更加多元且具互動性的方式，我們都十分歡迎。
         </p>
       </section>
-      <div className="grid grid-cols-1 grid-rows-4 gap-5 tablet:grid-cols-2 tablet:grid-rows-2">
+      <div className="flex grid-rows-4 flex-col gap-5 tablet:grid tablet:grid-cols-2 tablet:grid-rows-2">
         <SessionTypeBox title="實作工作坊形式">
           實作是學習一項新技能最直接的方式，您可以設計一個實務導向的工作坊，在介紹新技術的同時穿插應用的範例，讓會眾在過程中獲得成就感並帶走實用的技能。無論是軟體開發、工具使用，還是技術應用實作工作方的題目可以像是：
           從零開始開發一個簡單的聊天應用程式。 從數位音樂到 AI
