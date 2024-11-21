@@ -39,15 +39,15 @@ export default function TableOfContent({
       <nav className="relative md:hidden">
         <div
           onClick={() => setShowDropdown((prev) => !prev)}
-          className={`${theme === "light" ? "bg-gray" : "bg-foreground"} flex h-[40px] items-center justify-between rounded-xl px-4`}
+          className={`${theme === "light" ? "bg-background-light" : "bg-foreground"} flex h-[40px] items-center justify-between rounded-xl px-4`}
         >
           <h2
-            className={`font-bold ${theme === "light" ? "text-black" : "text-red"}`}
+            className={`font-bold ${theme === "light" ? "text-foreground" : "text-red"}`}
           >
             本頁目錄
           </h2>
           <span
-            className={`material-symbols-outlined ${theme === "light" ? "text-black" : "text-red"} `}
+            className={`material-symbols-outlined ${theme === "light" ? "text-foreground" : "text-red"} `}
           >
             {showDropdown ? "keyboard_arrow_up" : "keyboard_arrow_down"}
           </span>
@@ -55,7 +55,7 @@ export default function TableOfContent({
         {/* dropDown */}
         {showDropdown && (
           <div
-            className={`absolute top-[40px] z-10 w-full rounded-lg ${theme === "light" ? "bg-gray" : "bg-light-brown"} p-2 shadow-lg`}
+            className={`absolute top-[50px] z-10 w-full rounded-lg ${theme === "light" ? "bg-background-light" : "bg-background-light"} p-2 shadow-lg`}
           >
             {sections.map((section, index) => (
               <motion.div
@@ -64,13 +64,13 @@ export default function TableOfContent({
                 animate={{ opacity: 1, y: 0, backgroundColor: "#000000" }}
                 transition={{
                   duration: 0.1,
-                  delay: index * 0.1,
+                  delay: index * 0.03,
                   ease: "easeInOut",
                 }} // 動畫時間
               >
                 <Link
                   href={`#${section.id}`}
-                  className={`flex w-full justify-center border-b p-0 py-4 transition duration-300 ${theme === "light" ? "bg-gray text-black" : "bg-light-brown text-red"}`}
+                  className={`flex w-full justify-center border-b border-foreground/30 p-0 py-4 transition duration-300 ${theme === "light" ? "bg-background-light text-foreground" : "bg-background-light text-red"}`}
                   onClick={() => setShowDropdown(false)}
                 >
                   <div className=" ">{section.title}</div>
