@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function TableOfContent({
@@ -13,6 +13,26 @@ export default function TableOfContent({
   submitUrl: string;
 }) {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [currentSection, setCurrentSection] = useState<null | string>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          setCurrentSection("#" + entry.target.id);
+          break;
+        }
+      }
+    });
+
+    for (const section of sections) {
+      const targetElement = document.querySelector(`#${section.id}`);
+      if (!targetElement) continue;
+      observer.observe(targetElement);
+    }
+
+    setCurrentSection(`#${sections[0].id}`);
+  }, [sections]);
 
   return (
     <>
@@ -33,8 +53,9 @@ export default function TableOfContent({
           {sections.map((section) => (
             <Link
               href={`#${section.id}`}
+              onClick={() => setCurrentSection(`#${section.id}`)}
               key={section.id}
-              className="tableContentItem"
+              className={`${currentSection === `#${section.id}` ? "currentTableContentItem" : "tableContentItem"}`}
             >
               <li
                 key={section.id}
