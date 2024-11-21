@@ -15,6 +15,7 @@ type TimeLeft = {
 export default function CountdownPage() {
   const TARGET_DATE = "2025-01-21T23:59:59"; // 可以動態設置
   const [isHovered, setIsHovered] = useState(false);
+  console.log(isHovered);
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
