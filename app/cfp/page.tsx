@@ -42,26 +42,26 @@ export default function Home() {
                 <div className="flex flex-row justify-center gap-3 sm:gap-5">
                   <Link
                     href="/cfp/normal"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:px-3 hover:bg-foreground transition"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:px-3"
                   >
                     一般議程
                   </Link>
                   <Link
                     href="/cfp/undefined"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:px-3 hover:bg-foreground transition"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:px-3"
                   >
                     開放式議程
                   </Link>
                   <Link
                     href="/cfp/poster"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:px-3 hover:bg-foreground transition"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:px-3"
                   >
                     靜態海報展
                   </Link>
                 </div>
                 <Link
                   href="/cfp/deadline.ics"
-                  className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:w-full hover:bg-foreground transition"
+                  className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:w-full"
                 >
                   把截止日期加入行事曆
                 </Link>
@@ -107,13 +107,13 @@ export default function Home() {
                   <div className="flex gap-6 pt-14 max-[1024px]:grid max-[1024px]:grid-cols-8 max-[1024px]:gap-5 max-sm:grid-cols-2">
                     <Link
                       href="https://groups.google.com/g/sitcon-general/"
-                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold max-[1024px]:col-span-5 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal hover:bg-foreground transition"
+                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold transition hover:bg-foreground max-[1024px]:col-span-5 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
                     >
                       訂閱郵件論壇
                     </Link>
                     <Link
                       href="https://gitlab.com/sitcon-tw/2025/board/-/boards"
-                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold max-[1024px]:col-span-3 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal hover:bg-foreground transition"
+                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold transition hover:bg-foreground max-[1024px]:col-span-3 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
                     >
                       查看 GitLab
                     </Link>
@@ -232,16 +232,19 @@ function PhoneLayout() {
           的運作，點擊下方「個人贊助方案」，您的支持將會成為我們的動力，讓更多學生能在舞台上展現自我、讓資訊教育遍及臺灣的每個角落！
           <br />
           <br />
-          若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用
-          {" "}<Link href="mailto:contact@sitcon.org" className="text-primary underline cursor-pointer">
-          contact@sitcon.org
-          </Link>{" "}聯絡我們，商討更多的合作方式！
-          
+          若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用{" "}
+          <Link
+            href="mailto:contact@sitcon.org"
+            className="cursor-pointer text-primary underline"
+          >
+            contact@sitcon.org
+          </Link>{" "}
+          聯絡我們，商討更多的合作方式！
         </p>
         <div className="flex-row pt-16">
           <a
             href="https://sitcon.org/donate"
-            className="text-accent flex items-center justify-end whitespace-nowrap text-nowrap text-[30px] font-bold"
+            className="flex items-center justify-end whitespace-nowrap text-nowrap text-[30px] font-bold text-accent"
           >
             我要贊助
             <span className="material-icons" style={{ fontSize: "44px" }}>
@@ -250,7 +253,7 @@ function PhoneLayout() {
           </a>
           <a
             href="https://i.sitcon.org/2025cfs-form"
-            className="text-accent flex items-center justify-end whitespace-nowrap text-nowrap text-[22px] font-bold"
+            className="flex items-center justify-end whitespace-nowrap text-nowrap text-[22px] font-bold text-accent"
           >
             索取贊助徵求書
             <span className="material-icons" style={{ fontSize: "44px" }}>
@@ -280,15 +283,19 @@ function TabletLayout() {
             的運作，點擊下方「個人贊助方案」，您的支持將會成為我們的動力，讓更多學生能在舞台上展現自我、讓資訊教育遍及臺灣的每個角落！
             <br />
             <br />
-            若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用
-            {" "}<Link href="mailto:contact@sitcon.org" className="text-primary underline cursor-pointer">
-          contact@sitcon.org
-          </Link>{" "} 聯絡我們，商討更多的合作方式！
+            若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用{" "}
+            <Link
+              href="mailto:contact@sitcon.org"
+              className="cursor-pointer text-primary underline"
+            >
+              contact@sitcon.org
+            </Link>{" "}
+            聯絡我們，商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
             <a
               href="https://sitcon.org/donate"
-              className="text-accent hover:text-accent-light flex items-center justify-end whitespace-nowrap text-nowrap text-h2 font-bold transition"
+              className="flex items-center justify-end whitespace-nowrap text-nowrap text-h2 font-bold text-accent transition hover:text-accent-light"
             >
               我要贊助
               <span className="material-icons" style={{ fontSize: "62px" }}>
@@ -297,7 +304,7 @@ function TabletLayout() {
             </a>
             <a
               href="https://i.sitcon.org/2025cfs-form"
-              className="text-accent hover:text-accent-light flex items-center justify-end whitespace-nowrap text-nowrap text-h3 font-bold transition"
+              className="flex items-center justify-end whitespace-nowrap text-nowrap text-h3 font-bold text-accent transition hover:text-accent-light"
             >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "62px" }}>
@@ -342,15 +349,19 @@ function DesktopLayout() {
             的運作，點擊下方「個人贊助方案」，您的支持將會成為我們的動力，讓更多學生能在舞台上展現自我、讓資訊教育遍及臺灣的每個角落！
             <br />
             <br />
-            若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用
-            {" "}<Link href="mailto:contact@sitcon.org" className="text-primary underline cursor-pointer">
-          contact@sitcon.org
-          </Link>{" "} 聯絡我們，商討更多的合作方式！
+            若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用{" "}
+            <Link
+              href="mailto:contact@sitcon.org"
+              className="cursor-pointer text-primary underline"
+            >
+              contact@sitcon.org
+            </Link>{" "}
+            聯絡我們，商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
             <a
               href="https://sitcon.org/donate"
-              className="text-accent hover:text-accent-light flex items-center justify-end whitespace-nowrap text-nowrap text-h1 font-bold transition"
+              className="flex items-center justify-end whitespace-nowrap text-nowrap text-h1 font-bold text-accent transition hover:text-accent-light"
             >
               我要贊助
               <span className="material-icons" style={{ fontSize: "66px" }}>
@@ -359,7 +370,7 @@ function DesktopLayout() {
             </a>
             <a
               href="https://i.sitcon.org/2025cfs-form"
-              className="text-accent hover:text-accent-light flex items-center justify-end whitespace-nowrap text-nowrap text-h2 font-bold transition"
+              className="flex items-center justify-end whitespace-nowrap text-nowrap text-h2 font-bold text-accent transition hover:text-accent-light"
             >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "53px" }}>
