@@ -59,21 +59,31 @@ export default function Page() {
             稿件資訊
           </h3>
           <ul className="ml-2 text-normal-mobile font-normal leading-10 tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
-            <li>題目 Project Title：必填、公開。長度請自行斟酌。</li>
             <li>
-              摘要 Abstract：必填、公開。建議約 350 字，使用於宣傳與網站公告。
+              <span className="subTitle">題目 Project Title：</span>
+              <span className="hightlight">必填、公開</span>。長度請自行斟酌。
             </li>
             <li>
-              主題標籤 Labels：必填、公開。請填寫 1~3
-              個與海報內文相關的領域與知識標籤，例如：ML、Data
+              <span className="subTitle">摘要 Abstract：</span>
+              <span className="hightlight">必填、公開</span>。建議約
+              <span className="hightlight"> 350 </span>
+              字，使用於宣傳與網站公告。
+            </li>
+            <li>
+              <span className="subTitle">主題標籤 Labels：</span>
+              <span className="hightlight">必填、公開</span>。請填寫 1~3
+              個與海報內文相關的領域與
+              <span className="hightlight">知識標籤</span>，例如：ML、Data
               Science、資安、NLP 等；錄取後會與提供稿件者溝通微調後公開於官網。
             </li>
             <li>
-              研究說明 Project Content：必填。請以 PDF
-              檔案上傳，需簡要說明（一）研究動機與目的 Research Question or
-              Problem；（二）研究方法與過程 Methodology；（三）研究結果與討論
-              Results and Interpretation of these results；（四）結論應用及展望
-              Conclusions 等，以 600~1500 字為限。可參考{" "}
+              <span className="subTitle">研究說明 Project Content：</span>
+              必填。請以 PDF 檔案上傳，需簡要說明（一）研究動機與目的 Research
+              Question or Problem；（二）研究方法與過程
+              Methodology；（三）研究結果與討論 Results and Interpretation of
+              these results；（四）結論應用及展望 Conclusions 等，以{" "}
+              <span className="hightlight"> 600~1500 </span>
+              字為限。可參考{" "}
               <Link
                 href={
                   "https://twsf.ntsec.gov.tw/FileAtt.ashx?fcode=AC1C403BD297CA5A6A628EBAD362874E&lang=1"
@@ -85,14 +95,20 @@ export default function Page() {
               第 17 頁說明。
             </li>
             <li>
-              海報內容 Poster
-              Content：錄取後上傳、公開。以呈現研究結果為主，除題目與摘要之外，建議依序可包含前言、研究方法、結論及參考文獻等，內容請投稿作者自行斟酌，以不超過海報尺寸為限，大會方將會提供參考模板給錄取者。請以直版寬
-              841 mm、高 1189 mm （A0 大小）規格製作為 pdf
+              <span className="subTitle">海報內容 Poster Content：</span>
+              錄取後上傳、公開。以呈現研究結果為主，除題目與摘要之外，建議依序可包含前言、研究方法、結論及參考文獻等，內容請投稿作者自行斟酌，以不超過海報尺寸為限，大會方將會提供參考模板給錄取者。請以直版寬
+              <span className="hightlight">
+                {" "}
+                841 mm、高 1189 mm （A0 大小）
+              </span>
+              規格製作為 pdf
               檔案，一篇投稿一面看板，請於收到錄取通知後，依據錄取郵件說明上傳最終版海報檔案，統一由大會進行印製與佈展。
             </li>
             <li>
-              其他說明 Additional
-              Instructions：其他以上未提及之說明，若為延續性研究作品也請在此標明。
+              <span className="subTitle">
+                其他說明 Additional Instructions：
+              </span>
+              其他以上未提及之說明，若為延續性研究作品也請在此標明。
             </li>
           </ul>
         </div>
@@ -132,24 +148,34 @@ export default function Page() {
           <h3 className="text-h3-mobile text-light-blue md:text-h3">
             海報格式參考
           </h3>
-          <ul className="ml-2 text-normal-mobile font-normal leading-10 tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+          <ul className="list-inside list-disc leading-10">
             <li>
-              中文名稱：字體大小範圍為 70 號字〜90
-              號字，且建議最多不超過兩行，置中對齊方式。
+              <span className="subTitle">電子郵件 Email：</span>
+              <span className="hightlight">必填</span>
+              。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
             </li>
             <li>
-              英文名稱：字體大小範圍為 40 號字〜80
-              號字，且建議最多不超過兩行，置中對齊方式。
+              <span className="subTitle">暱稱 / 名字 Name：</span>
+              <span className="hightlight">必填、公開</span>
+              。公開於講者海報及網站的稱呼。
             </li>
             <li>
-              作者中、英文姓名：字體大小範圍 30 號字〜40 號字，置中對齊方式。
-            </li>
-            <li>海報頁面的上下側及左右邊各留至少 5 公分。</li>
-            <li>
-              內文中文建議以標楷體或黑體書寫、英文以 Times New Roman 書寫。
+              <span className="subTitle">自我介紹 Self Introduction：</span>
+              <span className="hightlight">必填、公開</span>
+              。公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
             </li>
             <li>
-              圖表需以良好解析度呈現，可以列在文中，或列在參考文獻之後。列在文中者，請盡量靠近文中第一次提及的地方。各圖、表請備說明內容，圖的說明應置於圖的下方，而表的說明則應置於表的上方。
+              <span className="subTitle">手機號碼 Phone：</span>
+              <span className="hightlight">必填</span>
+              。用於大會聯絡、確認資訊用的電話號碼。
+            </li>
+            <li className="pl-[22px] -indent-[22px]">
+              <span className="subTitle">
+                其他聯絡方式 Other Contact Information：
+              </span>
+              <span className="hightlight">必填</span>
+              。其他任何我們能聯絡您的方式（如 Telegram
+              ID、住處電話等），以利我們在審稿時即時向您釐清投稿資訊。
             </li>
           </ul>
         </div>
