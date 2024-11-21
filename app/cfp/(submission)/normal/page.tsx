@@ -49,7 +49,7 @@ export default function Page() {
           議程種類
         </h2>
         <div className="mb-6 mt-4 grid grid-rows-2 gap-3 lg:grid-cols-2 lg:grid-rows-1">
-          <div className="flex flex-col items-center rounded-lg border bg-white p-6 text-orange md:border-orange md:bg-light-brown">
+          <div className="flex flex-col items-center rounded-lg border bg-foreground p-6 text-orange md:border-orange md:bg-light-brown">
             <Image priority src={PresentationIcon} alt="PRESENTATION" />
             <h3 className="text-h3-mobile md:text-h3">Presentation</h3>
             <p>
@@ -57,7 +57,7 @@ export default function Page() {
               分鐘的問答時間，讓您有充分的時間展示想法、描述經歷、和與會者交流。
             </p>
           </div>
-          <div className="flex flex-col items-center rounded-lg border bg-white p-6 text-red md:border-red md:bg-light-brown">
+          <div className="flex flex-col items-center rounded-lg border bg-foreground p-6 text-red md:border-red md:bg-light-brown">
             <Image priority src={EspressoIcon} alt="PRESENTATION" />
             <h3 className="text-h3-mobile md:text-h3">Espresso</h3>
             <p>

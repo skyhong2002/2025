@@ -4,7 +4,38 @@
 
 html,
 body {
-  @apply bg-light-brown;
+  @apply bg-background;
+}
+
+.hero {
+  animation: heroFadeIn 2s forwards ease-in-out;
+  background: url("/2025/cfp/theme/hero.png") no-repeat center center;
+}
+
+.hero-content {
+  animation: heroContentFadeIn 2s forwards ease-in-out;
+}
+
+@keyframes heroContentFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0.1;    
+    background-size: 100% 100%;
+  }
+  to {
+    opacity: 0.5;
+    background-size: 110% 110%;
+  }
 }
 
 .material-icons {
