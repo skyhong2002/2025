@@ -43,7 +43,11 @@ export default function Page() {
       <h1 className="mb-4 text-h1-mobile font-extrabold md:text-h1">
         一般議程投稿
       </h1>
-      <TableOfContent theme="light" sections={sections} />
+      <TableOfContent
+        theme="light"
+        sections={sections}
+        submitUrl="https://forms.gle/rb5kuP1CCrzodKJs9"
+      />
 
       <Countdown />
 
