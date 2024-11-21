@@ -18,7 +18,7 @@ export default function Navbar() {
     <nav className="sticky left-0 right-0 top-0 z-20 flex justify-center bg-blue">
       <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
         <ul className="relative flex w-full items-center justify-between p-4 max-[750px]:justify-center">
-          <Link href="/">
+          <Link href="/cfp/">
             <Image
               src={Logo}
               alt="logo"
