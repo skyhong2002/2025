@@ -79,7 +79,7 @@ function Support() {
 function PastEvents() {
   return (
     <FooterSubMenuGrid
-      title="歷年主題網站"
+      title="歷年網站"
       links={[
         { text: "2013", href: "https://sitcon.org/2013" },
         { text: "2014", href: "https://sitcon.org/2014" },
