@@ -29,16 +29,14 @@ export default function Navbar() {
     { link: "/cfp/undefined", label: "開放式議程徵稿" },
     { link: "/cfp/poster", label: "海報徵稿" },
   ];
-  const disableFadeEffect = !isIndex || !showMenu;
+  const allowFadeEffect = isIndex && !showMenu;
   return (
     <nav className="fixed left-0 right-0 top-0 z-20 flex justify-center">
       <motion.div
         className="flex w-full items-center justify-center transition"
         style={{
-          opacity: disableFadeEffect ? navBackgroundOpacity : 1,
-          backgroundColor: disableFadeEffect
-            ? navBackground
-            : "rgba(39, 48, 77)",
+          opacity: allowFadeEffect ? navBackgroundOpacity : 1,
+          backgroundColor: allowFadeEffect ? navBackground : "rgba(39, 48, 77)",
         }}
       >
         <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
