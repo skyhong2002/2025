@@ -21,7 +21,7 @@ export default function TableOfContent({
         <Link
           href={submitUrl}
           target="_blank"
-          className="tableContentItem block w-full rounded-md bg-primary px-4 py-2 text-center font-bold text-black"
+          className="tableContentItem block w-full rounded-md bg-primary px-4 py-2 text-center font-bold text-black hover:bg-foreground"
         >
           立即投稿
         </Link>
