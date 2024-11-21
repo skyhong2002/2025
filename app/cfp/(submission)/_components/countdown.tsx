@@ -93,7 +93,7 @@ export default function CountdownPage() {
         <motion.div
           onHoverStart={() => setIsHovered(true)}
           onHoverEnd={() => setIsHovered(false)}
-          className="h-full w-[40%] rounded-2xl bg-foreground"
+          className="h-full w-[40%] rounded-2xl bg-foreground hover:bg-primary transition-all duration-[0.4s]"
         >
           <Link
             className="flex h-full w-full items-center justify-center"
