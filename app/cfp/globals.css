@@ -119,7 +119,7 @@ html {
 }
 
 .hightlight {
-  color: #ff0000;
+  @apply text-primary;
   font-size: bold;
 }
 

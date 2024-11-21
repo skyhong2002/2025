@@ -15,7 +15,7 @@ export default function Timeline() {
               <path
                 id="arrowHead"
                 d="M770 16 L790 16 M780 8 L790 16 L780 24"
-                stroke="#D3C4B7"
+                className="stroke-current text-foreground"
                 strokeWidth="3.5"
                 fill="none"
               />
@@ -24,7 +24,7 @@ export default function Timeline() {
                 y1="16"
                 x2="98%"
                 y2="16"
-                stroke="#D3C4B7"
+                className="stroke-current text-foreground"
                 strokeWidth="3.5"
               />
             </svg>
@@ -34,7 +34,13 @@ export default function Timeline() {
           <div className="flex justify-between">
             <div className="z-10 w-min">
               <svg className="h-10 w-10">
-                <circle key={1} cx={10} cy="16" r="8" fill="#CC9232" />
+                <circle
+                  key={1}
+                  cx={10}
+                  cy="16"
+                  r="8"
+                  className="fill-current text-primary"
+                />
               </svg>
               <span className="material-icons-big">flag</span>
               <p>11.12.2024</p>
@@ -43,16 +49,30 @@ export default function Timeline() {
 
             <div className="z-10 w-min">
               <svg className="h-10 w-10">
-                <circle key={1} cx={10} cy="16" r="8" fill="#CC9232" />
+                <circle
+                  key={1}
+                  cx={10}
+                  cy="16"
+                  r="8"
+                  className="fill-current text-primary"
+                />
               </svg>
-              <span className="material-icons-big text-red">event_busy</span>
+              <span className="material-icons-big text-foreground">
+                event_busy
+              </span>
               <p>01.21</p>
               <h3 className="w-max text-h3">投稿截止</h3>
             </div>
 
             <div className="z-10 w-min">
               <svg className="h-10 w-10">
-                <circle key={1} cx={10} cy="16" r="8" fill="#CC9232" />
+                <circle
+                  key={1}
+                  cx={10}
+                  cy="16"
+                  r="8"
+                  className="fill-current text-primary"
+                />
               </svg>
               <span className="material-icons-big">email</span>
               <p>一月下旬</p>
@@ -61,7 +81,13 @@ export default function Timeline() {
 
             <div className="z-10 w-min">
               <svg className="h-10 w-10">
-                <circle key={1} cx={10} cy="16" r="8" fill="#CC9232" />
+                <circle
+                  key={1}
+                  cx={10}
+                  cy="16"
+                  r="8"
+                  className="fill-current text-primary"
+                />
               </svg>
               <span className="material-icons-big">mic_none</span>
               <p className="w-max">二月上旬至下旬</p>
@@ -70,7 +96,13 @@ export default function Timeline() {
 
             <div className="z-10 w-min">
               <svg className="h-10 w-10">
-                <circle key={1} cx={10} cy="16" r="8" fill="#CC9232" />
+                <circle
+                  key={1}
+                  cx={10}
+                  cy="16"
+                  r="8"
+                  className="fill-current text-primary"
+                />
               </svg>
               <span className="material-icons-big">route</span>
               <p>03.07</p>
@@ -79,9 +111,15 @@ export default function Timeline() {
 
             <div className="z-10 w-min">
               <svg className="h-10 w-10">
-                <circle key={1} cx={10} cy="16" r="8" fill="#CC9232" />
+                <circle
+                  key={1}
+                  cx={10}
+                  cy="16"
+                  r="8"
+                  className="fill-current text-primary"
+                />
               </svg>
-              <span className="material-icons-big text-orange">groups</span>
+              <span className="material-icons-big text-foreground">groups</span>
               <p>03.08</p>
               <h3 className="w-max text-h3">年會</h3>
             </div>

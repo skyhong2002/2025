@@ -7,7 +7,7 @@ export default function CodeOfConduct() {
         id="code-of-conduct"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           CODE OF CONDUCT
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
@@ -16,7 +16,7 @@ export default function CodeOfConduct() {
           SITCON，我們要求所有參與者閱讀年會的{" "}
           <Link
             href={"https://sitcon.org/code-of-conduct/"}
-            className="text-orange underline underline-offset-2"
+            className="text-primary underline underline-offset-2"
           >
             行為準則（Code of Conduct）
           </Link>
@@ -28,7 +28,7 @@ export default function CodeOfConduct() {
         id="submission-guidelines"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           投稿注意事項
         </h2>
         <div>
@@ -71,7 +71,7 @@ export default function CodeOfConduct() {
         id="license"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           授權
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
@@ -91,7 +91,7 @@ export default function CodeOfConduct() {
         id="practice-talk"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           試講
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
@@ -106,7 +106,7 @@ export default function CodeOfConduct() {
         id="rehearsal"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           彩排
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
