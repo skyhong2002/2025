@@ -233,7 +233,10 @@ function PhoneLayout() {
           <br />
           <br />
           若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用
-          contact@sitcon.org 聯絡我們，商討更多的合作方式！
+          {" "}<Link href="mailto:contact@sitcon.org" className="text-primary underline cursor-pointer">
+          contact@sitcon.org
+          </Link>{" "}聯絡我們，商討更多的合作方式！
+          
         </p>
         <div className="flex-row pt-16">
           <a
@@ -278,7 +281,9 @@ function TabletLayout() {
             <br />
             <br />
             若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用
-            contact@sitcon.org 聯絡我們，商討更多的合作方式！
+            {" "}<Link href="mailto:contact@sitcon.org" className="text-primary underline cursor-pointer">
+          contact@sitcon.org
+          </Link>{" "} 聯絡我們，商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
             <a
@@ -338,7 +343,9 @@ function DesktopLayout() {
             <br />
             <br />
             若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用
-            contact@sitcon.org 聯絡我們，商討更多的合作方式！
+            {" "}<Link href="mailto:contact@sitcon.org" className="text-primary underline cursor-pointer">
+          contact@sitcon.org
+          </Link>{" "} 聯絡我們，商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
             <a

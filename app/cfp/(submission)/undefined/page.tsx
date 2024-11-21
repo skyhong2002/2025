@@ -3,6 +3,7 @@ import Timeline from "../_components/timeline";
 import CodeOfConduct from "../../_components/code-of-conduct";
 import TableOfContent from "../_components/table-of-content";
 import FAQ from "../../_components/faq";
+import Link from "next/link";
 
 export default function Page() {
   const sections = [
@@ -32,7 +33,16 @@ export default function Page() {
     },
     {
       title: "還有疑問怎麼辦？",
-      answer: "歡迎寄信至 session@sitcon.org 詢問，我們會儘速回應。",
+      answer: <p>
+      歡迎寄信至{" "}
+      <Link
+        href="mailto:contact@sitcon.org"
+        className="cursor-pointer text-primary underline"
+      >
+        contact@sitcon.org
+      </Link>{" "}
+      詢問，我們會儘速回應。
+    </p>
     },
   ];
 

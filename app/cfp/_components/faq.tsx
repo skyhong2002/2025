@@ -1,10 +1,10 @@
 "use client";
-import { Fragment, useState } from "react";
+import { Fragment, ReactNode, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface QA {
   title: string;
-  answer: string;
+  answer: ReactNode;
 }
 
 export default function FAQ({ QA }: { QA: QA[] }) {

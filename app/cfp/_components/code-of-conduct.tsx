@@ -62,7 +62,9 @@ export default function CodeOfConduct() {
           </ul>
           <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
             若有任何問題或投稿建議，請來信 SITCON 議程組信箱
-            session@sitcon.org。
+            {" "}<Link href="mailto:contact@sitcon.org" className="text-primary underline cursor-pointer">
+          contact@sitcon.org
+          </Link>{" "}。
           </p>
         </div>
       </section>
