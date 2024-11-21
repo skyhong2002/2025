@@ -29,13 +29,16 @@ export default function Navbar() {
     { link: "/cfp/undefined", label: "開放式議程徵稿" },
     { link: "/cfp/poster", label: "海報徵稿" },
   ];
+  const disableFadeEffect = !isIndex || !showMenu;
   return (
     <nav className="fixed left-0 right-0 top-0 z-20 flex justify-center">
       <motion.div
         className="flex w-full items-center justify-center transition"
         style={{
-          opacity: isIndex ? navBackgroundOpacity : 1,
-          backgroundColor: isIndex ? navBackground : "rgba(39, 48, 77)",
+          opacity: disableFadeEffect ? navBackgroundOpacity : 1,
+          backgroundColor: disableFadeEffect
+            ? navBackground
+            : "rgba(39, 48, 77)",
         }}
       >
         <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
@@ -74,7 +77,7 @@ export default function Navbar() {
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.8, opacity: 0 }}
                   transition={{ duration: 0.2 }}
-                  className="material-symbols-outlined !text-[48px]"
+                  className="material-symbols-outlined !text-[48px] text-foreground"
                 >
                   {showMenu ? "close" : "menu"}
                 </motion.span>
@@ -87,7 +90,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-[64px] z-10 flex h-[100vh] w-full flex-col items-end gap-16 border-t border-black bg-light-brown p-6 text-h2 font-bold shadow-lg md:hidden"
+                  className="absolute top-[64px] z-10 flex h-[100vh] w-full flex-col items-end gap-16 border-t border-foreground/50 bg-background-light p-6 text-h2 font-bold shadow-lg md:hidden"
                 >
                   {menuItems.map(({ link, label }, index) => (
                     <NavbarItem key={link} link={link}>
@@ -98,7 +101,7 @@ export default function Navbar() {
                           duration: 0.2,
                           delay: 0.05 * (index + 1),
                         }}
-                        className="border-b border-black p-2 text-blue"
+                        className="border-b border-foreground p-2 text-foreground"
                         onClick={() => setShowMenu((prev) => !prev)}
                       >
                         {label}
