@@ -19,6 +19,23 @@ export default function Page() {
     { id: "qa", title: "Q & A" },
   ];
 
+  const QA = [
+    {
+      title: "「先備知識」與「目標受眾」有何不同？",
+      answer:
+        "「目標受眾」表示您預期何種人將會前來參與該場議程，此欄位可能表示為與會者的興趣、生活環境抑或年齡層。「先備知識」表示對該議程有興趣者，您建議須先備哪些基礎技術、能力或經驗，有助於了解與吸收該場議程的知識精華。舉例而言，若一講題為「在營隊中使用虛擬貨幣」，則先備知識可能是「沒有」，目標受眾可能是「有想要辦營隊的人」。而如果是有關 Julia 程式語言的演講，則先備知識可能是「知道平行運算是什麼」，目標受眾可能是「想用 Julia 做資料科學的人」。",
+    },
+    {
+      title: "投稿主題是否有必要切合年會主題？",
+      answer:
+        "不用。審稿時僅會依照上文所述標準審查，不會因為呼應主題就拿到比較高分，或因為與主題無關就被扣分。",
+    },
+    {
+      title: "還有疑問怎麼辦？",
+      answer: "歡迎寄信至 session@sitcon.org 詢問，我們會儘速回應。",
+    },
+  ];
+
   return (
     <div className="py-8 text-normal-mobile md:text-normal">
       <h1 className="mb-4 text-h1-mobile font-extrabold md:text-h1">
@@ -28,7 +45,7 @@ export default function Page() {
       <Countdown />
       <section
         id="important-dates"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           重要時程
@@ -38,7 +55,7 @@ export default function Page() {
 
       <section
         id="session-types"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           議程說明
@@ -51,7 +68,7 @@ export default function Page() {
       </section>
       <section
         id="what-is-open-session"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           什麼是開放式議程？
@@ -60,29 +77,30 @@ export default function Page() {
           為帶給與會者更多元的議程內容，我們為講者提供了開放式議程這個選項，跳脫講者對聽眾單向陳述式的演講，開放式議程更加強調主講者和與會者的雙向交流。SITCON
           作為學生展現自己的舞台，我們期待以學生為主體的投稿，無論是實作工作坊、議題交流、社群分享或更多您想像得到能讓議程更加多元且具互動性的方式，我們都十分歡迎。
         </p>
+        <div className="flex grid-rows-4 flex-col gap-5 tablet:grid tablet:grid-cols-2 tablet:grid-rows-2">
+          <SessionTypeBox title="實作工作坊形式">
+            實作是學習一項新技能最直接的方式，您可以設計一個實務導向的工作坊，在介紹新技術的同時穿插應用的範例，讓會眾在過程中獲得成就感並帶走實用的技能。無論是軟體開發、工具使用，還是技術應用實作工作方的題目可以像是：
+            從零開始開發一個簡單的聊天應用程式。 從數位音樂到 AI
+            視覺藝術的創意應用。
+          </SessionTypeBox>
+          <SessionTypeBox title="議題交流形式">
+            知識的交流不只受限於於演講，資訊發展快速，卻也延伸出許多可以深入討論的議題，我們期待透過講者的引言，拋磚引玉，激發聽眾的想法，透過多方觀點的交流，聽眾可以理解不同看法，進而發現新的思考方向。
+            例如： 人工智慧是否會有自我意識？ 隱私權與數據共享如何找到平衡點？
+          </SessionTypeBox>
+          <SessionTypeBox title="社群分享形式">
+            社群的力量在於凝聚志同道合的人，講者可以分享社群運營經驗，無論是分享如何推廣技術還是組織活動的秘訣，透過經驗分享，探討如何打造互助的社群環境，或介紹該社群所推廣的技術、理念與特色，讓更多人對此產生興趣。例如：
+            如何吸引新手加入開源社群？ 如何帶領社群成員認識資料科學？
+          </SessionTypeBox>
+          <SessionTypeBox title="更多形式由您來創造">
+            不只有上述的形式，我們非常歡迎其他形式的議程。
+            無論是主持一場圓桌會議，一起腦力激盪，甚至舉辦一場小競賽，任何你想得到的非傳統議程形式都可以在開放式議程中進行！
+          </SessionTypeBox>
+        </div>
       </section>
-      <div className="grid grid-cols-1 grid-rows-4 gap-5 tablet:grid-cols-2 tablet:grid-rows-2">
-        <SessionTypeBox title="實作工作坊形式">
-          實作是學習一項新技能最直接的方式，您可以設計一個實務導向的工作坊，在介紹新技術的同時穿插應用的範例，讓會眾在過程中獲得成就感並帶走實用的技能。無論是軟體開發、工具使用，還是技術應用實作工作方的題目可以像是：
-          從零開始開發一個簡單的聊天應用程式。 從數位音樂到 AI
-          視覺藝術的創意應用。
-        </SessionTypeBox>
-        <SessionTypeBox title="議題交流形式">
-          知識的交流不只受限於於演講，資訊發展快速，卻也延伸出許多可以深入討論的議題，我們期待透過講者的引言，拋磚引玉，激發聽眾的想法，透過多方觀點的交流，聽眾可以理解不同看法，進而發現新的思考方向。
-          例如： 人工智慧是否會有自我意識？ 隱私權與數據共享如何找到平衡點？
-        </SessionTypeBox>
-        <SessionTypeBox title="社群分享形式">
-          社群的力量在於凝聚志同道合的人，講者可以分享社群運營經驗，無論是分享如何推廣技術還是組織活動的秘訣，透過經驗分享，探討如何打造互助的社群環境，或介紹該社群所推廣的技術、理念與特色，讓更多人對此產生興趣。例如：
-          如何吸引新手加入開源社群？ 如何帶領社群成員認識資料科學？
-        </SessionTypeBox>
-        <SessionTypeBox title="更多形式由您來創造">
-          不只有上述的形式，我們非常歡迎其他形式的議程。
-          無論是主持一場圓桌會議，一起腦力激盪，甚至舉辦一場小競賽，任何你想得到的非傳統議程形式都可以在開放式議程中進行！
-        </SessionTypeBox>
-      </div>
+
       <section
         id="submission-topics"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           投稿方式
@@ -193,7 +211,7 @@ export default function Page() {
 
       <section
         id="review-process"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           審稿方式
@@ -217,24 +235,7 @@ export default function Page() {
       </section>
 
       <CodeOfConduct />
-      <FAQ
-        QA={[
-          {
-            title: "「先備知識」與「目標受眾」有何不同？",
-            answer:
-              "「目標受眾」表示您預期何種人將會前來參與該場議程，此欄位可能表示為與會者的興趣、生活環境抑或年齡層。「先備知識」表示對該議程有興趣者，您建議須先備哪些基礎技術、能力或經驗，有助於了解與吸收該場議程的知識精華。舉例而言，若一講題為「在營隊中使用虛擬貨幣」，則先備知識可能是「沒有」，目標受眾可能是「有想要辦營隊的人」。而如果是有關 Julia 程式語言的演講，則先備知識可能是「知道平行運算是什麼」，目標受眾可能是「想用 Julia 做資料科學的人」。",
-          },
-          {
-            title: "投稿主題是否有必要切合年會主題？",
-            answer:
-              "不用。審稿時僅會依照上文所述標準審查，不會因為呼應主題就拿到比較高分，或因為與主題無關就被扣分。",
-          },
-          {
-            title: "還有疑問怎麼辦？",
-            answer: "歡迎寄信至 session@sitcon.org 詢問，我們會儘速回應。",
-          },
-        ]}
-      />
+      <FAQ QA={QA} />
     </div>
   );
 }

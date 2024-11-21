@@ -12,7 +12,7 @@ export default function FAQ({ QA }: { QA: QA[] }) {
     Array(QA.length).fill(false),
   );
   return (
-    <section id="qa" className="-mt-[80px] pt-[80px]">
+    <section id="qa" className="my-4 -mt-[80px] pt-[80px]">
       <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
         Q&A
       </h2>

@@ -18,6 +18,23 @@ export default function Page() {
     { id: "rehearsal", title: "彩排" },
     { id: "qa", title: "Q & A" },
   ];
+
+  const QA = [
+    {
+      title: "是否一定要是學術研究的成果？",
+      answer:
+        "不用。本次投稿接受各類型的專案展示，包括學術研究及實務應用成果，歡迎學生分享各種形式的內容。",
+    },
+    {
+      title: "投稿主題是否有必要切合年會主題？",
+      answer:
+        "不用。審稿時僅會依照上文所述標準審查，不會因為呼應主題就拿到比較高分，或因為與主題無關就被扣分。",
+    },
+    {
+      title: "還有疑問怎麼辦？",
+      answer: "歡迎寄信至 session@sitcon.org 詢問，我們會儘速回應。",
+    },
+  ];
   return (
     <div className="py-8 text-normal-mobile md:text-normal">
       <h1 className="mb-4 text-h1-mobile font-extrabold md:text-h1">
@@ -28,7 +45,7 @@ export default function Page() {
       <Countdown />
       <section
         id="important-dates"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           重要時程
@@ -38,7 +55,7 @@ export default function Page() {
 
       <section
         id="session-types"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           投稿說明
@@ -50,7 +67,7 @@ export default function Page() {
 
       <section
         id="submission-topics"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           投稿方式
@@ -184,7 +201,7 @@ export default function Page() {
 
       <section
         id="review-process"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           審稿方式
@@ -208,24 +225,7 @@ export default function Page() {
       </section>
 
       <CodeOfConduct />
-      <FAQ
-        QA={[
-          {
-            title: "是否一定要是學術研究的成果？",
-            answer:
-              "不用。本次投稿接受各類型的專案展示，包括學術研究及實務應用成果，歡迎學生分享各種形式的內容。",
-          },
-          {
-            title: "投稿主題是否有必要切合年會主題？",
-            answer:
-              "不用。審稿時僅會依照上文所述標準審查，不會因為呼應主題就拿到比較高分，或因為與主題無關就被扣分。",
-          },
-          {
-            title: "還有疑問怎麼辦？",
-            answer: "歡迎寄信至 session@sitcon.org 詢問，我們會儘速回應。",
-          },
-        ]}
-      />
+      <FAQ QA={QA} />
     </div>
   );
 }

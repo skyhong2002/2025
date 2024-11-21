@@ -2,10 +2,10 @@
 import Link from "next/link";
 export default function CodeOfConduct() {
   return (
-    <div className="space-y-16">
+    <>
       <section
         id="code-of-conduct"
-        className="my-4 -mt-[80px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           CODE OF CONDUCT
@@ -26,7 +26,7 @@ export default function CodeOfConduct() {
 
       <section
         id="submission-guidelines"
-        className="-mt-[80px] space-y-4 pt-[80px]"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           投稿注意事項
@@ -67,7 +67,10 @@ export default function CodeOfConduct() {
         </div>
       </section>
 
-      <section id="license" className="-mt-[80px] space-y-4 pt-[80px]">
+      <section
+        id="license"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
+      >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           授權
         </h2>
@@ -84,7 +87,10 @@ export default function CodeOfConduct() {
         <div className="py-1" />
       </section>
 
-      <section id="practice-talk" className="-mt-[80px] space-y-4 pt-[80px]">
+      <section
+        id="practice-talk"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
+      >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           試講
         </h2>
@@ -96,7 +102,10 @@ export default function CodeOfConduct() {
         </p>
       </section>
 
-      <section id="rehearsal" className="-mt-[80px] space-y-4 pt-[80px]">
+      <section
+        id="rehearsal"
+        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
+      >
         <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
           彩排
         </h2>
@@ -112,6 +121,6 @@ export default function CodeOfConduct() {
           提供設備：與年會當天場地的設備相同，例如麥克風、倒數計時器等。
         </p>
       </section>
-    </div>
+    </>
   );
 }

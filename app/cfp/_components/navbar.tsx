@@ -41,7 +41,7 @@ export default function Navbar() {
       >
         <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
           <ul className="relative flex w-full items-center justify-between p-4 max-[750px]:justify-center">
-            <Link href="/">
+            <Link href="/cfp">
               <SitconLogo className="text-foreground" />
             </Link>
             <ul className="flex items-center justify-end gap-8 text-foreground max-[750px]:hidden">
@@ -95,7 +95,10 @@ export default function Navbar() {
                       <motion.p
                         initial={{ opacity: 0, x: -40 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.2, delay: 0.2 * (index + 1) }}
+                        transition={{
+                          duration: 0.2,
+                          delay: 0.05 * (index + 1),
+                        }}
                         className="border-b border-black p-2 text-blue"
                         onClick={() => setShowMenu((prev) => !prev)}
                       >
