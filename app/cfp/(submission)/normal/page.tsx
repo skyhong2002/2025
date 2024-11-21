@@ -6,6 +6,25 @@ import FAQ from "../../_components/faq";
 import Espresso from "../../_components/logos/espresso";
 import Presentation from "../../_components/logos/presentation";
 import Link from "next/link";
+import Image from "next/image";
+
+function PresentationBlock(presentation: { title: string; id: string }) {
+  return (
+    <Link
+      target="_blank"
+      href={`https://youtu.be/${presentation.id}`}
+      className="flex flex-col gap-2 rounded-lg bg-background-light p-3 transition hover:brightness-125"
+    >
+      <Image
+        src={`https://img.youtube.com/vi/${presentation.id}/maxresdefault.jpg`}
+        alt={presentation.title}
+        width={1280}
+        height={720}
+      />
+      <span>{presentation.title}</span>
+    </Link>
+  );
+}
 
 export default function Page() {
   const sections = [
@@ -22,6 +41,121 @@ export default function Page() {
     { id: "qa", title: "Q & A" },
   ];
 
+  const presentations = [
+    {
+      title: "比 Python 更人性化 - 圖形化程式語言 Grapycal",
+      url: "https://sitcon.org/2024/agenda/fbe417/",
+      id: "J5LY0iXIfjI",
+    },
+    {
+      title: "教練我想打 Code！為甚麼要學計組和 OS？",
+      url: "https://sitcon.org/2022/agenda/82b1c6",
+      id: "wHWjPbD0ZaE",
+    },
+    {
+      title: "那些在德國 37C3 的經驗談：啤酒、馬黛茶、混亂",
+      url: "https://sitcon.org/2024/agenda/53292d/",
+      id: "BupcDzMkHd4",
+    },
+    {
+      title: "超越文字的力量：大型語言模型的能力與缺陷",
+      url: "https://sitcon.org/2024/agenda/ecfb2c/",
+      id: "JGgZTngrJB4",
+    },
+    {
+      title: "想自己辦活動或比賽嗎？那先來看看我們吧！",
+      url: "https://sitcon.org/2022/agenda/9109ae",
+      id: "_ShwBPzj_XU",
+    },
+    {
+      title: "Windows 系統安全這麼複雜怎麼學",
+      url: "https://sitcon.org/2022/agenda/6362cd",
+      id: "zOGGMS84mzU",
+    },
+    {
+      title: "身為學生，做研究也要拿出真本事",
+      url: "https://sitcon.org/2022/agenda/44d2d0",
+      id: "SbIPLs8q91Q",
+    },
+    {
+      title: "第一次做密室逃脫就上手",
+      url: "https://sitcon.org/2020/agenda/bdcf60d1-4ea7-4485-bc64-a6252eabc19f",
+      id: "1gFBx16AlMc",
+    },
+    {
+      title: "網路維運，在台灣怎麼玩？打造全台最大家用網路！",
+      url: "https://sitcon.org/2021/agenda/3fe74d93-2ab5-4c42-8b49-b5b92973f4aa",
+      id: "paJ0AlW6h-I",
+    },
+    {
+      title: "從學校到業界，工程師作為職業的現實",
+      url: "https://sitcon.org/2019/agenda/7a67f4fb-b6f4-4595-b9af-527b3024c8f8",
+      id: "qYxdomoMEf8",
+    },
+    {
+      title: "奔跑吧！台北：遊戲開發經驗分享",
+      url: "https://sitcon.org/2018/#/agenda/sub/d946b6e1-d826-4c64-86a4-bf013bcc0c06",
+      id: "85bW97XI4i0",
+    },
+    {
+      title: "關於 CTF 的那些事",
+      url: "https://sitcon.org/2021/agenda/7a88857e-7d50-4d9c-a656-2d99feef6198",
+      id: "_lNPRlt6c2E",
+    },
+  ];
+
+  const espressos = [
+    {
+      title: "格鬥遊戲 AI 開發經驗談",
+      id: "ryLLzSwQ54w",
+    },
+    {
+      title: "PHP 是世界上最棒的語言，但我做了一個比它更棒的！",
+      url: "https://sitcon.org/2021/agenda/bb826e6d-8544-4101-8811-13032bd9a4fd",
+      id: "y3EM5GHigTY",
+    },
+    {
+      title: "科技藝術入門 - 淺談 p5.js",
+      url: "https://sitcon.org/2024/agenda/f01c4f/",
+      id: "TDlfRf18MM8",
+    },
+    {
+      title: "喜歡打街機？做一台放家裡打r",
+      url: "https://sitcon.org/2021/agenda/2b210726-c5b0-4094-a591-fccb51f0ee55",
+      id: "I07gX4YlYrE",
+    },
+    {
+      title: "我也能讓 Python 幫忙操控電腦嗎？",
+      url: "https://sitcon.org/2020/agenda/32ba951d-3cfb-4461-ae6a-5ddbab693b8b",
+      id: "MfiKAOBrPpk",
+    },
+    {
+      title: "創造真正的專家：專有領域的語言模型案例介紹",
+      url: "https://sitcon.org/2024/agenda/819758/",
+      id: "xsrWCelvfyI",
+    },
+    {
+      title: "深度學習如何深度學習",
+      url: "https://sitcon.org/2018/#/agenda/sub/f3c6853d-2b0e-464c-8837-9411455961d8",
+      id: "H5o5Oa_nbqs",
+    },
+    {
+      title: "平行程式設計：讓 GoAccess 性能提升 x3.6 倍",
+      url: "https://sitcon.org/2024/agenda/90acce/",
+      id: "RQR55V3gk-A",
+    },
+    {
+      title: "你所不知道的維基 - Wikidata",
+      url: "https://sitcon.org/2019/agenda/7959ab0b-cdfa-40bc-8566-099477abb195",
+      id: "kD-jGfDZGGo",
+    },
+    {
+      title: "淺談社會網路分析",
+      url: "https://sitcon.org/2019/agenda/f60637a1-0ccb-4c02-b1b0-be7a6a393d87",
+      id: "GFfaD-kVe_A",
+    },
+  ];
+
   const QA = [
     {
       title: "「先備知識」與「目標受眾」有何不同？",
@@ -35,16 +169,18 @@ export default function Page() {
     },
     {
       title: "還有疑問怎麼辦？",
-      answer: <p>
-      歡迎寄信至{" "}
-      <Link
-        href="mailto:contact@sitcon.org"
-        className="cursor-pointer text-primary underline"
-      >
-        contact@sitcon.org
-      </Link>{" "}
-      詢問，我們會儘速回應。
-    </p>
+      answer: (
+        <p>
+          歡迎寄信至{" "}
+          <Link
+            href="mailto:contact@sitcon.org"
+            className="cursor-pointer text-primary underline"
+          >
+            contact@sitcon.org
+          </Link>{" "}
+          詢問，我們會儘速回應。
+        </p>
+      ),
     },
   ];
 
@@ -105,12 +241,13 @@ export default function Page() {
           投稿主題範例
         </h2>
         <p className="leading-10">
-          SITCON 作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
+          SITCON
+          作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
           不論是以技術探討形式，或輕鬆的分享方式，任何與資訊科技、電腦技術相關的講題，我們都非常歡迎投稿！
           除此之外，您也可以透過參與投稿者小聚或前往 SITCON
           歷年網站（2013、2014、2015、2016、2017、2018、2019、2020、2021、2022、2024）查看過去的議程。
         </p>
-        <h3 className="my-4 text-h3-mobile font-bold md:text-h3  text-primary">
+        <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
           PRESENTATION
         </h3>
         <p className="leading-10">
@@ -120,17 +257,29 @@ export default function Page() {
           分鐘的問答時間，共 <span className="hightlight"> 40 </span>
           分鐘，讓您有充分的時間展示想法、描述經歷、和與會者交流。
         </p>
-        <h3 className="my-4 text-h3-mobile font-bold md:text-h3  text-primary">ESPRESSO</h3>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
+          {presentations.map((item) => (
+            <PresentationBlock key={item.id} id={item.id} title={item.title} />
+          ))}
+        </div>
+        <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
+          ESPRESSO
+        </h3>
         <p className="leading-10">
           Espresso 僅有 <span className="hightlight"> 10 </span>
           分鐘，挑戰最為濃縮與精華的議程，為與會者帶來短而精緻的知識洗禮。
         </p>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
+          {espressos.map((item) => (
+            <PresentationBlock key={item.id} id={item.id} title={item.title} />
+          ))}
+        </div>
       </section>
       <section id="submission-format" className="-mt-[80px] pt-[80px] md:mb-16">
         <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           投稿方式
         </h2>
-        <h3 className="my-4 text-h3-mobile text-primary md:text-h3 font-bold">
+        <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
           稿件資訊
         </h3>
         <ul className="list-inside list-disc leading-10">
@@ -188,7 +337,7 @@ export default function Page() {
             選填。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
           </li>
         </ul>
-        <h3 className="my-4 text-h3-mobile text-primary md:text-h3 font-bold">
+        <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
           個人資料
         </h3>
         <p className="mb-2">
