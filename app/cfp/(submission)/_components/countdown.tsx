@@ -86,7 +86,7 @@ export default function CountdownPage() {
           <div className="w-full justify-between pl-2 text-foreground lg:pl-12 min-[1210px]:flex">
             <p className="whitespace-nowrap text-nowrap font-bold">截止日期</p>
             <p className="whitespace-nowrap text-nowrap">
-              2024 年 1 月 21 日（六）23:59
+              2025 年 1 月 21 日（二）23:59
             </p>
           </div>
         </div>
