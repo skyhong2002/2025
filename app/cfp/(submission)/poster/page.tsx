@@ -40,7 +40,11 @@ export default function Page() {
       <h1 className="mb-4 text-h1-mobile font-extrabold md:text-h1">
         海報徵稿
       </h1>
-      <TableOfContent sections={sections} theme="light" />
+      <TableOfContent
+        sections={sections}
+        theme="light"
+        submitUrl="https://forms.gle/NDZqhGJBLwvQTgEt8"
+      />
 
       <Countdown />
       <section

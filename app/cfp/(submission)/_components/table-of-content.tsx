@@ -6,17 +6,28 @@ import { motion } from "framer-motion";
 export default function TableOfContent({
   theme = "light",
   sections = [],
+  submitUrl,
 }: {
   theme: "red" | "light";
   sections: { id: string; title: string }[];
+  submitUrl: string;
 }) {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
     <>
       {/* pc & tablet */}
-      <nav className="md: fixed right-0 top-[100px] hidden w-min md:block lg:w-[15%]">
-        <h2 className="mb-3 font-extrabold text-foreground">本頁目錄</h2>
+      <nav className="md: fixed right-5 top-[100px] hidden w-min max-w-[200px] md:block lg:w-[15%]">
+        <Link
+          href={submitUrl}
+          target="_blank"
+          className="tableContentItem block w-full rounded-md bg-primary px-4 py-2 text-center font-bold text-black"
+        >
+          立即投稿
+        </Link>
+        <h2 className="mb-3 text-h3 font-extrabold text-foreground">
+          本頁目錄
+        </h2>
         <div className="mb-3 h-[1px] bg-foreground" />
         <ul>
           {sections.map((section) => (
@@ -27,7 +38,7 @@ export default function TableOfContent({
             >
               <li
                 key={section.id}
-                className="mb-1 mr-3 h-[30px] text-nowrap font-bold text-foreground"
+                className="mb-1 mr-3 h-[30px] text-nowrap text-foreground"
               >
                 {section.title}
               </li>
