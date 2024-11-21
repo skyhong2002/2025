@@ -48,27 +48,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
-          rel="stylesheet"
-        />
-        {/* 兩個資源不能合併 */}
-      </head>
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-        <div className="w-full bg-background-light">
-          <div className="mx-auto max-w-[1120px]">
-            <Footer />
-          </div>
+    <>
+      <Navbar />
+      {children}
+      <div className="w-full bg-background-light">
+        <div className="mx-auto max-w-[1120px]">
+          <Footer />
         </div>
-      </body>
-    </html>
+      </div>
+    </>
   );
 }
