@@ -47,7 +47,7 @@ export default function Page() {
         id="important-dates"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           重要時程
         </h2>
         <Timeline />
@@ -57,7 +57,7 @@ export default function Page() {
         id="session-types"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           議程說明
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
@@ -70,7 +70,7 @@ export default function Page() {
         id="what-is-open-session"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           什麼是開放式議程？
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
@@ -102,13 +102,11 @@ export default function Page() {
         id="submission-topics"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           投稿方式
         </h2>
         <div className="space-y-4">
-          <h3 className="text-h3-mobile text-light-blue md:text-h3">
-            稿件資訊
-          </h3>
+          <h3 className="text-h3-mobile text-primary md:text-h3">稿件資訊</h3>
           <ul className="ml-2 list-inside list-disc text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
             <li>
               <span className="subTitle">題目 Title：</span>
@@ -169,9 +167,7 @@ export default function Page() {
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-h3-mobile text-light-blue md:text-h3">
-            個人資料
-          </h3>
+          <h3 className="text-h3-mobile text-primary md:text-h3">個人資料</h3>
           <p className="mb-2">
             除了暱稱 /
             名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
@@ -213,7 +209,7 @@ export default function Page() {
         id="review-process"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
-        <h2 className="text-h2-mobile font-extrabold text-light-blue md:text-h2">
+        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           審稿方式
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
@@ -248,7 +244,7 @@ function SessionTypeBox({
   children: React.ReactNode;
 }) {
   return (
-    <div className="space-y-4 rounded-lg border border-red bg-light-brown p-4 text-red">
+    <div className="space-y-4 rounded-lg bg-background-light p-4 text-foreground">
       <h3 className="text-h3-mobile font-bold md:text-h3">{title}</h3>
       <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
         {children}
