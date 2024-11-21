@@ -4,8 +4,6 @@ import "./globals.css";
 import Navbar from "./_components/navbar";
 import Footer from "./_components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export async function generateMetadata(): Promise<Metadata> {
   const image = "https://sitcon.org/2025/og.jpg";
   const title = "SITCON 2025";
