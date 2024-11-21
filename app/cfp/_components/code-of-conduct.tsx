@@ -16,7 +16,7 @@ export default function CodeOfConduct() {
           SITCON，我們要求所有參與者閱讀年會的{" "}
           <Link
             href={"https://sitcon.org/code-of-conduct/"}
-            className="text-orange underline underline-offset-2"
+            className="text-primary underline underline-offset-2"
           >
             行為準則（Code of Conduct）
           </Link>
