@@ -84,7 +84,7 @@ export default function Home() {
                   </h1>
                   <p className="text-justify text-normal leading-8 text-foreground">
                     學生計算機年會（Students’ Information Technology
-                    Conference）自 2013
+                    Conference）自 2012
                     年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。
                   </p>
                 </div>
