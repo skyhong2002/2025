@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
-import PresentationIcon from "../../_assets/presentation.svg";
-import EspressoIcon from "../../_assets/espresso.svg";
 import CodeOfConduct from "../../_components/code-of-conduct";
 import TableOfContent from "../_components/table-of-content";
 import FAQ from "../../_components/faq";
+import Espresso from "../../_components/logos/espresso";
+import Presentation from "../../_components/logos/presentation";
 
 export default function Page() {
   const sections = [
@@ -66,16 +66,16 @@ export default function Page() {
           議程種類
         </h2>
         <div className="mb-6 mt-4 grid grid-rows-2 gap-3 lg:grid-cols-2 lg:grid-rows-1">
-          <div className="md:background-light flex flex-col items-center rounded-lg border bg-background-light p-6 text-orange md:border-orange">
-            <Image priority src={PresentationIcon} alt="PRESENTATION" />
+          <div className="md:background-light flex flex-col items-center gap-3 rounded-lg border bg-background-light p-6 text-foreground md:border-foreground">
+            <Presentation />
             <h3 className="text-h3-mobile md:text-h3">Presentation</h3>
             <p>
               Presentation 共 40 分鐘，包含完整 30 分鐘的議程與 10
               分鐘的問答時間，讓您有充分的時間展示想法、描述經歷、和與會者交流。
             </p>
           </div>
-          <div className="md:background-light flex flex-col items-center rounded-lg border bg-background-light p-6 text-red md:border-red">
-            <Image priority src={EspressoIcon} alt="PRESENTATION" />
+          <div className="md:background-light flex flex-col items-center gap-3 rounded-lg border bg-background-light p-6 text-foreground md:border-foreground">
+            <Espresso />
             <h3 className="text-h3-mobile md:text-h3">Espresso</h3>
             <p>
               Espresso 僅有 10
