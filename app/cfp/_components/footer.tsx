@@ -112,7 +112,7 @@ function Brand() {
     <div className="item-between flex flex-row gap-6 max-mobile:flex-col mobile:items-end">
       <SitconLogo height={60} width={200} />
       <p className="max-[1060px]:hidden">
-        學生計算機年會 <br /> Student Information Technology Conference
+        學生計算機年會 <br /> Students&#39; Information Technology Conference
       </p>
     </div>
   );
