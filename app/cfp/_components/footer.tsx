@@ -54,11 +54,10 @@ function Links() {
     <FooterSubMenu
       title="連結"
       links={[
-        { text: "首頁", href: "" },
-        { text: "年會主題", href: "theme" },
-        { text: "一般議程投稿", href: "normal" },
-        { text: "開放式議程投稿", href: "undefined" },
-        { text: "海報投稿", href: "poster" },
+        { text: "首頁", href: "/cfp" },
+        { text: "一般議程投稿", href: "/cfp/normal" },
+        { text: "開放式議程投稿", href: "/cfp/undefined" },
+        { text: "海報投稿", href: "/cfp/poster" },
       ]}
     />
   );
@@ -69,8 +68,8 @@ function Support() {
     <FooterSubMenu
       title="支持我們"
       links={[
-        { text: "我要贊助", href: "sponsor" },
-        { text: "索取贊助徵求書", href: "request-sponsorship" },
+        { text: "我要贊助", href: "https://sitcon.org/donate" },
+        { text: "索取贊助徵求書", href: "https://i.sitcon.org/2025cfs-form/" },
       ]}
     />
   );
