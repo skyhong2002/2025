@@ -1,103 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
-
-type TimeLeft = {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-};
-
-function MiniCountdown() {
-  const TARGET_DATE = "2025-01-21T23:59:59"; // 可以動態設置
-  const now = new Date();
-  const target = new Date(TARGET_DATE);
-  const difference = target.getTime() - now.getTime();
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((difference / (1000 * 60)) % 60),
-    seconds: Math.floor((difference / 1000) % 60),
-  });
-
-  // 客戶端倒數計時邏輯
-  function calculateTimeLeft(): TimeLeft {
-    const now = new Date();
-    const target = new Date(TARGET_DATE);
-    const difference = target.getTime() - now.getTime();
-
-    if (difference <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-    }
-
-    return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / (1000 * 60)) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
-    };
-  }
-
-  useEffect(() => {
-    const timerId = setInterval(() => {
-      setTimeLeft(calculateTimeLeft()); // 更新倒數時間
-    }, 1000);
-
-    return () => clearInterval(timerId); // 清除計時器
-  }, [timeLeft]); // 當 timeLeft 更新時觸發
-
-  function formatToTwoDigits(num: number): string {
-    return num.toString().padStart(2, "0");
-  }
-  return (
-    <div className="flex flex-row rounded-[11px] px-[14px] py-[8px] text-[#fff] max-[1024px]:bg-inherit max-sm:w-[80%] max-sm:justify-center max-sm:rounded-[208px] max-sm:border-2 max-sm:border-black max-sm:p-3">
-      {Object.entries(timeLeft).map(([key, value]) => (
-        <div key={key}>
-          <div className="flex flex-row items-center justify-center">
-            <AnimatePresence mode="popLayout" initial={false}>
-              <motion.span
-                key={value}
-                initial={{
-                  opacity: 0,
-                  y: "-0.25em",
-                  scaleY: 0.75,
-                  filter: "blur(0.1em)",
-                  transformOrigin: "top",
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  scaleY: 1,
-                  filter: "blur(0px)",
-                }}
-                exit={{
-                  opacity: 0,
-                  y: "0.25em",
-                  scaleY: 0.75,
-                  filter: "blur(0.1em)",
-                  transformOrigin: "bottom",
-                }}
-                className="text-5xl max-[1024px]:text-6xl max-sm:text-4xl max-sm:text-5xl"
-              >
-                {formatToTwoDigits(value)}
-              </motion.span>
-            </AnimatePresence>
-            {key != "seconds" ? (
-              <span className="px-1 text-3xl max-[1024px]:text-4xl max-sm:text-h2-mobile">
-                :
-              </span>
-            ) : (
-              ""
-            )}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 export default function Home() {
   return (
@@ -382,7 +285,7 @@ function TabletLayout() {
           <div className="flex-row pt-8">
             <a
               href="https://sitcon.org/donate"
-              className="flex items-center justify-end text-h1 font-bold text-accent transition hover:text-accent-light"
+              className="text-accent hover:text-accent-light flex items-center justify-end text-h1 font-bold transition"
             >
               我要贊助
               <span className="material-icons" style={{ fontSize: "62px" }}>
@@ -391,7 +294,7 @@ function TabletLayout() {
             </a>
             <a
               href="https://i.sitcon.org/2025cfs-form"
-              className="flex items-center justify-end text-h2 font-bold text-accent transition hover:text-accent-light"
+              className="text-accent hover:text-accent-light flex items-center justify-end text-h2 font-bold transition"
             >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "62px" }}>
@@ -442,7 +345,7 @@ function DesktopLayout() {
           <div className="flex-row pt-8">
             <a
               href="https://sitcon.org/donate"
-              className="flex items-center justify-end text-h1 font-bold text-accent transition hover:text-accent-light"
+              className="text-accent hover:text-accent-light flex items-center justify-end text-h1 font-bold transition"
             >
               我要贊助
               <span className="material-icons" style={{ fontSize: "66px" }}>
@@ -451,7 +354,7 @@ function DesktopLayout() {
             </a>
             <a
               href="https://i.sitcon.org/2025cfs-form"
-              className="flex items-center justify-end text-h2 font-bold text-accent transition hover:text-accent-light"
+              className="text-accent hover:text-accent-light flex items-center justify-end text-h2 font-bold transition"
             >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "53px" }}>
