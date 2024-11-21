@@ -11,19 +11,19 @@ export default function Home() {
         </div>
         <div className="absolute left-1/2 top-1/2 h-[calc(100svh-64px)] min-h-[600px] -translate-x-1/2 -translate-y-1/2">
           <div
-            className={`hero-content relative flex h-full items-center justify-center bg-cover bg-[left_20%_center] max-[1024px]:bg-gray max-[1024px]:bg-none lg:bg-center`}
+            className={`hero-content relative flex h-full items-center justify-center bg-cover bg-[left_20%_center] max-[1024px]:bg-none lg:bg-center`}
           >
             <div className="flex w-full flex-col items-center gap-4">
               <div className="flex flex-col items-center justify-center">
-                <div className="flex flex-row gap-3 py-5 max-[1024px]:hidden">
+                <div className="flex flex-row gap-3 py-5">
                   <p className="text-h3 text-[#FFFFFF]">SITCON 2025</p>
                 </div>
-                <div className="flex flex-row gap-3 pb-3 max-[1024px]:hidden">
+                <div className="flex flex-row gap-3 pb-3">
                   <p className="text-8xl font-semibold text-[#FFFFFF]">
                     徵稿開始
                   </p>
                 </div>
-                <div className="flex flex-row gap-3 py-5 max-[1024px]:hidden">
+                <div className="flex flex-row gap-3 py-5">
                   <p className="text-h3 text-[#FFFFFF]">03 / 08</p>
                   <div className="text-h3 text-[#FFFFFF]">
                     <p>中央研究院人文社會科學館</p>
@@ -35,35 +35,29 @@ export default function Home() {
                 {/* <MiniCountdown /> */}
               </div>
               <div className="flex max-w-[800px] flex-col justify-center gap-5">
-                <div className="flex flex-row justify-center gap-5 max-sm:grid max-sm:grid-cols-2 max-sm:px-4">
+                <div className="flex flex-row justify-center gap-5">
                   <Link
                     href="/cfp/poster"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:text-[18px] max-[1024px]:font-semibold max-sm:w-full max-sm:px-3 max-sm:py-2 max-sm:text-h2-mobile"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:w-full max-sm:px-3 max-sm:py-2 max-sm:text-h2-mobile"
                   >
                     一般議程
                   </Link>
                   <Link
                     href="/cfp/poster"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:text-[18px] max-[1024px]:font-semibold max-sm:w-full max-sm:px-3 max-sm:py-2 max-sm:text-h2-mobile"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:w-full max-sm:px-3 max-sm:py-2 max-sm:text-h2-mobile"
                   >
                     開放式議程
                   </Link>
                   <Link
                     href="/cfp/poster"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:text-[18px] max-[1024px]:font-semibold max-sm:w-full max-sm:px-3 max-sm:py-2 max-sm:text-h2-mobile"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-sm:w-full max-sm:px-3 max-sm:py-2 max-sm:text-h2-mobile"
                   >
                     靜態海報展
-                  </Link>
-                  <Link
-                    href="#"
-                    className="hidden w-auto justify-center rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:flex max-[1024px]:text-[18px] max-sm:w-full max-sm:px-3 max-sm:py-2 max-sm:text-h2-mobile"
-                  >
-                    加入行事曆
                   </Link>
                 </div>
                 <Link
                   href="/cfp/deadline.ics"
-                  className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:hidden max-[1024px]:text-[18px] max-sm:w-full max-sm:py-2"
+                  className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center max-[1024px]:text-[18px] max-sm:w-full max-sm:py-2"
                 >
                   把截止日期加入行事曆
                 </Link>
@@ -146,10 +140,10 @@ export default function Home() {
 function CloseTouchSection() {
   return (
     <div className="bg-background-light p-8 max-[1024px]:bg-background-light max-sm:bg-[url('/2025/cfp/stats/3.jpg')] max-sm:bg-cover max-sm:bg-center sm:relative sm:col-span-2 sm:rounded-[32px] sm:p-6">
-      <h1 className="text-[26px] font-semibold tracking-widest text-foreground max-[1024px]:text-blue max-sm:text-[#FFFFFF] min-[1024px]:text-h2">
+      <h1 className="text-[26px] font-semibold tracking-widest text-foreground max-[1024px]:text-foreground max-sm:text-[#FFFFFF] min-[1024px]:text-h2">
         此外，我們也樂見企業與學生的近距離交流，成為我們的合作夥伴您可以：
       </h1>
-      <p className="pt-5 text-justify text-normal-mobile font-semibold leading-8 text-foreground max-[1024px]:text-blue max-sm:text-[#FFFFFF] sm:absolute sm:bottom-6 sm:left-6 sm:pt-0 sm:text-normal sm:font-normal sm:tracking-wider">
+      <p className="pt-5 text-justify text-normal-mobile font-semibold leading-8 text-foreground max-[1024px]:text-foreground max-sm:text-[#FFFFFF] sm:absolute sm:bottom-6 sm:left-6 sm:pt-0 sm:text-normal sm:font-normal sm:tracking-wider">
         {">"} 接觸學生資訊人才
         <br />
         {">"} 提升品牌影響力
@@ -199,10 +193,10 @@ function From2013() {
 
       {/* Tablet Layout */}
       <div className="relative col-span-2 rounded-[32px] bg-background-light p-6 max-sm:hidden min-[1024px]:hidden">
-        <h1 className="text-[26px] font-semibold tracking-[2px] text-blue">
+        <h1 className="text-[26px] font-semibold tracking-[2px] text-foreground">
           自 2013 以來，我們帶領了無數學子進入資訊的殿堂，更做到：
         </h1>
-        <p className="absolute bottom-6 left-6 text-justify text-normal leading-8 text-blue">
+        <p className="absolute bottom-6 left-6 text-justify text-normal leading-8 text-foreground">
           {">"} 累積逾 11,000 名與會者
           <br />
           {">"} 超過 400 位學生講者
@@ -267,10 +261,10 @@ function TabletLayout() {
     <div className="relative grid max-w-[1120px] grid-rows-2 gap-4 bg-background bg-cover bg-[left_20%_center] px-10 max-sm:hidden lg:bg-center min-[1024px]:hidden">
       <div className="row-span-1 grid h-auto grid-cols-2 gap-4">
         <div className="col-span-1 rounded-[32px] bg-background-light p-6">
-          <h1 className="text-h1 font-black tracking-[2px] text-blue">
+          <h1 className="text-h1 font-black tracking-[2px] text-foreground">
             支持我們
           </h1>
-          <p className="text-justify text-normal leading-8 text-blue">
+          <p className="text-justify text-normal leading-8 text-foreground">
             SITCON
             秉持著不向與會者收費的原則，十年以來致力於推廣學生資訊教育，創造學生交流、教學互長的機會。
             <br />
