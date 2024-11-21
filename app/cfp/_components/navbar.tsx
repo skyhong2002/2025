@@ -60,7 +60,7 @@ export default function Navbar() {
 
             <AnimatePresence mode="wait">
               <motion.div
-                className="absolute right-4 justify-self-end md:hidden"
+                className="absolute right-4 cursor-pointer justify-self-end md:hidden"
                 onClick={() => setShowMenu((prev) => !prev)}
                 initial={{ rotate: 0 }}
                 animate={{
