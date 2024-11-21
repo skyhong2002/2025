@@ -457,7 +457,7 @@ export default function Page() {
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
           投稿作者同意以{" "}
           <Link
-            href={"https://creativecommons.org/licenses/by/4.0/"}
+            href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
             className="underline underline-offset-2"
           >
             創用 CC「姓名標示」4.0
