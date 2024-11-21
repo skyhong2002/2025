@@ -244,8 +244,51 @@ export default function Page() {
           SITCON
           作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
           不論是以技術探討形式，或輕鬆的分享方式，任何與資訊科技、電腦技術相關的講題，我們都非常歡迎投稿！
-          除此之外，您也可以透過參與投稿者小聚或前往 SITCON
-          歷年網站（2013、2014、2015、2016、2017、2018、2019、2020、2021、2022、2024）查看過去的議程。
+          除此之外，您也可以透過參與投稿者小聚或前往 SITCON 歷年網站（
+          <Link className="link" href="https://sitcon.org/2013">
+            2013
+          </Link>
+          、
+          <Link className="link" href="https://sitcon.org/2014">
+            2014
+          </Link>
+          、
+          <Link className="link" href="https://sitcon.org/2015">
+            2015
+          </Link>
+          、
+          <Link className="link" href="https://sitcon.org/2016">
+            2016
+          </Link>
+          、
+          <Link className="link" href="https://sitcon.org/2017">
+            2017
+          </Link>
+          、
+          <Link className="link" href="https://sitcon.org/2018">
+            2018
+          </Link>
+          、
+          <Link className="link" href="https://sitcon.org/2019">
+            2019
+          </Link>
+          、
+          <Link className="link" href="https://sitcon.org/2020">
+            2020
+          </Link>
+          、
+          <Link className="link" href="https://sitcon.org/2021">
+            2021
+          </Link>
+          、
+          <Link className="link" href="https://sitcon.org/2022">
+            2022
+          </Link>
+          、
+          <Link className="link" href="https://sitcon.org/2024">
+            2024
+          </Link>
+          ）查看過去的議程。
         </p>
         <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
           PRESENTATION
