@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Countdown from "../_components/countdown";
 import Timeline from "../_components/timeline";
 import CodeOfConduct from "../../_components/code-of-conduct";
