@@ -320,7 +320,7 @@ export default function Page() {
       </section>
       <section id="submission-format" className="-mt-[80px] pt-[80px] md:mb-16">
         <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
-          投稿方式
+          投稿格式
         </h2>
         <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
           稿件資訊
