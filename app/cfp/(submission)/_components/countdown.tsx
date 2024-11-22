@@ -10,7 +10,7 @@ type TimeLeft = {
   seconds: number;
 };
 
-async function calculateTimeLeft(): Promise<TimeLeft> {
+function calculateTimeLeft(): TimeLeft {
   const TARGET_DATE = "2025-01-21T23:59:59";
   const now = new Date();
   const target = new Date(TARGET_DATE);
@@ -28,9 +28,8 @@ async function calculateTimeLeft(): Promise<TimeLeft> {
   };
 }
 
-// 這是server component
-export default async function CountdownPage() {
-  const initialTimeLeft = await calculateTimeLeft();
+export default function CountdownPage() {
+  const initialTimeLeft = calculateTimeLeft();
   return (
     <div className="mx-auto hidden h-[289px] w-full flex-col justify-between md:mb-16 md:flex">
       <div className="flex h-[200px] w-full flex-col items-center rounded-3xl border border-foreground px-24 py-5">
