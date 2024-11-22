@@ -43,7 +43,7 @@ export default function CountdownPage() {
       <div className="flex h-[67px] w-full justify-between">
         <div className="flex h-full w-[57%] items-center justify-between rounded-2xl border border-foreground px-5">
           <CalendarSvg height={48} width={48} />
-          <div className="w-full justify-between pl-2 text-foreground lg:pl-12 min-[1210px]:flex">
+          <div className="w-full justify-between px-4 text-foreground min-[1210px]:flex">
             <p className="whitespace-nowrap text-nowrap font-bold">截止日期</p>
             <p className="whitespace-nowrap text-nowrap">
               2025 年 1 月 21 日（二）23:59
