@@ -37,7 +37,7 @@ export default function TableOfContent({
   return (
     <>
       {/* pc & tablet */}
-      <nav className="md: fixed right-5 top-[100px] hidden w-min max-w-[200px] md:block lg:w-[15%]">
+      <nav className="md: fixed right-5 top-[100px] hidden w-min max-w-[200px] md:block lg:w-[200px]">
         <Link
           href={submitUrl}
           target="_blank"
@@ -48,8 +48,8 @@ export default function TableOfContent({
         <h2 className="mb-3 text-h3 font-extrabold text-foreground">
           本頁目錄
         </h2>
-        <div className="mb-3 h-[1px] bg-foreground" />
-        <ul>
+        <div className="mb-3 h-[1px] bg-primary" />
+        <ul className="w-full">
           {sections.map((section) => (
             <Link
               href={`#${section.id}`}
