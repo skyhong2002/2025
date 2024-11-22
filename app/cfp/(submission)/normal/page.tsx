@@ -596,7 +596,7 @@ export default function Page() {
   );
 }
 
-function InformationField({
+export function InformationField({
   title,
   tags,
   children,
