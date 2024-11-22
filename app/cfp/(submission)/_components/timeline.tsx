@@ -3,15 +3,15 @@ export default function Timeline({ isPoster }: { isPoster: boolean }) {
     <>
       <div className="mx-auto hidden w-full md:block">
         {isPoster ? (
-          <div className="flex justify-between space-x-4 text-h3">
+          <div className="hidden justify-between space-x-4 text-h3 lg:flex">
             <div className="mr-4 flex h-min flex-col space-y-4 text-nowrap">
-              <p>2024 年 11 月 22 日（五）：開始徵稿</p>
-              <p>2025 年 1 月 21 日（二）23:59：投稿截止</p>
-              <p>2025 年一月下旬：海報錄取通知</p>
+              <p>24/11/12(五):開始徵稿</p>
+              <p>25/1/21(二)/23:59:投稿截止</p>
+              <p>25/一月下旬:海報錄取通知</p>
             </div>
             <div className="flex flex-col space-y-4">
-              <p>2025 年 2 月 16 日（日）：錄取海報檔案上傳截止</p>
-              <p>2025 年 3 月 8 日（六）：年會</p>
+              <p>25/1/16(日):錄取海報檔案上傳截止</p>
+              <p>25/3/8(六):年會</p>
             </div>
           </div>
         ) : (
@@ -144,7 +144,7 @@ export default function Timeline({ isPoster }: { isPoster: boolean }) {
       </div>
 
       <div className="mx-auto tracking-wider md:hidden">
-        <div className="space-y-4 text-xl">
+        <div className="space-y-4 text-xl leading-10">
           {isPoster ? (
             <>
               <p>2024 年 11 月 22 日（五）：開始徵稿</p>
