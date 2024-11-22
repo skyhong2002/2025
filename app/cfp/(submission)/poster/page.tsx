@@ -306,14 +306,42 @@ export default function Page() {
           授權
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-          投稿作者同意以{" "}
+          今年將採取實體與線上同步之模式進行，除開放式議程外，年會當天將對每一場議程進行直播串流。如果您同意以
           <Link
             href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
-            className="underline underline-offset-2"
+            className="hightlight subTitle underline underline-offset-2"
           >
-            創用 CC「姓名標示」4.0
-          </Link>{" "}
-          授權大會方進行紙本印刷、宣傳、展覽、數位化、重製等審稿、佈展、官方網站上線工作必要流程。投稿作者仍擁有投稿專案著作之著作權。且擔保本著作係著作人之原創性著作，未侵害任何第三人之智慧財產權。
+            {" "}
+            創用 CC「姓名標示」4.0{" "}
+          </Link>
+          授權釋出議程錄影，我們將會上傳至
+          <Link
+            href={"https://sitcon.org/yt"}
+            className="hightlight subTitle underline underline-offset-2"
+          >
+            {" "}
+            YouTube{" "}
+          </Link>
+          及
+          <Link
+            href={"https://odysee.com/@SITCON:f"}
+            className="hightlight subTitle underline underline-offset-2"
+          >
+            {" "}
+            LBRY{" "}
+          </Link>
+          的 SITCON 頻道。{" "}
+        </p>
+        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+          您為議程準備的其餘相關素材（如投影片），將於年會前由 SITCON
+          議程組向您蒐集素材連結，並整理在年會官方網站的議程資訊上。您可以自行決定在何種平台、以何種方式釋出，我們不會干涉，但鼓勵您選擇允許知識共享的
+          <Link
+            href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
+            className="hightlight subTitle underline underline-offset-2"
+          >
+            {" "}
+            創用 CC 系列授權。{" "}
+          </Link>
         </p>
         <div className="py-1" />
       </section>
