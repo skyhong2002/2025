@@ -68,7 +68,7 @@ function Support() {
     <FooterSubMenu
       title="支持我們"
       links={[
-        { text: "我要贊助", href: "https://sitcon.org/donate" },
+        // { text: "我要贊助", href: "https://sitcon.org/donate" },
         { text: "索取贊助徵求書", href: "https://i.sitcon.org/2025cfs-form/" },
       ]}
     />

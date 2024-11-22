@@ -233,16 +233,13 @@ function PhoneLayout() {
           <br />
           <br />
           若您有興趣成為我們的贊助夥伴，歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用{" "}
-          <Link
-            href="mailto:contact@sitcon.org"
-            className="link"
-          >
+          <Link href="mailto:contact@sitcon.org" className="link">
             contact@sitcon.org
           </Link>{" "}
           聯絡我們，商討更多的合作方式！
         </p>
         <div className="flex-row pt-16">
-          <a
+          {/* <a
             href="https://sitcon.org/donate"
             className="flex items-center justify-end whitespace-nowrap text-nowrap text-[30px] font-bold text-accent"
           >
@@ -250,7 +247,7 @@ function PhoneLayout() {
             <span className="material-icons" style={{ fontSize: "44px" }}>
               north_east
             </span>
-          </a>
+          </a> */}
           <a
             href="https://i.sitcon.org/2025cfs-form"
             className="flex items-center justify-end whitespace-nowrap text-nowrap text-[22px] font-bold text-accent"
@@ -293,7 +290,7 @@ function TabletLayout() {
             聯絡我們，商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
-            <a
+            {/* <a
               href="https://sitcon.org/donate"
               className="flex items-center justify-end whitespace-nowrap text-nowrap text-h2 font-bold text-accent transition hover:text-accent-light"
             >
@@ -301,7 +298,7 @@ function TabletLayout() {
               <span className="material-icons" style={{ fontSize: "62px" }}>
                 north_east
               </span>
-            </a>
+            </a> */}
             <a
               href="https://i.sitcon.org/2025cfs-form"
               className="flex items-center justify-end whitespace-nowrap text-nowrap text-h3 font-bold text-accent transition hover:text-accent-light"
@@ -359,7 +356,7 @@ function DesktopLayout() {
             聯絡我們，商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
-            <a
+            {/* <a
               href="https://sitcon.org/donate"
               className="flex items-center justify-end whitespace-nowrap text-nowrap text-h1 font-bold text-accent transition hover:text-accent-light"
             >
@@ -367,7 +364,7 @@ function DesktopLayout() {
               <span className="material-icons" style={{ fontSize: "66px" }}>
                 north_east
               </span>
-            </a>
+            </a> */}
             <a
               href="https://i.sitcon.org/2025cfs-form"
               className="flex items-center justify-end whitespace-nowrap text-nowrap text-h2 font-bold text-accent transition hover:text-accent-light"
