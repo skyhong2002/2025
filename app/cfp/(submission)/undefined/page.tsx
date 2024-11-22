@@ -126,46 +126,58 @@ export default function Page() {
             稿件資訊
           </h3>
           <div className="flex flex-col gap-8">
-            <InformationField title="題目 Title" tags={["必填", "公開"]}>
+            <InformationField title="題目 Title" tags={["required", "public"]}>
               請不要超出<span className="hightlight subTitle"> 20 </span>字。
             </InformationField>
-            <InformationField title="摘要 Abstract" tags={["必填", "公開"]}>
+            <InformationField
+              title="摘要 Abstract"
+              tags={["required", "public"]}
+            >
               建議<span className="hightlight subTitle"> 150~250 </span>
               字，使用於宣傳與網站公告。
             </InformationField>
             <InformationField
               title="為何選擇開放式議程 Format Preference Explanation"
-              tags={["必填"]}
+              tags={["required"]}
             >
               請簡述為什麼您認為開放式議程更適合此議程的內容或主題呈現。這部分可以包括您希望透過開放式議程達成的效果、氣氛或參與方式，以便審稿委員理解您的設計考量。
             </InformationField>
-            <InformationField title="進行模式 Method" tags={["必填", "公開"]}>
+            <InformationField
+              title="進行模式 Method"
+              tags={["required", "public"]}
+            >
               不限字數，請詳細說明該議程預計如何和會眾互動，以及是否需要額外的工具，此項目將幫助會眾預期該如何參與此議程。
             </InformationField>
-            <InformationField title="議程大綱 Outline" tags={["必填"]}>
+            <InformationField title="議程大綱 Outline" tags={["required"]}>
               請說明該開放式議程的大綱及時間長度規劃。
             </InformationField>
-            <InformationField title="目標受眾 Target Audience" tags={["必填"]}>
+            <InformationField
+              title="目標受眾 Target Audience"
+              tags={["required"]}
+            >
               請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「不知道該不該讀研究所的學生」等。
             </InformationField>
             <InformationField
               title="先備知識 Prior Knowledge"
-              tags={["必填", "公開"]}
+              tags={["required", "public"]}
             >
               請說明該議程的與會者所需具備的{" "}
               <span className="hightlight subTitle">先備知識</span>
               。例如：「能理解 Python 基礎語法」、「略懂 108 課綱現況」等。
             </InformationField>
-            <InformationField title="主題標籤 Labels" tags={["必填", "公開"]}>
+            <InformationField
+              title="主題標籤 Labels"
+              tags={["required", "public"]}
+            >
               請填寫 1~4 個該議程相關的領域與{" "}
               <span className="hightlight subTitle">知識標籤</span>
               ，例如：ML、Data
               Science、資安紅隊、blockchain、社團等；錄取後會與講者溝通微調後公開於官網議程表。
             </InformationField>
-            <InformationField title="詳細說明 Description" tags={["必填"]}>
+            <InformationField title="詳細說明 Description" tags={["required"]}>
               不限字數，請說明這個議程您認為重要的相關細節，以利審稿委員更瞭解您的議程。
             </InformationField>
-            <InformationField title="附件 Attachment" tags={["選填"]}>
+            <InformationField title="附件 Attachment" tags={["optional"]}>
               可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
             </InformationField>
           </div>
@@ -179,24 +191,27 @@ export default function Page() {
             名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
           </p>
           <div className="flex flex-col gap-8">
-            <InformationField title="電子郵件 Email" tags={["必填"]}>
+            <InformationField title="電子郵件 Email" tags={["required"]}>
               能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
             </InformationField>
-            <InformationField title="暱稱 / 名字 Name" tags={["必填", "公開"]}>
+            <InformationField
+              title="暱稱 / 名字 Name"
+              tags={["required", "public"]}
+            >
               公開於講者海報及網站的稱呼。
             </InformationField>
             <InformationField
               title="自我介紹 Self Introduction"
-              tags={["必填", "公開"]}
+              tags={["required", "public"]}
             >
               公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
             </InformationField>
-            <InformationField title="手機號碼 Phone" tags={["必填"]}>
+            <InformationField title="手機號碼 Phone" tags={["required"]}>
               用於大會聯絡、確認資訊用的電話號碼。
             </InformationField>
             <InformationField
               title="其他聯絡方式 Other Contact Information"
-              tags={["必填"]}
+              tags={["required"]}
             >
               其他任何我們能聯絡您的方式（如 Telegram
               ID、住處電話等），以利我們在審稿時即時向您釐清投稿資訊。
