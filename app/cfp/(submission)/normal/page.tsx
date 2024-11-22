@@ -7,7 +7,6 @@ import Espresso from "../../_components/logos/espresso";
 import Presentation from "../../_components/logos/presentation";
 import Link from "next/link";
 import Image from "next/image";
-import { tr } from "framer-motion/client";
 
 function PresentationBlock(presentation: { title: string; id: string }) {
   return (

@@ -4,7 +4,6 @@ import Timeline from "../_components/timeline";
 import CodeOfConduct from "../../_components/code-of-conduct";
 import TableOfContent from "../_components/table-of-content";
 import FAQ from "../../_components/faq";
-import { tr } from "framer-motion/client";
 
 export default function Page() {
   const sections = [
