@@ -266,14 +266,16 @@ export default function Page() {
               "2021",
               "2022",
               "2024",
-            ].map((year) => (
-              <span key={year}>
-                <Link className="link" href={`https://sitcon.org/${year}`}>
-                  {year}
-                </Link>
-                {<span>{year === "2024" ? "" : "、"}</span>}
-              </span>
-            ))}
+            ]
+              .toReversed()
+              .map((year, index) => (
+                <span key={year}>
+                  <Link className="link" href={`https://sitcon.org/${year}`}>
+                    {year}
+                  </Link>
+                  {<span>{index == 10 ? "" : "、"}</span>}
+                </span>
+              ))}
             ）查看過去的議程。
           </p>
           <p className="leading-10">
