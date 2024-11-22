@@ -12,12 +12,8 @@ type TimeLeft = {
 };
 
 // 這是client component 計算倒數時間
-export default function CountdownClock({
-  initialTimeLeft,
-}: {
-  initialTimeLeft: TimeLeft;
-}) {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(initialTimeLeft);
+export default function CountdownClock() {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   // const TARGET_DATE = "2025-01-21T23:59:59"; // 可以動態設置
   // function calculateTimeLeft(): TimeLeft {
