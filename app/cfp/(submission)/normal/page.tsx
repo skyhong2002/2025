@@ -215,7 +215,7 @@ export default function Page() {
           議程種類
         </h2>
         <div className="mb-6 mt-4 grid grid-rows-2 gap-3 lg:grid-cols-2 lg:grid-rows-1">
-          <div className="md:background-light flex flex-col items-center gap-3 rounded-lg border bg-background-light p-6 text-foreground md:border-foreground">
+          <div className="md:background-light flex flex-col items-center gap-3 rounded-lg bg-background-light p-6 text-foreground">
             <Presentation />
             <h3 className="text-h3-mobile md:text-h3">Presentation</h3>
             <p>
@@ -225,7 +225,7 @@ export default function Page() {
               分鐘的問答時間，讓您有充分的時間展示想法、描述經歷、和與會者交流。
             </p>
           </div>
-          <div className="md:background-light flex flex-col items-center gap-3 rounded-lg border bg-background-light p-6 text-foreground md:border-foreground">
+          <div className="md:background-light flex flex-col items-center gap-3 rounded-lg bg-background-light p-6 text-foreground">
             <Espresso />
             <h3 className="text-h3-mobile md:text-h3">Espresso</h3>
             <p>
