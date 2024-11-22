@@ -65,7 +65,7 @@ export default function Page() {
         <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           重要時程
         </h2>
-        <Timeline isPoster={true} />
+        <Timeline isPoster />
       </section>
 
       <section
