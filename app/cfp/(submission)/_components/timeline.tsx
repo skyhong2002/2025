@@ -43,7 +43,7 @@ export default function Timeline() {
                 />
               </svg>
               <span className="material-icons-big">flag</span>
-              <p>11.12.2024</p>
+              <p>11.22.2024</p>
               <h3 className="w-max text-h3">開始徵稿</h3>
             </div>
 
