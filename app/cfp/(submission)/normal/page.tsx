@@ -450,7 +450,7 @@ export default function Page() {
           投稿注意事項
         </h2>
         <div>
-          <ul className="ml-2 text-normal-mobile font-normal leading-10 tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
+          <ul className="list-inside list-disc leading-10">
             <li>
               除非內容明顯偏離講題、違反 CoC
               或不符事實，我們不會強制要求講者對演講內容進行修正。
