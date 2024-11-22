@@ -85,6 +85,7 @@ html {
 }
 
 .tableContentItem {
+  display: block;
   transition: 0.4s;
   font-size: 14px;
   text-decoration: none;
@@ -110,13 +111,13 @@ html {
 }
 
 .currentTableContentItem {
+  display: block;
   transition: 0.4s;
   font-size: 14px;
   text-decoration: none;
   position: relative;
   margin-bottom: 12px;
   width: 100%;
-  transform: scaleX(0);
   transform-origin: right;
   ::after {
     content: "";

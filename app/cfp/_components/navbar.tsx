@@ -25,10 +25,11 @@ export default function Navbar() {
   const navBackground = useMotionTemplate`rgba(39, 48, 77, ${navBackgroundOpacity})`;
   const menuItems = [
     { link: "/cfp/", label: "首頁" },
-    { link: "/cfp/normal", label: "一般議程徵稿" },
-    { link: "/cfp/undefined", label: "開放式議程徵稿" },
-    { link: "/cfp/poster", label: "海報徵稿" },
+    { link: "/cfp/normal/", label: "一般議程徵稿" },
+    { link: "/cfp/undefined/", label: "開放式議程徵稿" },
+    { link: "/cfp/poster/", label: "海報徵稿" },
   ];
+  console.log(pathname);
   const allowFadeEffect = isIndex && !showMenu;
   return (
     <nav className="fixed left-0 right-0 top-0 z-20 flex justify-center">
@@ -50,7 +51,7 @@ export default function Navbar() {
                   <motion.p
                     initial={{ y: 0, scale: 1 }}
                     whileHover={{ y: -2, scale: 1.2 }}
-                    className="hover:text-primary"
+                    className={`hover:text-primary ${pathname === link && "text-primary"}`}
                   >
                     {label}
                   </motion.p>
