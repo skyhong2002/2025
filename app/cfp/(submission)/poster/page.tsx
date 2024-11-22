@@ -166,7 +166,7 @@ export default function Page() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-h3-mobile text-primary md:text-h3">
+          <h3 className="text-h3-mobile font-bold text-primary md:text-h3">
             海報格式參考
           </h3>
           <ul className="list-inside list-disc leading-10">
