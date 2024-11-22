@@ -49,9 +49,21 @@ export default function CountdownClock() {
       <div className="mb-2 flex flex-col items-center">
         <motion.span
           key={value}
-          initial={{ y: -30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 100 }}
+          initial={{
+            opacity: 0,
+            y: "-0.45em",
+            scaleY: 0.7,
+            filter: "blur(0.1em)",
+            transformOrigin: "top",
+          }}
+          animate={{ opacity: 1, y: 0, scaleY: 1, filter: "blur(0px)" }}
+          exit={{
+            opacity: 0,
+            y: "0.65em",
+            scaleY: 0.7,
+            filter: "blur(0.3em)",
+            transformOrigin: "bottom",
+          }}
           className="text-6xl text-foreground"
         >
           {formatToTwoDigits(value)}
