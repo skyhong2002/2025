@@ -1,4 +1,4 @@
-export default function Timeline() {
+export default function Timeline({ isPoster }: { isPoster: boolean }) {
   return (
     <>
       <div className="mx-auto hidden w-full md:block">
@@ -129,12 +129,24 @@ export default function Timeline() {
 
       <div className="mx-auto tracking-wider md:hidden">
         <div className="space-y-4 text-xl">
-          <p>2024 年 11 月 22 日（五）：開始徵稿</p>
-          <p>2025 年 1 月 21 日（二）23:59：投稿截止</p>
-          <p>2025 年一月下旬：議程錄取通知</p>
-          <p>2025 年二月：試講</p>
-          <p>2025 年 3 月 7 日 ( 五 )：彩排</p>
-          <p>2025 年 3 月 8 日 ( 六 )：年會</p>
+          {isPoster ? (
+            <>
+              <p>2024 年 11 月 22 日（五）：開始徵稿</p>
+              <p>2025 年 1 月 21 日（二）23:59：投稿截止</p>
+              <p>2025 年一月下旬：海報錄取通知</p>
+              <p>2025 年 2 月 16 日（日）：錄取海報檔案上傳截止</p>
+              <p>2025 年 3 月 8 日（六）：年會</p>
+            </>
+          ) : (
+            <>
+              <p>2024 年 11 月 22 日（五）：開始徵稿</p>
+              <p>2025 年 1 月 21 日（二）23:59：投稿截止</p>
+              <p>2025 年一月下旬：議程錄取通知</p>
+              <p>2025 年二月：試講</p>
+              <p>2025 年 3 月 7 日 ( 五 )：彩排</p>
+              <p>2025 年 3 月 8 日 ( 六 )：年會</p>
+            </>
+          )}
         </div>
       </div>
     </>

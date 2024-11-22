@@ -7,6 +7,7 @@ import Espresso from "../../_components/logos/espresso";
 import Presentation from "../../_components/logos/presentation";
 import Link from "next/link";
 import Image from "next/image";
+import { tr } from "framer-motion/client";
 
 function PresentationBlock(presentation: { title: string; id: string }) {
   return (
@@ -204,7 +205,7 @@ export default function Page() {
         <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           重要時程
         </h2>
-        <Timeline />
+        <Timeline isPoster={false} />
       </section>
 
       <section

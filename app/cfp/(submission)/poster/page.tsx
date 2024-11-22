@@ -4,6 +4,7 @@ import Timeline from "../_components/timeline";
 import CodeOfConduct from "../../_components/code-of-conduct";
 import TableOfContent from "../_components/table-of-content";
 import FAQ from "../../_components/faq";
+import { tr } from "framer-motion/client";
 
 export default function Page() {
   const sections = [
@@ -65,7 +66,7 @@ export default function Page() {
         <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
           重要時程
         </h2>
-        <Timeline />
+        <Timeline isPoster={true} />
       </section>
 
       <section
