@@ -15,24 +15,6 @@ type TimeLeft = {
 export default function CountdownClock() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
-  // const TARGET_DATE = "2025-01-21T23:59:59"; // 可以動態設置
-  // function calculateTimeLeft(): TimeLeft {
-  //   const now = new Date();
-  //   const target = new Date(TARGET_DATE);
-  //   const difference = target.getTime() - now.getTime();
-
-  //   if (difference <= 0) {
-  //     return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-  //   }
-
-  //   return {
-  //     days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-  //     hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-  //     minutes: Math.floor((difference / (1000 * 60)) % 60),
-  //     seconds: Math.floor((difference / 1000) % 60),
-  //   };
-  // }
-
   useEffect(() => {
     const timerId = setInterval(() => {
       setTimeLeft(calculateTimeLeft()); // 更新倒數時間
