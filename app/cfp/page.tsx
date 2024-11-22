@@ -1,11 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
       <div className="relative h-[calc(100svh)] min-h-[600px] bg-black">
+        <Head>
+          <link rel="canonical" href="https://sitcon.org/2025/" />
+        </Head>
         <div className="hero h-[calc(100svh)] min-h-[600px]">
           {/* background image only */}
         </div>

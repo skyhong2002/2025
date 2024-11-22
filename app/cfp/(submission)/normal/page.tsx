@@ -364,7 +364,7 @@ export default function Page() {
             請填寫 1~4 個該議程相關的{" "}
             <span className="hightlight subTitle">領域與知識標籤</span>{" "}
             例如：ML、Data
-            Science、資安紅隊、blockchain、社團等；錄取後會與講者溝通微調後公開於官網議程表。
+            Science、資安紅隊、blockchain、社團等；審稿委員將會參考此欄位了解件著重的面向，錄取後議程組也會參考此欄位，在與您溝通後挑選合適的標籤呈現於官網議程表上。
           </InformationField>
           <InformationField title="詳細說明 Description" tags={["必填"]}>
             不限字數，請盡可能{" "}
@@ -449,9 +449,6 @@ export default function Page() {
               除非內容明顯偏離講題、違反 CoC
               或不符事實，我們不會強制要求講者對演講內容進行修正。
             </li>
-            <li className="listItem">
-              「議程題目」、「摘要」與「先備知識」將放置於官方網站與大會發行的文宣中。
-            </li>
             <li>在截稿之前，投稿者可以隨時透過表單回函修改已送出的稿件。</li>
             <li className="listItem">
               審稿過程
@@ -460,7 +457,7 @@ export default function Page() {
             </li>
             <li className="listItem">
               若 SITCON
-              議程組認為您的稿件比較適合另一種形式，或者該形式的名額已經額滿、無法再增額時，我們會向您充分說明與溝通，並經您的同意後，轉換稿件類型或時間長度。
+              議程組認為您的稿件比較適合另一種形式，或者該形式的名額已經額滿、無法再增額時」更正為「若審稿委員認為您的稿件比較適合其他形式，且原形式名額已經額滿、無法再增額時
             </li>
             <li className="listItem">
               SITCON 2025

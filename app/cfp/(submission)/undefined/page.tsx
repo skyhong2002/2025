@@ -78,8 +78,8 @@ export default function Page() {
           議程說明
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
-          開放式議程為<span className="hightlight"> 40 </span>
-          分鐘的議程，該議程不限定進行方式，希望跳脫傳統議程框架，透過雙向互動、實作等，任何你想得到的非傳統形式進行此場議程。
+          開放式議程為<span className="hightlight"> 40 </span> 分鐘和
+          開放式議程為<span className="hightlight"> 90 </span> 分鐘兩種時長
         </p>
       </section>
       <section
@@ -90,8 +90,8 @@ export default function Page() {
           什麼是開放式議程？
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
-          在追求創新的時代，我們為講者提供了開放式議程這個選項，跳脫講者對聽眾單向陳述式的演講，開放式議程更加強調主講者和與會者的雙向交流。SITCON
-          作為學生展現自己的舞台，我們期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是一同探討學生相關議題等。
+          為帶給與會者更多元的議程內容，我們為講者提供了開放式議程這個選項，跳脫講者對聽眾單向陳述式的演講，開放式議程更加強調主講者和與會者的雙向交流。SITCON
+          作為學生展現自己的舞台，我們期待以學生為主體的投稿，無論是實作工作坊、議題交流、社群分享或更多您想像得到能讓議程更加多元且具互動性的方式，我們都十分歡迎。
         </p>
         <div className="flex grid-rows-4 flex-col gap-5 tablet:grid tablet:grid-cols-2 tablet:grid-rows-2">
           <SessionTypeBox title="實作工作坊形式">
@@ -253,9 +253,6 @@ export default function Page() {
               除非內容明顯偏離講題、違反 CoC
               或不符事實，我們不會強制要求講者對演講內容進行修正。
             </li>
-            <li className="listItem">
-              「議程題目」、「摘要」與「先備知識」將放置於官方網站與大會發行的文宣中。
-            </li>
             <li>在截稿之前，投稿者可以隨時透過表單回函修改已送出的稿件。</li>
             <li className="listItem">
               審稿過程
@@ -263,8 +260,7 @@ export default function Page() {
               。我們以稿件是否能夠吸引人、高品質、適合聽眾為考量。
             </li>
             <li className="listItem">
-              若 SITCON
-              議程組認為您的稿件比較適合另一種形式，或者該形式的名額已經額滿、無法再增額時，我們會向您充分說明與溝通，並經您的同意後，轉換稿件類型或時間長度。
+              若審稿委員認為您的稿件比較適合其他形式，且原形式名額已經額滿、無法再增額時，我們會向您充分說明與溝通，並經您的同意後，轉換稿件類型或時間長度。
             </li>
             <li className="listItem">
               SITCON 2025
@@ -356,6 +352,9 @@ export default function Page() {
             並有工作人員提供建議（如簡報、臺風等）
           </span>
           ，講者可以自由參加，並自行選擇最合適的場次。若您的稿件確認入選，議程組將再與您協調確切時間。為維護所有講者的權利，試講時間恕不接受更改，請您準時參與。
+        </p>
+        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+          開放式議程的形式較為靈活，我們強烈建議講者參與試講，並在試講中提前演練時間控制、現場互動安排與內容引導。由於開放式議程重視雙向交流和互動環節，建議您設計能促進參與者投入互動的方式，以更流暢地進行議程，例如預先設定討論問題、安排練習或互動環節。試講過程中，工作人員將針對控時、控場等細節提供回饋，協助您調整內容，確保開放式議程在實際呈現時能順利進行並達到最佳效果。
         </p>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
           所有場次將依報名情況舉辦，預計舉辦北部、中部、南部、線上場等，時間約為二月上旬至二月下旬，地點另行通知。
