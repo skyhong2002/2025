@@ -29,7 +29,7 @@ export function calculateTimeLeft(): TimeLeft {
 }
 
 export default function CountdownPage() {
-  const initialTimeLeft = calculateTimeLeft();
+  // const initialTimeLeft = calculateTimeLeft();
   return (
     <div className="mx-auto hidden h-[289px] w-full flex-col justify-between md:mb-16 md:flex">
       <div className="flex h-[200px] w-full flex-col items-center rounded-3xl border border-foreground px-24 py-5">
@@ -37,7 +37,7 @@ export default function CountdownPage() {
           距 離 投 稿 截 止 還 有 :
         </h3>
         <div className="mt-5 flex w-full justify-between">
-          <CountdownClock initialTimeLeft={initialTimeLeft} />
+          <CountdownClock />
         </div>
       </div>
       <div className="flex h-[67px] w-full justify-between">
