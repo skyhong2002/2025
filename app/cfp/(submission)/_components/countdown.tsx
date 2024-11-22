@@ -10,27 +10,27 @@ type TimeLeft = {
   seconds: number;
 };
 
-// 這是server component 
-export default async function CountdownPage() {
-  const TARGET_DATE = "2025-01-21T23:59:59"; // 可以動態設置
-  function calculateTimeLeft(): TimeLeft {
-    const now = new Date();
-    const target = new Date(TARGET_DATE);
-    const difference = target.getTime() - now.getTime();
+async function calculateTimeLeft(): Promise<TimeLeft> {
+  const TARGET_DATE = "2025-01-21T23:59:59";
+  const now = new Date();
+  const target = new Date(TARGET_DATE);
+  const difference = target.getTime() - now.getTime();
 
-    if (difference <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-    }
-
-    return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / (1000 * 60)) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
-    };
+  if (difference <= 0) {
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
   }
-  const initailTimeLeft = calculateTimeLeft();
 
+  return {
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((difference / (1000 * 60)) % 60),
+    seconds: Math.floor((difference / 1000) % 60),
+  };
+}
+
+// 這是server component
+export default async function CountdownPage() {
+  const initialTimeLeft = await calculateTimeLeft();
   return (
     <div className="mx-auto hidden h-[289px] w-full flex-col justify-between md:mb-16 md:flex">
       <div className="flex h-[200px] w-full flex-col items-center rounded-3xl border border-foreground px-24 py-5">
@@ -38,7 +38,7 @@ export default async function CountdownPage() {
           距 離 投 稿 截 止 還 有 :
         </h3>
         <div className="mt-5 flex w-full justify-between">
-          <CountdownClock initailTimeLeft={initailTimeLeft} />
+          <CountdownClock initialTimeLeft={initialTimeLeft} />
         </div>
       </div>
       <div className="flex h-[67px] w-full justify-between">
