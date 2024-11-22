@@ -14,7 +14,7 @@ export default function SitconLogo({
       viewBox="0 0 140 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className + " -translate-y-1 fill-current"}
+      className={className + " w-full -translate-y-1 fill-current"}
     >
       <g clipPath="url(#clip0_1022_393)">
         <path

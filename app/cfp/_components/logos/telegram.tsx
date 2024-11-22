@@ -2,7 +2,7 @@ export default function TelegramLogo() {
   return (
     <svg
       role="img"
-      className="fill-current"
+      className="w-full fill-current"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >

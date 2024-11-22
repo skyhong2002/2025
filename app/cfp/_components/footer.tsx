@@ -207,7 +207,7 @@ function RadioLinkButton({
   return (
     <Link
       href={href}
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-foreground px-3 py-1 text-foreground hover:bg-blue hover:text-white"
+      className=" flex h-12 w-12 items-center justify-center rounded-full border border-foreground px-3 py-1 text-foreground hover:bg-blue hover:text-white"
     >
       {logo}
     </Link>

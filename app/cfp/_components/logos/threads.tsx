@@ -6,7 +6,7 @@ export default function ThreadsLogo() {
       id="Layer_1"
       viewBox="0 0 878 1000"
       xmlns="http://www.w3.org/2000/svg"
-      className="fill-current"
+      className="w-full fill-current"
     >
       <title>Threads</title>
       <g>
@@ -25,5 +25,5 @@ export default function ThreadsLogo() {
         />
       </g>
     </svg>
-);
+  );
 }
