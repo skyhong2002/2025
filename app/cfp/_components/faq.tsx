@@ -69,7 +69,7 @@ export default function FAQ({ QA }: { QA: QA[] }) {
                   borderTopLeftRadius: "0",
                 }}
                 transition={{ duration: 0.2 }}
-                className={`rounded-b-2xl bg-[#353f61] px-6 text-foreground`}
+                className={`rounded-b-2xl bg-[#353f61] px-6 text-normal-mobile font-normal leading-10 tracking-wider text-foreground md:text-normal`}
               >
                 {qa.answer}
               </motion.div>

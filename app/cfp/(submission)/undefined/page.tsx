@@ -33,16 +33,18 @@ export default function Page() {
     },
     {
       title: "還有疑問怎麼辦？",
-      answer: <p>
-      歡迎寄信至{" "}
-      <Link
-        href="mailto:contact@sitcon.org"
-        className="cursor-pointer text-primary underline"
-      >
-        contact@sitcon.org
-      </Link>{" "}
-      詢問，我們會儘速回應。
-    </p>
+      answer: (
+        <p>
+          歡迎寄信至{" "}
+          <Link
+            href="mailto:contact@sitcon.org"
+            className="cursor-pointer text-primary underline"
+          >
+            contact@sitcon.org
+          </Link>{" "}
+          詢問，我們會儘速回應。
+        </p>
+      ),
     },
   ];
 
@@ -75,9 +77,8 @@ export default function Page() {
           議程說明
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
-          開放式議程分為<span className="hightlight"> 40 </span>分鐘和
-          <span className="hightlight"> 90 </span>
-          分鐘兩種時長，該議程不限定進行方式，希望跳脫傳統議程框架，透過雙向互動、實作等，任何您想得到的非傳統形式進行此場議程。
+          開放式議程為<span className="hightlight"> 40 </span>
+          分鐘的議程，該議程不限定進行方式，希望跳脫傳統議程框架，透過雙向互動、實作等，任何你想得到的非傳統形式進行此場議程。
         </p>
       </section>
       <section
@@ -120,89 +121,93 @@ export default function Page() {
           投稿方式
         </h2>
         <div className="space-y-4">
-          <h3 className="text-h3-mobile text-primary md:text-h3 font-bold">稿件資訊</h3>
+          <h3 className="text-h3-mobile font-bold text-primary md:text-h3">
+            稿件資訊
+          </h3>
           <ul className="ml-2 list-inside list-disc text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-            <li>
+            <li className="listItem">
               <span className="subTitle">題目 Title：</span>
               <span className="hightlight">必填、公開</span>。請不要超出
               <span className="hightlight"> 20 </span>字。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">摘要 Abstract：</span>
               <span className="hightlight">必填、公開</span>。建議
               <span className="hightlight"> 150~250 </span>
               字，使用於宣傳與網站公告。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">
                 為何選擇開放式議程 Format Preference Explanation：
               </span>
               <span className="hightlight">必填</span>
               。請簡述為什麼您認為開放式議程更適合此議程的內容或主題呈現。這部分可以包括您希望透過開放式議程達成的效果、氣氛或參與方式，以便審稿委員理解您的設計考量。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">進行模式 Method :</span>
               <span className="hightlight">必填、公開</span>
               。不限字數，請詳細說明該議程預計如何和會眾互動，以及是否需要額外的工具，此項目將幫助會眾預期該如何參與此議程。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">議程大綱 Outline：</span>
               <span className="hightlight">必填</span>
               。請說明該開放式議程的大綱及時間長度規劃。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">目標受眾 Target Audience：</span>
               <span className="hightlight">必填</span>
               。請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「不知道該不該讀研究所的學生」等。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">先備知識 Prior Knowledge：</span>
               <span className="hightlight">必填、公開</span>
               。請說明該議程的與會者所需具備的
               <span className="hightlight">先備知識</span>。例如：「能理解
               Python 基礎語法」、「略懂 108 課綱現況」等。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">主題標籤 Labels：</span>
               <span className="hightlight">必填、公開</span>。請填寫 1~4
               個該議程相關的領域與<span className="hightlight">知識標籤</span>
               ，例如：ML、Data
               Science、資安紅隊、blockchain、社團等；錄取後會與講者溝通微調後公開於官網議程表。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">詳細說明 Description：</span>
               <span className="hightlight">必填</span>
               。不限字數，請說明這個議程您認為重要的相關細節，以利審稿委員更瞭解您的議程。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">附件 Attachment：</span>
               選填。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
             </li>
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-h3-mobile text-primary md:text-h3 font-bold">個人資料</h3>
+          <h3 className="text-h3-mobile font-bold text-primary md:text-h3">
+            個人資料
+          </h3>
           <p className="mb-2">
             除了暱稱 /
             名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
           </p>
           <ul className="list-inside list-disc leading-10">
-            <li>
+            <li className="listItem">
               <span className="subTitle">電子郵件 Email：</span>
               <span className="hightlight">必填</span>
               。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">暱稱 / 名字 Name：</span>
               <span className="hightlight">必填、公開</span>
               。公開於講者海報及網站的稱呼。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">自我介紹 Self Introduction：</span>
               <span className="hightlight">必填、公開</span>
               。公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
             </li>
-            <li>
+            <li className="listItem">
               <span className="subTitle">手機號碼 Phone：</span>
               <span className="hightlight">必填</span>
               。用於大會聯絡、確認資訊用的電話號碼。
@@ -233,13 +238,15 @@ export default function Page() {
           審稿委員將針對以下項目進行篩選：
         </p>
         <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
-          <li>
+          <li className="listItem">
             稿件內容：講者是否熟悉這個題目、和會眾的交流效果、可執行性，以及是否符合開放式議程的宗旨，展現出創新和彈性的分享形式，能促進與會者的參與或啟發新的想法。
           </li>
-          <li>
+          <li className="listItem">
             表達能力：提供的資料是否有條理、文句暢通，提供資料（尤其是稿件的詳細說明）之完整度。我們偏好完整的資料，讓審稿委員更清楚了解演講細節。
           </li>
-          <li>適合聽眾：稿件是否適合 SITCON 大多數的與會者討論。</li>
+          <li className="listItem">
+            適合聽眾：稿件是否適合 SITCON 大多數的與會者討論。
+          </li>
         </ul>
         <div className="py-1" />
       </section>
@@ -255,29 +262,31 @@ export default function Page() {
         </h2>
         <div>
           <ul className="ml-2 text-normal-mobile font-normal leading-10 tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
-            <li>
+            <li className="listItem">
               除非內容明顯偏離講題、違反 CoC
               或不符事實，我們不會強制要求講者對演講內容進行修正。
             </li>
-            <li>
+            <li className="listItem">
               「議程題目」、「摘要」與「先備知識」將放置於官方網站與大會發行的文宣中。
             </li>
-            <li>在截稿之前，投稿者可以隨時透過表單回函修改已送出的稿件。</li>
-            <li>
+            <li className="listItem">
+              在截稿之前，投稿者可以隨時透過表單回函修改已送出的稿件。
+            </li>
+            <li className="listItem">
               審稿過程不考慮稿件內容的難度。我們以稿件是否能夠吸引人、高品質、適合聽眾為考量。
             </li>
-            <li>
+            <li className="listItem">
               若 SITCON
               議程組認為您的稿件比較適合另一種形式，或者該形式的名額已經額滿、無法再增額時，我們會向您充分說明與溝通，並經您的同意後，轉換稿件類型或時間長度。
             </li>
-            <li>
+            <li className="listItem">
               SITCON 2025
               將會有多軌議程及各式場外活動同時進行，與會者可以自行決定要參與哪一場議程或活動。
             </li>
-            <li>
+            <li className="listItem">
               為鼓勵投稿，大會提供投稿者一組報名邀請碼（一稿一組，每人最多一組），可優先報名參與本年會。若您的稿件被接受，年會將頒予感謝狀以表彰您的熱情付出與貢獻，並額外提供講者身分入場，屆時您可以將年會邀請碼贈與他人使用，邀請親朋好友共襄盛舉。
             </li>
-            <li>
+            <li className="listItem">
               若同一稿件有多個講者，請在「暱稱 /
               名字」欄位標示所有講者的稱呼，並在「演講大綱」詳細說明各個講者如何分配演講內容。稿件經接受者，無論講者人數，皆只提供一組可轉贈的入場票邀請碼、一份講者識別證與一份講者專屬迎賓禮，大會方保有最終發放之權力。未佩戴識別證的講者，僅能在自己的演講時，於該議程時段進入議程所在的會議廳。
             </li>
