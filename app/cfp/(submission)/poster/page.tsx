@@ -252,35 +252,35 @@ export default function Page() {
         </h2>
         <div>
           <ul className="list-inside list-disc leading-10">
-            <li>
+            <li className="listItem">
               除非內容明顯偏離講題、違反 CoC
               或不符事實，我們不會強制要求講者對演講內容進行修正。
             </li>
-            <li>
+            <li className="listItem">
               「議程題目」、「摘要」與「先備知識」將放置於官方網站與大會發行的文宣中。
             </li>
             <li>在截稿之前，投稿者可以隨時透過表單回函修改已送出的稿件。</li>
-            <li>
+            <li className="listItem">
               審稿過程
               <span className="hightlight subTitle">不考慮稿件內容的難度</span>
               。我們以稿件是否能夠吸引人、高品質、適合聽眾為考量。
             </li>
-            <li>
+            <li className="listItem">
               若 SITCON
               議程組認為您的稿件比較適合另一種形式，或者該形式的名額已經額滿、無法再增額時，我們會向您充分說明與溝通，並經您的同意後，轉換稿件類型或時間長度。
             </li>
-            <li>
+            <li className="listItem">
               SITCON 2025
               將會有多軌議程及各式場外活動同時進行，與會者可以自行決定要參與哪一場議程或活動。
             </li>
-            <li>
+            <li className="listItem">
               為鼓勵投稿，大會
               <span className="hightlight subTitle">
                 提供投稿者一組報名邀請碼
               </span>
               （一稿一組，每人最多一組），可優先報名參與本年會。若您的稿件被接受，年會將頒予感謝狀以表彰您的熱情付出與貢獻，並額外提供講者身分入場，屆時您可以將年會邀請碼贈與他人使用，邀請親朋好友共襄盛舉。
             </li>
-            <li>
+            <li className="listItem">
               若同一稿件有多個講者，請在「暱稱 /
               名字」欄位標示所有講者的稱呼，並在「演講大綱」詳細說明各個講者如何分配演講內容。稿件經接受者，無論講者人數，皆只提供一組可轉贈的入場票邀請碼、一份講者識別證與一份講者專屬迎賓禮，大會方保有最終發放之權力。未佩戴識別證的講者，僅能在自己的演講時，於該議程時段進入議程所在的會議廳。
             </li>

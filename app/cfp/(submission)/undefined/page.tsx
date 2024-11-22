@@ -239,23 +239,26 @@ export default function Page() {
         </p>
         <ul className="list-inside list-disc leading-10">
           <li className="listItem">
-            稿件內容：講者是否熟悉這個題目、和會眾的交流效果、可執行性，以及是否符合開放式議程的宗旨，展現出創新和彈性的分享形式，能促進與會者的參與或啟發新的想法。
+            <span className="hightlight subTitle">稿件內容：</span>
+            講者是否熟悉這個題目、和會眾的交流效果、可執行性，以及是否符合開放式議程的宗旨，展現出創新和彈性的分享形式，能促進與會者的參與或啟發新的想法。
           </li>
           <li className="listItem">
-            表達能力：提供的資料是否有條理、文句暢通，提供資料（尤其是稿件的詳細說明）之完整度。我們偏好完整的資料，讓審稿委員更清楚了解演講細節。
+            <span className="hightlight subTitle">表達能力：</span>
+            提供的資料是否有條理、文句暢通，提供資料（尤其是稿件的詳細說明）之完整度。我們偏好完整的資料，讓審稿委員更清楚了解演講細節。
           </li>
           <li className="listItem">
-            適合聽眾：稿件是否適合 SITCON 大多數的與會者討論。
+            <span className="hightlight subTitle">適合聽眾：</span>稿件是否適合
+            SITCON 大多數的與會者討論。
           </li>
-          <li className="listItem">
-            議程適切性：稿件是否符合開放式議程的宗旨，展現出創新和彈性的分享形式，能促進與會者的參與感或啟發新的想法。
-          </li>
+          {/* <li className="listItem">
+            <span className="hightlight subTitle"> 議程適切性：</span>
+            稿件是否符合開放式議程的宗旨，展現出創新和彈性的分享形式，能促進與會者的參與感或啟發新的想法。
+          </li> */}
         </ul>
         <div className="py-1" />
       </section>
 
       <CodeOfConduct />
-
       <section
         id="submission-guidelines"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
@@ -272,11 +275,11 @@ export default function Page() {
             <li className="listItem">
               「議程題目」、「摘要」與「先備知識」將放置於官方網站與大會發行的文宣中。
             </li>
+            <li>在截稿之前，投稿者可以隨時透過表單回函修改已送出的稿件。</li>
             <li className="listItem">
-              在截稿之前，投稿者可以隨時透過表單回函修改已送出的稿件。
-            </li>
-            <li className="listItem">
-              審稿過程不考慮稿件內容的難度。我們以稿件是否能夠吸引人、高品質、適合聽眾為考量。
+              審稿過程
+              <span className="hightlight subTitle">不考慮稿件內容的難度</span>
+              。我們以稿件是否能夠吸引人、高品質、適合聽眾為考量。
             </li>
             <li className="listItem">
               若 SITCON
@@ -287,7 +290,11 @@ export default function Page() {
               將會有多軌議程及各式場外活動同時進行，與會者可以自行決定要參與哪一場議程或活動。
             </li>
             <li className="listItem">
-              為鼓勵投稿，大會提供投稿者一組報名邀請碼（一稿一組，每人最多一組），可優先報名參與本年會。若您的稿件被接受，年會將頒予感謝狀以表彰您的熱情付出與貢獻，並額外提供講者身分入場，屆時您可以將年會邀請碼贈與他人使用，邀請親朋好友共襄盛舉。
+              為鼓勵投稿，大會
+              <span className="hightlight subTitle">
+                提供投稿者一組報名邀請碼
+              </span>
+              （一稿一組，每人最多一組），可優先報名參與本年會。若您的稿件被接受，年會將頒予感謝狀以表彰您的熱情付出與貢獻，並額外提供講者身分入場，屆時您可以將年會邀請碼贈與他人使用，邀請親朋好友共襄盛舉。
             </li>
             <li className="listItem">
               若同一稿件有多個講者，請在「暱稱 /
@@ -300,7 +307,7 @@ export default function Page() {
               href="mailto:contact@sitcon.org"
               className="cursor-pointer text-primary underline"
             >
-              contact@sitcon.org
+              <span className="hightlight subTitle">contact@sitcon.org</span>
             </Link>{" "}
             。
           </p>
@@ -363,14 +370,21 @@ export default function Page() {
           試講
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-          試講提供講者提升演講品質的機會，比照年會時間安排供講者講完整場演講，並有工作人員提供建議（如簡報、臺風等），講者可以自由參加，並自行選擇最合適的場次。若您的稿件確認入選，議程組將再與您協調確切時間。為維護所有講者的權利，試講時間恕不接受更改，請您準時參與。
-          <br />
-          開放式議程的形式較為靈活，我們強烈建議講者參與試講，並在試講中提前演練時間控制、現場互動安排與內容引導。由於開放式議程重視雙向交流和互動環節，建議您設計能促進參與者投入互動的方式，以更流暢地進行議程，例如預先設定討論問題、安排練習或互動環節。試講過程中，工作人員將針對控時、控場等細節提供回饋，協助您調整內容，確保開放式議程在實際呈現時能順利進行並達到最佳效果。
-          <br />
-          所有場次將依報名情況舉辦，預計舉辦北部、中部、南部、線上場等，時間約為二月，地點另行通知。
-          <br />
-          試講交通補助：為確保年會議程品質，我們鼓勵講者參與試講，並將依照客運價格標準，補助講者至最近試講場地的全額或部分車資。若您的稿件被予以錄取，細節將於錄取後通知。
+          試講提供講者提升演講品質的機會，比照年會時間安排供講者講完整場演講，
+          <span className="hightlight subTitle">
+            並有工作人員提供建議（如簡報、臺風等）
+          </span>
+          ，講者可以自由參加，並自行選擇最合適的場次。若您的稿件確認入選，議程組將再與您協調確切時間。為維護所有講者的權利，試講時間恕不接受更改，請您準時參與。
         </p>
+        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+          所有場次將依報名情況舉辦，預計舉辦北部、中部、南部、線上場等，時間約為二月上旬至二月下旬，地點另行通知。
+        </p>
+        <div className="rounded-2xl border border-light-brown p-4">
+          <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+            試講交通補助：為確保年會議程品質，大會鼓勵講者參與試講，並將依照客運價格標準，補助講者至最近試講場地的全額或部分車資。屆時若有需要，請保留試講當天的乘車票據，並於
+            3/8（六）年會當天繳交給工作人員。{" "}
+          </p>
+        </div>
       </section>
 
       <section
