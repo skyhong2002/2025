@@ -56,7 +56,7 @@ export default function CountdownPage() {
             href={"/cfp/deadline.ics"}
           >
             <h3 className="flex h-full items-center justify-center text-xl font-bold text-black">
-              把截止日期加入行事曆
+              將徵稿截止日期加入行事曆
             </h3>
           </Link>
         </div>
