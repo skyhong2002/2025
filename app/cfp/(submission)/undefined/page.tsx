@@ -33,16 +33,18 @@ export default function Page() {
     },
     {
       title: "還有疑問怎麼辦？",
-      answer: <p>
-      歡迎寄信至{" "}
-      <Link
-        href="mailto:contact@sitcon.org"
-        className="cursor-pointer text-primary underline"
-      >
-        contact@sitcon.org
-      </Link>{" "}
-      詢問，我們會儘速回應。
-    </p>
+      answer: (
+        <p>
+          歡迎寄信至{" "}
+          <Link
+            href="mailto:contact@sitcon.org"
+            className="cursor-pointer text-primary underline"
+          >
+            contact@sitcon.org
+          </Link>{" "}
+          詢問，我們會儘速回應。
+        </p>
+      ),
     },
   ];
 
@@ -75,9 +77,8 @@ export default function Page() {
           議程說明
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
-          開放式議程分為<span className="hightlight"> 40 </span>分鐘和
-          <span className="hightlight"> 90 </span>
-          分鐘兩種時長，該議程不限定進行方式，希望跳脫傳統議程框架，透過雙向互動、實作等，任何您想得到的非傳統形式進行此場議程。
+          開放式議程為<span className="hightlight"> 40 </span>
+          分鐘的議程，該議程不限定進行方式，希望跳脫傳統議程框架，透過雙向互動、實作等，任何你想得到的非傳統形式進行此場議程。
         </p>
       </section>
       <section
@@ -88,8 +89,8 @@ export default function Page() {
           什麼是開放式議程？
         </h2>
         <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
-          為帶給與會者更多元的議程內容，我們為講者提供了開放式議程這個選項，跳脫講者對聽眾單向陳述式的演講，開放式議程更加強調主講者和與會者的雙向交流。SITCON
-          作為學生展現自己的舞台，我們期待以學生為主體的投稿，無論是實作工作坊、議題交流、社群分享或更多您想像得到能讓議程更加多元且具互動性的方式，我們都十分歡迎。
+          在追求創新的時代，我們為講者提供了開放式議程這個選項，跳脫講者對聽眾單向陳述式的演講，開放式議程更加強調主講者和與會者的雙向交流。SITCON
+          作為學生展現自己的舞台，我們期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是一同探討學生相關議題等。
         </p>
         <div className="flex grid-rows-4 flex-col gap-5 tablet:grid tablet:grid-cols-2 tablet:grid-rows-2">
           <SessionTypeBox title="實作工作坊形式">
@@ -120,98 +121,102 @@ export default function Page() {
           投稿方式
         </h2>
         <div className="space-y-4">
-          <h3 className="text-h3-mobile text-primary md:text-h3 font-bold">稿件資訊</h3>
+          <h3 className="text-h3-mobile font-bold text-primary md:text-h3">
+            稿件資訊
+          </h3>
           <ul className="ml-2 list-inside list-disc text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-            <li>
-              <span className="subTitle">題目 Title：</span>
-              <span className="hightlight">必填、公開</span>。請不要超出
-              <span className="hightlight"> 20 </span>字。
+            <li className="listItem">
+              <span className="">題目 Title：</span>
+              <span className="hightlight subTitle">必填、公開</span>
+              。請不要超出
+              <span className="hightlight subTitle"> 20 </span>字。
             </li>
-            <li>
-              <span className="subTitle">摘要 Abstract：</span>
-              <span className="hightlight">必填、公開</span>。建議
-              <span className="hightlight"> 150~250 </span>
+            <li className="listItem">
+              <span className="">摘要 Abstract：</span>
+              <span className="hightlight subTitle">必填、公開</span>。建議
+              <span className="hightlight subTitle"> 150~250 </span>
               字，使用於宣傳與網站公告。
             </li>
-            <li>
-              <span className="subTitle">
+            <li className="listItem">
+              <span className="">
                 為何選擇開放式議程 Format Preference Explanation：
               </span>
-              <span className="hightlight">必填</span>
+              <span className="hightlight subTitle">必填</span>
               。請簡述為什麼您認為開放式議程更適合此議程的內容或主題呈現。這部分可以包括您希望透過開放式議程達成的效果、氣氛或參與方式，以便審稿委員理解您的設計考量。
             </li>
-            <li>
-              <span className="subTitle">進行模式 Method :</span>
-              <span className="hightlight">必填、公開</span>
+            <li className="listItem">
+              <span className="">進行模式 Method :</span>
+              <span className="hightlight subTitle">必填、公開</span>
               。不限字數，請詳細說明該議程預計如何和會眾互動，以及是否需要額外的工具，此項目將幫助會眾預期該如何參與此議程。
             </li>
-            <li>
-              <span className="subTitle">議程大綱 Outline：</span>
-              <span className="hightlight">必填</span>
+            <li className="listItem">
+              <span className="">議程大綱 Outline：</span>
+              <span className="hightlight subTitle">必填</span>
               。請說明該開放式議程的大綱及時間長度規劃。
             </li>
-            <li>
-              <span className="subTitle">目標受眾 Target Audience：</span>
-              <span className="hightlight">必填</span>
+            <li className="listItem">
+              <span className="">目標受眾 Target Audience：</span>
+              <span className="hightlight subTitle">必填</span>
               。請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「不知道該不該讀研究所的學生」等。
             </li>
-            <li>
-              <span className="subTitle">先備知識 Prior Knowledge：</span>
-              <span className="hightlight">必填、公開</span>
+            <li className="listItem">
+              <span className="">先備知識 Prior Knowledge：</span>
+              <span className="hightlight subTitle">必填、公開</span>
               。請說明該議程的與會者所需具備的
-              <span className="hightlight">先備知識</span>。例如：「能理解
-              Python 基礎語法」、「略懂 108 課綱現況」等。
+              <span className="hightlight subTitle">先備知識</span>
+              。例如：「能理解 Python 基礎語法」、「略懂 108 課綱現況」等。
             </li>
-            <li>
-              <span className="subTitle">主題標籤 Labels：</span>
-              <span className="hightlight">必填、公開</span>。請填寫 1~4
-              個該議程相關的領域與<span className="hightlight">知識標籤</span>
+            <li className="listItem">
+              <span className="">主題標籤 Labels：</span>
+              <span className="hightlight subTitle">必填、公開</span>。請填寫
+              1~4 個該議程相關的領域與
+              <span className="hightlight">知識標籤</span>
               ，例如：ML、Data
               Science、資安紅隊、blockchain、社團等；錄取後會與講者溝通微調後公開於官網議程表。
             </li>
-            <li>
-              <span className="subTitle">詳細說明 Description：</span>
-              <span className="hightlight">必填</span>
+            <li className="listItem">
+              <span className="">詳細說明 Description：</span>
+              <span className="hightlight subTitle">必填</span>
               。不限字數，請說明這個議程您認為重要的相關細節，以利審稿委員更瞭解您的議程。
             </li>
-            <li>
-              <span className="subTitle">附件 Attachment：</span>
+            <li className="listItem">
+              <span className="">附件 Attachment：</span>
               選填。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
             </li>
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-h3-mobile text-primary md:text-h3 font-bold">個人資料</h3>
+          <h3 className="text-h3-mobile font-bold text-primary md:text-h3">
+            個人資料
+          </h3>
           <p className="mb-2">
             除了暱稱 /
             名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
           </p>
           <ul className="list-inside list-disc leading-10">
-            <li>
-              <span className="subTitle">電子郵件 Email：</span>
-              <span className="hightlight">必填</span>
+            <li className="listItem">
+              <span className="">電子郵件 Email：</span>
+              <span className="hightlight subTitle">必填</span>
               。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
             </li>
-            <li>
-              <span className="subTitle">暱稱 / 名字 Name：</span>
-              <span className="hightlight">必填、公開</span>
+            <li className="listItem">
+              <span className="">暱稱 / 名字 Name：</span>
+              <span className="hightlight subTitle">必填、公開</span>
               。公開於講者海報及網站的稱呼。
             </li>
-            <li>
-              <span className="subTitle">自我介紹 Self Introduction：</span>
-              <span className="hightlight">必填、公開</span>
+            <li className="listItem">
+              <span className="">自我介紹 Self Introduction：</span>
+              <span className="hightlight subTitle">必填、公開</span>
               。公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
             </li>
-            <li>
-              <span className="subTitle">手機號碼 Phone：</span>
-              <span className="hightlight">必填</span>
+            <li className="listItem">
+              <span className="">手機號碼 Phone：</span>
+              <span className="hightlight subTitle">必填</span>
               。用於大會聯絡、確認資訊用的電話號碼。
             </li>
             <li className="pl-[22px] -indent-[22px]">
-              <span className="subTitle">
-                其他聯絡方式 Other Contact Information：
-              </span>
-              <span className="hightlight">必填</span>
+              <span className="">其他聯絡方式 Other Contact Information：</span>
+              <span className="hightlight subTitle">必填</span>
               。其他任何我們能聯絡您的方式（如 Telegram
               ID、住處電話等），以利我們在審稿時即時向您釐清投稿資訊。
             </li>
@@ -232,20 +237,28 @@ export default function Page() {
           <br />
           審稿委員將針對以下項目進行篩選：
         </p>
-        <ul className="ml-2 text-normal-mobile font-normal leading-loose tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
-          <li>
-            稿件內容：講者是否熟悉這個題目、和會眾的交流效果、可執行性，以及是否符合開放式議程的宗旨，展現出創新和彈性的分享形式，能促進與會者的參與或啟發新的想法。
+        <ul className="list-inside list-disc leading-10">
+          <li className="listItem">
+            <span className="hightlight subTitle">稿件內容：</span>
+            講者是否熟悉這個題目、和會眾的交流效果、可執行性，以及是否符合開放式議程的宗旨，展現出創新和彈性的分享形式，能促進與會者的參與或啟發新的想法。
           </li>
-          <li>
-            表達能力：提供的資料是否有條理、文句暢通，提供資料（尤其是稿件的詳細說明）之完整度。我們偏好完整的資料，讓審稿委員更清楚了解演講細節。
+          <li className="listItem">
+            <span className="hightlight subTitle">表達能力：</span>
+            提供的資料是否有條理、文句暢通，提供資料（尤其是稿件的詳細說明）之完整度。我們偏好完整的資料，讓審稿委員更清楚了解演講細節。
           </li>
-          <li>適合聽眾：稿件是否適合 SITCON 大多數的與會者討論。</li>
+          <li className="listItem">
+            <span className="hightlight subTitle">適合聽眾：</span>稿件是否適合
+            SITCON 大多數的與會者討論。
+          </li>
+          {/* <li className="listItem">
+            <span className="hightlight subTitle"> 議程適切性：</span>
+            稿件是否符合開放式議程的宗旨，展現出創新和彈性的分享形式，能促進與會者的參與感或啟發新的想法。
+          </li> */}
         </ul>
         <div className="py-1" />
       </section>
 
       <CodeOfConduct />
-
       <section
         id="submission-guidelines"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
@@ -254,30 +267,36 @@ export default function Page() {
           投稿注意事項
         </h2>
         <div>
-          <ul className="ml-2 text-normal-mobile font-normal leading-10 tracking-wider md:text-normal [&>li]:relative [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-0 before:[&>li]:top-[0.8em] before:[&>li]:-translate-y-[1em] before:[&>li]:text-xl before:[&>li]:content-['.']">
-            <li>
+          <ul className="list-inside list-disc leading-10">
+            <li className="listItem">
               除非內容明顯偏離講題、違反 CoC
               或不符事實，我們不會強制要求講者對演講內容進行修正。
             </li>
-            <li>
+            <li className="listItem">
               「議程題目」、「摘要」與「先備知識」將放置於官方網站與大會發行的文宣中。
             </li>
             <li>在截稿之前，投稿者可以隨時透過表單回函修改已送出的稿件。</li>
-            <li>
-              審稿過程不考慮稿件內容的難度。我們以稿件是否能夠吸引人、高品質、適合聽眾為考量。
+            <li className="listItem">
+              審稿過程
+              <span className="hightlight subTitle">不考慮稿件內容的難度</span>
+              。我們以稿件是否能夠吸引人、高品質、適合聽眾為考量。
             </li>
-            <li>
+            <li className="listItem">
               若 SITCON
               議程組認為您的稿件比較適合另一種形式，或者該形式的名額已經額滿、無法再增額時，我們會向您充分說明與溝通，並經您的同意後，轉換稿件類型或時間長度。
             </li>
-            <li>
+            <li className="listItem">
               SITCON 2025
               將會有多軌議程及各式場外活動同時進行，與會者可以自行決定要參與哪一場議程或活動。
             </li>
-            <li>
-              為鼓勵投稿，大會提供投稿者一組報名邀請碼（一稿一組，每人最多一組），可優先報名參與本年會。若您的稿件被接受，年會將頒予感謝狀以表彰您的熱情付出與貢獻，並額外提供講者身分入場，屆時您可以將年會邀請碼贈與他人使用，邀請親朋好友共襄盛舉。
+            <li className="listItem">
+              為鼓勵投稿，大會
+              <span className="hightlight subTitle">
+                提供投稿者一組報名邀請碼
+              </span>
+              （一稿一組，每人最多一組），可優先報名參與本年會。若您的稿件被接受，年會將頒予感謝狀以表彰您的熱情付出與貢獻，並額外提供講者身分入場，屆時您可以將年會邀請碼贈與他人使用，邀請親朋好友共襄盛舉。
             </li>
-            <li>
+            <li className="listItem">
               若同一稿件有多個講者，請在「暱稱 /
               名字」欄位標示所有講者的稱呼，並在「演講大綱」詳細說明各個講者如何分配演講內容。稿件經接受者，無論講者人數，皆只提供一組可轉贈的入場票邀請碼、一份講者識別證與一份講者專屬迎賓禮，大會方保有最終發放之權力。未佩戴識別證的講者，僅能在自己的演講時，於該議程時段進入議程所在的會議廳。
             </li>
@@ -288,7 +307,7 @@ export default function Page() {
               href="mailto:contact@sitcon.org"
               className="cursor-pointer text-primary underline"
             >
-              contact@sitcon.org
+              <span className="hightlight subTitle">contact@sitcon.org</span>
             </Link>{" "}
             。
           </p>
@@ -303,14 +322,42 @@ export default function Page() {
           授權
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-          投稿作者同意以{" "}
+          今年將採取實體與線上同步之模式進行，除開放式議程外，年會當天將對每一場議程進行直播串流。如果您同意以
           <Link
             href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
-            className="underline underline-offset-2"
+            className="hightlight subTitle underline underline-offset-2"
           >
-            創用 CC「姓名標示」4.0
-          </Link>{" "}
-          授權大會方進行紙本印刷、宣傳、展覽、數位化、重製等審稿、佈展、官方網站上線工作必要流程。投稿作者仍擁有投稿專案著作之著作權。且擔保本著作係著作人之原創性著作，未侵害任何第三人之智慧財產權。
+            {" "}
+            創用 CC「姓名標示」4.0{" "}
+          </Link>
+          授權釋出議程錄影，我們將會上傳至
+          <Link
+            href={"https://sitcon.org/yt"}
+            className="hightlight subTitle underline underline-offset-2"
+          >
+            {" "}
+            YouTube{" "}
+          </Link>
+          及
+          <Link
+            href={"https://odysee.com/@SITCON:f"}
+            className="hightlight subTitle underline underline-offset-2"
+          >
+            {" "}
+            LBRY{" "}
+          </Link>
+          的 SITCON 頻道。{" "}
+        </p>
+        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+          您為議程準備的其餘相關素材（如投影片），將於年會前由 SITCON
+          議程組向您蒐集素材連結，並整理在年會官方網站的議程資訊上。您可以自行決定在何種平台、以何種方式釋出，我們不會干涉，但鼓勵您選擇允許知識共享的
+          <Link
+            href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
+            className="hightlight subTitle underline underline-offset-2"
+          >
+            {" "}
+            創用 CC 系列授權。{" "}
+          </Link>
         </p>
         <div className="py-1" />
       </section>
@@ -323,14 +370,21 @@ export default function Page() {
           試講
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-          試講提供講者提升演講品質的機會，比照年會時間安排供講者講完整場演講，並有工作人員提供建議（如簡報、臺風等），講者可以自由參加，並自行選擇最合適的場次。若您的稿件確認入選，議程組將再與您協調確切時間。為維護所有講者的權利，試講時間恕不接受更改，請您準時參與。
-          <br />
-          開放式議程的形式較為靈活，我們強烈建議講者參與試講，並在試講中提前演練時間控制、現場互動安排與內容引導。由於開放式議程重視雙向交流和互動環節，建議您設計能促進參與者投入互動的方式，以更流暢地進行議程，例如預先設定討論問題、安排練習或互動環節。試講過程中，工作人員將針對控時、控場等細節提供回饋，協助您調整內容，確保開放式議程在實際呈現時能順利進行並達到最佳效果。
-          <br />
-          所有場次將依報名情況舉辦，預計舉辦北部、中部、南部、線上場等，時間約為二月，地點另行通知。
-          <br />
-          試講交通補助：為確保年會議程品質，我們鼓勵講者參與試講，並將依照客運價格標準，補助講者至最近試講場地的全額或部分車資。若您的稿件被予以錄取，細節將於錄取後通知。
+          試講提供講者提升演講品質的機會，比照年會時間安排供講者講完整場演講，
+          <span className="hightlight subTitle">
+            並有工作人員提供建議（如簡報、臺風等）
+          </span>
+          ，講者可以自由參加，並自行選擇最合適的場次。若您的稿件確認入選，議程組將再與您協調確切時間。為維護所有講者的權利，試講時間恕不接受更改，請您準時參與。
         </p>
+        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+          所有場次將依報名情況舉辦，預計舉辦北部、中部、南部、線上場等，時間約為二月上旬至二月下旬，地點另行通知。
+        </p>
+        <div className="rounded-2xl border border-light-brown p-4">
+          <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+            試講交通補助：為確保年會議程品質，大會鼓勵講者參與試講，並將依照客運價格標準，補助講者至最近試講場地的全額或部分車資。屆時若有需要，請保留試講當天的乘車票據，並於
+            3/8（六）年會當天繳交給工作人員。{" "}
+          </p>
+        </div>
       </section>
 
       <section
@@ -341,16 +395,25 @@ export default function Page() {
           彩排
         </h2>
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-          SITCON 2025
-          將在年會前一天提供議程被錄取之講者彩排的機會。彩排能讓講者熟悉現場設備環境、攝影機位置，並且測試
-          Live Demo
-          情境。若講者想於正式演講前先熟悉場地與現場情況，歡迎於彩排當天前來參與，一起使年會議程品質更臻完美。
-          日期：2025 年 3 月 7 日（五）。
-          場地：議程廳與年會相同，細節將於稿件錄取後通知。 時間：一人約 5~10
-          分鐘，可練習操作設備或演練部分簡報內容。若有 Live Demo
-          或特殊需求，可提前與議程組討論。
-          提供設備：與年會當天場地的設備相同，例如麥克風、倒數計時器等。
+          本屆 SITCON
+          將在年會前一天提供入選講者彩排的機會。彩排能讓講者熟悉現場設備環境、攝影機位置，並且測試
+          Live Demo 情境。希望講者能夠共同參與彩排，一起使年會議程品質更臻完美。
         </p>
+        <ul className="leading-10">
+          <li className="">日期：2025 年 3 月 7 日（五）。</li>
+          <li className="">場地：議程廳與年會相同，細節將於稿件錄取後通知。</li>
+          <li className="">
+            時間：一人約 5~10 分鐘。若有 Live Demo
+            或特殊需求，可提前與議程組安排時間。
+          </li>
+          <li className="">
+            流程：講者操作設備，測試 Live Demo
+            連結及切換方式，也可以演練部分簡報內容。
+          </li>
+          <li className="">
+            提供設備：與年會當天場地的設備相同，例如麥克風、倒數計時器等。
+          </li>
+        </ul>
       </section>
 
       <FAQ QA={QA} />
@@ -366,9 +429,9 @@ function SessionTypeBox({
   children: React.ReactNode;
 }) {
   return (
-    <div className="space-y-4 rounded-lg bg-background-light p-4 text-foreground">
-      <h3 className="text-h3-mobile font-bold md:text-h3">{title}</h3>
-      <p className="text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
+    <div className="flex flex-col justify-between space-y-4 rounded-lg bg-background-light p-6 text-foreground">
+      <h3 className="mb-14 text-h3-mobile font-bold md:text-h3">{title}</h3>
+      <p className="flex items-end text-normal-mobile font-normal leading-loose tracking-wider md:text-normal">
         {children}
       </p>
     </div>
