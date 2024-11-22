@@ -10,7 +10,7 @@ type TimeLeft = {
   seconds: number;
 };
 
-function calculateTimeLeft(): TimeLeft {
+export function calculateTimeLeft(): TimeLeft {
   const TARGET_DATE = "2025-01-21T23:59:59";
   const now = new Date();
   const target = new Date(TARGET_DATE);
