@@ -7,6 +7,7 @@ import Espresso from "../../_components/logos/espresso";
 import Presentation from "../../_components/logos/presentation";
 import Link from "next/link";
 import Image from "next/image";
+import { ReactNode } from "react";
 
 function PresentationBlock(presentation: { title: string; id: string }) {
   return (
@@ -330,99 +331,80 @@ export default function Page() {
         <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
           稿件資訊
         </h3>
-        <ul className="list-inside list-disc leading-10">
-          <li className="listItem">
-            <span className="">投稿類型 Type：</span>
-            <span className="subTitle hightlight">必填、公開</span>
-            。請寫明所欲投稿為何種議程類型（Presentation、Espresso）。
-          </li>
-          <li>
-            <span className="">題目 Title：</span>
-            <span className="subTitle hightlight">必填、公開</span>
-            。請不要超出<span className="subTitle hightlight"> 20 </span>
+        <div className="flex flex-col gap-8">
+          <InformationField title="投稿類型 Type" tags={["必填", "公開"]}>
+            請寫明所欲投稿為何種議程類型（Presentation、Espresso）。
+          </InformationField>
+          <InformationField title="題目 Title" tags={["必填", "公開"]}>
+            請不要超出<span className="subTitle hightlight"> 20 </span>
             字，題目無須與年會主題相關。
-          </li>
-          <li className="listItem">
-            <span className="">摘要 Abstract：</span>
-            <span className="subTitle hightlight">必填、公開</span>。建議
+          </InformationField>
+          <InformationField title="摘要 Abstract：" tags={["必填", "公開"]}>
             <span className="hightlight subTitle"> 150~250 </span>
             字，使用於宣傳與網站公告。
-          </li>
-          <li className="listItem">
-            <span className="">演講大綱 Outline：</span>
-            <span className="subTitle hightlight">必填</span>
-            。請說明議程的內容大綱與時間分配。若為多位講者共同分享，請說明各個講者如何分配演講內容。
-          </li>
-          <li className="listItem">
-            <span className="">目標受眾 Target Audience：</span>
-            <span className="subTitle hightlight">必填</span>
-            。請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。在這邊為您提供過往的會眾比例：大學生
+          </InformationField>
+          <InformationField title="演講大綱 Outline" tags={["必填"]}>
+            請說明議程的內容大綱與時間分配。若為多位講者共同分享，請說明各個講者如何分配演講內容。
+          </InformationField>
+          <InformationField title="目標受眾 Target Audience" tags={["必填"]}>
+            請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。在這邊為您提供過往的會眾比例：大學生
             58%、高中/職生 22%、社會人士 8%、研究生 11%、國中生 1%
-          </li>
-          <p></p>
-          <li className="listItem">
-            <span className="">先備知識 Prior Knowledge：</span>
-            <span className="subTitle hightlight">必填、公開</span>
-            。請說明該議程的與會者所需具備的
-            <span className="subTitle hightlight">先備知識</span>
-            。例如：「能理解 Python 基礎語法」、「能熟練運用 Class 與 OOP」等。
-          </li>
-          <li className="listItem">
-            <span className="">主題標籤 Labels：</span>
-            <span className="subTitle hightlight">必填、公開</span>
-            。請填寫 1~4 個該議程相關的
-            <span className="hightlight subTitle">領域與知識標籤</span>
-            ，例如：ML、Data
+          </InformationField>
+          <InformationField
+            title="先備知識 Prior Knowledge"
+            tags={["必填", "公開"]}
+          >
+            請說明該議程的與會者所需具備的{" "}
+            <span className="subTitle hightlight">先備知識</span> 例如：「能理解
+            Python 基礎語法」、「能熟練運用 Class 與 OOP」等。
+          </InformationField>
+          <InformationField title="主題標籤 Labels" tags={["必填", "公開"]}>
+            請填寫 1~4 個該議程相關的{" "}
+            <span className="hightlight subTitle">領域與知識標籤</span>{" "}
+            例如：ML、Data
             Science、資安紅隊、blockchain、社團等；錄取後會與講者溝通微調後公開於官網議程表。
-          </li>
-          <li className="listItem">
-            <span className="">詳細說明 Description：</span>
-            <span className="subTitle hightlight">必填</span>
-            。不限字數，請盡可能
-            <span className="hightlight subTitle">詳細說明</span>
+          </InformationField>
+          <InformationField title="詳細說明 Description" tags={["必填"]}>
+            不限字數，請盡可能{" "}
+            <span className="hightlight subTitle">詳細說明</span>{" "}
             這個議程的相關細節，如議程架構、想傳達的內容及您認為可能可以說服審稿委員選擇您的稿件之資訊等，以利審稿委員更瞭解您的議程及想法。
-          </li>
-          <li className="listItem">
-            附件 Attachment：
-            <span className="subTitle hightlight">選填</span>
-            。可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
-          </li>
-        </ul>
+          </InformationField>
+          <InformationField title="附件 Attachment" tags={["選填"]}>
+            可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
+          </InformationField>
+        </div>
         <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
           個人資料
         </h3>
-        <p className="mb-2 leading-10">
+        <p className="mb-2 mb-7 leading-10">
           除了暱稱 /
           名字、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
         </p>
-        <ul className="list-inside list-disc leading-10">
-          <li className="listItem">
-            <span className="">電子郵件 Email：</span>
-            <span className="hightlight subTitle">必填</span>
-            。能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
-          </li>
-          <li className="listItem">
-            <span className="">暱稱 / 名字 Name：</span>
-            <span className="hightlight subTitle">必填、公開</span>
-            。公開於講者海報及網站的稱呼。
-          </li>
-          <li className="listItem">
-            <span className="">自我介紹 Self Introduction：</span>
-            <span className="hightlight subTitle">必填、公開</span>
-            。公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
-          </li>
-          <li className="listItem">
-            <span className="">手機號碼 Phone：</span>
-            <span className="hightlight subTitle">必填</span>
-            。用於大會聯絡、確認資訊用的電話號碼。
-          </li>
-          <li className="listItem">
-            <span className="">其他聯絡方式 Other Contact Information：</span>
-            <span className="hightlight subTitle">必填</span>
-            。其他任何我們能聯絡您的方式（如 Telegram
+        <div className="flex flex-col gap-8">
+          <InformationField title="電子郵件 Email" tags={["必填"]}>
+            能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
+          </InformationField>
+          <InformationField title="暱稱 / 名字 Name" tags={["必填", "公開"]}>
+            公開於講者海報及網站的稱呼。
+          </InformationField>
+          <InformationField
+            title="自我介紹 Self Introduction"
+            tags={["必填", "公開"]}
+          >
+            公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
+          </InformationField>
+
+          <InformationField title="手機號碼 Phone" tags={["必填"]}>
+            用於大會聯絡、確認資訊用的電話號碼。
+          </InformationField>
+          <InformationField
+            title="其他聯絡方式 Other Contact Information"
+            tags={["必填"]}
+          >
+            其他任何我們能聯絡您的方式（如 Telegram
             ID、住處電話等），以利我們在審稿時即時向您釐清投稿資訊。
-          </li>
-        </ul>
+          </InformationField>
+        </div>
       </section>
       <section id="review-process" className="-mt-[60px] pt-[80px] md:mb-16">
         <h2 className="my-4 text-h2-mobile font-extrabold text-primary md:text-h2">
@@ -610,6 +592,32 @@ export default function Page() {
       </section>
 
       <FAQ QA={QA} />
+    </div>
+  );
+}
+
+export function InformationField({
+  title,
+  tags,
+  children,
+}: {
+  title: string;
+  tags: string[];
+  children: ReactNode;
+}) {
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="flex items-center gap-2">
+        <span className="text-lg font-bold leading-9 text-secondary">
+          {title}
+        </span>
+        {tags.map((tag) => (
+          <span key={tag} className="rounded-lg bg-background-light px-3">
+            {tag}
+          </span>
+        ))}
+      </div>
+      <div className="leading-10">{children}</div>
     </div>
   );
 }
