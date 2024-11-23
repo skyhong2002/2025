@@ -593,11 +593,21 @@ export function InformationField({
     optional: "選填",
     public: "公開",
   };
+
+  const titleSplit = title.split("\\n");
+
   return (
     <div className="relative flex flex-col gap-1 rounded-2xl bg-background-light p-5">
       <div className="items-left flex flex-col">
         <span className="text-2xl font-bold leading-9 text-secondary">
-          {title}
+          {titleSplit.length <= 1
+            ? titleSplit[0]
+            : titleSplit.map((title) => (
+                <>
+                  {title}
+                  <br />
+                </>
+              ))}
         </span>
       </div>
       <div className="absolute right-5 top-7 gap-2">

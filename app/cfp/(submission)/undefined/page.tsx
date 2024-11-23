@@ -134,9 +134,19 @@ export default function Page() {
               建議<span className="hightlight subTitle"> 150~250 </span>
               字，使用於宣傳與網站公告。
             </InformationField>
-            <InformationField title="為何選擇開放式議程" tags={["required"]}>
-              請簡述為什麼您認為開放式議程更適合此議程的內容或主題呈現。這部分可以包括您希望透過開放式議程達成的效果、氣氛或參與方式，以便審稿委員理解您的設計考量。
-            </InformationField>
+            <div className="max-[1024px]:hidden">
+              <InformationField title="為何選擇開放式議程" tags={["required"]}>
+                請簡述為什麼您認為開放式議程更適合此議程的內容或主題呈現。這部分可以包括您希望透過開放式議程達成的效果、氣氛或參與方式，以便審稿委員理解您的設計考量。
+              </InformationField>
+            </div>
+            <div className="hidden max-[1024px]:block">
+              <InformationField
+                title="為何選擇\n開放式議程"
+                tags={["required"]}
+              >
+                請簡述為什麼您認為開放式議程更適合此議程的內容或主題呈現。這部分可以包括您希望透過開放式議程達成的效果、氣氛或參與方式，以便審稿委員理解您的設計考量。
+              </InformationField>
+            </div>
             <InformationField title="進行模式" tags={["required", "public"]}>
               不限字數，請詳細說明該議程預計如何和會眾互動，以及是否需要額外的工具，此項目將幫助會眾預期該如何參與此議程。
             </InformationField>
