@@ -174,6 +174,7 @@ export default function Page() {
         <p>
           歡迎寄信至{" "}
           <Link
+            target="_blank"
             href="mailto:contact@sitcon.org"
             className="cursor-pointer text-primary underline"
           >
@@ -270,7 +271,11 @@ export default function Page() {
               .toReversed()
               .map((year, index) => (
                 <span key={year}>
-                  <Link className="link" href={`https://sitcon.org/${year}`}>
+                  <Link
+                    target="_blank"
+                    className="link"
+                    href={`https://sitcon.org/${year}`}
+                  >
                     {year}
                   </Link>
                   {<span>{index == 10 ? "" : "、"}</span>}
@@ -327,8 +332,8 @@ export default function Page() {
           投稿格式
         </h2>
         <p className="leading-10">
-          Presentation 與
-          Espresso的投稿格式相同，除標示為公開之資訊會對外公布外，其餘僅供審稿委員於審稿時閱讀。
+          Presentation 與 Espresso
+          的投稿格式相同，除標示為公開之資訊會對外公布外，其餘僅供審稿委員於審稿時閱讀。
         </p>
         <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
           稿件資訊
@@ -341,10 +346,7 @@ export default function Page() {
             請不要超出<span className="subTitle hightlight"> 20 </span>
             字，題目無須與年會主題相關。
           </InformationField>
-          <InformationField
-            title="摘要 Abstract："
-            tags={["required", "public"]}
-          >
+          <InformationField title="摘要 Abstract" tags={["required", "public"]}>
             <span className="hightlight subTitle"> 150~250 </span>
             字，使用於宣傳與網站公告。
           </InformationField>
@@ -490,6 +492,7 @@ export default function Page() {
           <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
             若有任何問題或投稿建議，請來信 SITCON 議程組信箱{" "}
             <Link
+              target="_blank"
               href="mailto:contact@sitcon.org"
               className="cursor-pointer text-primary underline"
             >
@@ -510,6 +513,7 @@ export default function Page() {
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
           今年將採取實體與線上同步之模式進行，除開放式議程外，年會當天將對每一場議程進行直播串流。如果您同意以
           <Link
+            target="_blank"
             href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
             className="hightlight subTitle underline underline-offset-2"
           >
@@ -518,6 +522,7 @@ export default function Page() {
           </Link>
           授權釋出議程錄影，我們將會上傳至
           <Link
+            target="_blank"
             href={"https://sitcon.org/yt"}
             className="hightlight subTitle underline underline-offset-2"
           >
@@ -526,6 +531,7 @@ export default function Page() {
           </Link>
           及
           <Link
+            target="_blank"
             href={"https://odysee.com/@SITCON:f"}
             className="hightlight subTitle underline underline-offset-2"
           >
@@ -538,6 +544,7 @@ export default function Page() {
           您為議程準備的其餘相關素材（如投影片），將於年會前由 SITCON
           議程組向您蒐集素材連結，並整理在年會官方網站的議程資訊上。您可以自行決定在何種平台、以何種方式釋出，我們不會干涉，但鼓勵您選擇允許知識共享的
           <Link
+            target="_blank"
             href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
             className="hightlight subTitle underline underline-offset-2"
           >
