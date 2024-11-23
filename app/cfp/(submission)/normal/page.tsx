@@ -340,26 +340,17 @@ export default function Page() {
           <InformationField title="演講大綱" tags={["required"]}>
             請說明議程的內容大綱與時間分配。若為多位講者共同分享，請說明各個講者如何分配演講內容。
           </InformationField>
-          <InformationField
-            title="目標受眾"
-            tags={["required"]}
-          >
+          <InformationField title="目標受眾" tags={["required"]}>
             請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。SITCON
             2024 的會眾比例為：大學生 58%、高中/職生 22%、社會人士 8%、研究生
             11%、國中生 1%
           </InformationField>
-          <InformationField
-            title="先備知識"
-            tags={["required", "public"]}
-          >
+          <InformationField title="先備知識" tags={["required", "public"]}>
             請說明該議程的與會者所需具備的{" "}
             <span className="subTitle hightlight">先備知識</span> 例如：「能理解
             Python 基礎語法」、「能熟練運用 Class 與 OOP」等。
           </InformationField>
-          <InformationField
-            title="主題標籤"
-            tags={["required", "public"]}
-          >
+          <InformationField title="主題標籤" tags={["required", "public"]}>
             請填寫 1~4 個該議程相關的{" "}
             <span className="hightlight subTitle">領域與知識標籤</span>{" "}
             例如：ML、Data
@@ -603,16 +594,15 @@ export function InformationField({
     public: "公開",
   };
   return (
-    <div className="mt-1 flex flex-col gap-2">
-      <div className="flex items-center gap-2">
-        <span className="text-lg font-bold leading-9 text-secondary">
+    <div className="relative flex flex-col gap-2 rounded-2xl bg-background-light p-6">
+      <div className="items-left flex flex-col">
+        <span className="text-3xl font-bold leading-9 text-secondary">
           {title}
         </span>
+      </div>
+      <div className="absolute right-5 top-7 gap-2">
         {tags.map((tag) => (
-          <span
-            key={tag}
-            className={`rounded-lg bg-background-light px-3 ${tag || ""}`}
-          >
+          <span key={tag} className={`ml-2 rounded-lg px-3 py-1 ${tag || ""}`}>
             {tagClassMap[tag]}
           </span>
         ))}
