@@ -200,10 +200,16 @@ function FooterSubMenuGrid({
         {links.map((link) => {
           const { text, href } = link;
           return (
-            <li key={href}>
-              <Link target="_blank" className="hover:opacity-70" href={href}>
-                {text}
-              </Link>
+            <li key={href} className="text-center">
+              <a target="_blank" className="inline-block hover:opacity-70" href={href}>
+                <span className="inline-block">
+                  {text.split("").map((char, index) => (
+                    <span key={index} className="inline-block w-2.5 text-center">
+                      {char}
+                    </span>
+                  ))}
+                </span>
+              </a>
             </li>
           );
         })}
