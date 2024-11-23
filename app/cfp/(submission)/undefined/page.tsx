@@ -355,7 +355,7 @@ export default function Page() {
         <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
           所有場次將依報名情況舉辦，預計舉辦北部、中部、南部、線上場等，時間約為二月，地點另行通知。
         </p>
-        <div className="rounded-2xl border border-light-brown p-4">
+        <div className="rounded-2xl border border-foreground p-4">
           <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
             試講交通補助：為確保年會議程品質，我們鼓勵講者參與試講，並將依照客運價格標準，補助講者至最近試講場地的全額或部分車資。若您的稿件被予以錄取，細節將於錄取後通知。
           </p>
