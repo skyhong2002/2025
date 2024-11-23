@@ -111,8 +111,8 @@ export default function Page() {
               title="主題標籤 Labels"
               tags={["required", "public"]}
             >
-              請填寫 1~3 個與海報內文相關的領域與{" "}
-              <span className="hightlight subTitle">知識標籤</span>
+              請填寫 1~3 個與海報內文相關的{" "}
+              <span className="hightlight subTitle">領域與知識標籤</span>
               ，例如：ML、Data Science、資安、NLP
               等；錄取後會與提供稿件者溝通微調後公開於官網。
             </InformationField>
