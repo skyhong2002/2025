@@ -325,23 +325,23 @@ export default function Page() {
         <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
           稿件資訊
         </h3>
-        <div className="flex flex-col gap-8">
-          <InformationField title="投稿類型 Type" tags={["required", "public"]}>
+        <div className="flex flex-col gap-4">
+          <InformationField title="投稿類型" tags={["required", "public"]}>
             請寫明所欲投稿為何種議程類型（Presentation、Espresso）。
           </InformationField>
-          <InformationField title="題目 Title" tags={["required", "public"]}>
+          <InformationField title="題目" tags={["required", "public"]}>
             請不要超出<span className="subTitle hightlight"> 20 </span>
             字，題目無須與年會主題相關。
           </InformationField>
-          <InformationField title="摘要 Abstract" tags={["required", "public"]}>
+          <InformationField title="摘要" tags={["required", "public"]}>
             <span className="hightlight subTitle"> 150~250 </span>
             字，使用於宣傳與網站公告。
           </InformationField>
-          <InformationField title="演講大綱 Outline" tags={["required"]}>
+          <InformationField title="演講大綱" tags={["required"]}>
             請說明議程的內容大綱與時間分配。若為多位講者共同分享，請說明各個講者如何分配演講內容。
           </InformationField>
           <InformationField
-            title="目標受眾 Target Audience"
+            title="目標受眾"
             tags={["required"]}
           >
             請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。SITCON
@@ -349,7 +349,7 @@ export default function Page() {
             11%、國中生 1%
           </InformationField>
           <InformationField
-            title="先備知識 Prior Knowledge"
+            title="先備知識"
             tags={["required", "public"]}
           >
             請說明該議程的與會者所需具備的{" "}
@@ -357,7 +357,7 @@ export default function Page() {
             Python 基礎語法」、「能熟練運用 Class 與 OOP」等。
           </InformationField>
           <InformationField
-            title="主題標籤 Labels"
+            title="主題標籤"
             tags={["required", "public"]}
           >
             請填寫 1~4 個該議程相關的{" "}
@@ -365,12 +365,12 @@ export default function Page() {
             例如：ML、Data
             Science、資安紅隊、blockchain、社團等；審稿委員將會參考此欄位了解件著重的面向，錄取後議程組也會參考此欄位，在與您溝通後挑選合適的標籤呈現於官網議程表上。
           </InformationField>
-          <InformationField title="詳細說明 Description" tags={["required"]}>
+          <InformationField title="詳細說明" tags={["required"]}>
             不限字數，請盡可能{" "}
             <span className="hightlight subTitle">詳細說明</span>{" "}
             個議程的相關細節，如議程詳細架構及想傳達的內容，如您為什麼想講這個議程及您預期此議程能為聽眾帶來什麼等，以利審稿委員更瞭解您的議程及想法。
           </InformationField>
-          <InformationField title="附件 Attachment" tags={["optional"]}>
+          <InformationField title="附件" tags={["optional"]}>
             可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
           </InformationField>
         </div>
@@ -380,7 +380,7 @@ export default function Page() {
         <p className="mb-2 mb-7 leading-10">
           除了暱稱、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
         </p>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4">
           <InformationField title="電子郵件" tags={["required"]}>
             能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
           </InformationField>

@@ -95,20 +95,20 @@ export default function Page() {
           <p>除標示為公開之資訊會對外公布外，其餘僅供審稿委員於審稿時閱讀。</p>
           <div className="flex flex-col gap-8">
             <InformationField
-              title="題目 Project Title"
+              title="題目"
               tags={["required", "public"]}
             >
               長度請自行斟酌。
             </InformationField>
             <InformationField
-              title="摘要 Abstract"
+              title="摘要"
               tags={["required", "public"]}
             >
               建議約 <span className="hightlight subTitle"> 350 </span>{" "}
               字，使用於宣傳與網站公告。
             </InformationField>
             <InformationField
-              title="主題標籤 Labels"
+              title="主題標籤"
               tags={["required", "public"]}
             >
               請填寫 1~3 個與海報內文相關的{" "}
@@ -117,7 +117,7 @@ export default function Page() {
               等；錄取後會與提供稿件者溝通微調後公開於官網。
             </InformationField>
             <InformationField
-              title="專案說明 Project Content"
+              title="專案說明"
               tags={["required"]}
             >
               請以 PDF 檔案上傳，以{" "}
@@ -125,7 +125,7 @@ export default function Page() {
               字為限。內容涵蓋專案或研究的背景與目標，說明其所解決的問題或探索的課題，並描述所使用的方法或技術，包括專案實施或研究過程中，並展示專案或研究的主要成果，說明其應用價值或理論貢獻，探討未來發展方向或進一步探索的可能性。投稿者可根據專案或研究的特性自行安排內容，展現專案或研究的獨特性與價值。專案說明不需設計或排版，僅需充分說明貴專案內容即可。
             </InformationField>
             <InformationField
-              title="其他說明 Additional Instructions"
+              title="其他說明"
               tags={[]}
             >
               其他以上未提及之說明，若為延續性研究作品也請在此標明。
