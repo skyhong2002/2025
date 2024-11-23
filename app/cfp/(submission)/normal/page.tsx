@@ -610,7 +610,7 @@ export function InformationField({
     public: "public",
   };
   return (
-    <div className="flex flex-col gap-2">
+    <div className="mt-1 flex flex-col gap-2">
       <div className="flex items-center gap-2">
         <span className="text-lg font-bold leading-9 text-secondary">
           {title}
