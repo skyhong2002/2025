@@ -594,9 +594,9 @@ export function InformationField({
     public: "公開",
   };
   return (
-    <div className="relative flex flex-col gap-2 rounded-2xl bg-background-light p-6">
+    <div className="relative flex flex-col gap-1 rounded-2xl bg-background-light p-5">
       <div className="items-left flex flex-col">
-        <span className="text-3xl font-bold leading-9 text-secondary">
+        <span className="text-2xl font-bold leading-9 text-secondary">
           {title}
         </span>
       </div>
