@@ -322,7 +322,7 @@ export default function Page() {
         </h2>
         <p className="leading-10">
           Presentation 與 Espresso
-          的投稿格式相同，除標示為public之資訊會對外公布外，其餘僅供審稿委員於審稿時閱讀。
+          的投稿格式相同，除標示為公開之資訊會對外公布外，其餘僅供審稿委員於審稿時閱讀。
         </p>
         <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
           稿件資訊
@@ -390,10 +390,10 @@ export default function Page() {
             您的姓名。
           </InformationField>
           <InformationField title="暱稱" tags={["required", "public"]}>
-            public於講者及網站的稱呼。
+            公開於講者及網站的稱呼。
           </InformationField>
           <InformationField title="自我介紹" tags={["required", "public"]}>
-            public於講者海報及網站，將有助於會眾更加了解有關你的資訊。
+            公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
           </InformationField>
 
           <InformationField title="手機號碼" tags={["required"]}>
@@ -605,9 +605,9 @@ export function InformationField({
   children: ReactNode;
 }) {
   const tagClassMap = {
-    required: "required",
+    required: "必填",
     optional: "選填",
-    public: "public",
+    public: "公開",
   };
   return (
     <div className="mt-1 flex flex-col gap-2">

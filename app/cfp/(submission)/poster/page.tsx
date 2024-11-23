@@ -92,9 +92,7 @@ export default function Page() {
           <h3 className="text-h3-mobile font-bold text-primary md:text-h3">
             稿件資訊
           </h3>
-          <p>
-            除標示為public之資訊會對外公布外，其餘僅供審稿委員於審稿時閱讀。
-          </p>
+          <p>除標示為公開之資訊會對外公布外，其餘僅供審稿委員於審稿時閱讀。</p>
           <div className="flex flex-col gap-8">
             <InformationField
               title="題目 Project Title"
@@ -116,7 +114,7 @@ export default function Page() {
               請填寫 1~3 個與海報內文相關的領域與{" "}
               <span className="hightlight subTitle">知識標籤</span>
               ，例如：ML、Data Science、資安、NLP
-              等；錄取後會與提供稿件者溝通微調後public於官網。
+              等；錄取後會與提供稿件者溝通微調後公開於官網。
             </InformationField>
             <InformationField
               title="專案說明 Project Content"
@@ -151,10 +149,10 @@ export default function Page() {
                 您的姓名。
               </InformationField>
               <InformationField title="暱稱" tags={["required", "public"]}>
-                public於講者及網站的稱呼。
+                公開於講者及網站的稱呼。
               </InformationField>
               <InformationField title="自我介紹" tags={["required", "public"]}>
-                public於講者海報及網站，將有助於會眾更加了解有關你的資訊。至多三人。
+                公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。至多三人。
               </InformationField>
               <InformationField title="手機號碼" tags={["required"]}>
                 用於大會聯絡、確認資訊用的電話號碼。
@@ -276,7 +274,7 @@ export default function Page() {
               若同一稿件有多個講者，請在「暱稱 / 名字」欄位標示所有講者的稱呼。
             </li>
             <li className="listItem">
-              投稿格式所有註明「public」的資訊將於年會後public於官方網站；個人資料中註明「public」的資訊將放置於年會現場。
+              投稿格式所有註明「公開」的資訊將於年會後公開於官方網站；個人資料中註明「公開」的資訊將放置於年會現場。
             </li>
           </ul>
           <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">

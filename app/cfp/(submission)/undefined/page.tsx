@@ -173,7 +173,7 @@ export default function Page() {
               請填寫 1~4 個該議程相關的{" "}
               <span className="hightlight subTitle">領域與知識標籤</span>{" "}
               ，例如：ML、Data
-              Science、資安紅隊、blockchain、社團等；錄取後會與講者溝通微調後public於官網議程表。
+              Science、資安紅隊、blockchain、社團等；錄取後會與講者溝通微調後公開於官網議程表。
             </InformationField>
             <InformationField title="詳細說明 Description" tags={["required"]}>
               不限字數，請說明這個議程您認為重要的相關細節，以利審稿委員更瞭解您的議程。
@@ -199,10 +199,10 @@ export default function Page() {
               您的姓名。
             </InformationField>
             <InformationField title="暱稱" tags={["required", "public"]}>
-              public於講者及網站的稱呼。
+              公開於講者及網站的稱呼。
             </InformationField>
             <InformationField title="自我介紹" tags={["required", "public"]}>
-              public於講者海報及網站，將有助於會眾更加了解有關你的資訊。
+              公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
             </InformationField>
             <InformationField title="手機號碼" tags={["required"]}>
               用於大會聯絡、確認資訊用的電話號碼。
