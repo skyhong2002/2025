@@ -245,7 +245,7 @@ function PhoneLayout() {
           <Link href="mailto:contact@sitcon.org" className="link">
             contact@sitcon.org
           </Link>{" "}
-          聯絡我們，商討更多的合作方式！
+          聯絡我們，我們將有專人與您商討更多的合作方式！
         </p>
         <div className="flex-row pt-16">
           {/* <a
@@ -296,7 +296,7 @@ function TabletLayout() {
             >
               contact@sitcon.org
             </Link>{" "}
-            聯絡我們，商討更多的合作方式！
+            聯絡我們，我們將有專人與您商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
             {/* <a
@@ -362,7 +362,7 @@ function DesktopLayout() {
             >
               contact@sitcon.org
             </Link>{" "}
-            聯絡我們，商討更多的合作方式！
+            聯絡我們，我們將有專人與您商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
             {/* <a
