@@ -71,7 +71,7 @@ export default function TableOfContent({
       <nav className="relative md:hidden">
         <Link
           href={submitUrl}
-          className="fixed bottom-2 left-2 right-2 block rounded-md bg-background-light p-3 text-center text-lg brightness-150"
+          className="fixed bottom-2 left-2 right-2 z-30 block rounded-md bg-background-light p-3 text-center text-lg brightness-150"
           target="_blank"
         >
           立刻投稿
