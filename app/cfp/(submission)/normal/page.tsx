@@ -570,7 +570,7 @@ export default function Page() {
           Live Demo
           情境。若講者想於正式演講前先熟悉場地與現場情況，歡迎於彩排當天前來參與，一起使年會議程品質更臻完美。
         </p>
-        <ul className="leading-10">
+        <ul className="list-disc pl-6 leading-10">
           <li className="">日期：2025 年 3 月 7 日（五）。</li>
           <li className="">場地：議程廳與年會相同，細節將於稿件錄取後通知。</li>
           <li className="">
