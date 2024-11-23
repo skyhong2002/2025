@@ -11,12 +11,12 @@ export default function Page() {
     { id: "important-dates", title: "重要時程" },
     { id: "session-types", title: "投稿說明" },
     { id: "submission-topics", title: "投稿方式" },
+    { id: "poster-examples", title: "海報格式範例" },
     { id: "review-process", title: "審稿方式" },
     { id: "code-of-conduct", title: "Code of Conduct" },
     { id: "submission-guidelines", title: "投稿注意事項" },
     { id: "license", title: "授權" },
-    { id: "practice-talk", title: "試講" },
-    { id: "rehearsal", title: "彩排" },
+    { id: "poster-upload", title: "海報上傳與佈展" },
     { id: "qa", title: "Q & A" },
   ];
 
@@ -191,7 +191,7 @@ export default function Page() {
       </section>
 
       <section
-        id="review-process"
+        id="poster-examples"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
@@ -313,7 +313,7 @@ export default function Page() {
       </section>
 
       <section
-        id="practice-talk"
+        id="poster-upload"
         className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
       >
         <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
