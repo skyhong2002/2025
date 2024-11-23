@@ -344,8 +344,9 @@ export default function Page() {
             title="目標受眾 Target Audience"
             tags={["required"]}
           >
-            請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。在這邊為您提供過往的會眾比例：大學生
-            58%、高中/職生 22%、社會人士 8%、研究生 11%、國中生 1%
+            請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。SITCON
+            2024 的會眾比例為：大學生 58%、高中/職生 22%、社會人士 8%、研究生
+            11%、國中生 1%
           </InformationField>
           <InformationField
             title="先備知識 Prior Knowledge"
