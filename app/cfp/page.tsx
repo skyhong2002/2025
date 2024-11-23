@@ -117,7 +117,7 @@ export default function Home() {
                     <Link
                       target="_blank"
                       href="https://forms.gle/joSN37ABbBrG8S387"
-                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold transition hover:bg-foreground max-[1024px]:col-span-5 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
+                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold transition hover:bg-foreground max-[1024px]:col-span-8 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-2 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
                     >
                       預約跳坑表單
                     </Link>
