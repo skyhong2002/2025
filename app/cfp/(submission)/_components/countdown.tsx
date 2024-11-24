@@ -43,7 +43,7 @@ export default function CountdownPage() {
       <div className="flex h-[67px] w-full justify-between">
         <div className="flex h-full w-[57%] items-center justify-between rounded-2xl border border-foreground px-5">
           <CalendarSvg height={48} width={48} />
-          <div className="w-full justify-between px-4 text-foreground min-[1210px]:flex">
+          <div className="flex w-full flex-col justify-between px-4 text-foreground">
             <p className="whitespace-nowrap text-nowrap font-bold">
               截止日期&nbsp;
             </p>
@@ -58,8 +58,11 @@ export default function CountdownPage() {
             className="flex h-full w-full items-center justify-center"
             href={"/cfp/deadline.ics"}
           >
-            <h3 className="flex h-full items-center justify-center text-xl font-bold text-black">
+            <h3 className="flex h-full items-center justify-center text-xl font-bold text-black max-[950px]:hidden">
               將徵稿截止日期加入行事曆
+            </h3>
+            <h3 className="hidden h-full items-center justify-center text-xl font-bold text-black max-[950px]:flex">
+              加入行事曆
             </h3>
           </Link>
         </div>
