@@ -43,7 +43,7 @@ export default function TableOfContent({
         <Link
           href={submitUrl}
           target="_blank"
-          className="tableContentItem block w-full rounded-md bg-primary px-4 py-2 text-center font-bold text-black hover:bg-foreground min-[1024px]:active:bg-primary max-[1024px]:active:scale-95"
+          className="tableContentItem block w-full rounded-md bg-primary px-4 py-2 text-center font-bold text-black hover:bg-foreground max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
         >
           立即投稿
         </Link>
@@ -90,7 +90,7 @@ export default function TableOfContent({
         </AnimatePresence>
         <div
           onClick={() => setShowDropdown((prev) => !prev)}
-          className={`${theme === "light" ? "bg-background-light" : "bg-foreground"} flex h-[40px] items-center justify-between rounded-xl px-4 active:scale-95 transition`}
+          className={`${theme === "light" ? "bg-background-light" : "bg-foreground"} flex h-[40px] items-center justify-between rounded-xl px-4 transition active:scale-95`}
         >
           <h2
             className={`font-bold ${theme === "light" ? "text-foreground" : "text-red"}`}

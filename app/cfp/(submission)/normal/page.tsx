@@ -14,7 +14,7 @@ function PresentationBlock(presentation: { title: string; id: string }) {
     <Link
       target="_blank"
       href={`https://youtu.be/${presentation.id}`}
-      className="flex flex-col gap-2 rounded-lg bg-background-light p-3 transition hover:brightness-125 min-[1024px]:active:brightness-100 max-[1024px]:active:scale-95"
+      className="flex flex-col gap-2 rounded-lg bg-background-light p-3 transition hover:brightness-125 max-[1024px]:active:scale-95 min-[1024px]:active:brightness-100"
     >
       <Image
         src={`https://img.youtube.com/vi/${presentation.id}/maxresdefault.jpg`}
