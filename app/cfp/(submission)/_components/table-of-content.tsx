@@ -82,7 +82,7 @@ export default function TableOfContent({
               exit={{ scale: 0.95, opacity: 0, filter: "blur(0.5em)" }}
               transition={{ duration: 0.25 }}
               whileTap={{ scale: 0.95 }}
-              className={`fixed bottom-2 left-2 right-2 z-30 rounded-md bg-background-light p-3 text-center text-lg brightness-150`}
+              className={`fixed bottom-2 left-2 right-2 z-30 rounded-md bg-background-light p-3 text-center text-lg shadow-2xl shadow-black brightness-150`}
             >
               立刻投稿
             </motion.a>
