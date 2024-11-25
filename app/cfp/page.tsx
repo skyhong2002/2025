@@ -48,19 +48,19 @@ export default function Home() {
                 <div className="flex flex-row justify-center gap-3 sm:gap-5">
                   <Link
                     href="/cfp/normal"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:px-3"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:px-3 max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
                   >
                     一般議程
                   </Link>
                   <Link
                     href="/cfp/undefined"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:px-3"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:px-3 max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
                   >
                     開放式議程
                   </Link>
                   <Link
                     href="/cfp/poster"
-                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:px-3"
+                    className="w-full whitespace-nowrap text-nowrap rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:px-3 max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
                   >
                     靜態海報展
                   </Link>
@@ -68,7 +68,7 @@ export default function Home() {
                 <Link
                   target="_blank"
                   href="/cfp/deadline.ics"
-                  className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:w-full"
+                  className="w-auto rounded-[50px] bg-[#FFFFFF] px-8 py-1 text-center transition hover:bg-foreground max-sm:w-full max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
                 >
                   把截止日期加入行事曆
                 </Link>
@@ -117,21 +117,21 @@ export default function Home() {
                     <Link
                       target="_blank"
                       href="https://forms.gle/joSN37ABbBrG8S387"
-                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold transition hover:bg-foreground max-[1024px]:col-span-8 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-2 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
+                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold transition hover:bg-foreground max-[1024px]:col-span-8 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-2 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
                     >
                       預約跳坑表單
                     </Link>
                     <Link
                       target="_blank"
                       href="https://groups.google.com/g/sitcon-general/"
-                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold transition hover:bg-foreground max-[1024px]:col-span-5 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
+                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold transition hover:bg-foreground max-[1024px]:col-span-5 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
                     >
                       訂閱郵件論壇
                     </Link>
                     <Link
                       target="_blank"
                       href="https://gitlab.com/sitcon-tw/2025/board/-/boards"
-                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold transition hover:bg-foreground max-[1024px]:col-span-3 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal"
+                      className="w-[140px] rounded-[50px] bg-secondary py-3 text-center font-bold transition hover:bg-foreground max-[1024px]:col-span-3 max-[1024px]:w-auto max-[1024px]:rounded-lg max-[1024px]:text-[18px] max-[712px]:my-auto max-[712px]:text-[14px] max-sm:col-span-1 max-sm:rounded-[72px] max-sm:text-[18px] max-sm:font-normal max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
                     >
                       查看 GitLab
                     </Link>
@@ -268,7 +268,7 @@ function PhoneLayout() {
           </a> */}
           <a
             href="https://i.sitcon.org/2025cfs-form"
-            className="flex items-center justify-end whitespace-nowrap text-nowrap text-[22px] font-bold text-accent"
+            className="flex items-center justify-end whitespace-nowrap text-nowrap text-[22px] font-bold text-accent active:scale-95 transition"
           >
             索取贊助徵求書
             <span className="material-icons" style={{ fontSize: "44px" }}>
@@ -319,7 +319,7 @@ function TabletLayout() {
             </a> */}
             <a
               href="https://i.sitcon.org/2025cfs-form"
-              className="flex items-center justify-end whitespace-nowrap text-nowrap text-h3 font-bold text-accent transition hover:text-accent-light"
+              className="flex items-center justify-end whitespace-nowrap text-nowrap text-h3 font-bold text-accent transition hover:text-accent-light active:scale-95 transition"
             >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "62px" }}>
@@ -385,7 +385,7 @@ function DesktopLayout() {
             </a> */}
             <a
               href="https://i.sitcon.org/2025cfs-form"
-              className="flex items-center justify-end whitespace-nowrap text-nowrap text-h2 font-bold text-accent transition hover:text-accent-light"
+              className="flex items-center justify-end whitespace-nowrap text-nowrap text-h2 font-bold text-accent transition hover:text-accent-light active:bg-accent"
             >
               索取贊助徵求書
               <span className="material-icons" style={{ fontSize: "53px" }}>

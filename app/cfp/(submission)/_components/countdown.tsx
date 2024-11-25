@@ -52,7 +52,7 @@ export default function CountdownPage() {
             </p>
           </div>
         </div>
-        <div className="h-full w-[40%] rounded-2xl bg-foreground transition-all duration-[0.4s] hover:bg-primary">
+        <div className="h-full w-[40%] rounded-2xl bg-foreground transition-all duration-[0.4s] hover:bg-primary min-[1024px]:active:brightness-90 max-[1024px]:active:scale-95">
           <Link
             target="_blank"
             className="flex h-full w-full items-center justify-center"
