@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useNavbar } from "@/app/cfp/_components/navbar-context";
 
 export default function TableOfContent({
   theme = "light",
@@ -14,6 +15,7 @@ export default function TableOfContent({
 }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const [currentSection, setCurrentSection] = useState<null | string>(null);
+  const { isNavbarExpanded } = useNavbar();
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -69,13 +71,22 @@ export default function TableOfContent({
       </nav>
       {/* mobile */}
       <nav className="relative md:hidden">
-        <Link
-          href={submitUrl}
-          className="fixed bottom-2 left-2 right-2 z-30 block rounded-md bg-background-light p-3 text-center text-lg brightness-150"
-          target="_blank"
-        >
-          立刻投稿
-        </Link>
+        <AnimatePresence>
+          {!isNavbarExpanded && (
+            <motion.a
+              key="submit"
+              href={submitUrl}
+              target="_blank"
+              initial={{ scale: 0.95, opacity: 0, filter: "blur(0.5em)" }}
+              animate={{ scale: 1, opacity: 1, filter: "blur(0)" }}
+              exit={{ scale: 0.95, opacity: 0, filter: "blur(0.5em)" }}
+              transition={{ duration: 0.25 }}
+              className={`fixed bottom-2 left-2 right-2 z-30 block rounded-md bg-background-light p-3 text-center text-lg brightness-150`}
+            >
+              立刻投稿
+            </motion.a>
+          )}
+        </AnimatePresence>
         <div
           onClick={() => setShowDropdown((prev) => !prev)}
           className={`${theme === "light" ? "bg-background-light" : "bg-foreground"} flex h-[40px] items-center justify-between rounded-xl px-4`}

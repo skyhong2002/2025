@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./_components/navbar";
 import Footer from "./_components/footer";
+import { NavbarProvider } from "./_components/navbar-context";
 
 export async function generateMetadata(): Promise<Metadata> {
   const image = "https://sitcon.org/2025/og.jpg";
@@ -46,13 +47,15 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Navbar />
-      {children}
-      <div className="w-full bg-background-light">
-        <div className="mx-auto max-w-[1120px]">
-          <Footer />
+      <NavbarProvider>
+        <Navbar />
+        {children}
+        <div className="w-full bg-background-light">
+          <div className="mx-auto max-w-[1120px]">
+            <Footer />
+          </div>
         </div>
-      </div>
+      </NavbarProvider>
     </>
   );
 }

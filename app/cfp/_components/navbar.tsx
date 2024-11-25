@@ -1,6 +1,6 @@
 "use client";
-// import Image from "next/image";
 import Link from "next/link";
+import { useNavbar } from "./navbar-context";
 // import Logo from "@/public/assets/logo_black.svg";
 import {
   motion,
@@ -15,6 +15,7 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
+  const { setIsNavbarExpanded } = useNavbar();
   const { scrollY } = useScroll();
   const [isIndex, setIsIndex] = useState(true);
   const pathname = usePathname();
@@ -29,6 +30,12 @@ export default function Navbar() {
     { link: "/cfp/undefined/", label: "開放式議程徵稿" },
     { link: "/cfp/poster/", label: "海報徵稿" },
   ];
+
+  const handleMenuClick = () => {
+    setShowMenu((prev) => !prev);
+    setIsNavbarExpanded(!showMenu);
+  };
+
   console.log(pathname);
   const allowFadeEffect = isIndex && !showMenu;
   return (
@@ -62,7 +69,7 @@ export default function Navbar() {
             <AnimatePresence mode="wait">
               <motion.div
                 className="absolute right-4 cursor-pointer justify-self-end md:hidden"
-                onClick={() => setShowMenu((prev) => !prev)}
+                onClick={() => handleMenuClick()}
                 initial={{ rotate: 0 }}
                 animate={{
                   rotate: showMenu ? 360 : 0,
@@ -101,7 +108,7 @@ export default function Navbar() {
                           delay: 0.05 * (index + 1),
                         }}
                         className="border-b border-foreground p-2 text-foreground"
-                        onClick={() => setShowMenu((prev) => !prev)}
+                        onClick={() => handleMenuClick()}
                       >
                         {label}
                       </motion.p>
