@@ -26,6 +26,28 @@ function Dialog({
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }) {
+  const emojiHandMotion = {
+    rest: { rotate: 0, y: 0, x: 0 },
+    hover: {
+      rotate: -15,
+      y: -2,
+      x: 3,
+    },
+  };
+  const emojiMouseMotion = {
+    rest: {
+      x: 0,
+      y: 0,
+    },
+    hover: {
+      x: [0, -1, -1, 0],
+      y: [-1, 1, 0, 0],
+      transition: {
+        repeat: Infinity,
+        duration: 0.2,
+      },
+    },
+  };
   return (
     <AnimatePresence>
       {isOpen && (
@@ -80,12 +102,30 @@ function Dialog({
                 SITCON 年會更精彩！
               </p>
             </div>
-            <button
-              className="mt-5 w-full rounded-lg bg-background-light px-10 py-3 text-lg transition hover:brightness-125 md:w-1/2"
+            <motion.button
+              whileHover="hover"
+              initial="rest"
+              exit="rest"
+              className="mt-5 flex w-full justify-center rounded-lg bg-background-light px-10 py-3 text-lg transition hover:brightness-125 md:w-1/2"
               onClick={() => setIsOpen(false)}
             >
-              好欸 ( ੭˙ᗜ˙)੭
-            </button>
+              <span>好欸 ( </span>
+              <motion.span
+                className="origin-bottom-left"
+                variants={emojiHandMotion}
+              >
+                ੭
+              </motion.span>
+              <span>˙</span>
+              <motion.span variants={emojiMouseMotion}>ᗜ</motion.span>
+              <span>˙)</span>
+              <motion.span
+                className="origin-bottom-left"
+                variants={emojiHandMotion}
+              >
+                ੭
+              </motion.span>
+            </motion.button>
           </motion.div>
         </motion.div>
       )}
