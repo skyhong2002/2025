@@ -5,16 +5,47 @@ import { useState } from "react";
 
 export default function EarlyBird() {
   const [isOpen, setIsOpen] = useState(false);
+  const expiredTime = new Date("2024-12-25T23:59:00+08:00").getTime();
+  const isExpired = Date.now() > expiredTime;
+
   return (
     <>
-      <button
-        onClick={() => setIsOpen(true)}
-        className="z-10 flex w-full cursor-pointer items-center gap-5 rounded-lg border border-accent bg-[#271A3A] px-7 py-5 text-xl font-bold text-accent transition hover:brightness-125"
-      >
-        <ExclamationMark />
-        早鳥投稿計劃
-      </button>
+      {!isExpired ? (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="z-10 flex w-full cursor-pointer items-center gap-5 rounded-lg border border-accent bg-[#271A3A] px-7 py-5 text-xl font-bold text-accent transition hover:brightness-125"
+        >
+          <ExclamationMark />
+          <div className="flex flex-col items-start">
+            <a>早鳥投稿計劃開催中！</a>
+            <span className="text-sm text-accent opacity-60">
+              點此瞭解什麼是早鳥投稿計劃
+            </span>
+          </div>
+        </button>
+      ) : null}
       <Dialog isOpen={isOpen} setIsOpen={setIsOpen} />
+    </>
+  );
+}
+
+export function EarlyBirdHome() {
+  const expiredTime = new Date("2024-12-25T23:59:00+08:00").getTime();
+  const isExpired = Date.now() > expiredTime;
+
+  return (
+    <>
+      {!isExpired ? (
+        <span className="relative z-10 flex w-full items-center gap-5 rounded-[28px] border border-accent bg-[#271A3A] px-7 py-2 text-xl font-bold text-accent transition hover:brightness-125 max-sm:flex-row">
+          <ExclamationMark />
+          <div className="max-sm:flex-col">
+            <a>早鳥投稿計劃開催中！</a>
+            <span className="text-sm text-accent opacity-60 sm:absolute sm:inset-y-3 sm:right-7">
+              2024/12/25 23:59 截止
+            </span>
+          </div>
+        </span>
+      ) : null}
     </>
   );
 }

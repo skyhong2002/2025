@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EarlyBirdHome } from "@/app/cfp/(submission)/_components/early-bird";
 
 export async function generateMetadata() {
   return {
@@ -44,6 +45,7 @@ export default function Home() {
                 </p>
                 {/* <MiniCountdown /> */}
               </div>
+              <EarlyBirdHome />
               <div className="flex max-w-[800px] flex-col justify-center gap-3 sm:gap-5">
                 <div className="flex flex-row justify-center gap-3 sm:gap-5">
                   <Link
