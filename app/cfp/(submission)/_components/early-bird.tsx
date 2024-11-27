@@ -13,7 +13,7 @@ export default function EarlyBird() {
       {!isExpired ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="z-10 flex w-full cursor-pointer items-center gap-5 rounded-lg border border-accent bg-[#271A3A] px-7 py-5 text-xl font-bold text-accent transition hover:brightness-125 min-[1024px]:active:brightness-90 max-sm:active:scale-90"
+          className="z-10 flex w-full cursor-pointer items-center gap-5 rounded-lg border border-accent bg-[#271A3A] px-7 py-5 text-xl font-bold text-accent transition hover:brightness-125 max-sm:active:scale-90 min-[1024px]:active:brightness-90"
         >
           <ExclamationMark />
           <div className="flex flex-col items-start">
