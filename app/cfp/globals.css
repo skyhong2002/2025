@@ -189,3 +189,34 @@ html {
 .public {
   @apply border-primary border-opacity-30 border-2
 }
+
+.exclamation-mark {
+  animation: exclamation-mark-shake 1s infinite;
+}
+
+@keyframes exclamation-mark-shake {
+  0% {
+    transform: rotate(0deg);
+    color: #BDB3FF;
+  }
+  10% {
+    transform: rotate(10deg);
+    color: #ddd8ff;
+  }
+  20% {
+    transform: rotate(-10deg);
+    color: #ddd8ff;
+  }
+  30% {
+    transform: rotate(5deg);
+    color: #ddd8ff;
+  }
+  40% {
+    transform: rotate(0deg);
+    color: #ddd8ff;
+  }
+  100% {
+    transform: rotate(0deg);
+    color: #BDB3FF;
+  }
+}

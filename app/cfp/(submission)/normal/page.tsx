@@ -8,6 +8,7 @@ import Presentation from "../../_components/logos/presentation";
 import Link from "next/link";
 import Image from "next/image";
 import { ReactNode } from "react";
+import EarlyBird from "../_components/early-bird";
 
 function PresentationBlock(presentation: { title: string; id: string }) {
   return (
@@ -207,6 +208,10 @@ export default function Page() {
           重要時程
         </h2>
         <Timeline isPoster={false} />
+      </section>
+
+      <section className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16">
+        <EarlyBird />
       </section>
 
       <section
