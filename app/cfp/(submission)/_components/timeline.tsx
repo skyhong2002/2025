@@ -34,7 +34,11 @@ export default function Timeline({ isPoster }: { isPoster?: boolean }) {
           {/* 時程 */}
           <div className="flex justify-between">
             <TimelineItem icon="flag" date="2024-11-23" name="開始徵稿" />
-            <TimelineItem icon="redeem" date="01-21 23:59" name="早鳥截止" />
+            <TimelineItem
+              icon="redeem"
+              date="2024-12-25 23:59"
+              name="早鳥截止"
+            />
             <TimelineItem
               icon="event_busy"
               date="01-21 23:59"
