@@ -33,115 +33,23 @@ export default function Timeline({ isPoster }: { isPoster?: boolean }) {
 
           {/* 時程 */}
           <div className="flex justify-between">
-            <div className="z-10 w-min">
-              <svg className="h-10 w-10">
-                <circle
-                  key={1}
-                  cx={10}
-                  cy="16"
-                  r="8"
-                  className="fill-current text-primary"
-                />
-              </svg>
-              <span className="material-icons-big">flag</span>
-              <p>2024-11-23</p>
-              <h3 className="w-max text-h3">開始徵稿</h3>
-            </div>
-
-            <div className="z-10 w-min">
-              <svg className="h-10 w-10">
-                <circle
-                  key={1}
-                  cx={10}
-                  cy="16"
-                  r="8"
-                  className="fill-current text-primary"
-                />
-              </svg>
-              <span className="material-icons-big text-foreground">
-                event_busy
-              </span>
-              <p>01-21 23:59</p>
-              <h3 className="w-max text-h3">投稿截止</h3>
-            </div>
-
-            <div className="z-10 w-min">
-              <svg className="h-10 w-10">
-                <circle
-                  key={1}
-                  cx={10}
-                  cy="16"
-                  r="8"
-                  className="fill-current text-primary"
-                />
-              </svg>
-              <span className="material-icons-big">email</span>
-              <p>一月下旬</p>
-              <h3 className="w-max text-h3">錄取通知</h3>
-            </div>
-
+            <TimelineItem icon="flag" date="2024-11-23" name="開始徵稿" />
+            <TimelineItem icon="redeem" date="01-21 23:59" name="早鳥截止" />
+            <TimelineItem
+              icon="event_busy"
+              date="01-21 23:59"
+              name="投稿及稿件修改截止"
+            />
+            <TimelineItem icon="email" date="一月下旬" name="錄取通知" />
             {isPoster ? (
-              <div className="z-10 w-min">
-                <svg className="h-10 w-10">
-                  <circle
-                    key={1}
-                    cx={10}
-                    cy="16"
-                    r="8"
-                    className="fill-current text-primary"
-                  />
-                </svg>
-                <span className="material-icons-big">route</span>
-                <p>02-16</p>
-                <h3 className="w-max text-h3">錄取海報檔案上傳截止</h3>
-              </div>
+              <TimelineItem icon="route" date="2-16" name="錄取海報上傳截止" />
             ) : (
               <>
-                <div className="z-10 w-min">
-                  <svg className="h-10 w-10">
-                    <circle
-                      key={1}
-                      cx={10}
-                      cy="16"
-                      r="8"
-                      className="fill-current text-primary"
-                    />
-                  </svg>
-                  <span className="material-icons-big">mic_none</span>
-                  <p className="w-max">二月</p>
-                  <h3 className="w-max text-h3">試講</h3>
-                </div>
-                <div className="z-10 w-min">
-                  <svg className="h-10 w-10">
-                    <circle
-                      key={1}
-                      cx={10}
-                      cy="16"
-                      r="8"
-                      className="fill-current text-primary"
-                    />
-                  </svg>
-                  <span className="material-icons-big">route</span>
-                  <p>03-07</p>
-                  <h3 className="w-max text-h3">彩排</h3>
-                </div>
+                <TimelineItem icon="mic_none" date="二月" name="試講" />
+                <TimelineItem icon="route" date="03-07" name="彩排" />
               </>
             )}
-
-            <div className="z-10 w-min">
-              <svg className="h-10 w-10">
-                <circle
-                  key={1}
-                  cx={10}
-                  cy="16"
-                  r="8"
-                  className="fill-current text-primary"
-                />
-              </svg>
-              <span className="material-icons-big text-foreground">groups</span>
-              <p>03-08</p>
-              <h3 className="w-max text-h3">年會</h3>
-            </div>
+            <TimelineItem icon="groups" date="03-08" name="年會" />
           </div>
         </div>
       </div>
@@ -154,7 +62,11 @@ export default function Timeline({ isPoster }: { isPoster?: boolean }) {
             ：2024 年 11 月 22 日（六）
           </li>
           <li>
-            <span className="font-bold">投稿截止</span>
+            <span className="font-bold">早鳥投稿截止</span>
+            ：2024 年 12 月 25 日（三）23:59
+          </li>
+          <li>
+            <span className="font-bold">投稿及稿件修改截止</span>
             ：2025 年 1 月 21 日（二） 23:59
           </li>
           <li>
@@ -187,5 +99,32 @@ export default function Timeline({ isPoster }: { isPoster?: boolean }) {
         </ul>
       </div>
     </>
+  );
+}
+
+function TimelineItem({
+  icon,
+  date,
+  name,
+}: {
+  icon: string;
+  date: string;
+  name: string;
+}) {
+  return (
+    <div className="z-10 flex w-min flex-col">
+      <svg className="h-10 w-10">
+        <circle
+          key={1}
+          cx="10"
+          cy="16"
+          r="8"
+          className="fill-current text-primary"
+        />
+      </svg>
+      <span className="material-icons !text-5xl">{icon}</span>
+      <p className="whitespace-nowrap text-nowrap">{date}</p>
+      <h3 className="w-max font-bold">{name}</h3>
+    </div>
   );
 }
