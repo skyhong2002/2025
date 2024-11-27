@@ -5,6 +5,7 @@ import CodeOfConduct from "../../_components/code-of-conduct";
 import TableOfContent from "../_components/table-of-content";
 import FAQ from "../../_components/faq";
 import { InformationField } from "../normal/page";
+import EarlyBird from "../_components/early-bird";
 
 export default function Page() {
   const sections = [
@@ -67,6 +68,10 @@ export default function Page() {
           重要時程
         </h2>
         <Timeline isPoster />
+      </section>
+
+      <section className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16">
+        <EarlyBird />
       </section>
 
       <section
