@@ -137,7 +137,7 @@ html {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 64px; /* Preferred icon size */
+  font-size: 64px; /* Preferred icon size
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -184,10 +184,10 @@ html {
   @apply bg-primary text-background;
 }
 .optional {
-  @apply border-primary border-opacity-30 border-2 border-dashed
+  @apply border-2 border-dashed border-primary border-opacity-30;
 }
 .public {
-  @apply border-primary border-opacity-30 border-2
+  @apply border-2 border-primary border-opacity-30;
 }
 
 .exclamation-mark {
@@ -197,7 +197,7 @@ html {
 @keyframes exclamation-mark-shake {
   0% {
     transform: rotate(0deg);
-    color: #BDB3FF;
+    color: #bdb3ff;
   }
   10% {
     transform: rotate(10deg);
@@ -217,6 +217,6 @@ html {
   }
   100% {
     transform: rotate(0deg);
-    color: #BDB3FF;
+    color: #bdb3ff;
   }
 }
