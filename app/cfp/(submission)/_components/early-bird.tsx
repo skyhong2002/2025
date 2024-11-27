@@ -13,7 +13,7 @@ export default function EarlyBird() {
       {!isExpired ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="z-10 flex w-full cursor-pointer items-center gap-5 rounded-lg border border-accent bg-[#271A3A] px-7 py-5 text-xl font-bold text-accent transition hover:brightness-125"
+          className="z-10 flex w-full cursor-pointer items-center gap-5 rounded-lg border border-accent bg-[#271A3A] px-7 py-5 text-xl font-bold text-accent transition hover:brightness-125 min-[1024px]:active:brightness-90 max-sm:active:scale-90"
         >
           <ExclamationMark />
           <div className="flex flex-col items-start">
@@ -86,7 +86,7 @@ function Dialog({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.25 }}
           style={{ pointerEvents: "auto" }}
           className="fixed inset-0 z-50 m-0 flex scale-110 items-center justify-center bg-black/60"
           onClick={() => {
@@ -94,17 +94,17 @@ function Dialog({
           }}
         >
           <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 0.9 }}
-            exit={{ scale: 0.8 }}
-            transition={{ duration: 0.2 }}
+            initial={{ scale: 0.88, opacity: 0, y: 10, filter: "blur(0.35em)" }}
+            animate={{ scale: 0.9, opacity: 1, y: 0, filter: "blur(0)" }}
+            exit={{ scale: 0.8, opacity: 0, y: 10, filter: "blur(0.3em)" }}
+            transition={{ duration: 0.25 }}
             onClick={(e) => e.stopPropagation()}
-            className="absolute inset-5 flex flex-col items-center justify-between rounded-lg bg-background p-8 max-md:overflow-y-scroll md:static md:max-w-[70%] md:justify-start lg:max-w-[60%]"
+            className="absolute inset-5 flex flex-col items-center justify-between rounded-lg bg-background p-8 md:static md:max-w-[70%] md:justify-start lg:max-w-[60%]"
           >
-            <div>
-              <h2 className="mb-5 w-full text-start text-3xl font-bold text-primary">
-                早鳥投稿計劃
-              </h2>
+            <h2 className="mb-5 w-full text-start text-3xl font-bold text-primary">
+              早鳥投稿計劃
+            </h2>
+            <div className="max-md:overflow-y-scroll">
               <p className="text-lg leading-9">
                 為了鼓勵講者儘早送出稿件，讓您的精彩想法可以更早進入我們的視野。同時也能讓您提早規劃與完善內容，以充裕的時間打造更精彩的分享。今年我們新增了「早鳥投稿」的機制！
               </p>
@@ -137,7 +137,7 @@ function Dialog({
               whileHover="hover"
               initial="rest"
               exit="rest"
-              className="mt-5 flex w-full justify-center rounded-lg bg-background-light px-10 py-3 text-lg transition hover:brightness-125 md:w-1/2"
+              className="mt-5 flex w-full justify-center rounded-lg bg-background-light px-10 py-3 text-lg transition hover:brightness-125 max-sm:active:scale-90 md:w-1/2 min-[1024px]:active:bg-background"
               onClick={() => setIsOpen(false)}
             >
               <span>好欸 ( </span>
