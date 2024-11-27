@@ -46,7 +46,7 @@ function Dialog({
             exit={{ scale: 0.8 }}
             transition={{ duration: 0.2 }}
             onClick={(e) => e.stopPropagation()}
-            className="absolute inset-5 flex flex-col items-center justify-between overflow-y-scroll rounded-lg bg-background p-8 md:static md:max-w-[70%] md:justify-start lg:max-w-[60%]"
+            className="absolute inset-5 flex flex-col items-center justify-between rounded-lg bg-background p-8 max-md:overflow-y-scroll md:static md:max-w-[70%] md:justify-start lg:max-w-[60%]"
           >
             <div>
               <h2 className="mb-5 w-full text-start text-3xl font-bold text-primary">
