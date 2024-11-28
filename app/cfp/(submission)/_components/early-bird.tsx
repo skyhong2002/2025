@@ -1,5 +1,6 @@
 "use client";
 
+import { SHOW_EARLY_BIRD } from "@/app/layout";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
@@ -7,6 +8,8 @@ export default function EarlyBird() {
   const [isOpen, setIsOpen] = useState(false);
   const expiredTime = new Date("2024-12-25T23:59:00+08:00").getTime();
   const isExpired = Date.now() > expiredTime;
+
+  if (!SHOW_EARLY_BIRD) return null;
 
   return (
     <>
@@ -32,6 +35,8 @@ export default function EarlyBird() {
 export function EarlyBirdHome() {
   const expiredTime = new Date("2024-12-25T23:59:00+08:00").getTime();
   const isExpired = Date.now() > expiredTime;
+
+  if (!SHOW_EARLY_BIRD) return null;
 
   return (
     <>

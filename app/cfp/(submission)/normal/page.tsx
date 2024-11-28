@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ReactNode } from "react";
 import EarlyBird from "../_components/early-bird";
+import { SHOW_EARLY_BIRD } from "@/app/layout";
 
 function PresentationBlock(presentation: { title: string; id: string }) {
   return (
@@ -210,9 +211,11 @@ export default function Page() {
         <Timeline isPoster={false} />
       </section>
 
-      <section className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16">
-        <EarlyBird />
-      </section>
+      {SHOW_EARLY_BIRD && (
+        <section className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16">
+          <EarlyBird />
+        </section>
+      )}
 
       <section
         id="session-types"
