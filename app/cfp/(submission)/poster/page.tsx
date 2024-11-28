@@ -6,7 +6,7 @@ import TableOfContent from "../_components/table-of-content";
 import FAQ from "../../_components/faq";
 import { InformationField } from "../normal/page";
 import EarlyBird from "../_components/early-bird";
-import { SHOW_EARLY_BIRD } from "@/app/layout";
+import { SHOW_EARLY_BIRD } from "@/lib/const";
 
 export default function Page() {
   const sections = [

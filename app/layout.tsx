@@ -7,8 +7,6 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
-export const SHOW_EARLY_BIRD = false;
-
 const inter = Inter({ subsets: ["latin"] });
 export default function Layout({ children }: { children: ReactNode }) {
   const jsonLd = {

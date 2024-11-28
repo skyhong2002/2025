@@ -1,6 +1,6 @@
 "use client";
 
-import { SHOW_EARLY_BIRD } from "@/app/layout";
+import { SHOW_EARLY_BIRD } from "@/lib/const";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 

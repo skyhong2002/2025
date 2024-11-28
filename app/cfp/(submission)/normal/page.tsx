@@ -9,7 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ReactNode } from "react";
 import EarlyBird from "../_components/early-bird";
-import { SHOW_EARLY_BIRD } from "@/app/layout";
+import { SHOW_EARLY_BIRD } from "@/lib/const";
 
 function PresentationBlock(presentation: { title: string; id: string }) {
   return (
