@@ -1,1 +1,1 @@
-export const SHOW_EARLY_BIRD = false;
+export const SHOW_EARLY_BIRD = true;

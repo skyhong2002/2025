@@ -114,7 +114,11 @@ function Dialog({
                 為了鼓勵講者儘早送出稿件，讓您的精彩想法可以更早進入我們的視野。同時也能讓您提早規劃與完善內容，以充裕的時間打造更精彩的分享。今年我們新增了「早鳥投稿」的機制！
               </p>
               <p className="mt-5 text-lg leading-9">
-                凡是在早鳥投稿期間送出且{" "}
+                只要是在早鳥投稿期間「送出」的稿件，議程組將會在一月上旬{" "}
+                <span className="subTitle hightlight">
+                  先針對您的稿件給予回饋
+                </span>{" "}
+                ，讓您能參考更多元的建議做調整內容。同時，凡是在早鳥投稿期間送出且{" "}
                 <span className="subTitle hightlight">成功錄取</span>{" "}
                 的稿件，我們將提供可在{" "}
                 <span className="subTitle hightlight">
