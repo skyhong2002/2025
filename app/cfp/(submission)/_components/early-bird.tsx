@@ -3,6 +3,7 @@
 import { SHOW_EARLY_BIRD } from "@/lib/const";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 
 export default function EarlyBird() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +34,7 @@ export default function EarlyBird() {
 }
 
 export function EarlyBirdHome() {
+  const [isOpen, setIsOpen] = useState(false);
   const expiredTime = new Date("2024-12-25T23:59:00+08:00").getTime();
   const isExpired = Date.now() > expiredTime;
 
@@ -41,7 +43,10 @@ export function EarlyBirdHome() {
   return (
     <>
       {!isExpired ? (
-        <span className="relative z-10 flex w-full items-center gap-5 rounded-[28px] border border-accent bg-[#271A3A] px-7 py-2 text-xl font-bold text-accent transition hover:brightness-125 max-sm:flex-row">
+        <span
+          onClick={() => setIsOpen(true)}
+          className="relative z-10 flex w-full cursor-pointer items-center gap-5 rounded-[28px] border border-accent bg-[#271A3A] px-7 py-2 text-xl font-bold text-accent transition hover:brightness-125 max-sm:flex-row"
+        >
           <ExclamationMark />
           <div className="max-sm:flex-col">
             <a>早鳥投稿計劃開催中！</a>
@@ -51,6 +56,10 @@ export function EarlyBirdHome() {
           </div>
         </span>
       ) : null}
+      {createPortal(
+        <Dialog isOpen={isOpen} setIsOpen={setIsOpen} />,
+        document.body,
+      )}
     </>
   );
 }
@@ -93,7 +102,7 @@ function Dialog({
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
           style={{ pointerEvents: "auto" }}
-          className="fixed inset-0 z-50 m-0 flex scale-110 items-center justify-center bg-black/60"
+          className="fixed inset-0 z-50 m-0 flex scale-110 items-center justify-center bg-black/60 text-foreground"
           onClick={() => {
             setIsOpen(false);
           }}
