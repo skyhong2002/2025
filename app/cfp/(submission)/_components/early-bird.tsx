@@ -40,6 +40,8 @@ export function EarlyBirdHome() {
 
   if (!SHOW_EARLY_BIRD) return null;
 
+  if (typeof window !== "object") return null;
+
   return (
     <>
       {!isExpired ? (
