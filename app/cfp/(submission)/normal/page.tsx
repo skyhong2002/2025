@@ -10,6 +10,7 @@ import Image from "next/image";
 import { ReactNode } from "react";
 import EarlyBird from "../_components/early-bird";
 import { SHOW_EARLY_BIRD } from "@/lib/const";
+import TableOfContentMobile from "../_components/table-of-content-mobile";
 
 function PresentationBlock(presentation: { title: string; id: string }) {
   return (
@@ -189,400 +190,414 @@ export default function Page() {
   ];
 
   return (
-    <div className="py-8 text-normal-mobile md:text-normal">
-      <h1 className="mb-4 text-h1-mobile font-extrabold md:text-h1">
-        一般議程投稿
-      </h1>
+    <div className="flex gap-8 py-8 text-normal-mobile md:text-normal">
+      <div>
+        <h1 className="mb-4 text-h1-mobile font-extrabold md:text-h1">
+          一般議程投稿
+        </h1>
+
+        <Countdown />
+        <TableOfContentMobile
+          sections={sections}
+          theme="light"
+          submitUrl="https://forms.gle/rb5kuP1CCrzodKJs9"
+        />
+
+        <section
+          id="important-dates"
+          className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
+        >
+          <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
+            重要時程
+          </h2>
+          <Timeline isPoster={false} />
+        </section>
+
+        {SHOW_EARLY_BIRD && (
+          <section className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16">
+            <EarlyBird />
+          </section>
+        )}
+
+        <section
+          id="session-types"
+          className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
+        >
+          <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
+            議程種類
+          </h2>
+          <div className="mb-6 mt-4 grid grid-rows-2 gap-3 lg:grid-cols-2 lg:grid-rows-1">
+            <div className="md:background-light flex flex-col items-center gap-3 rounded-lg bg-background-light p-6 text-foreground">
+              <Presentation />
+              <h3 className="text-h3-mobile md:text-h3">Presentation</h3>
+              <p>
+                Presentation{" "}
+                <span className="subTitle hightlight">共 40 分鐘</span>{" "}
+                ，包含完整 30 分鐘的議程與 10
+                分鐘的問答時間，讓您有充分的時間展示想法、描述經歷、和與會者交流。
+              </p>
+            </div>
+            <div className="md:background-light flex flex-col items-center gap-3 rounded-lg bg-background-light p-6 text-foreground">
+              <Espresso />
+              <h3 className="text-h3-mobile md:text-h3">Espresso</h3>
+              <p>
+                Espresso{" "}
+                <span className="subTitle hightlight">僅有 10 分鐘 </span>
+                ，挑戰最為濃縮與精華的議程，為與會者帶來短而精緻的知識洗禮。
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          id="submission-topics"
+          className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
+        >
+          <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
+            投稿主題範例
+          </h2>
+          <div className="leading-10">
+            <p>
+              SITCON
+              作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
+              不論是探討技術或輕鬆的分享，任何與資訊科技、電腦技術相關的講題，我們都非常歡迎！
+            </p>
+            <p>
+              除此之外，您也可以前往 SITCON 歷年網站（
+              {[
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021",
+                "2022",
+                "2024",
+              ]
+                .toReversed()
+                .map((year, index) => (
+                  <span key={year}>
+                    <Link
+                      target="_blank"
+                      className="link"
+                      href={`https://sitcon.org/${year}`}
+                    >
+                      {year}
+                    </Link>
+                    {<span>{index == 10 ? "" : "、"}</span>}
+                  </span>
+                ))}
+              ）查看過去的議程。
+            </p>
+            <p className="mt-6 leading-10">
+              以下是我們選出以往的優良議程，提供給您參考：
+            </p>
+          </div>
+          <div className="py-4">
+            <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
+              PRESENTATION
+            </h3>
+            <div className="my-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
+              {presentations.map((item) => (
+                <PresentationBlock
+                  key={item.id}
+                  id={item.id}
+                  title={item.title}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="py-4">
+            <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
+              ESPRESSO
+            </h3>
+            <div className="my-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
+              {espressos.map((item) => (
+                <PresentationBlock
+                  key={item.id}
+                  id={item.id}
+                  title={item.title}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+        <section
+          id="submission-format"
+          className="-mt-[60px] pt-[80px] md:mb-16"
+        >
+          <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
+            投稿格式
+          </h2>
+          <p className="leading-10">
+            Presentation 與 Espresso
+            的投稿格式相同，除標示為公開之資訊會對外公布外，其餘僅供審稿委員於審稿時閱讀。
+          </p>
+          <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
+            稿件資訊
+          </h3>
+          <div className="flex flex-col gap-4">
+            <InformationField title="投稿類型" tags={["required", "public"]}>
+              請寫明所欲投稿為何種議程類型（Presentation、Espresso）。
+            </InformationField>
+            <InformationField title="題目" tags={["required", "public"]}>
+              請不要超出<span className="subTitle hightlight"> 20 </span>
+              字，題目無須與年會主題相關。
+            </InformationField>
+            <InformationField title="摘要" tags={["required", "public"]}>
+              <span className="hightlight subTitle"> 150~250 </span>
+              字，使用於宣傳與網站公告。
+            </InformationField>
+            <InformationField title="演講大綱" tags={["required"]}>
+              請說明議程的內容大綱與時間分配。若為多位講者共同分享，請說明各個講者如何分配演講內容。
+            </InformationField>
+            <InformationField title="目標受眾" tags={["required"]}>
+              請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。SITCON
+              2024 的會眾比例為：大學生 58%、高中/職生 22%、社會人士 8%、研究生
+              11%、國中生 1%
+            </InformationField>
+            <InformationField title="先備知識" tags={["required", "public"]}>
+              請說明該議程的與會者所需具備的{" "}
+              <span className="subTitle hightlight">先備知識</span>{" "}
+              例如：「能理解 Python 基礎語法」、「能熟練運用 Class 與 OOP」等。
+            </InformationField>
+            <InformationField title="主題標籤" tags={["required", "public"]}>
+              請填寫 1~4 個該議程相關的{" "}
+              <span className="hightlight subTitle">領域與知識標籤</span>{" "}
+              例如：ML、Data
+              Science、資安紅隊、blockchain、社團等；審稿委員將會參考此欄位了解件著重的面向，錄取後議程組也會參考此欄位，在與您溝通後挑選合適的標籤呈現於官網議程表上。
+            </InformationField>
+            <InformationField title="詳細說明" tags={["required"]}>
+              不限字數，請盡可能{" "}
+              <span className="hightlight subTitle">詳細說明</span>{" "}
+              個議程的相關細節，如議程詳細架構及想傳達的內容，如您為什麼想講這個議程及您預期此議程能為聽眾帶來什麼等，以利審稿委員更瞭解您的議程及想法。
+            </InformationField>
+            <InformationField title="附件" tags={["optional"]}>
+              可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
+            </InformationField>
+          </div>
+          <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
+            個人資料
+          </h3>
+          <p className="mb-2 mb-7 leading-10">
+            除了暱稱、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
+          </p>
+          <div className="flex flex-col gap-4">
+            <InformationField title="電子郵件" tags={["required"]}>
+              能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
+            </InformationField>
+            <InformationField title="名字" tags={["required", "public"]}>
+              您的姓名。
+            </InformationField>
+            <InformationField title="暱稱" tags={["required", "public"]}>
+              公開於講者及網站的稱呼。
+            </InformationField>
+            <InformationField title="自我介紹" tags={["required", "public"]}>
+              公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
+            </InformationField>
+
+            <InformationField title="手機號碼" tags={["required"]}>
+              用於大會聯絡、確認資訊用的電話號碼。
+            </InformationField>
+            <InformationField title="其他聯絡方式" tags={["required"]}>
+              其他任何我們能聯絡您的方式（如 Telegram
+              ID、住處電話等），以利我們在審稿時即時向您釐清投稿資訊。
+            </InformationField>
+          </div>
+        </section>
+        <section id="review-process" className="-mt-[60px] pt-[80px] md:mb-16">
+          <h2 className="my-4 text-h2-mobile font-extrabold text-primary md:text-h2">
+            審稿方式
+          </h2>
+          <p className="my-4 leading-10">
+            稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由 SITCON
+            工作人員、業界人士及學界人士組成。
+          </p>
+          <p>審稿委員將針對以下項目進行篩選：</p>
+          <ul className="list-inside list-disc leading-10">
+            <li className="listItem">
+              <span className="subTitle hightlight">稿件內容：</span>
+              知識分享、經驗案例、想法觀點是否獨特等。
+            </li>
+            <li className="listItem">
+              <span className="subTitle hightlight">表達能力：</span>
+              提供的資料是否完整、有條理、文句暢通。完整的資料能讓審稿委員更清楚了解演講細節。
+            </li>
+            <li className="listItem">
+              <span className="subTitle hightlight">適合聽眾：</span>
+              稿件是否適合 SITCON
+              大多數的與會者。經審稿委員評估比較熱門的議程，將安排在較大的演講廳。
+            </li>
+          </ul>
+        </section>
+
+        <CodeOfConduct />
+
+        <section
+          id="submission-guidelines"
+          className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
+        >
+          <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
+            投稿注意事項
+          </h2>
+          <div>
+            <ul className="list-inside list-disc leading-10">
+              <li className="listItem">
+                除非內容明顯偏離講題、違反 CoC
+                或不符事實，我們不會強制要求講者對演講內容進行修正。
+              </li>
+              <li>在截稿之前，投稿者可以隨時透過表單回函修改已送出的稿件。</li>
+              <li className="listItem">
+                審稿過程
+                <span className="hightlight subTitle">
+                  不考慮稿件內容的難度
+                </span>
+                。我們以稿件是否能夠吸引人、高品質、適合聽眾為考量。
+              </li>
+              <li className="listItem">
+                若審稿委員認為您的稿件比較適合其他形式，且原形式名額已經額滿、無法再增額時，議程組會向您提出轉換形式之建議。若經您評估後同意該建議，議程組將會為您轉換稿件類型或時間長度。
+              </li>
+              <li className="listItem">
+                SITCON 2025
+                將會有多軌議程及各式場外活動同時進行，與會者可以自行決定要參與哪一場議程或活動。
+              </li>
+              <li className="listItem">
+                為鼓勵投稿，大會
+                <span className="hightlight subTitle">
+                  提供投稿者一組報名邀請碼
+                </span>
+                （一稿一組，每人最多一組），使用邀請碼可優先報名參與本年會。若您的稿件被接受，年會將頒予感謝狀以表彰您的熱情付出與貢獻，並額外提供講者身分入場，屆時您可以將年會邀請碼贈與他人使用，邀請親朋好友共襄盛舉。
+              </li>
+              <li className="listItem">
+                若同一稿件有多個講者，無論講者人數，皆只提供一組可轉贈的入場票邀請碼、一份講者識別證與一份講者專屬迎賓禮，大會方保有最終發放之權力。未佩戴識別證的講者，僅能在自己的演講時，於該議程時段進入議程所在的會議廳。
+              </li>
+            </ul>
+            <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+              若有任何問題或投稿建議，請來信 SITCON 議程組信箱{" "}
+              <Link
+                target="_blank"
+                href="mailto:session@sitcon.org"
+                className="cursor-pointer text-primary underline"
+              >
+                <span className="hightlight subTitle">session@sitcon.org</span>
+              </Link>{" "}
+              。
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="license"
+          className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
+        >
+          <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
+            授權
+          </h2>
+          <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+            今年將採取實體與線上同步之模式進行，除開放式議程外，年會當天將對每一場議程進行直播串流。如果您同意以
+            <Link
+              target="_blank"
+              href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
+              className="hightlight subTitle underline underline-offset-2"
+            >
+              {" "}
+              創用 CC「姓名標示」4.0{" "}
+            </Link>
+            授權釋出議程錄影，我們將會上傳至
+            <Link
+              target="_blank"
+              href={"https://sitcon.org/yt"}
+              className="hightlight subTitle underline underline-offset-2"
+            >
+              {" "}
+              YouTube{" "}
+            </Link>
+            及
+            <Link
+              target="_blank"
+              href={"https://odysee.com/@SITCON:f"}
+              className="hightlight subTitle underline underline-offset-2"
+            >
+              {" "}
+              LBRY{" "}
+            </Link>
+            的 SITCON 頻道。{" "}
+          </p>
+          <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+            您為議程準備的其餘相關素材（如投影片），將於年會前由 SITCON
+            議程組向您蒐集素材連結，並整理在年會官方網站的議程資訊上。議程錄影與素材您可以自行決定在何種平台、以何種方式釋出，但鼓勵您選擇允許知識共享的{" "}
+            <Link
+              target="_blank"
+              href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
+              className="hightlight subTitle underline underline-offset-2"
+            >
+              創用 CC 系列授權。
+            </Link>
+          </p>
+          <div className="py-1" />
+        </section>
+
+        <section
+          id="practice-talk"
+          className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
+        >
+          <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
+            試講
+          </h2>
+          <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+            試講提供講者提升演講品質的機會，比照年會時間安排供講者講完整場演講，
+            <span className="hightlight subTitle">
+              並有工作人員提供建議（如簡報、臺風等）
+            </span>
+            ，講者可以自由參加，並自行選擇最合適的場次。若您的稿件確認入選，議程組將再與您協調確切時間。為維護所有講者的權利，試講時間恕不接受更改，請您準時參與。
+          </p>
+          <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+            所有場次將依報名情況舉辦，預計舉辦北部、中部、南部、線上場等，時間約為二月，地點另行通知。
+          </p>
+          <div className="rounded-2xl border border-foreground p-4">
+            <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+              試講交通補助：為確保年會議程品質，我們鼓勵講者參與試講，並將依照客運價格標準，補助講者至最近試講場地的全額或部分車資。若您的稿件被予以錄取，細節將於錄取後通知。
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="rehearsal"
+          className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
+        >
+          <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
+            彩排
+          </h2>
+          <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
+            SITCON 2025
+            將在年會前一天提供議程被錄取之講者彩排的機會。彩排能讓講者熟悉現場設備環境、攝影機位置，並且測試
+            Live Demo
+            情境。若講者想於正式演講前先熟悉場地與現場情況，歡迎於彩排當天前來參與，一起使年會議程品質更臻完美。
+          </p>
+          <ul className="list-disc pl-6 leading-10">
+            <li className="">日期：2025 年 3 月 7 日（五）。</li>
+            <li className="">
+              場地：議程廳與年會相同，細節將於稿件錄取後通知。
+            </li>
+            <li className="">
+              時間：一人約 5~10 分鐘，可練習操作設備或演練部分簡報內容。若有
+              Live Demo 或特殊需求，可提前與議程組討論。
+            </li>
+            <li className="">
+              提供設備：與年會當天場地的設備相同，例如麥克風、倒數計時器等。
+            </li>
+          </ul>
+        </section>
+
+        <FAQ QA={QA} />
+      </div>
       <TableOfContent
         theme="light"
         sections={sections}
         submitUrl="https://forms.gle/rb5kuP1CCrzodKJs9"
       />
-
-      <Countdown />
-
-      <section
-        id="important-dates"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
-      >
-        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
-          重要時程
-        </h2>
-        <Timeline isPoster={false} />
-      </section>
-
-      {SHOW_EARLY_BIRD && (
-        <section className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16">
-          <EarlyBird />
-        </section>
-      )}
-
-      <section
-        id="session-types"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
-      >
-        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
-          議程種類
-        </h2>
-        <div className="mb-6 mt-4 grid grid-rows-2 gap-3 lg:grid-cols-2 lg:grid-rows-1">
-          <div className="md:background-light flex flex-col items-center gap-3 rounded-lg bg-background-light p-6 text-foreground">
-            <Presentation />
-            <h3 className="text-h3-mobile md:text-h3">Presentation</h3>
-            <p>
-              Presentation{" "}
-              <span className="subTitle hightlight">共 40 分鐘</span> ，包含完整
-              30 分鐘的議程與 10
-              分鐘的問答時間，讓您有充分的時間展示想法、描述經歷、和與會者交流。
-            </p>
-          </div>
-          <div className="md:background-light flex flex-col items-center gap-3 rounded-lg bg-background-light p-6 text-foreground">
-            <Espresso />
-            <h3 className="text-h3-mobile md:text-h3">Espresso</h3>
-            <p>
-              Espresso{" "}
-              <span className="subTitle hightlight">僅有 10 分鐘 </span>
-              ，挑戰最為濃縮與精華的議程，為與會者帶來短而精緻的知識洗禮。
-            </p>
-          </div>
-        </div>
-      </section>
-      <section
-        id="submission-topics"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
-      >
-        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
-          投稿主題範例
-        </h2>
-        <div className="leading-10">
-          <p>
-            SITCON
-            作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
-            不論是探討技術或輕鬆的分享，任何與資訊科技、電腦技術相關的講題，我們都非常歡迎！
-          </p>
-          <p>
-            除此之外，您也可以前往 SITCON 歷年網站（
-            {[
-              "2013",
-              "2014",
-              "2015",
-              "2016",
-              "2017",
-              "2018",
-              "2019",
-              "2020",
-              "2021",
-              "2022",
-              "2024",
-            ]
-              .toReversed()
-              .map((year, index) => (
-                <span key={year}>
-                  <Link
-                    target="_blank"
-                    className="link"
-                    href={`https://sitcon.org/${year}`}
-                  >
-                    {year}
-                  </Link>
-                  {<span>{index == 10 ? "" : "、"}</span>}
-                </span>
-              ))}
-            ）查看過去的議程。
-          </p>
-          <p className="mt-6 leading-10">
-            以下是我們選出以往的優良議程，提供給您參考：
-          </p>
-        </div>
-        <div className="py-4">
-          <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
-            PRESENTATION
-          </h3>
-          <div className="my-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
-            {presentations.map((item) => (
-              <PresentationBlock
-                key={item.id}
-                id={item.id}
-                title={item.title}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="py-4">
-          <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
-            ESPRESSO
-          </h3>
-          <div className="my-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4">
-            {espressos.map((item) => (
-              <PresentationBlock
-                key={item.id}
-                id={item.id}
-                title={item.title}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-      <section id="submission-format" className="-mt-[60px] pt-[80px] md:mb-16">
-        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
-          投稿格式
-        </h2>
-        <p className="leading-10">
-          Presentation 與 Espresso
-          的投稿格式相同，除標示為公開之資訊會對外公布外，其餘僅供審稿委員於審稿時閱讀。
-        </p>
-        <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
-          稿件資訊
-        </h3>
-        <div className="flex flex-col gap-4">
-          <InformationField title="投稿類型" tags={["required", "public"]}>
-            請寫明所欲投稿為何種議程類型（Presentation、Espresso）。
-          </InformationField>
-          <InformationField title="題目" tags={["required", "public"]}>
-            請不要超出<span className="subTitle hightlight"> 20 </span>
-            字，題目無須與年會主題相關。
-          </InformationField>
-          <InformationField title="摘要" tags={["required", "public"]}>
-            <span className="hightlight subTitle"> 150~250 </span>
-            字，使用於宣傳與網站公告。
-          </InformationField>
-          <InformationField title="演講大綱" tags={["required"]}>
-            請說明議程的內容大綱與時間分配。若為多位講者共同分享，請說明各個講者如何分配演講內容。
-          </InformationField>
-          <InformationField title="目標受眾" tags={["required"]}>
-            請說明您期待該議程的目標受眾為怎麼樣的人。例如：「嚮往成為前端開發者的初學者」、「欲精進某技能的後端工程師」等。SITCON
-            2024 的會眾比例為：大學生 58%、高中/職生 22%、社會人士 8%、研究生
-            11%、國中生 1%
-          </InformationField>
-          <InformationField title="先備知識" tags={["required", "public"]}>
-            請說明該議程的與會者所需具備的{" "}
-            <span className="subTitle hightlight">先備知識</span> 例如：「能理解
-            Python 基礎語法」、「能熟練運用 Class 與 OOP」等。
-          </InformationField>
-          <InformationField title="主題標籤" tags={["required", "public"]}>
-            請填寫 1~4 個該議程相關的{" "}
-            <span className="hightlight subTitle">領域與知識標籤</span>{" "}
-            例如：ML、Data
-            Science、資安紅隊、blockchain、社團等；審稿委員將會參考此欄位了解件著重的面向，錄取後議程組也會參考此欄位，在與您溝通後挑選合適的標籤呈現於官網議程表上。
-          </InformationField>
-          <InformationField title="詳細說明" tags={["required"]}>
-            不限字數，請盡可能{" "}
-            <span className="hightlight subTitle">詳細說明</span>{" "}
-            個議程的相關細節，如議程詳細架構及想傳達的內容，如您為什麼想講這個議程及您預期此議程能為聽眾帶來什麼等，以利審稿委員更瞭解您的議程及想法。
-          </InformationField>
-          <InformationField title="附件" tags={["optional"]}>
-            可以附上程式碼、投影片草稿或任何您認為有助於我們瞭解您議程的附件，請再三確認是否有開啟共用權限。
-          </InformationField>
-        </div>
-        <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
-          個人資料
-        </h3>
-        <p className="mb-2 mb-7 leading-10">
-          除了暱稱、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
-        </p>
-        <div className="flex flex-col gap-4">
-          <InformationField title="電子郵件" tags={["required"]}>
-            能讓大會聯絡的電子信箱。（注意：請您在大會的聯絡過程中，維持使用相同信箱）
-          </InformationField>
-          <InformationField title="名字" tags={["required", "public"]}>
-            您的姓名。
-          </InformationField>
-          <InformationField title="暱稱" tags={["required", "public"]}>
-            公開於講者及網站的稱呼。
-          </InformationField>
-          <InformationField title="自我介紹" tags={["required", "public"]}>
-            公開於講者海報及網站，將有助於會眾更加了解有關你的資訊。
-          </InformationField>
-
-          <InformationField title="手機號碼" tags={["required"]}>
-            用於大會聯絡、確認資訊用的電話號碼。
-          </InformationField>
-          <InformationField title="其他聯絡方式" tags={["required"]}>
-            其他任何我們能聯絡您的方式（如 Telegram
-            ID、住處電話等），以利我們在審稿時即時向您釐清投稿資訊。
-          </InformationField>
-        </div>
-      </section>
-      <section id="review-process" className="-mt-[60px] pt-[80px] md:mb-16">
-        <h2 className="my-4 text-h2-mobile font-extrabold text-primary md:text-h2">
-          審稿方式
-        </h2>
-        <p className="my-4 leading-10">
-          稿件均經議程組形式審查，交予該領域之審稿委員審稿。審稿委員由 SITCON
-          工作人員、業界人士及學界人士組成。
-        </p>
-        <p>審稿委員將針對以下項目進行篩選：</p>
-        <ul className="list-inside list-disc leading-10">
-          <li className="listItem">
-            <span className="subTitle hightlight">稿件內容：</span>
-            知識分享、經驗案例、想法觀點是否獨特等。
-          </li>
-          <li className="listItem">
-            <span className="subTitle hightlight">表達能力：</span>
-            提供的資料是否完整、有條理、文句暢通。完整的資料能讓審稿委員更清楚了解演講細節。
-          </li>
-          <li className="listItem">
-            <span className="subTitle hightlight">適合聽眾：</span>稿件是否適合
-            SITCON
-            大多數的與會者。經審稿委員評估比較熱門的議程，將安排在較大的演講廳。
-          </li>
-        </ul>
-      </section>
-
-      <CodeOfConduct />
-
-      <section
-        id="submission-guidelines"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
-      >
-        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
-          投稿注意事項
-        </h2>
-        <div>
-          <ul className="list-inside list-disc leading-10">
-            <li className="listItem">
-              除非內容明顯偏離講題、違反 CoC
-              或不符事實，我們不會強制要求講者對演講內容進行修正。
-            </li>
-            <li>在截稿之前，投稿者可以隨時透過表單回函修改已送出的稿件。</li>
-            <li className="listItem">
-              審稿過程
-              <span className="hightlight subTitle">不考慮稿件內容的難度</span>
-              。我們以稿件是否能夠吸引人、高品質、適合聽眾為考量。
-            </li>
-            <li className="listItem">
-              若審稿委員認為您的稿件比較適合其他形式，且原形式名額已經額滿、無法再增額時，議程組會向您提出轉換形式之建議。若經您評估後同意該建議，議程組將會為您轉換稿件類型或時間長度。
-            </li>
-            <li className="listItem">
-              SITCON 2025
-              將會有多軌議程及各式場外活動同時進行，與會者可以自行決定要參與哪一場議程或活動。
-            </li>
-            <li className="listItem">
-              為鼓勵投稿，大會
-              <span className="hightlight subTitle">
-                提供投稿者一組報名邀請碼
-              </span>
-              （一稿一組，每人最多一組），使用邀請碼可優先報名參與本年會。若您的稿件被接受，年會將頒予感謝狀以表彰您的熱情付出與貢獻，並額外提供講者身分入場，屆時您可以將年會邀請碼贈與他人使用，邀請親朋好友共襄盛舉。
-            </li>
-            <li className="listItem">
-              若同一稿件有多個講者，無論講者人數，皆只提供一組可轉贈的入場票邀請碼、一份講者識別證與一份講者專屬迎賓禮，大會方保有最終發放之權力。未佩戴識別證的講者，僅能在自己的演講時，於該議程時段進入議程所在的會議廳。
-            </li>
-          </ul>
-          <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-            若有任何問題或投稿建議，請來信 SITCON 議程組信箱{" "}
-            <Link
-              target="_blank"
-              href="mailto:session@sitcon.org"
-              className="cursor-pointer text-primary underline"
-            >
-              <span className="hightlight subTitle">session@sitcon.org</span>
-            </Link>{" "}
-            。
-          </p>
-        </div>
-      </section>
-
-      <section
-        id="license"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
-      >
-        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
-          授權
-        </h2>
-        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-          今年將採取實體與線上同步之模式進行，除開放式議程外，年會當天將對每一場議程進行直播串流。如果您同意以
-          <Link
-            target="_blank"
-            href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
-            className="hightlight subTitle underline underline-offset-2"
-          >
-            {" "}
-            創用 CC「姓名標示」4.0{" "}
-          </Link>
-          授權釋出議程錄影，我們將會上傳至
-          <Link
-            target="_blank"
-            href={"https://sitcon.org/yt"}
-            className="hightlight subTitle underline underline-offset-2"
-          >
-            {" "}
-            YouTube{" "}
-          </Link>
-          及
-          <Link
-            target="_blank"
-            href={"https://odysee.com/@SITCON:f"}
-            className="hightlight subTitle underline underline-offset-2"
-          >
-            {" "}
-            LBRY{" "}
-          </Link>
-          的 SITCON 頻道。{" "}
-        </p>
-        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-          您為議程準備的其餘相關素材（如投影片），將於年會前由 SITCON
-          議程組向您蒐集素材連結，並整理在年會官方網站的議程資訊上。議程錄影與素材您可以自行決定在何種平台、以何種方式釋出，但鼓勵您選擇允許知識共享的{" "}
-          <Link
-            target="_blank"
-            href={"https://creativecommons.org/licenses/by/4.0/deed.zh-hant"}
-            className="hightlight subTitle underline underline-offset-2"
-          >
-            創用 CC 系列授權。
-          </Link>
-        </p>
-        <div className="py-1" />
-      </section>
-
-      <section
-        id="practice-talk"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
-      >
-        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
-          試講
-        </h2>
-        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-          試講提供講者提升演講品質的機會，比照年會時間安排供講者講完整場演講，
-          <span className="hightlight subTitle">
-            並有工作人員提供建議（如簡報、臺風等）
-          </span>
-          ，講者可以自由參加，並自行選擇最合適的場次。若您的稿件確認入選，議程組將再與您協調確切時間。為維護所有講者的權利，試講時間恕不接受更改，請您準時參與。
-        </p>
-        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-          所有場次將依報名情況舉辦，預計舉辦北部、中部、南部、線上場等，時間約為二月，地點另行通知。
-        </p>
-        <div className="rounded-2xl border border-foreground p-4">
-          <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-            試講交通補助：為確保年會議程品質，我們鼓勵講者參與試講，並將依照客運價格標準，補助講者至最近試講場地的全額或部分車資。若您的稿件被予以錄取，細節將於錄取後通知。
-          </p>
-        </div>
-      </section>
-
-      <section
-        id="rehearsal"
-        className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
-      >
-        <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
-          彩排
-        </h2>
-        <p className="text-normal-mobile font-normal leading-10 tracking-wider md:text-normal">
-          SITCON 2025
-          將在年會前一天提供議程被錄取之講者彩排的機會。彩排能讓講者熟悉現場設備環境、攝影機位置，並且測試
-          Live Demo
-          情境。若講者想於正式演講前先熟悉場地與現場情況，歡迎於彩排當天前來參與，一起使年會議程品質更臻完美。
-        </p>
-        <ul className="list-disc pl-6 leading-10">
-          <li className="">日期：2025 年 3 月 7 日（五）。</li>
-          <li className="">場地：議程廳與年會相同，細節將於稿件錄取後通知。</li>
-          <li className="">
-            時間：一人約 5~10 分鐘，可練習操作設備或演練部分簡報內容。若有 Live
-            Demo 或特殊需求，可提前與議程組討論。
-          </li>
-          <li className="">
-            提供設備：與年會當天場地的設備相同，例如麥克風、倒數計時器等。
-          </li>
-        </ul>
-      </section>
-
-      <FAQ QA={QA} />
     </div>
   );
 }
