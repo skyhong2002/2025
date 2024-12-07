@@ -10,6 +10,7 @@ import Image from "next/image";
 import { ReactNode } from "react";
 import EarlyBird from "../_components/early-bird";
 import { SHOW_EARLY_BIRD } from "@/lib/const";
+import TableOfContentMobile from "../_components/table-of-content-mobile";
 
 function PresentationBlock(presentation: { title: string; id: string }) {
   return (
@@ -196,6 +197,11 @@ export default function Page() {
         </h1>
 
         <Countdown />
+        <TableOfContentMobile
+          sections={sections}
+          theme="light"
+          submitUrl="https://forms.gle/rb5kuP1CCrzodKJs9"
+        />
 
         <section
           id="important-dates"

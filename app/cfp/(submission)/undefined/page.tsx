@@ -7,6 +7,7 @@ import Link from "next/link";
 import { InformationField } from "../normal/page";
 import EarlyBird from "../_components/early-bird";
 import { SHOW_EARLY_BIRD } from "@/lib/const";
+import TableOfContentMobile from "../_components/table-of-content-mobile";
 
 export default function Page() {
   const sections = [
@@ -57,6 +58,12 @@ export default function Page() {
         <h1 className="mb-4 text-h1-mobile font-extrabold md:text-h1">
           開放式議程投稿
         </h1>
+
+        <TableOfContentMobile
+          sections={sections}
+          theme="light"
+          submitUrl="https://forms.gle/rb5kuP1CCrzodKJs9"
+        />
 
         <Countdown />
         <section
