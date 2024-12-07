@@ -39,7 +39,7 @@ export default function TableOfContent({
   return (
     <>
       {/* pc & tablet */}
-      <nav className="md: fixed right-5 top-[100px] hidden w-min max-w-[200px] md:block lg:w-[200px]">
+      <nav className="sticky right-5 top-[100px] hidden w-min max-w-[200px] self-start md:block lg:w-[200px]">
         <Link
           href={submitUrl}
           target="_blank"
