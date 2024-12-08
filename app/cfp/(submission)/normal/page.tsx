@@ -381,7 +381,7 @@ export default function Page() {
           <h3 className="my-4 text-h3-mobile font-bold text-primary md:text-h3">
             個人資料
           </h3>
-          <p className="mb-2 mb-7 leading-10">
+          <p className="mb-2 leading-10">
             除了暱稱、自我介紹被用於宣傳，其餘資訊僅需提供一人作為代表（當稿件同時有多位講者時），供議程組於聯絡時使用。
           </p>
           <div className="flex flex-col gap-4">
