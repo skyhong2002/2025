@@ -66,8 +66,16 @@ export default function Page() {
           id="important-dates"
           className="my-4 -mt-[60px] space-y-4 pt-[80px] md:mb-16"
         >
-          <h2 className="text-h2-mobile font-extrabold text-primary md:text-h2">
+          <h2 className="flex items-center text-h2-mobile font-extrabold text-primary max-md:flex md:text-h2">
             重要時程
+            <Link
+              href={"/cfp/deadline.ics"}
+              className="flex items-center justify-center"
+            >
+              <button className="ml-2 rounded-lg bg-background-light px-3 py-1 text-sm font-normal text-foreground">
+                加入行事曆
+              </button>
+            </Link>
           </h2>
           <Timeline isPoster />
         </section>
