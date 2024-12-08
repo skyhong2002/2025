@@ -69,7 +69,7 @@ function Support() {
     <FooterSubMenu
       title="支持我們"
       links={[
-        // { text: "我要贊助", href: "https://sitcon.org/donate" },
+        { text: "我要贊助", href: "https://sitcon.org/donate" },
         { text: "索取贊助徵求書", href: "https://i.sitcon.org/2025cfs-form/" },
       ]}
       internal={false}
@@ -201,10 +201,17 @@ function FooterSubMenuGrid({
           const { text, href } = link;
           return (
             <li key={href} className="text-center">
-              <a target="_blank" className="inline-block hover:opacity-70" href={href}>
+              <a
+                target="_blank"
+                className="inline-block hover:opacity-70"
+                href={href}
+              >
                 <span className="inline-block">
                   {text.split("").map((char, index) => (
-                    <span key={index} className="inline-block w-2.5 text-center">
+                    <span
+                      key={index}
+                      className="inline-block w-2.5 text-center"
+                    >
                       {char}
                     </span>
                   ))}

@@ -259,7 +259,8 @@ function PhoneLayout() {
           聯絡我們，我們將有專人與您商討更多的合作方式！
         </p>
         <div className="flex-row pt-16">
-          {/* <a
+          <a
+            target="_blank"
             href="https://sitcon.org/donate"
             className="flex items-center justify-end whitespace-nowrap text-nowrap text-[30px] font-bold text-accent"
           >
@@ -267,7 +268,7 @@ function PhoneLayout() {
             <span className="material-icons" style={{ fontSize: "44px" }}>
               north_east
             </span>
-          </a> */}
+          </a>
           <a
             href="https://i.sitcon.org/2025cfs-form"
             className="flex items-center justify-end whitespace-nowrap text-nowrap text-[22px] font-bold text-accent transition active:scale-95"
@@ -310,15 +311,16 @@ function TabletLayout() {
             聯絡我們，我們將有專人與您商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
-            {/* <a
+            <a
               href="https://sitcon.org/donate"
+              target="_blank"
               className="flex items-center justify-end whitespace-nowrap text-nowrap text-h2 font-bold text-accent transition hover:text-accent-light"
             >
               我要贊助
               <span className="material-icons" style={{ fontSize: "62px" }}>
                 north_east
               </span>
-            </a> */}
+            </a>
             <a
               href="https://i.sitcon.org/2025cfs-form"
               className="flex items-center justify-end whitespace-nowrap text-nowrap text-h3 font-bold text-accent transition hover:text-accent-light active:scale-95"
@@ -376,7 +378,8 @@ function DesktopLayout() {
             聯絡我們，我們將有專人與您商討更多的合作方式！
           </p>
           <div className="flex-row pt-8">
-            {/* <a
+            <a
+              target="_blank"
               href="https://sitcon.org/donate"
               className="flex items-center justify-end whitespace-nowrap text-nowrap text-h1 font-bold text-accent transition hover:text-accent-light"
             >
@@ -384,7 +387,7 @@ function DesktopLayout() {
               <span className="material-icons" style={{ fontSize: "66px" }}>
                 north_east
               </span>
-            </a> */}
+            </a>
             <a
               href="https://i.sitcon.org/2025cfs-form"
               className="flex items-center justify-end whitespace-nowrap text-nowrap text-h2 font-bold text-accent transition hover:text-accent-light active:bg-accent"
