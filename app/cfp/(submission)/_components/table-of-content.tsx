@@ -14,7 +14,7 @@ export default function TableOfContent({
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
+      for (const entry of entries.toReversed()) {
         if (entry.isIntersecting) {
           setCurrentSection("#" + entry.target.id);
           break;
