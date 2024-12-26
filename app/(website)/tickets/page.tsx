@@ -28,7 +28,7 @@ export default function Page() {
             <p className="mt-8 text-h3-mobile font-bold md:text-h3">一般票</p>
           </div>
 
-          <div className="flex flex-col items-start justify-center py-4 md:w-4/12 md:py-10">
+          <div className="flex flex-col items-center justify-center py-4 md:w-4/12 md:py-10">
             <ul className="text-center text-normal-mobile leading-[200%] md:list-inside md:list-disc md:text-start md:text-normal">
               <li className="listItem mt-4 !pl-0 md:mt-0 md:pl-[-22px]">
                 第一波售票：
@@ -83,7 +83,7 @@ export default function Page() {
             <div className="dashLine" />
           </div>
           <div className="mt-4 flex items-center justify-center md:w-2/12">
-            <button className="ml-[-4px] mr-4 flex h-[60px] w-full items-center justify-center rounded-full bg-primary p-4 text-normal text-black">
+            <button className="ml-[-4px] mr-4 flex h-[60px] w-[190px] items-center justify-center rounded-full bg-primary p-4 text-normal text-black md:w-full">
               立即取得
             </button>
           </div>
@@ -120,7 +120,7 @@ export default function Page() {
             <div className="dashLine" />
           </div>
           <div className="mt-4 flex items-center justify-center md:w-2/12">
-            <button className="ml-[-4px] mr-4 flex h-[60px] w-full items-center justify-center rounded-full bg-primary p-4 text-normal text-black">
+            <button className="ml-[-4px] mr-4 flex h-[60px] w-[190px] items-center justify-center rounded-full bg-primary p-4 text-normal text-black md:w-full">
               立即取得
             </button>
           </div>
