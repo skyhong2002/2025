@@ -220,3 +220,15 @@ html {
     color: #bdb3ff;
   }
 }
+
+.dashLine {
+  width: 1px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to top,
+    white 0%,
+    white 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
