@@ -170,14 +170,6 @@ const ShuttleDiagram = () => {
               fill="white"
             />
           </svg>
-          {/* <svg
-          viewBox="0 0 100 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <polygon points="0,9 97,9 95,12 100,8 95,4 97,7 0,7" fill="white" />
-        </svg> */}
           <div className="absolute left-[10%] top-[20px] w-[80%]">
             <p>接駁車發車時間：7:45~10:00</p>
             <p>班距：15~20 分鐘一班</p>
@@ -202,7 +194,7 @@ const ShuttleDiagram = () => {
             viewBox="0 0 16 208"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="mx-8"
+            className="ml-8 mr-16"
           >
             <path
               d="M7.29288 207.707C7.68341 208.098 8.31657 208.098 8.7071 207.707L15.0711 201.343C15.4616 200.953 15.4616 200.319 15.0711 199.929C14.6805 199.538 14.0474 199.538 13.6568 199.929L7.99999 205.586L2.34314 199.929C1.95261 199.538 1.31945 199.538 0.928923 199.929C0.538399 200.319 0.538399 200.953 0.928923 201.343L7.29288 207.707ZM7 -4.37114e-08L6.99999 207L8.99999 207L9 4.37114e-08L7 -4.37114e-08Z"
