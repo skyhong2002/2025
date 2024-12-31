@@ -11,10 +11,12 @@ export default function Page() {
   const [isLoading, setIsLoading] = useState(true);
 
   const options: Array<{ value: Transportation; label: string }> = [
-    { value: "shuttle", label: "大眾接駁車" },
+    { value: "shuttle", label: "大眾接駁車" },ad
     { value: "public", label: "大眾運輸工具" },
     { value: "car", label: "自行開車" },
   ];
+
+  console.log("開發組的各位新年快樂拉~ by pizza");
 
   return (
     <div className="flex w-full flex-col items-start justify-center gap-8 text-[#ffffff]">
