@@ -11,7 +11,7 @@ export default function Page() {
   const [isLoading, setIsLoading] = useState(true);
 
   const options: Array<{ value: Transportation; label: string }> = [
-    { value: "shuttle", label: "大眾接駁車" },ad
+    { value: "shuttle", label: "大眾接駁車" },
     { value: "public", label: "大眾運輸工具" },
     { value: "car", label: "自行開車" },
   ];
