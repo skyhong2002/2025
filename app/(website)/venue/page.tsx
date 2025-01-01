@@ -15,14 +15,20 @@ export default function Page() {
   ];
 
   return (
-    <div className="flex w-full flex-col items-start justify-center gap-8 text-[#ffffff]">
+    <div className="flex w-full flex-col items-start justify-center gap-12 text-[#ffffff]">
       <section
         id="address"
         className="flex w-full flex-col items-center gap-3 font-bold"
       >
-        <h1 className="self-start text-h1-mobile font-bold md:text-h1">
-          會場地圖
-        </h1>
+        <div className="flex text-left w-full justify-end">
+          <h1 className="self-start text-h1-mobile font-bold md:text-h1 flex-none">
+            會場地圖
+          </h1>
+          <div className="flex flex-1 ml-4">
+            <Image src={"/2025/icon/caution.svg"} width={30} height={30} alt="caution icon" className="my-auto" />
+            <p className="my-auto font-bold text-xl pl-1">緊急避難圖</p>
+          </div>
+        </div>
       </section>
       <section id="map" className="flex w-full flex-col gap-8">
         <div className="flex w-full justify-between gap-2 text-h3-mobile font-bold md:gap-6 md:text-h3">
@@ -35,9 +41,8 @@ export default function Page() {
               }}
               key={option.value}
               onClick={() => setFloor(option.value)}
-              className={`flex h-[60px] flex-grow items-center justify-center rounded-xl text-black ${
-                Floor === option.value ? "bg-[#B9D3E6]" : "bg-[#DEE6EB]"
-              }`}
+              className={`flex h-[60px] flex-grow items-center justify-center rounded-xl text-black ${Floor === option.value ? "bg-[#B9D3E6]" : "bg-[#DEE6EB]"
+                }`}
             >
               {option.label}
             </motion.button>
