@@ -41,6 +41,9 @@ const config: Config = {
         accent: "#BDB3FF",
         "accent-light": "#d4cdff",
       },
+      aspectRatio: {
+        "1/2": "1 / 2",
+      },
     },
   },
   plugins: [],
