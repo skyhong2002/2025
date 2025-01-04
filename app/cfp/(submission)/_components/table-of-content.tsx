@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function TableOfContent({
   sections = [],
-  submitUrl,
+  submitUrl = "",
 }: {
   theme: "red" | "light";
   sections: { id: string; title: string }[];
@@ -35,13 +35,15 @@ export default function TableOfContent({
     <>
       {/* pc & tablet */}
       <nav className="sticky right-5 top-[100px] hidden w-min max-w-[200px] self-start md:block lg:w-[200px]">
-        <Link
-          href={submitUrl}
-          target="_blank"
-          className="tableContentItem block w-full rounded-md bg-primary px-4 py-2 text-center font-bold text-black hover:bg-foreground max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
-        >
-          立即投稿
-        </Link>
+        {submitUrl.length == 0 ? null : (
+          <Link
+            href={submitUrl}
+            target="_blank"
+            className="tableContentItem block w-full rounded-md bg-primary px-4 py-2 text-center font-bold text-black hover:bg-foreground max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
+          >
+            立即投稿
+          </Link>
+        )}
         <h2 className="mb-3 text-h3 font-extrabold text-foreground">
           本頁目錄
         </h2>
