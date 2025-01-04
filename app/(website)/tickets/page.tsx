@@ -17,7 +17,7 @@ export default function Page() {
         </button>
         {/* ticket 1 */}
         <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light py-10 md:flex-row md:rounded-none md:border md:py-0">
-          <div className="aspect-1/2 z-10 ml-[-1px] box-border hidden rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
+          <div className="z-10 ml-[-1px] box-border hidden aspect-1/2 rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
           <div className="flex flex-col items-center justify-center md:w-3/12 md:py-10">
             <Image
               src="/2025/website/ticket.svg"
@@ -53,11 +53,11 @@ export default function Page() {
               KKTIX 報名連結
             </button>
           </div>
-          <div className="aspect-1/2 right-0 z-10 mr-[-1px] box-border hidden rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
+          <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
         {/* ticket 2 */}
         <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light py-10 md:flex-row md:rounded-none md:border md:py-0">
-          <div className="aspect-1/2 z-10 ml-[-1px] box-border hidden rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
+          <div className="z-10 ml-[-1px] box-border hidden aspect-1/2 rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
           <div className="flex flex-col items-center md:w-3/12 md:py-10">
             <span className="material-symbols-outlined mt-16 scale-[600%] text-[#ffffff]">
               flight
@@ -88,11 +88,11 @@ export default function Page() {
             </button>
           </div>
 
-          <div className="aspect-1/2 right-0 z-10 mr-[-1px] box-border hidden rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
+          <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
         {/* ticket 3 */}
         <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light py-10 md:flex-row md:rounded-none md:border md:py-0">
-          <div className="aspect-1/2 z-10 ml-[-1px] box-border hidden rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
+          <div className="z-10 ml-[-1px] box-border hidden aspect-1/2 rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
           <div className="flex flex-col items-center justify-center md:w-3/12 md:py-10">
             <span className="material-symbols-outlined mt-16 scale-[600%] text-[#ffffff]">
               crowdsource
@@ -125,7 +125,7 @@ export default function Page() {
             </button>
           </div>
 
-          <div className="aspect-1/2 right-0 z-10 mr-[-1px] box-border hidden rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
+          <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
       </section>
       <section
