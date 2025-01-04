@@ -344,42 +344,49 @@
         "group": "場務組",
         "role": "組員",
         "name": "泰迪貓",
-        "email": "6344aced0fbe64abbe4e11346444cfe4daca23ab81abf1a4e06e653905fce568"
+        "email": "6344aced0fbe64abbe4e11346444cfe4daca23ab81abf1a4e06e653905fce568",
+        "website": "https://owo.tw"
       },
       {
         "group": "場務組",
         "role": "組員",
         "name": "Tim",
-        "email": "d1c537b0706e98b9a12d49ceabe38b9ff45d89475a609f3af66a3ee1719a59ba"
+        "email": "d1c537b0706e98b9a12d49ceabe38b9ff45d89475a609f3af66a3ee1719a59ba",
+        "website": "mailto:"
       },
       {
         "group": "場務組",
         "role": "組員",
         "name": "Windless",
-        "email": "5b168d8b83a4f506cf9be7b9b86b7ffc2b7a8dee29e5f6c82f9720764fc05f4d"
+        "email": "5b168d8b83a4f506cf9be7b9b86b7ffc2b7a8dee29e5f6c82f9720764fc05f4d",
+        "website": "https://facebook.com"
       },
       {
         "group": "場務組",
         "role": "組員",
         "name": "Citycafe",
-        "email": "e7a5e9f10f7f45034c7c4aab60b2688fc8eab8c9682607c9df70d718d64bd05f"
+        "email": "e7a5e9f10f7f45034c7c4aab60b2688fc8eab8c9682607c9df70d718d64bd05f",
+        "website": "https://linkedin.com"
       },
       {
         "group": "場務組",
         "role": "組員",
         "name": "CompileErr0r",
-        "email": "feef4421f4052a6fe1c0391b0cafd938fa6756e252b29a05af9519b35d15a214"
+        "email": "feef4421f4052a6fe1c0391b0cafd938fa6756e252b29a05af9519b35d15a214",
+        "website": "https://github.com"
       },
       {
         "group": "場務組",
         "role": "組員",
         "name": "小林",
-        "email": "920c24bb3e4be04733a21b651699df5b9df4ca0578cd689842ee8325f6066445"
+        "email": "920c24bb3e4be04733a21b651699df5b9df4ca0578cd689842ee8325f6066445",
+        "website": "https://t.me"
       },
       {
         "group": "場務組",
         "role": "組員",
         "name": "亨",
+        "website": "instagram.com",
         "email": "332afa5b330434059ba493f3b9154f0d1fd690fc9bca81adcb9f0327d9d05bc1"
       },
       {
@@ -387,18 +394,21 @@
         "role": "組員",
         "name": "PT",
         "email": "7b1905ab5be177a10307c71e20d65ef578377dedb3237ab2284c93b7277d30a3",
-        "website": "https://about.ptchen.tw"
+        "website": "https://discord.com"
       },
       {
         "group": "場務組",
         "role": "組員",
         "name": "柴柴",
-        "email": "cacb91a081291126489ba6b0e98662c698188ecce6391007b171461b21ef4241"
+        "email": "cacb91a081291126489ba6b0e98662c698188ecce6391007b171461b21ef4241",
+        "website": "youtube.com",
+        "rainbow": true
       },
       {
         "group": "場務組",
         "role": "組員",
         "name": "Puchi",
+        "website": "x.com",
         "email": "a7dffbe5e12a4355ac276f9d7d8d41b96874582cd0684c22036022d7223ec239"
       }
     ]
