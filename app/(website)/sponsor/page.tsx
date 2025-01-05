@@ -1,4 +1,5 @@
 import Image from "next/image";
+import sponsorList from "./sponsors.json";
 
 export default function Page() {
   return (
@@ -171,6 +172,7 @@ export default function Page() {
         <h1 className="pb-[56px] text-center text-h1 font-bold">贊助夥伴</h1>
         <div className="space-y-12">
           <div>
+            {/* 領航級 */}
             <h2 className="pb-6 text-center text-h2 font-bold">領航級</h2>
             <div className="flex justify-center">
               <div className="flex h-96 w-80 items-center justify-center rounded-2xl bg-white">
@@ -188,96 +190,20 @@ export default function Page() {
           <div>
             <h2 className="pb-6 text-center text-h2 font-bold">深耕級</h2>
             <div className="grid grid-cols-5 justify-center gap-x-5 gap-y-[27px]">
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
+              {sponsorList.level2.map((brand, index) => (
+                <div
+                  key={brand.name || index}
+                  className="flex h-[133px] w-[189px] items-center justify-center rounded-2xl bg-white md:h-[192px] md:w-[205px]"
+                >
+                  <Image
+                    src={brand.image}
+                    alt={brand.name}
+                    width={160}
+                    height={105}
+                    className="rounded-md"
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -285,96 +211,20 @@ export default function Page() {
           <div>
             <h2 className="pb-6 text-center text-h2 font-bold">前瞻級</h2>
             <div className="grid grid-cols-5 justify-center gap-x-5 gap-y-[27px]">
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
+              {sponsorList.level3.map((brand, index) => (
+                <div
+                  key={brand.name || index}
+                  className="flex h-[133px] w-[189px] items-center justify-center rounded-2xl bg-white md:h-[192px] md:w-[205px]"
+                >
+                  <Image
+                    src={brand.image}
+                    alt={brand.name}
+                    width={160}
+                    height={105}
+                    className="rounded-md"
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -382,193 +232,20 @@ export default function Page() {
           <div>
             <h2 className="pb-6 text-center text-h2 font-bold">新芽級</h2>
             <div className="grid grid-cols-5 justify-center gap-x-5 gap-y-[27px]">
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* 前瞻級 */}
-          <div>
-            <h2 className="pb-6 text-center text-h2 font-bold">前瞻級</h2>
-            <div className="grid grid-cols-5 justify-center gap-x-5 gap-y-[27px]">
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
+              {sponsorList.level4.map((brand, index) => (
+                <div
+                  key={brand.name || index}
+                  className="flex h-[133px] w-[189px] items-center justify-center rounded-2xl bg-white md:h-[192px] md:w-[205px]"
+                >
+                  <Image
+                    src={brand.image}
+                    alt={brand.name}
+                    width={160}
+                    height={105}
+                    className="rounded-md"
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -576,96 +253,20 @@ export default function Page() {
           <div>
             <h1 className="pb-6 text-center text-h1 font-bold">特別感謝</h1>
             <div className="grid grid-cols-5 justify-center gap-x-5 gap-y-[27px]">
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
+              {sponsorList.special_thanks.map((brand, index) => (
+                <div
+                  key={brand.name || index}
+                  className="flex h-[133px] w-[189px] items-center justify-center rounded-2xl bg-white md:h-[192px] md:w-[205px]"
+                >
+                  <Image
+                    src={brand.image}
+                    alt={brand.name}
+                    width={160}
+                    height={105}
+                    className="rounded-md"
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -673,96 +274,20 @@ export default function Page() {
           <div>
             <h1 className="pb-6 text-center text-h1 font-bold">媒體夥伴</h1>
             <div className="grid grid-cols-5 justify-center gap-x-5 gap-y-[27px]">
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
-              <div className="flex h-[192px] w-[205px] items-center justify-center rounded-2xl bg-white">
-                <Image
-                  src="https://placehold.co/160x105"
-                  alt="品牌名稱"
-                  width={160}
-                  height={105}
-                  className="rounded-md"
-                />
-              </div>
+              {sponsorList.media.map((brand, index) => (
+                <div
+                  key={brand.name || index}
+                  className="flex h-[133px] w-[189px] items-center justify-center rounded-2xl bg-white md:h-[192px] md:w-[205px]"
+                >
+                  <Image
+                    src={brand.image}
+                    alt={brand.name}
+                    width={160}
+                    height={105}
+                    className="rounded-md"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
