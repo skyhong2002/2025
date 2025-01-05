@@ -177,8 +177,8 @@ export default function Page() {
             <div className="flex justify-center">
               <div className="flex h-96 w-80 items-center justify-center rounded-2xl bg-white">
                 <Image
-                  src="https://placehold.co/244x160"
-                  alt="領航級"
+                  src={sponsorList.level1[0].image}
+                  alt={sponsorList.level1[0].name}
                   width={244}
                   height={160}
                   className="rounded-md"
