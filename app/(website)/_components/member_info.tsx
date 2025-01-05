@@ -2,14 +2,19 @@
 
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faDiscord,
   faFacebook,
   faGithub,
   faInstagram,
   faLinkedin,
-  faTelegram, faXTwitter, faYoutube,
+  faTelegram,
+  faXTwitter,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
 interface Member {
@@ -35,10 +40,7 @@ function getIcon(website: string | undefined) {
     return faLinkedin;
   } else if (website.includes("github.com")) {
     return faGithub;
-  } else if (
-    website.includes("telegram.org") ||
-    website.includes("t.me")
-  ) {
+  } else if (website.includes("telegram.org") || website.includes("t.me")) {
     return faTelegram;
   } else if (
     website.includes("instagram.com") ||
