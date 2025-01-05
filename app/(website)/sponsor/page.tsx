@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import sponsorList from "./sponsors.json";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+  const router = useRouter();
   return (
     <div className="space-y-32">
       {/* 支持我們 */}
@@ -74,10 +78,20 @@ export default function Page() {
           扶持資訊教育，讓我們一同使更多的臺灣學子能在舞台上展現自我、相互成長！
         </p>
         <div className="flex justify-center space-x-7 md:justify-normal">
-          <button className="h-[60px] w-[153px] rounded-full bg-primary text-black">
+          <button
+            onClick={() => {
+              router.push("https://ocf.neticrm.tw/");
+            }}
+            className="h-[60px] w-[153px] rounded-full bg-primary text-black"
+          >
             個人贊助
           </button>
-          <button className="h-[60px] w-[154px] rounded-full bg-primary text-black">
+          <button
+            onClick={() => {
+              router.push("https://i.sitcon.org/2022cfs-form");
+            }}
+            className="h-[60px] w-[154px] rounded-full bg-primary text-black"
+          >
             索取贊助徵求書
           </button>
         </div>
