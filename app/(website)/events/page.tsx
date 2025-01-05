@@ -11,7 +11,7 @@ export default function Page() {
     { id: "whiteboard", title: "白板大戰" },
     { id: "lightning_talk", title: "Lightning Talk 閃電秀" },
     { id: "poster", title: "靜態海報展" },
-    { id: "coffee", title: "咖啡廳" },
+    { id: "cafeteria", title: "咖啡廳" },
     { id: "agenda", title: "開放式議程" },
     { id: "geocaching", title: "大地遊戲" },
   ];
@@ -113,6 +113,14 @@ export default function Page() {
               查看海報
             </Link>
           </div>
+        </section>
+        <section id="cafeteria" className="mt-20">
+          <h3 className="text-[22px] font-normal md:text-[26px]">咖啡廳</h3>
+          <p className="mt-4 leading-[200%]">
+            想與來自四面八方的與會者進行交流嗎？還是想繼續討論剛剛精彩的議程嗎？抑或是想要有個地方好好休息呢？那麼歡迎來到
+            SITCON
+            咖啡廳。在這裡，我們提供悠閒的環境、舒適的空間，以及不可或缺的動力來源☕️，讓各個需求的與會者都能在這裡找到屬於自己的小天地，無論你是想與人聊天、討論，或是在一整天豐富的行程中想稍微喘口氣，甚至是在這裡腦力激盪出一項專案，我們都歡迎！
+          </p>
         </section>
         <section id="agenda" className="mt-20">
           <h3 className="text-[22px] font-normal md:text-[26px]">開放式議程</h3>
