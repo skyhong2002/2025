@@ -5,14 +5,12 @@ export default function Page() {
     <div className="space-y-32">
       {/* 支持我們 */}
       <div className="items-start text-normal-mobile md:text-normal">
-        <h1 className="text-h1 font-bold">支持我們</h1>
-        <div className="py-[17px]" />
-        <p className="max-w-[685px] leading-loose">
+        <h1 className="pb-[38px] text-h1 font-bold">支持我們</h1>
+        <p className="max-w-[685px] pb-[54px] leading-loose">
           十年以來，SITCON
           一直秉持著不向與會者收費的原則來舉辦資訊研討會，不僅創造許多學生們交流、教學互長的機會，也帶領無數學子踏入資訊的殿堂。
         </p>
-        <div className="py-[27px]" />
-        <div className="flex space-x-7">
+        <div className="flex space-x-7 pb-[64px]">
           <Image
             src="https://placehold.co/238x226"
             alt="Sponsor Image"
@@ -42,15 +40,13 @@ export default function Page() {
             className="rounded-3xl"
           />
         </div>
-        <div className="py-[32px]" />
-        <p className="max-w-[685px] leading-loose">
+        <p className="max-w-[685px] pb-[55px] leading-loose">
           而維繫學生們的資訊交流平台，除了有賴志工們的努力及貢獻，亦十分需要在資金上的支持。
           教育不只在課本裡，如果您也認同 SITCON
           的理念，歡迎點擊下方「個人贊助」或「索取贊助徵求書」按鈕以了解詳細的合作方案，或是寄信至
           contact@sitcon.org 與我們聯繫，商酌更多的合作方式！
           扶持資訊教育，讓我們一同使更多的臺灣學子能在舞台上展現自我、相互成長！
         </p>
-        <div className="py-[22.5px]" />
         <div className="flex space-x-7">
           <button className="h-[60px] w-[153px] rounded-full bg-primary text-black">
             個人贊助
@@ -63,13 +59,11 @@ export default function Page() {
 
       {/* 主辦單位 */}
       <div className="items-center text-normal-mobile md:text-normal">
-        <h1 className="text-center text-h1 font-bold">主辦單位</h1>
-        <div className="py-[22.5px]" />
-        <h2 className="text-center text-h2 font-bold">
+        <h1 className="pb-[55px] text-center text-h1 font-bold">主辦單位</h1>
+        <h2 className="pb-[69px] text-center text-h2 font-bold">
           SITCON 學生計算機年會籌備團隊
         </h2>
-        <div className="py-[34.5px]" />
-        <div className="flex justify-center">
+        <div className="flex justify-center pb-[74px]">
           <Image
             src="https://placehold.co/385x109?text=SITCON%20Logo%20385x109.4"
             alt="SITCON Logo"
@@ -77,7 +71,6 @@ export default function Page() {
             height={109}
           />
         </div>
-        <div className="py-[37px]" />
         <div className="flex justify-center">
           <p className="max-w-[685px]">
             SITCON 學生計算機年會 (Students’ Information Technology Conference)
