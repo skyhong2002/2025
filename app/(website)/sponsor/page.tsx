@@ -65,11 +65,13 @@ export default function Page() {
       <div className="items-center text-normal-mobile md:text-normal">
         <h1 className="text-center text-h1 font-bold">主辦單位</h1>
         <div className="py-[22.5px]" />
-        <h2 className="text-center text-h2 font-bold">SITCON 學生計算機年會</h2>
+        <h2 className="text-center text-h2 font-bold">
+          SITCON 學生計算機年會籌備團隊
+        </h2>
         <div className="py-[34.5px]" />
         <div className="flex justify-center">
           <Image
-            src="https://placehold.co/385x109?text=SITCON%20Logo%20385x109_4"
+            src="https://placehold.co/385x109?text=SITCON%20Logo%20385x109.4"
             alt="SITCON Logo"
             width={385}
             height={109}
@@ -91,6 +93,48 @@ export default function Page() {
           </p>
         </div>
       </div>
+
+      {/* 共同主辦 */}
+      <div className="items-center text-normal-mobile md:text-normal">
+        <h1 className="pb-[56px] text-center text-h1 font-bold">共同主辦</h1>
+        <div className="flex justify-center space-x-6">
+          <div className="flex flex-col items-center justify-center">
+            <h2 className="text-h2 font-bold">中央研究院資訊科學研究所</h2>
+            <Image
+              src="https://placehold.co/312x194"
+              alt="中央研究院資訊科學研究所"
+              width={312}
+              height={194}
+              className="py-[27.5px]"
+            />
+            <p className="max-w-[508px] leading-loose">
+              中央研究院資訊科學研究所於 1977 年開始設立籌備處，歷經五年籌備，
+              於 1982 年 9
+              月正式成立研究所，是中央研究院數理組十一個單位之一。目前編制內有
+              39 位研究人員，另外有 29 位博士後研究學者，將近 300
+              位專任之資訊技術人員與非全時之研究助理，支援資訊領域之研究與系統之開發。「件件工作，反映自我，凡經我手，必為佳作」是全體同仁一致秉持的工作信念，重視工作之卓越品質，發揮最佳綜效之團隊精神。
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <h2 className="text-h2 font-bold">財團法人開放文化基金會</h2>
+            <Image
+              src="https://placehold.co/439x194"
+              alt="中央研究院資訊科學研究所"
+              width={439}
+              height={194}
+              className="py-[27.5px]"
+            />
+            <p className="max-w-[509px] leading-loose">
+              開放文化基金會成立於 2014
+              年，由多個開源社群及活動組織共同發起，希望協助台灣蓬勃的開放社群，進一步促進開放源碼、開放資料、開放硬體等自由精神，能更廣泛的於各領域中應用，同時也協助政府、企業及非政府組織更能了解開源軟體的優勢、開放資料的重要，進而推廣開放協作的文化。
+              2015
+              年起我們除了支援本地社群主辦多場中大型活動，也和英國代表處、美國在台協會及世界銀行等單位共同舉辦各種主題講座，深耕台灣的開放文化並與國際交流。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 協辦單位 */}
     </div>
   );
 }
