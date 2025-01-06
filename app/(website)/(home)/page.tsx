@@ -1,11 +1,9 @@
 import { ReactNode } from "react";
 import heroImage from "./_assets/hero.png";
-import Link from "next/link";
-import LinkButton from "../_components/linkButton";
 
 export default function Page() {
   return (
-    <div className="mb-28 w-full leading-8 text-foreground">
+    <div className="w-full">
       <div
         style={{
           backgroundImage: `url(${heroImage.src})`,
@@ -146,5 +144,27 @@ function Section({
       </div>
       <div className="font-normal">{children}</div>
     </>
+  );
+}
+
+function Button({
+  link,
+  text,
+  className,
+  target,
+}: {
+  link: string;
+  text: string;
+  className?: string;
+  target?: string;
+}) {
+  return (
+    <a
+      href={link}
+      target={target ?? "_self"}
+      className={`text-nowrap rounded-full bg-primary p-2 px-6 text-center text-normal font-semibold text-black ${className} hover:brightness-110`}
+    >
+      {text}
+    </a>
   );
 }
