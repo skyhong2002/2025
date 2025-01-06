@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Inter } from "next/font/google";
-import "./cfp/globals.css";
+import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
