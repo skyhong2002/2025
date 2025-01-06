@@ -18,12 +18,10 @@ interface MenuItem {
 
 export default function Navbar({
   menuItems,
-  logoHref = "/cfp",
-  onMenuClick = () => {},
+  onMenuClick,
 }: {
   menuItems: MenuItem[];
-  logoHref?: string;
-  onMenuClick?: (prev: boolean) => void;
+  onMenuClick: (prev: boolean) => void;
 }) {
   const [showMenu, setShowMenu] = useState(false);
   const { scrollY } = useScroll();
