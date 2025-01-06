@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+
+import TicketSvg from "@/public/website/ticket.svg";
+
 export default function Page() {
   return (
     <div className="flex flex-col items-start justify-center gap-24">
@@ -20,7 +23,7 @@ export default function Page() {
           <div className="z-10 ml-[-1px] box-border hidden aspect-1/2 rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
           <div className="flex flex-col items-center justify-center md:w-3/12 md:py-10">
             <Image
-              src="/2025/website/ticket.svg"
+              src={TicketSvg.src}
               alt="ticket Icon"
               width={120}
               height={120}
