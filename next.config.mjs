@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/2025",
+  basePath: process.env.GHA_OWNER === "sitcon-tw" ? "/2025" : "",
   trailingSlash: true,
   distDir: "dist",
   images: {

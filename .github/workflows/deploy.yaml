@@ -2,13 +2,15 @@ name: Deploy
 
 on:
   push:
-    branches: main
+    branches: production
   workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - run: echo ::set-env name=GHA_OWNER::$(echo $GITHUB_REPOSITORY | awk -F / '{print $1}')
+        shell: bash
       - uses: actions/checkout@v4
       - name: Set timezone to Asia/Taipei
         uses: szenius/set-timezone@v1.2
