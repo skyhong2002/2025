@@ -5,7 +5,7 @@ import InstagramLogo from "./logos/instagram";
 import TelegramLogo from "./logos/telegram";
 import ThreadsLogo from "./logos/threads";
 import YoutubeLogo from "./logos/youtube";
-import SitconLogo from "./logos/sitcon";
+import SitconLogo from "../../_components/logos/sitcon";
 
 export default function Footer() {
   return (
