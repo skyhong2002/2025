@@ -5,7 +5,7 @@ export default function Footer() {
     { href: "/", text: "首頁" },
     { href: "/tickets/", text: "活動報名" },
     { href: "/traffic/", text: "交通方式" },
-    { href: "/sponsor/", text: "合作夥伴" },
+    // { href: "/sponsor/", text: "合作夥伴" },
   ];
   return <BaseFooter navigationLinks={navigationLinks} />;
 }
