@@ -1,4 +1,11 @@
-import BaseFooter from "@/app/_components/footer";
+import Link from "next/link";
+import FacebookLogo from "./logos/facebook";
+import FlickrLogo from "./logos/flickr";
+import InstagramLogo from "./logos/instagram";
+import TelegramLogo from "./logos/telegram";
+import ThreadsLogo from "./logos/threads";
+import YoutubeLogo from "./logos/youtube";
+import SitconLogo from "../../_components/logos/sitcon";
 
 export default function Footer() {
   const navigationLinks = [
