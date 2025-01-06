@@ -1,26 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-
-import TicketSvg from "@/public/website/ticket.svg";
-import LinkButton from "../../_components/linkButton";
-
 export default function Page() {
   return (
     <div className="flex flex-col items-start justify-center gap-24">
       <section id="RegisterInfo" className="flex flex-col items-start gap-4">
         <h1 className="text-h1-mobile font-bold md:text-h1">報名資訊</h1>
-        <p className="w-full leading-[200%] md:w-[80%]">
-        <p className="w-full leading-[200%] md:w-[80%]">
+        <p className="w-full leading-[200%] md:w-[70%]">
           SITCON
           年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助，若您也認同
           SITCON 的理念，歡迎支持我們。
         </p>
-        <LinkButton
-          link="https://sitcon.org/donate"
-          text="支持我們"
-          target="_blank"
-          className="mb-10"
-        />
+        <button className="flex h-[60px] w-[190px] items-center justify-center self-center rounded-full bg-primary text-black md:mb-10 md:w-[153px] md:self-start">
+          <Link className="" href="/tickets">
+            支持我們
+          </Link>
+        </button>
         {/* ticket 1 */}
         <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light px-2 py-10 md:flex-row md:rounded-none md:border md:px-0 md:py-0">
           <div className="z-10 ml-[-1px] box-border hidden aspect-1/2 rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
@@ -85,6 +79,9 @@ export default function Page() {
               <li className="listItem mt-4 md:mt-0 md:pl-[-22px]">
                 先到先審制，報名者需在 2025/01/21 23:59 前填寫申請表單。
                 先到先審制，報名者需在 2025/01/21 23:59 前填寫申請表單。
+              </li>
+              <li className="listItem mt-4 !pl-0 md:mt-0 md:pl-[-22px]">
+                申請資格及更詳細的申請說明，請參考 SITCON 2024 遠道而來票。
               </li>
             </ul>
           </div>
@@ -175,48 +172,32 @@ export default function Page() {
               className="ml-[-4px] md:mr-4 md:w-full"
             />
           </div>
+
           <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
       </section>
       <section
         id="SubmitInfo"
-        className="flex w-full flex-col items-start gap-4 leading-[200%] md:w-[80%]"
-        className="flex w-full flex-col items-start gap-4 leading-[200%] md:w-[80%]"
+        className="flex w-full flex-col items-start gap-4 leading-[200%] md:w-[70%]"
       >
         <h1 className="mb-8 text-h1-mobile font-bold md:text-h1">投稿資訊</h1>
         <p className="">
           SITCON
-          作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
-          不論是探討技術或輕鬆的分享，任何與資訊科技、電腦技術相關的講題，我們都非常歡迎。
-          作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
-          不論是探討技術或輕鬆的分享，任何與資訊科技、電腦技術相關的講題，我們都非常歡迎。
+          期望成為學生展現自己的舞台，如果你有想要與大家分享的經驗、技術或專案，我們歡迎任何與資訊或電腦軟硬體相關的講題。
         </p>
-        <p>SITCON 2025 預計徵求三種形式的稿件：</p>
+        <p>歡迎於 2024/01/24 前用以下形式的投搞</p>
+        <li>海報投稿：以靜態海報展出學生個人或團隊專案研究作品。</li>
+        <p>歡迎於 2024/01/20 前用以下形式的投搞（已截止）</p>
         <li>
-          一般議程：SITCON 2025 邀請您將您的精彩經歷以 Presentation 與 Espresso
-          兩種形式呈現。Presentation 想邀請您用 40
-          分鐘深入分享一個專案、技術或有趣的經歷，而 Espresso 則想挑戰您在 10
-          分鐘內精練的介紹一個主題的能力。無論是技術或經驗的分享，都歡迎投稿一般議程。
-          一般議程：SITCON 2025 邀請您將您的精彩經歷以 Presentation 與 Espresso
-          兩種形式呈現。Presentation 想邀請您用 40
-          分鐘深入分享一個專案、技術或有趣的經歷，而 Espresso 則想挑戰您在 10
-          分鐘內精練的介紹一個主題的能力。無論是技術或經驗的分享，都歡迎投稿一般議程。
+          一般議程：10 分鐘與 40 分鐘的議程，帶給會眾知識的洗禮與思想的壯遊。
         </li>
         <li>
-          開放式議程：如果您想呈現的主題更加獨特、創新，想跳脫講者對聽眾單向陳述式的演講，那開放式議程會是你的最好選擇！想帶一個實作的工作坊、和其他與會者一同討論特定議題、邀請社群的夥伴彼此分享經驗，或想以任何形式增加議程多元與互動性的稿件，都歡迎來挑戰開放式議程。今年開放式議程也提供
-          40 或 90 分鐘兩種時長，提供您更彈性的呈現方式。
-          開放式議程：如果您想呈現的主題更加獨特、創新，想跳脫講者對聽眾單向陳述式的演講，那開放式議程會是你的最好選擇！想帶一個實作的工作坊、和其他與會者一同討論特定議題、邀請社群的夥伴彼此分享經驗，或想以任何形式增加議程多元與互動性的稿件，都歡迎來挑戰開放式議程。今年開放式議程也提供
-          40 或 90 分鐘兩種時長，提供您更彈性的呈現方式。
+          開放式議程：40
+          分鐘的議程，不限定進行方式，歡迎任何非傳統、實現性質的形式進行此場議程。
         </li>
-        <li>
-          海報展：海報展希望以靜態海報呈現您個人或團隊的專案或研究成果，作品只要以資訊相關領域為主，不限語言都歡迎投稿。我們期望透過此方式讓更多學生能有展現自我的機會，同時為會眾帶來不同形式的學習與交流。海報展也能讓您有和與會者直接針對您的作品互動的機會，如果希望作品能得到更多回饋，歡迎投稿海報展！
-        </li>
-        <LinkButton
-          text="了解更多"
-          className="leading-normal"
-          link={"https://sitcon.org/2025/cfp"}
-          target="_blank"
-        />
+        <button className="mt-6 flex h-[60px] w-[190px] items-center justify-center self-center rounded-full bg-primary p-4 text-normal text-black md:w-[153px] md:self-start">
+          了解更多
+        </button>
       </section>
     </div>
   );

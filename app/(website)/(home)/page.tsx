@@ -1,7 +1,5 @@
 import { ReactNode } from "react";
 import heroImage from "./_assets/hero.png";
-import Link from "next/link";
-import LinkButton from "../_components/linkButton";
 
 export default function Page() {
   return (
@@ -11,7 +9,7 @@ export default function Page() {
           backgroundImage: `url(${heroImage.src})`,
           backgroundSize: "cover",
         }}
-        className="mx-auto mb-[-25%] aspect-[3/2] w-full max-w-[1920px] bg-top bg-no-repeat min-[1900px]:mb-[-20%] min-[2300px]:mb-[-15%]"
+        className="relative aspect-[2/3] w-full bg-top bg-no-repeat"
       >
         <div className="absolute left-0 right-0 top-1/2 px-10 md:left-10 md:right-auto md:w-2/3"></div>
       </div>
@@ -39,25 +37,22 @@ export default function Page() {
             </h2>
           </div>
           <div className="mt-12 flex flex-col gap-7">
-            <p className="text-center text-normal font-bold md:text-xl">
+            <p className="text-normal font-bold md:text-xl">
               Il s&apos;agit toujours de libérer la vie là où elle est
               prisonnière <br /> 這總是關乎到解放生命被禁錮的生命
             </p>
             <p className="brightness-90">
-              「Line of
-              Flight」是當代文學裡的一個概念，由法國的思想家德勒茲提出，是指在日常社會結構中找到一個裂縫或缺口，並在現有框架下挖掘出新的可能性。而
-              Lines，則代表了多條可能的逃逸路徑。我們可以不只有一種選擇或方法，而是有各種突破框架、追求創新和探索新可能性的方向。
+              「Lines of
+              Flight」（中譯：逃逸路線）是當代文學裡的一個概念，由法國的思想家德勒茲提出。所謂的「逃逸路線」，是指在日常社會結構中找到一個裂縫或缺口，並在現有框架下挖掘出新的可能性。
             </p>
             <p className="brightness-90">
               正如我們所處的這個時代，人類的智慧打造出前所未見的世界，在便捷、快速等多種科技紅利的包圍下，我們也看見了資訊流通導致的社群成癮，看見在社會價值觀裡的畫地自限，看見螢幕構築出那若即若離的疏離感，這一切彷彿科技建構出的無形枷鎖，將我們束縛其中。
             </p>
-            <div className="flex items-center justify-center gap-2 text-center text-normal font-bold md:text-xl">
-              <span>——</span>
-              <span>在這樣一個開放的年代，為什麼好像變得不再自由？</span>
-              <span>——</span>
-            </div>
+            <p className="text-normal font-bold md:text-xl">
+              在這樣一個開放的年代，為什麼好像變得不再自由？
+            </p>
             <p className="brightness-90">
-              作為學生，我們處在一個迷惘卻充滿熱血的年紀，可以試圖去尋找社會中的裂隙，並透過「自我覺察」來建立屬於自己的價值觀與信念。無論是發掘在螢幕後方的我們，被社群媒體影響的同時遺漏了什麼；或是如何不為了合群或符合社會期待，而去隱藏自己的真實想法以此從眾；甚至是勇敢地成為先鋒，以資訊結合不同領域，打造出多元化的社群生態。讓我們帶著自我覺察的心，去開創一條屬於這個時代的逃逸路線。
+              作為學生，我們處在一個迷惘卻充滿熱血的年紀，可以試圖去尋找社會中的裂隙，並透過「自我覺察」來建立屬於自己的價值觀與信念。無論是發掘在螢幕後方的我們，被社群媒體影響的同時遺漏了什麼；或是如何不為了合群或符合社會期待，而去隱藏自己的真實想法以此從眾；甚至是勇敢地成為先鋒，以資訊結合不同領域，打造出多元化的社群生態。讓我們帶著自我覺察的心，去開創一條屬於這個時代的道路。
             </p>
           </Section>
         </div>
@@ -103,5 +98,27 @@ function Section({
       </div>
       <div className="font-normal">{children}</div>
     </>
+  );
+}
+
+function Button({
+  link,
+  text,
+  className,
+  target,
+}: {
+  link: string;
+  text: string;
+  className?: string;
+  target?: string;
+}) {
+  return (
+    <a
+      href={link}
+      target={target ?? "_self"}
+      className={`text-nowrap rounded-full bg-primary p-2 px-6 text-center text-normal font-semibold text-black ${className} hover:brightness-110`}
+    >
+      {text}
+    </a>
   );
 }
