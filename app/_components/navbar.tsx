@@ -18,10 +18,10 @@ interface MenuItem {
 
 export default function Navbar({
   menuItems,
-  onMenuClick = () => {},
+  onMenuClick,
 }: {
   menuItems: MenuItem[];
-  onMenuClick?: (prev: boolean) => void;
+  onMenuClick: (prev: boolean) => void;
 }) {
   const [showMenu, setShowMenu] = useState(false);
   const { scrollY } = useScroll();
