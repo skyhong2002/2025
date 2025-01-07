@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import TicketSvg from "@/public/website/ticket.svg";
+import LinkButton from "../../_components/linkButton";
 
 export default function Page() {
   return (
@@ -13,11 +14,12 @@ export default function Page() {
           年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助，若您也認同
           SITCON 的理念，歡迎支持我們。
         </p>
-        <button className="flex h-[60px] w-[190px] items-center justify-center self-center rounded-full bg-primary text-black md:mb-10 md:w-[153px] md:self-start">
-          <Link className="" href="/tickets">
-            支持我們
-          </Link>
-        </button>
+        <LinkButton
+          link="https://sitcon.org/donate"
+          text="支持我們"
+          target="_blank"
+          className="mb-10"
+        />
         {/* ticket 1 */}
         <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light py-10 md:flex-row md:rounded-none md:border md:py-0">
           <div className="z-10 ml-[-1px] box-border hidden aspect-1/2 rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
@@ -52,14 +54,12 @@ export default function Page() {
             <div className="dashLine" />
           </div>
           <div className="mt-4 flex items-center justify-center md:w-2/12">
-            <Link
-              href={"https://sitcon.kktix.cc/events/sitcon2025"}
+            <LinkButton
+              link={"https://sitcon.kktix.cc/events/sitcon2025"}
               target="_blank"
-            >
-              <button className="ml-[-4px] mr-4 flex h-[60px] w-full items-center justify-center rounded-full bg-primary p-4 text-normal text-black">
-                KKTIX 報名連結
-              </button>
-            </Link>
+              text="立即取得"
+              className="ml-[-4px] mr-4 md:w-full"
+            />
           </div>
           <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
@@ -88,15 +88,12 @@ export default function Page() {
             <div className="dashLine" />
           </div>
           <div className="mt-4 flex items-center justify-center md:w-2/12">
-            <Link
-              className="link"
-              href={"https://hackmd.io/@SITCON/H18WacxQ1x"}
+            <LinkButton
+              link={"https://hackmd.io/@SITCON/H18WacxQ1x"}
               target="_blank"
-            >
-              <button className="ml-[-4px] mr-4 flex h-[60px] w-[190px] items-center justify-center rounded-full bg-primary p-4 text-normal text-black md:w-full">
-                立即取得
-              </button>
-            </Link>
+              text="立即取得"
+              className="ml-[-4px] mr-4 md:w-full"
+            />
           </div>
 
           <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
@@ -147,11 +144,12 @@ export default function Page() {
             <div className="dashLine" />
           </div>
           <div className="mt-4 flex items-center justify-center md:w-2/12">
-            <Link href={"https://ocf.tw/p/oscvpass/"} target="_blank">
-              <button className="ml-[-4px] mr-4 flex h-[60px] w-[190px] items-center justify-center rounded-full bg-primary p-4 text-normal text-black md:w-full">
-                立即取得
-              </button>
-            </Link>
+            <LinkButton
+              link={"https://ocf.tw/p/oscvpass/"}
+              target="_blank"
+              text="立即取得"
+              className="ml-[-4px] mr-4 md:w-full"
+            />
           </div>
           <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
@@ -181,11 +179,12 @@ export default function Page() {
           開放式議程：如果您想呈現的主題更加獨特、創新，想跳脫講者對聽眾單向陳述式的演講，那開放式議程會是你的最好選擇！想帶一個實作的工作坊、和其他與會者一同討論特定議題、邀請社群的夥伴彼此分享經驗，或想以任何形式增加議程多元與互動性的稿件，都歡迎來挑戰開放式議程。今年開放式議程也提供
           40 或 90 分鐘兩種時長，提供您更彈性的呈現方式。
         </li>
-        <Link href={"https://sitcon.org/2025/cfp"} target="_blank">
-          <button className="mt-6 flex h-[60px] w-[190px] items-center justify-center self-center rounded-full bg-primary p-4 text-normal text-black md:w-[153px] md:self-start">
-            了解更多
-          </button>
-        </Link>
+        <LinkButton
+          text="了解更多"
+          className="leading-normal"
+          link={"https://sitcon.org/2025/cfp"}
+          target="_blank"
+        />
       </section>
     </div>
   );
