@@ -7,7 +7,7 @@ import { useNavbar } from "@/app/cfp/_components/navbar-context";
 export default function TableOfContentMobile({
   theme = "light",
   sections = [],
-  submitUrl,
+  submitUrl = "",
 }: {
   theme: "red" | "light";
   sections: { id: string; title: string }[];
@@ -35,23 +35,25 @@ export default function TableOfContentMobile({
   return (
     <>
       <nav className="relative md:hidden">
-        <AnimatePresence>
-          {!isNavbarExpanded && (
-            <motion.a
-              key="submit"
-              href={submitUrl}
-              target="_blank"
-              initial={{ scale: 0.95, opacity: 0, filter: "blur(0.5em)" }}
-              animate={{ scale: 1, opacity: 1, filter: "blur(0)" }}
-              exit={{ scale: 0.95, opacity: 0, filter: "blur(0.5em)" }}
-              transition={{ duration: 0.25 }}
-              whileTap={{ scale: 0.95 }}
-              className={`fixed bottom-2 left-2 right-2 z-30 rounded-md bg-background-light p-3 text-center text-lg shadow-2xl shadow-black brightness-150`}
-            >
-              立刻投稿
-            </motion.a>
-          )}
-        </AnimatePresence>
+        {submitUrl.length != 0 && (
+          <AnimatePresence>
+            {!isNavbarExpanded && (
+              <motion.a
+                key="submit"
+                href={submitUrl}
+                target="_blank"
+                initial={{ scale: 0.95, opacity: 0, filter: "blur(0.5em)" }}
+                animate={{ scale: 1, opacity: 1, filter: "blur(0)" }}
+                exit={{ scale: 0.95, opacity: 0, filter: "blur(0.5em)" }}
+                transition={{ duration: 0.25 }}
+                whileTap={{ scale: 0.95 }}
+                className={`fixed bottom-2 left-2 right-2 z-30 rounded-md bg-background-light p-3 text-center text-lg shadow-2xl shadow-black brightness-150`}
+              >
+                立刻投稿
+              </motion.a>
+            )}
+          </AnimatePresence>
+        )}
         <div
           onClick={() => setShowDropdown((prev) => !prev)}
           className={`${theme === "light" ? "bg-background-light" : "bg-foreground"} flex h-[40px] items-center justify-between rounded-xl px-4 transition active:scale-95`}
