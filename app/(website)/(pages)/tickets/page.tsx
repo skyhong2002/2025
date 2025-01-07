@@ -57,8 +57,8 @@ export default function Page() {
             <div className="dashLine" />
           </div>
           <div className="mt-4 flex items-center justify-center md:w-2/12">
-            <Link
-              href={"https://sitcon.kktix.cc/events/sitcon2025"}
+            <LinkButton
+              link={"https://sitcon.kktix.cc/events/sitcon2025"}
               target="_blank"
               text="立即取得"
               className="ml-[-4px] md:mr-4 md:w-full"
@@ -92,9 +92,8 @@ export default function Page() {
             <div className="dashLine" />
           </div>
           <div className="mt-4 flex items-center justify-center md:w-2/12">
-            <Link
-              className="link"
-              href={"https://hackmd.io/@SITCON/H18WacxQ1x"}
+            <LinkButton
+              link={"https://hackmd.io/@SITCON/H18WacxQ1x"}
               target="_blank"
               text="立即取得"
               className="ml-[-4px] md:mr-4 md:w-full"
