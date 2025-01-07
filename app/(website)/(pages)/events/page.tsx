@@ -169,7 +169,7 @@ export default function Page() {
             </p>
             <div className="mt-4 flex md:justify-end">
               <Link
-                className="flex h-[40px] w-full sm:w-[190px] items-center justify-center self-center rounded-full bg-[#6CA7D2] text-black transition hover:bg-foreground max-[1024px]:active:scale-95 max-sm:px-3 md:w-[153px] md:self-start min-[1024px]:active:bg-primary"
+                className="flex h-[40px] w-full items-center justify-center self-center rounded-full bg-[#6CA7D2] text-black transition hover:bg-foreground max-[1024px]:active:scale-95 max-sm:px-3 sm:w-[190px] md:w-[153px] md:self-start min-[1024px]:active:bg-primary"
                 href="/poster"
                 target="_blank"
               >
@@ -183,9 +183,7 @@ export default function Page() {
           className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
         >
           <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">
-              咖啡廳
-            </h3>
+            <h3 className="mb-4 text-[22px] font-bold sm:hidden">咖啡廳</h3>
             <img
               className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
               src="/website/guide.png"
@@ -193,9 +191,7 @@ export default function Page() {
             />
           </div>
           <div className="col-span-2 sm:p-4">
-            <h3 className="text-[26px] font-normal max-sm:hidden">
-              咖啡廳
-            </h3>
+            <h3 className="text-[26px] font-normal max-sm:hidden">咖啡廳</h3>
             <p className="mt-4 leading-[200%]">
               想與來自四面八方的與會者進行交流嗎？還是想繼續討論剛剛精彩的議程嗎？抑或是想要有個地方好好休息呢？那麼歡迎來到
               SITCON
@@ -208,9 +204,7 @@ export default function Page() {
           className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
         >
           <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">
-              開放式議程
-            </h3>
+            <h3 className="mb-4 text-[22px] font-bold sm:hidden">開放式議程</h3>
             <img
               className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
               src="/website/guide.png"
@@ -235,9 +229,7 @@ export default function Page() {
           className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
         >
           <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">
-              大地遊戲
-            </h3>
+            <h3 className="mb-4 text-[22px] font-bold sm:hidden">大地遊戲</h3>
             <img
               className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
               src="/website/guide.png"
@@ -245,9 +237,7 @@ export default function Page() {
             />
           </div>
           <div className="col-span-2 sm:p-4">
-            <h3 className="text-[26px] font-normal max-sm:hidden">
-              大地遊戲
-            </h3>
+            <h3 className="text-[26px] font-normal max-sm:hidden">大地遊戲</h3>
             <p className="mt-4 leading-[200%]">
               第一次參加
               SITCON，還沒進入狀況嗎？今年有各式各樣的活動，除了精彩議程，還有靜態海報展、咖啡廳和攤位等等，還摸不著頭緒要先去哪裡逛逛嗎？還在猶豫該怎麼規劃最充實的時間利用嗎？別擔心！快點進
