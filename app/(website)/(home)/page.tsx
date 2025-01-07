@@ -40,9 +40,14 @@ export default function Page() {
           <p className="brightness-90">
             作為學生，我們處在一個迷惘卻充滿熱血的年紀，可以試圖去尋找社會中的裂隙，並透過「自我覺察」來建立屬於自己的價值觀與信念。無論是發掘在螢幕後方的我們，被社群媒體影響的同時遺漏了什麼；或是如何不為了合群或符合社會期待，而去隱藏自己的真實想法以此從眾；甚至是勇敢地成為先鋒，以資訊結合不同領域，打造出多元化的社群生態。讓我們帶著自我覺察的心，去開創一條屬於這個時代的逃逸路線。
           </p>
-          <div className="my-10 flex justify-end gap-5">
-            <Button link="tickets" text="報名活動" />
+          <div className="my-10 flex gap-5 md:justify-end">
             <Button
+              className="w-full md:w-auto"
+              link="tickets"
+              text="報名活動"
+            />
+            <Button
+              className="w-full md:w-auto"
               link="https://sitcon.org/donate"
               text="支持我們"
               target="_blank"
