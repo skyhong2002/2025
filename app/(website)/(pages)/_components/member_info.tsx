@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect } from "react";
 import {
   faArrowUpRightFromSquare,
   faEnvelope,
@@ -68,6 +69,38 @@ function getIcon(website: string | undefined) {
 export default function MemberInfo(memberObj: Member) {
   const member = memberObj.member;
   const pop_icon = getIcon(member.website);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const rainbowFilter = [
+    "drop-shadow(0px 0px 5px red)",
+    "drop-shadow(0px 0 5px orange)",
+    "drop-shadow(0px 0 5px yellow)",
+    "drop-shadow(0px 0 5px green)",
+    "drop-shadow(0px 0px 5px rgba(52,189,235,70))",
+    "drop-shadow(0px 0px 5px rgba(207,52,235,70))",
+    "drop-shadow(0px 0px 5px red)",
+    "drop-shadow(0px 0 5px orange)",
+    "drop-shadow(0px 0 5px yellow)",
+    "drop-shadow(0px 0 5px green)",
+    "drop-shadow(0px 0px 5px rgba(52,189,235,70))",
+    "drop-shadow(0px 0px 5px rgba(207,52,235,70))",
+    "drop-shadow(0px 0px 5px red)",
+    "drop-shadow(0px 0 5px orange)",
+    "drop-shadow(0px 0 5px yellow)",
+    "drop-shadow(0px 0 5px green)",
+    "drop-shadow(0px 0px 5px rgba(52,189,235,70))",
+    "drop-shadow(0px 0px 5px rgba(207,52,235,70))",
+    "drop-shadow(0px 0px 5px rgba(201,235,255,70))",
+  ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const outside = {
     notOnHover: {
@@ -76,44 +109,50 @@ export default function MemberInfo(memberObj: Member) {
     },
     qianOnHover: {
       scale: 1.2,
-      filter: [
-        "drop-shadow(0px 0px 5px red)",
-        "drop-shadow(0px 0 5px orange)",
-        "drop-shadow(0px 0 5px yellow)",
-        "drop-shadow(0px 0 5px green)",
-        "drop-shadow(0px 0px 5px rgba(52,189,235,70))",
-        "drop-shadow(0px 0px 5px rgba(207,52,235,70))",
-        "drop-shadow(0px 0px 5px red)",
-        "drop-shadow(0px 0 5px orange)",
-        "drop-shadow(0px 0 5px yellow)",
-        "drop-shadow(0px 0 5px green)",
-        "drop-shadow(0px 0px 5px rgba(52,189,235,70))",
-        "drop-shadow(0px 0px 5px rgba(207,52,235,70))",
-        "drop-shadow(0px 0px 5px red)",
-        "drop-shadow(0px 0 5px orange)",
-        "drop-shadow(0px 0 5px yellow)",
-        "drop-shadow(0px 0 5px green)",
-        "drop-shadow(0px 0px 5px rgba(52,189,235,70))",
-        "drop-shadow(0px 0px 5px rgba(207,52,235,70))",
-        "drop-shadow(0px 0px 5px rgba(201,235,255,70))",
-      ],
+      filter: rainbowFilter,
+    },
+    qianOnTap: {
+      scale: 1.3,
+      filter: rainbowFilter,
+      duration: 0.1,
+    },
+    qianOnClick: {
+      scale: 1.08,
+      filter: rainbowFilter,
     },
     onHover: {
       scale: 1.2,
-      filter: "drop-shadow(0px 0px 5px rgba(201,235,255,70))",
+      filter: "drop-shadow(0px 0px 7px rgba(201,235,255,70))",
+    },
+    onClick: {
+      scale: 1.08,
+      filter: "drop-shadow(0px 0px 4px rgba(201,235,255,70))",
+    },
+    onTap: {
+      scale: 1.3,
+      filter: "drop-shadow(0px 0px 7px rgba(201,235,255,70))",
+      duration: 0.1,
     },
   };
 
   const pictureBlur = {
     onHover: { opacity: 1, filter: "blur(0.5em) brightness(0.3)" },
     qianOnHover: { opacity: 1, filter: "blur(0.5em) brightness(0.3)" },
+    qianOnTap: { opacity: 1, filter: "blur(0.5em) brightness(0.3)" },
+    qianOnClick: { opacity: 1, filter: "blur(0.5em) brightness(0.3)" },
     notOnHover: { opacity: 1, filter: "blur(0) brightness(1)" },
+    onClick: { opacity: 1, filter: "blur(0.5em) brightness(0.3)" },
+    onTap: { opacity: 1, filter: "blur(0.5em) brightness(0.3)" },
   };
 
   const icon = {
     onHover: { opacity: 1 },
     qianOnHover: { opacity: 1 },
+    qianOnTap: { opacity: 1 },
+    qianOnClick: { opacity: 1 },
     notOnHover: { opacity: 0 },
+    onClick: { opacity: 1 },
+    onTap: { opacity: 1 },
   };
 
   return (
@@ -123,6 +162,15 @@ export default function MemberInfo(memberObj: Member) {
           <motion.button
             initial="notOnHover"
             whileHover={member.rainbow ? "qianOnHover" : "onHover"}
+            whileTap={
+              windowWidth <= 768
+                ? member.rainbow
+                  ? "qianOnTap"
+                  : "onTap"
+                : member.rainbow
+                  ? "qianOnClick"
+                  : "onClick"
+            }
             variants={outside}
             onClick={() => window.open(member.website, "_blank")}
             className={`relative h-20 w-20 overflow-hidden rounded-full`}
@@ -134,8 +182,7 @@ export default function MemberInfo(memberObj: Member) {
             />
             <motion.div
               variants={icon}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-white"
-              style={{ fontSize: "30px" }}
+              className="absolute inset-0 transform text-2xl text-white sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:text-3xl"
             >
               <FontAwesomeIcon icon={pop_icon} />
             </motion.div>
@@ -145,7 +192,15 @@ export default function MemberInfo(memberObj: Member) {
             initial="notOnHover"
             whileHover={member.rainbow ? "qianOnHover" : "onHover"}
             variants={outside}
-            onClick={() => window.open(member.website, "_blank")}
+            whileTap={
+              windowWidth <= 768
+                ? member.rainbow
+                  ? "qianOnTap"
+                  : "onTap"
+                : member.rainbow
+                  ? "qianOnClick"
+                  : "onClick"
+            }
             className={`relative h-20 w-20 overflow-hidden rounded-full`}
             src={`https://gravatar.com/avatar/${member.email}?s=512&d=https://sitcon.org/2022/imgs/deafult_avatar.jpg&r=g`}
           />
