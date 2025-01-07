@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import heroImage from "./_assets/hero.png";
 import Link from "next/link";
+import LinkButton from "../_components/linkButton";
 
 export default function Page() {
   return (
@@ -41,12 +42,12 @@ export default function Page() {
             作為學生，我們處在一個迷惘卻充滿熱血的年紀，可以試圖去尋找社會中的裂隙，並透過「自我覺察」來建立屬於自己的價值觀與信念。無論是發掘在螢幕後方的我們，被社群媒體影響的同時遺漏了什麼；或是如何不為了合群或符合社會期待，而去隱藏自己的真實想法以此從眾；甚至是勇敢地成為先鋒，以資訊結合不同領域，打造出多元化的社群生態。讓我們帶著自我覺察的心，去開創一條屬於這個時代的逃逸路線。
           </p>
           <div className="my-10 flex gap-5 md:justify-end">
-            <Button
+            <LinkButton
               className="w-full md:w-auto"
               link="tickets"
               text="報名活動"
             />
-            <Button
+            <LinkButton
               className="w-full md:w-auto"
               link="https://sitcon.org/donate"
               text="支持我們"
@@ -97,19 +98,19 @@ export default function Page() {
           </Section>
         </div>
         <div className="my-10 flex flex-col justify-end gap-5 md:flex-row">
-          <Button
+          <LinkButton
             link="https://forms.gle/rr93tuxJ9m9uStDf9"
             target="_blank"
             text="預約跳坑表單"
           />
           <div className="flex gap-5">
-            <Button
+            <LinkButton
               link="https://groups.google.com/g/sitcon"
               target="_blank"
               text="郵件論壇"
               className="w-full md:w-auto"
             />
-            <Button
+            <LinkButton
               link="https://gitlab.com/sitcon-tw/2025/board/-/boards"
               text="查看 GitLab"
               target="_blank"
@@ -139,27 +140,5 @@ function Section({
       </div>
       <div className="font-normal">{children}</div>
     </>
-  );
-}
-
-function Button({
-  link,
-  text,
-  className,
-  target,
-}: {
-  link: string;
-  text: string;
-  className?: string;
-  target?: string;
-}) {
-  return (
-    <a
-      href={link}
-      target={target ?? "_self"}
-      className={`text-nowrap rounded-full bg-primary p-2 px-6 text-center text-normal font-semibold text-black ${className} hover:brightness-110`}
-    >
-      {text}
-    </a>
   );
 }
