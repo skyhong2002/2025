@@ -1,7 +1,7 @@
 "use client";
 
 import TableOfContent from "@/app/cfp/(submission)/_components/table-of-content";
-// import TableOfContentMobile from "@/app/cfp/(submission)/_components/table-of-content-mobile";
+import TableOfContentMobile from "@/app/cfp/(submission)/_components/table-of-content-mobile";
 import staffJson from "./staff.json";
 import Link from "next/link";
 import GroupInfo from "../_components/group_info";
@@ -26,26 +26,28 @@ export default function Page() {
           若你對參與 SITCON 年會的籌備有興趣，歡迎填寫跳坑表單或是關注 SITCON
           的郵件論壇，明年的籌備開始時，你就會收到相關的資訊！
         </p>
-        <div className="mb-4 flex flex-row gap-6">
+        <div className="mb-8 flex flex-row gap-6 max-sm:grid max-sm:grid-cols-2">
           <Link
-            className="flex h-[60px] w-[190px] items-center justify-center self-center rounded-full bg-primary text-black transition hover:bg-foreground max-[1024px]:active:scale-95 max-sm:px-3 md:mb-10 md:w-[153px] md:self-start min-[1024px]:active:bg-primary"
+            className="flex h-[60px] w-full items-center justify-center self-center rounded-full bg-primary text-black transition hover:bg-foreground max-[1024px]:active:scale-95 max-sm:px-3 md:mb-10 md:w-[153px] md:self-start min-[1024px]:active:bg-primary"
             href="https://forms.gle/rr93tuxJ9m9uStDf9"
             target="_blank"
           >
             跳坑表單
           </Link>
           <Link
-            className="flex h-[60px] w-[190px] items-center justify-center self-center rounded-full bg-primary text-black transition hover:bg-foreground max-[1024px]:active:scale-95 max-sm:px-3 md:mb-10 md:w-[153px] md:self-start min-[1024px]:active:bg-primary"
+            className="flex h-[60px] w-full items-center justify-center self-center rounded-full bg-primary text-black transition hover:bg-foreground max-[1024px]:active:scale-95 max-sm:px-3 md:mb-10 md:w-[153px] md:self-start min-[1024px]:active:bg-primary"
             href="https://groups.google.com/g/sitcon"
             target="_blank"
           >
             郵件論壇
           </Link>
         </div>
-        {/* <TableOfContentMobile theme="light" sections={sections} submitUrl="" /> */}
-        {staffJson.map((group) => (
-          <GroupInfo key={group.group} group={group} />
-        ))}
+        <TableOfContentMobile theme="light" sections={sections} submitUrl="" />
+        <div className="mt-4">
+          {staffJson.map((group) => (
+            <GroupInfo key={group.group} group={group} />
+          ))}
+        </div>
       </div>
       <TableOfContent theme="light" sections={sections} submitUrl="" />
     </div>
