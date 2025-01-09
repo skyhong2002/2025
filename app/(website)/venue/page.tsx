@@ -20,13 +20,19 @@ export default function Page() {
         id="address"
         className="flex w-full flex-col items-center gap-3 font-bold"
       >
-        <div className="flex text-left w-full justify-end">
-          <h1 className="self-start text-h1-mobile font-bold md:text-h1 flex-none">
+        <div className="flex w-full justify-end text-left">
+          <h1 className="flex-none self-start text-h1-mobile font-bold md:text-h1">
             會場地圖
           </h1>
-          <div className="flex flex-1 ml-4">
-            <Image src={"/2025/icon/caution.svg"} width={30} height={30} alt="caution icon" className="my-auto" />
-            <p className="my-auto font-bold text-xl pl-1">緊急避難圖</p>
+          <div className="ml-4 flex flex-1">
+            <Image
+              src={"/2025/icon/caution.svg"}
+              width={30}
+              height={30}
+              alt="caution icon"
+              className="my-auto"
+            />
+            <p className="my-auto pl-1 text-xl font-bold">緊急避難圖</p>
           </div>
         </div>
       </section>
@@ -41,8 +47,9 @@ export default function Page() {
               }}
               key={option.value}
               onClick={() => setFloor(option.value)}
-              className={`flex h-[60px] flex-grow items-center justify-center rounded-xl text-black ${Floor === option.value ? "bg-[#B9D3E6]" : "bg-[#DEE6EB]"
-                }`}
+              className={`flex h-[60px] flex-grow items-center justify-center rounded-xl text-black ${
+                Floor === option.value ? "bg-[#B9D3E6]" : "bg-[#DEE6EB]"
+              }`}
             >
               {option.label}
             </motion.button>
