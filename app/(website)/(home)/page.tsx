@@ -11,7 +11,7 @@ export default function Page() {
           backgroundImage: `url(${heroImage.src})`,
           backgroundSize: "cover",
         }}
-        className="relative -mb-[50%] aspect-[2/3] w-full bg-top bg-no-repeat"
+        className="-mb-[50%] aspect-[2/3] w-full bg-top bg-no-repeat"
       >
         <div className="absolute left-0 right-0 top-1/2 px-10 md:left-10 md:right-auto md:w-2/3"></div>
       </div>
