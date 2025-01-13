@@ -21,7 +21,7 @@ export default function Page() {
             <LinkButton
               className="w-full md:w-auto"
               link="tickets"
-              text="報名活動"
+              text="活動報名"
             />
             <LinkButton
               className="w-full md:w-auto"
