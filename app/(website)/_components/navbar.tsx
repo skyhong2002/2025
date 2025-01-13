@@ -6,6 +6,7 @@ export default function Navbar() {
   return (
     <>
       <BaseNavbar
+        logoHref="/"
         menuItems={[
           { link: "/", label: "首頁" },
           { link: "/tickets/", label: "活動報名" },
