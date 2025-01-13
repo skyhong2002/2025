@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 export default function LinkButton({
   link,
   text,
@@ -13,7 +15,10 @@ export default function LinkButton({
     <a
       href={link}
       target={target ?? "_self"}
-      className={`text-nowrap rounded-full bg-primary p-3 px-6 text-center text-normal font-bold text-black ${className} hover:brightness-110`}
+      className={cn(
+        `text-nowrap rounded-full bg-primary p-3 px-6 text-center text-normal font-bold text-black hover:brightness-110`,
+        className,
+      )}
     >
       {text}
     </a>
