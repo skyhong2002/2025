@@ -18,9 +18,11 @@ interface MenuItem {
 
 export default function Navbar({
   menuItems,
+  logoHref = "/cfp",
   onMenuClick = () => {},
 }: {
   menuItems: MenuItem[];
+  logoHref?: string;
   onMenuClick?: (prev: boolean) => void;
 }) {
   const [showMenu, setShowMenu] = useState(false);
@@ -51,7 +53,7 @@ export default function Navbar({
       >
         <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
           <ul className="relative flex w-full items-center justify-between p-4 max-[750px]:justify-center">
-            <Link href="/cfp">
+            <Link href={logoHref}>
               <SitconLogo className="text-foreground" />
             </Link>
             <ul className="flex items-center justify-end gap-8 text-foreground max-[750px]:hidden">
