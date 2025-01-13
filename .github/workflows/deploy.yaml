@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
     steps:
       - run: echo ::set-env name=GHA_OWNER::$(echo $GITHUB_REPOSITORY | awk -F / '{print $1}')
         shell: bash
