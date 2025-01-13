@@ -17,11 +17,11 @@ const config: Config = {
         h1: "48px",
         h2: "32px",
         h3: "24px",
-        normal: "16px",
+        normal: "18px",
         "h1-mobile": "30px",
         "h2-mobile": "24px",
         "h3-mobile": "20px",
-        "normal-mobile": "16px",
+        "normal-mobile": "18px",
       },
       colors: {
         blue: "#52599F",
