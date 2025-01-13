@@ -13,7 +13,7 @@ export default function LinkButton({
     <a
       href={link}
       target={target ?? "_self"}
-      className={`text-nowrap rounded-full bg-primary p-3 px-6 text-center text-normal text-black ${className} hover:brightness-110`}
+      className={`text-nowrap rounded-full bg-primary p-3 px-6 text-center text-normal font-bold text-black ${className} hover:brightness-110`}
     >
       {text}
     </a>
