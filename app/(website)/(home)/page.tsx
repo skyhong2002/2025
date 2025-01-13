@@ -16,15 +16,15 @@ export default function Page() {
         <div className="absolute left-0 right-0 top-1/2 px-10 md:left-10 md:right-auto md:w-2/3"></div>
       </div>
       <div className="flex justify-center">
-        <div className="flex w-full max-w-[90%] flex-col justify-center py-40 lg:max-w-[840px] desktop:max-w-[1120px]">
+        <div className="flex w-full max-w-[90%] flex-col justify-center px-4 py-40 lg:max-w-[840px] desktop:max-w-[1120px]">
           <div className="my-10 flex gap-5 md:justify-end">
             <LinkButton
-              className="w-full md:w-auto"
+              className="w-full px-12 py-3 text-xl md:w-auto"
               link="tickets"
               text="活動報名"
             />
             <LinkButton
-              className="w-full md:w-auto"
+              className="w-full px-12 py-3 text-xl md:w-auto"
               link="https://sitcon.org/donate"
               text="支持我們"
               target="_blank"
