@@ -40,7 +40,7 @@ const roomStyle = (room: string, broadcast: string[] | null) => {
         return "col-start-6 col-end-6";
     }
   } else if (broadcast.length === 5) {
-    return "col-span-5";
+    return "col-start-2 col-end-7";
   } else {
   }
 };
@@ -60,7 +60,12 @@ export default function DesktopAgenda() {
           index === 0 || sessions.start !== data.sessions[index - 1].start;
         return (
           <React.Fragment key={index}>
-            {showTime && <div>{timeRender(sessions.start)}</div>}
+            {showTime && (
+              <div className="relative">
+                <p>{timeRender(sessions.start)}</p>
+                <div className=""></div>
+              </div>
+            )}
             <div
               className={`rounded-lg border p-4 text-center ${sessionType(sessions.type)} ${roomStyle(sessions.room, sessions.broadcast)}`}
             >
