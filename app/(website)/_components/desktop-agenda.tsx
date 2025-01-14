@@ -1,7 +1,7 @@
 import React from "react";
 import data from "@/app/(website)/_data/agenda.json";
 // import timeRender from "@/app/(website)/_utils/time-render";
-import SessionCard from "./SessionCard";
+import SessionCard from "@/app/(website)/_components/SessionCard";
 
 // const sessionType = (type: string) => {
 //   switch (type) {
