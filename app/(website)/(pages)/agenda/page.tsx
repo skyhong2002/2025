@@ -4,7 +4,7 @@ import MobileAgenda from "@/app/(website)/_components/mobile-agenda";
 export default function Page() {
   return (
     <>
-      <h1 className="text-h1-mobile text-white md:text-h1">議程表</h1>
+      <h1 className="text-h1-mobile text-white md:text-h1">年會議程表</h1>
       <div className="mt-4">
         <div className="hidden md:block">
           <DesktopAgenda />
