@@ -1,17 +1,20 @@
+"use client";
 import data from "@/app/(website)/_data/agenda.json";
 import SessionCard from "@/app/(website)/_components/SessionCard";
 import timeRender from "@/app/(website)/_utils/time-render";
+import { useState } from "react";
 
 export default function MobileAgenda() {
-  const room = "S";
+  const [room, setRoom] = useState("R0");
   return (
     <div className="text-white">
       {/* TODO: Tab switch */}
-      <div className="flex">
+      <div className="flex shadow-2xl shadow-indigo-500/40">
         {data.rooms.map((rooms, index) => (
           <button
             key={index}
             className={`basis-1/5 text-center ${room === rooms.id ? "border-b-4" : ""}`}
+            onClick={() => setRoom(rooms.id)}
           >
             {rooms.id}
           </button>
@@ -22,7 +25,7 @@ export default function MobileAgenda() {
         {data.sessions.map((session) => (
           <>
             <div
-              className="flex h-[1px] w-full items-center text-white"
+              className="flex h-[1px] w-full items-center text-white drop-shadow-2xl"
               style={{
                 gridColumn: "start / end",
                 gridRow: `timeLine-${session.start} / ${session.end}`,
