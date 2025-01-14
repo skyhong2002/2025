@@ -46,9 +46,15 @@ export default function Page() {
                 2025/02/09 20:00～2025/02/22 23:59
               </li>
             </ul>
-            <button className="mt-8 rounded-full bg-[#9c9c9c] p-3 text-normal font-semibold text-[#ffffff] md:bg-[#ffffff] md:text-background-light">
-              將 SITCON 2025 重要日程加入行事曆
-            </button>
+            <LinkButton
+              link={"/website/ticket_dates.ics"}
+              target="_blank"
+              text="加入行事曆"
+              className="mt-8 bg-[#9c9c9c] text-[#ffffff] hover:brightness-90 md:w-full md:bg-[#ffffff] md:text-background-light"
+            />
+            {/* <button className="mt-8 w-full rounded-full bg-[#9c9c9c] p-3 text-normal font-semibold text-[#ffffff] md:bg-[#ffffff] md:text-background-light"> */}
+            {/* 加入行事曆 */}
+            {/* </button> */}
           </div>
           <div className="flex h-full justify-center md:w-1/12">
             <div className="dashLine" />
