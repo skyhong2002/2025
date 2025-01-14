@@ -34,16 +34,12 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col items-center justify-center py-4 md:w-4/12 md:py-10">
-            <ul className="text-center text-normal-mobile leading-[200%] md:list-inside md:list-disc md:text-start md:text-normal">
+            <ul className="w-[80%] list-inside list-disc text-normal-mobile leading-[200%] md:text-start md:text-normal">
               <li className="listItem mt-4 !pl-0 md:mt-0 md:pl-[-22px]">
-                第一波售票：
-                <br />
-                2025/01/12 20:00～2025/01/25 23:59
+                第一波售票：01/12 20:00 ～01/25 23:59
               </li>
               <li className="listItem mt-4 !pl-0 md:mt-0 md:pl-[-22px]">
-                第二波售票：
-                <br />
-                2025/02/09 20:00～2025/02/22 23:59
+                第二波售票：02/09 20:00 ～02/22 23:59
               </li>
             </ul>
             <LinkButton
@@ -64,7 +60,7 @@ export default function Page() {
               link={"https://sitcon.kktix.cc/events/sitcon2025"}
               target="_blank"
               text="立即取得"
-              className="ml-[-4px] mr-4 md:w-full"
+              className="ml-[-4px] md:mr-4 md:w-full"
             />
           </div>
           <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
@@ -98,7 +94,7 @@ export default function Page() {
               link={"https://hackmd.io/@SITCON/H18WacxQ1x"}
               target="_blank"
               text="立即取得"
-              className="ml-[-4px] mr-4 md:w-full"
+              className="ml-[-4px] md:mr-4 md:w-full"
             />
           </div>
 
@@ -154,7 +150,7 @@ export default function Page() {
               link={"https://ocf.tw/p/oscvpass/"}
               target="_blank"
               text="立即取得"
-              className="ml-[-4px] mr-4 md:w-full"
+              className="ml-[-4px] md:mr-4 md:w-full"
             />
           </div>
           <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
