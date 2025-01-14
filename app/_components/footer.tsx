@@ -13,7 +13,7 @@ export default function BaseFooter({
   navigationLinks: NavigationLink[];
 }) {
   return (
-    <footer className="space-y-7 bg-background-light px-10 pb-7 pt-0 text-foreground mobile:py-16">
+    <footer className="space-y-7 bg-background-light px-5 pb-7 pt-4 text-foreground mobile:px-10 mobile:py-16 mobile:pt-16">
       <>
         {/* Desktop Layout 820+ */}
         <div className="flex justify-between max-[820px]:hidden">
@@ -224,7 +224,7 @@ function RadioLinkButton({
   return (
     <Link
       href={href}
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-foreground px-3 py-1 text-foreground hover:bg-blue hover:text-white"
+      className="flex aspect-square h-10 w-10 items-center justify-center rounded-full border border-foreground px-2 py-1 text-foreground hover:bg-blue hover:text-white mobile:h-12 mobile:w-12 mobile:px-3"
     >
       {logo}
     </Link>
