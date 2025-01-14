@@ -61,7 +61,7 @@ export default function Page() {
             </p>
           </div>
           <div className="mt-10 flex flex-col gap-7">
-            <Section title="關於 SITCON" subtitle="about SITCON">
+            <Section title="關於 SITCON" subtitle="About SITCON">
               <p>
                 學生計算機年會（Students’ Information Technology Conference）自
                 2012
