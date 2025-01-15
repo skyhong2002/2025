@@ -2,6 +2,7 @@ import React from "react";
 import data from "@/app/(website)/_data/agenda.json";
 import SessionCard from "@/app/(website)/_components/SessionCard";
 
+// 新的議程表json改變，請改變times的length來調整議程表的高度
 const times = [
   { id: "t0830", length: "0.5fr" },
   { id: "t0900", length: "0.5fr" },
@@ -42,7 +43,7 @@ export default function DesktopAgenda() {
 
   const gridTemplateRows = times.reduce((acc: string, time) => {
     return `${acc} [timeLine-${time.id}] 1px [${time.id}] ${time.length}`;
-  }, "[start] 1fr [divider] 1px");
+  }, "[start] 30px [divider] 1px");
   // start divider timeLine-0830 0830 timeLine-1000 1000 ...
 
   return (
@@ -56,7 +57,7 @@ export default function DesktopAgenda() {
       {/* row1 empty R2 R0 R1 R3 S  */}
       <div></div>
       {data.rooms.map((rooms, index) => (
-        <div key={index} className="text-center">
+        <div key={index} className="text-center text-[24px] font-bold">
           {rooms.id}
         </div>
       ))}
