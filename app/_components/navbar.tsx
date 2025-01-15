@@ -45,12 +45,32 @@ export default function Navbar({
   return (
     <nav className="fixed left-0 right-0 top-0 z-20 flex justify-center">
       <motion.div
-        className="flex w-full items-center justify-center transition"
+        className="flex w-full flex-col items-center justify-center transition"
         style={{
           opacity: allowFadeEffect ? navBackgroundOpacity : 1,
           backgroundColor: allowFadeEffect ? navBackground : "rgba(39, 48, 77)",
         }}
       >
+        <div className="flex w-full items-center justify-center gap-2 bg-background-light p-3 text-center text-foreground brightness-125">
+          <motion.p
+            initial={{
+              opacity: 0.2,
+            }}
+            animate={{
+              opacity: [0.2, 1, 0.2],
+            }}
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+              repeat: Infinity,
+            }}
+          >
+            SITCON 2025 熱烈徵稿中{" "}
+            <Link href="/cfp" className="link">
+              了解更多
+            </Link>
+          </motion.p>
+        </div>
         <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
           <ul className="relative flex w-full items-center justify-between p-4 max-[750px]:justify-center">
             <Link href={logoHref}>
