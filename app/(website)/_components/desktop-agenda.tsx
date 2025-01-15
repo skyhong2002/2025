@@ -2,31 +2,31 @@ import React from "react";
 import data from "@/app/(website)/_data/agenda.json";
 import SessionCard from "@/app/(website)/_components/SessionCard";
 
-// 新的議程表json改變，請改變times的length來調整議程表的高度
+// 新的議程表json改變，請改變times的height來調整議程表的高度
 const times = [
-  { id: "t0830", length: "0.5fr" },
-  { id: "t0900", length: "0.5fr" },
-  { id: "t0910", length: "1fr" },
-  { id: "t1000", length: "0.5fr" },
-  { id: "t1005", length: "1fr" },
-  { id: "t1055", length: "0.5fr" },
-  { id: "t1105", length: "1fr" },
-  { id: "t1145", length: "0.01fr" },
-  { id: "t1200", length: "1fr" },
-  { id: "t1230", length: "0.01fr" },
-  { id: "t1245", length: "1fr" },
-  { id: "t1325", length: "0.5fr" },
-  { id: "t1335", length: "1fr" },
-  { id: "t1415", length: "0.5fr" },
-  { id: "t1425", length: "1fr" },
-  { id: "t1435", length: "0.5fr" },
-  { id: "t1445", length: "1fr" },
-  { id: "t1525", length: "0.5fr" },
-  { id: "t1605", length: "1fr" },
-  { id: "t1645", length: "0.5fr" },
-  { id: "t1655", length: "1fr" },
-  { id: "t1745", length: "0.5fr" },
-  { id: "t1755", length: "0.5fr" },
+  { id: "t0830", height: "0.5fr" },
+  { id: "t0900", height: "0.5fr" },
+  { id: "t0910", height: "1fr" },
+  { id: "t1000", height: "0.5fr" },
+  { id: "t1005", height: "1fr" },
+  { id: "t1055", height: "0.5fr" },
+  { id: "t1105", height: "1fr" },
+  { id: "t1145", height: "0.01fr" },
+  { id: "t1200", height: "1fr" },
+  { id: "t1230", height: "0.01fr" },
+  { id: "t1245", height: "1fr" },
+  { id: "t1325", height: "0.5fr" },
+  { id: "t1335", height: "1fr" },
+  { id: "t1415", height: "0.5fr" },
+  { id: "t1425", height: "1fr" },
+  { id: "t1435", height: "0.5fr" },
+  { id: "t1445", height: "1fr" },
+  { id: "t1525", height: "0.5fr" },
+  { id: "t1605", height: "1fr" },
+  { id: "t1645", height: "0.5fr" },
+  { id: "t1655", height: "1fr" },
+  { id: "t1745", height: "0.5fr" },
+  { id: "t1755", height: "0.5fr" },
 ];
 
 const styleToText = (time: string) => {
@@ -42,7 +42,7 @@ export default function DesktopAgenda() {
   // start R0 R1 R2 R3 S
 
   const gridTemplateRows = times.reduce((acc: string, time) => {
-    return `${acc} [timeLine-${time.id}] 1px [${time.id}] ${time.length}`;
+    return `${acc} [timeLine-${time.id}] 1px [${time.id}] ${time.height}`;
   }, "[start] 30px [divider] 1px");
   // start divider timeLine-0830 0830 timeLine-1000 1000 ...
 
@@ -63,7 +63,7 @@ export default function DesktopAgenda() {
       ))}
       {/* row1 empty R2 R0 R1 R3 S  */}
 
-      {/*  divider */}
+      {/* full  divider */}
       <div
         className="h-[1px] w-full bg-white"
         style={{

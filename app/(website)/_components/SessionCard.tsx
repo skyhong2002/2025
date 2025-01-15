@@ -99,7 +99,7 @@ const SessionCard = ({ session }: { session: Session }) => {
   return (
     <div
       key={session.id}
-      className={`flex h-full w-full rounded-lg border bg-slate-600 p-4 ${sessionStyle(session.type)}`}
+      className={`flex h-full w-full rounded-lg border p-4 ${sessionStyle(session.type)}`}
       style={{
         gridColumn: `${startRoom} / ${endRoom}`,
         gridRow: `${startTime} / ${endTime}`,
