@@ -136,7 +136,7 @@ const SessionCard = ({ session }: { session: Session }) => {
             </h3>
             <p>{speakerNames.join(" / ")}</p>
           </div>
-          <div className="">
+          <div className="flex flex-wrap">
             {session.tags.map((tag) => {
               return (
                 <span

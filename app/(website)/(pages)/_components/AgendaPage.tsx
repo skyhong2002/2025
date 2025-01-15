@@ -15,7 +15,7 @@ export default function AgendaPage({
   console.log(setSessionIsOpen);
 
   return (
-    <>
+    <div className="w-full">
       <h1 className="text-h1-mobile text-white md:text-h1">年會議程表</h1>
       <div className="mt-4">
         <div className="hidden md:block">
@@ -26,6 +26,6 @@ export default function AgendaPage({
         </div>
       </div>
       {sessionIsOpen && <SessionPopup openSessionID={openSessionID} />}
-    </>
+    </div>
   );
 }
