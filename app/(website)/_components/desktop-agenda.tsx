@@ -1,75 +1,31 @@
 import React from "react";
 import data from "@/app/(website)/_data/agenda.json";
-// import timeRender from "@/app/(website)/_utils/time-render";
 import SessionCard from "@/app/(website)/_components/SessionCard";
 
-// const sessionType = (type: string) => {
-//   switch (type) {
-//     case "K":
-//       return "bg-background-light text-primary col-span-5";
-//     case "E":
-//       return "bg-background-light text-primary";
-//     case "P":
-//       return "bg-background-light text-primary";
-//     case "U":
-//       return "bg-background-light text-primary";
-//     case "Ev":
-//       return "bg-background text-white col-span-5";
-//     case "PD":
-//       return "bg-background text-white";
-//     case "L":
-//       return "bg-background text-white";
-//     case "S":
-//       return "bg-background text-white";
-//     default:
-//       return "";
-//   }
-// };
-
-// const roomStyle = (room: string, broadcast: string[] | null) => {
-//   if (broadcast === null) {
-//     switch (room) {
-//       case "R0":
-//         return "grid";
-//       case "R1":
-//         return "col-start-3 col-end-3";
-//       case "R2":
-//         return "col-start-4 col-end-4";
-//       case "R3":
-//         return "col-start-5 col-end-5";
-//       case "S":
-//         return "col-start-6 col-end-6";
-//     }
-//   } else if (broadcast.length === 5) {
-//     return "col-start-2 col-end-7";
-//   } else {
-//   }
-// };
-
 const times = [
-  "t0830",
-  "t0900",
-  "t0910",
-  "t1000",
-  "t1005",
-  "t1055",
-  "t1105",
-  "t1145",
-  "t1200",
-  "t1230",
-  "t1245",
-  "t1325",
-  "t1335",
-  "t1415",
-  "t1425",
-  "t1435",
-  "t1445",
-  "t1525",
-  "t1605",
-  "t1645",
-  "t1655",
-  "t1745",
-  "t1755",
+  { id: "t0830", length: "0.5fr" },
+  { id: "t0900", length: "0.5fr" },
+  { id: "t0910", length: "1fr" },
+  { id: "t1000", length: "0.5fr" },
+  { id: "t1005", length: "1fr" },
+  { id: "t1055", length: "0.5fr" },
+  { id: "t1105", length: "1fr" },
+  { id: "t1145", length: "0.01fr" },
+  { id: "t1200", length: "1fr" },
+  { id: "t1230", length: "0.01fr" },
+  { id: "t1245", length: "1fr" },
+  { id: "t1325", length: "0.5fr" },
+  { id: "t1335", length: "1fr" },
+  { id: "t1415", length: "0.5fr" },
+  { id: "t1425", length: "1fr" },
+  { id: "t1435", length: "0.5fr" },
+  { id: "t1445", length: "1fr" },
+  { id: "t1525", length: "0.5fr" },
+  { id: "t1605", length: "1fr" },
+  { id: "t1645", length: "0.5fr" },
+  { id: "t1655", length: "1fr" },
+  { id: "t1745", length: "0.5fr" },
+  { id: "t1755", length: "0.5fr" },
 ];
 
 const styleToText = (time: string) => {
@@ -85,13 +41,13 @@ export default function DesktopAgenda() {
   // start R0 R1 R2 R3 S
 
   const gridTemplateRows = times.reduce((acc: string, time) => {
-    return `${acc} [timeLine-${time}] 1px [${time}] 200px`;
+    return `${acc} [timeLine-${time.id}] 1px [${time.id}] ${time.length}`;
   }, "[start] 1fr [divider] 1px");
   // start divider timeLine-0830 0830 timeLine-1000 1000 ...
 
   return (
     <div
-      className="grid gap-4 space-y-4 text-white"
+      className="grid gap-4 text-white"
       style={{
         gridTemplateColumns: gridTemplateColumns,
         gridTemplateRows: gridTemplateRows,
@@ -119,15 +75,15 @@ export default function DesktopAgenda() {
       {/* all timeLine */}
       {times.map((time) => (
         <div
-          key={time}
-          className="flex h-[1px] w-full items-center text-white"
+          key={time.id}
+          className="mt-2 flex h-full w-full items-center text-white"
           style={{
             gridColumn: "start / end",
-            gridRow: `timeLine-${time} / ${time}`,
+            gridRow: `timeLine-${time.id} / ${time.id}`,
           }}
         >
-          <p>{styleToText(time)}</p>
-          <div className="ml-6 h-[1px] w-full bg-white"></div>
+          <p>{styleToText(time.id)}</p>
+          <hr className="ml-6 w-full bg-white" />
         </div>
       ))}
       {/* all timeLine */}
