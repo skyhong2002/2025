@@ -63,7 +63,7 @@ export default function Page() {
               className="ml-[-4px] md:mr-4 md:w-full"
             />
           </div>
-          <div className="aspect-1/2 right-0 z-10 mr-[-1px] box-border hidden rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
+          <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
         {/* ticket 2 */}
         <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light px-2 py-10 md:flex-row md:rounded-none md:border md:px-0 md:py-0">
@@ -98,7 +98,7 @@ export default function Page() {
             />
           </div>
 
-          <div className="aspect-1/2 right-0 z-10 mr-[-1px] box-border hidden rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
+          <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
         {/* ticket 3 */}
         <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light px-2 py-10 md:flex-row md:rounded-none md:border md:px-0 md:py-0">
@@ -153,7 +153,7 @@ export default function Page() {
               className="ml-[-4px] md:mr-4 md:w-full"
             />
           </div>
-          <div className="aspect-1/2 right-0 z-10 mr-[-1px] box-border hidden rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
+          <div className="right-0 z-10 mr-[-1px] box-border hidden aspect-1/2 rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
       </section>
       <section
