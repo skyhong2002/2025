@@ -14,8 +14,6 @@ export default function Page() {
     { value: "car", label: "自行開車 / 機車" },
   ];
 
-  console.log("開發組的各位新年快樂拉~ by pizza");
-
   return (
     <div className="flex w-full flex-col items-start justify-center gap-8">
       <section
@@ -46,7 +44,7 @@ export default function Page() {
           />
         </div>
 
-        <div className="flex w-full justify-between gap-2 text-h3-mobile font-bold md:gap-6 md:text-h3">
+        <div className="flex w-full flex-col justify-between gap-2 text-h3-mobile font-bold md:flex-row md:gap-6 md:text-h3">
           {options.map((option) => (
             <motion.button
               initial={{ scale: 1, shadow: "0px 0px 0px rgba(0, 0, 0, 0)" }}

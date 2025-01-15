@@ -40,7 +40,7 @@ export default function Navbar({
     setShowMenu((prev) => !prev);
   };
 
-  console.log(pathname);
+  // console.log(pathname);
   const allowFadeEffect = isIndex && !showMenu;
   return (
     <nav className="fixed left-0 right-0 top-0 z-20 flex justify-center">
