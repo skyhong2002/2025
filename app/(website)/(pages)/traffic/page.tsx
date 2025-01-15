@@ -1,23 +1,21 @@
 "use client";
-import Image from "next/image";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Transportation = "car" | "public" | "shuttle";
 export default function Page() {
   const [transportation, setTransportation] = useState<Transportation>("car");
 
-  const [isLoading, setIsLoading] = useState(true);
-
   const options: Array<{ value: Transportation; label: string }> = [
     { value: "shuttle", label: "大眾接駁車" },
     { value: "public", label: "大眾運輸工具" },
-    { value: "car", label: "自行開車" },
+    { value: "car", label: "自行開車 / 機車" },
   ];
 
   return (
-    <div className="flex w-full flex-col items-start justify-center gap-8 text-[#ffffff]">
+    <div className="flex w-full flex-col items-start justify-center gap-8">
       <section
         id="address"
         className="flex w-full flex-col items-center gap-3 font-bold"
@@ -34,19 +32,15 @@ export default function Page() {
       </section>
       <section id="map" className="flex w-full flex-col gap-8">
         <div className="relative h-auto w-full overflow-hidden rounded-xl">
-          {isLoading && (
-            <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center rounded-xl bg-gray text-h1 text-black">
-              地圖加載中~
-            </div>
-          )}
-          <Image
-            width={1000}
-            height={600}
-            src="https://picsum.photos/1000/600"
-            alt="Random Image"
-            className="w-full rounded-xl"
-            onLoad={() => setIsLoading(false)}
-            priority={true}
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14459.18734000737!2d121.6113732!3d25.0409679!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab46b3aaaaab%3A0x6ad0b8243ddc70ef!2z5Lit5aSu56CU56m26Zmi5Lq65paH56S-5pyD56eR5a246aSo!5e0!3m2!1szh-TW!2stw!4v1705165279899!5m2!1szh-TW!2stw"
+            className="h-[400px] w-full md:h-[600px]"
+            style={{
+              border: 0,
+            }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
 
@@ -120,8 +114,43 @@ const CarDiagram = () => {
       <div className="box-border w-full rounded-xl border border-[#ffffff] p-5 md:w-[360px]">
         <h3 className="text-[20px] font-bold">中研院門口</h3>
         <p className="mt-2 text-normal leading-[150%]">
-          車輛進入院區請持證件向大門警衛室換取臨時通行證。假日換證不收費，並請停車於院內道路旁停車格。若您於周一至週五來訪，您需停車至人文社會館B2，並須支付停車費用
-          (每小時20元 )
+          中研院內設有停車格，車輛進入院區持證件向大門警衛換證後可駛入院區，計費方式請參考{" "}
+          <Link
+            className="link"
+            href={"https://dga.sinica.edu.tw/posts/78705"}
+            target="_blank"
+          >
+            中央研究院院區車輛通行停放管理施行要點
+          </Link>
+          。
+        </p>
+        <br />
+        <p>
+          機車禁止進入院區，在{" "}
+          <Link
+            className="link"
+            href={"https://maps.app.goo.gl/ZqKjZFgAS8SYPSF39"}
+            target="_blank"
+          >
+            大門右側
+          </Link>
+          、
+          <Link
+            className="link"
+            href={"https://maps.app.goo.gl/ZqKjZFgAS8SYPSF39"}
+            target="_blank"
+          >
+            大門對面
+          </Link>{" "}
+          與{" "}
+          <Link
+            className="link"
+            href={"https://maps.app.goo.gl/ZqKjZFgAS8SYPSF39"}
+            target="_blank"
+          >
+            胡適公園旁
+          </Link>{" "}
+          均設有機車停車場，供員工和來賓停放不予收費（不負保管責任）
         </p>
       </div>
     </section>
@@ -171,6 +200,7 @@ const ShuttleDiagram = () => {
             />
           </svg>
           <div className="absolute left-[10%] top-[20px] w-[80%]">
+            <p>地點：台北捷運站南港展覽館 2A 出口（當天會有人舉牌引導）</p>
             <p>接駁車發車時間：7:45~10:00</p>
             <p>班距：15~20 分鐘一班</p>
           </div>
@@ -223,6 +253,9 @@ const ShuttleDiagram = () => {
                 </clipPath>
               </defs>
             </svg>
+            <p className="leading-[200%]">
+              地點：台北捷運站南港展覽館 2A 出口（當天會有人舉牌引導）
+            </p>
             <p className="leading-[200%]">接駁車發車時間：7:45~10:00</p>
             <p className="leading-[200%]">班距：15~20 分鐘一班</p>
           </div>
@@ -411,7 +444,7 @@ const PublicDiagram = () => {
                 </defs>
               </svg>
               <p className="absolute top-6 flex w-full justify-center text-[12px]">
-                205、212、276、306、306區、645（到中研院站）
+                205、212、276、306、306 區（到中研院站）
               </p>
             </div>
           </div>
@@ -436,9 +469,9 @@ const PublicDiagram = () => {
               <div className="absolute top-6 flex w-full justify-center text-[12px]">
                 <div>
                   <p>中研院附近的 YouBike 2.0 站牌 :</p>
-                  <p>1.中研院人文社會科學館</p>
-                  <p>2.中研院綜合體育館</p>
-                  <p>3.研究院舊莊街口</p>
+                  <p>1. 中研院人文社會科學館</p>
+                  <p>2. 中研院綜合體育館東側</p>
+                  <p>3. 研究院舊莊街口</p>
                 </div>
               </div>
             </div>
@@ -614,7 +647,7 @@ const PublicDiagram = () => {
                     </defs>
                   </svg>
                   <p className="text-[12px]">
-                    205、212、 276、306、 306區、645 （到中研院站）
+                    205、212、 276、306、 306 區（到中研院站）
                   </p>
                 </div>
               </div>
@@ -654,9 +687,9 @@ const PublicDiagram = () => {
                 </span>
                 <div className="text-[12px]">
                   <p>YouBike 2.0 還車點 :</p>
-                  <p>1.中研院人文社會科學館</p>
-                  <p>2.中研院綜合體育館</p>
-                  <p>3.研究院舊莊街口</p>
+                  <p>1. 中研院人文社會科學館</p>
+                  <p>2. 中研院綜合體育館</p>
+                  <p>3. 研究院舊莊街口</p>
                 </div>
               </div>
             </div>
