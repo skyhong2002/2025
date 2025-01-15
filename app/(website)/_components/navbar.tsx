@@ -6,11 +6,12 @@ export default function Navbar() {
   return (
     <>
       <BaseNavbar
+        logoHref="/"
         menuItems={[
           { link: "/", label: "首頁" },
           { link: "/tickets/", label: "活動報名" },
           { link: "/traffic/", label: "交通方式" },
-          { link: "/sponsor/", label: "合作夥伴" },
+          // { link: "/sponsor/", label: "合作夥伴" },
         ]}
       />
     </>

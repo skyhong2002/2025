@@ -1,6 +1,6 @@
 import React from "react";
 import data from "@/app/(website)/_data/agenda.json";
-import SessionCard from "@/app/(website)/_components/SessionCard";
+import SessionCard from "@/app/(website)/(pages)/_components/SessionCard";
 
 // 新的議程表json改變，請改變times的height來調整議程表的高度
 const times = [

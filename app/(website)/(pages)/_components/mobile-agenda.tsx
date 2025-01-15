@@ -1,6 +1,6 @@
 "use client";
 import data from "@/app/(website)/_data/agenda.json";
-import SessionCard from "@/app/(website)/_components/SessionCard";
+import SessionCard from "@/app/(website)/(pages)/_components/SessionCard";
 import timeRender from "@/app/(website)/_utils/time-render";
 import { useState } from "react";
 

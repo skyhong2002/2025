@@ -1,6 +1,6 @@
 "use client";
-import DesktopAgenda from "@/app/(website)/_components/desktop-agenda";
-import MobileAgenda from "@/app/(website)/_components/mobile-agenda";
+import DesktopAgenda from "@/app/(website)/(pages)/_components/desktop-agenda";
+import MobileAgenda from "@/app/(website)/(pages)/_components/mobile-agenda";
 import SessionPopup from "../_components/SessionPopup";
 import { useState } from "react";
 

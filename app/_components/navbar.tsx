@@ -18,10 +18,12 @@ interface MenuItem {
 
 export default function Navbar({
   menuItems,
-  onMenuClick,
+  logoHref = "/cfp",
+  onMenuClick = () => {},
 }: {
   menuItems: MenuItem[];
-  onMenuClick: (prev: boolean) => void;
+  logoHref?: string;
+  onMenuClick?: (prev: boolean) => void;
 }) {
   const [showMenu, setShowMenu] = useState(false);
   const { scrollY } = useScroll();
@@ -38,7 +40,7 @@ export default function Navbar({
     setShowMenu((prev) => !prev);
   };
 
-  console.log(pathname);
+  // console.log(pathname);
   const allowFadeEffect = isIndex && !showMenu;
   return (
     <nav className="fixed left-0 right-0 top-0 z-20 flex justify-center">
