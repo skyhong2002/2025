@@ -66,7 +66,7 @@ export default function Page() {
           <div className="aspect-1/2 right-0 z-10 mr-[-1px] box-border hidden rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
         {/* ticket 2 */}
-        <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light py-10 md:flex-row md:rounded-none md:border md:py-0">
+        <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light px-2 py-10 md:flex-row md:rounded-none md:border md:px-0 md:py-0">
           <div className="aspect-1/2 z-10 ml-[-1px] box-border hidden rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
           <div className="flex flex-col items-center md:w-3/12 md:py-10">
             <span className="material-symbols-outlined mt-16 scale-[600%] text-[#ffffff]">
@@ -101,7 +101,7 @@ export default function Page() {
           <div className="aspect-1/2 right-0 z-10 mr-[-1px] box-border hidden rounded-bl-full rounded-tl-full border border-l-white border-r-background bg-background md:block md:w-1/12" />
         </div>
         {/* ticket 3 */}
-        <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light py-10 md:flex-row md:rounded-none md:border md:py-0">
+        <div className="box-border flex w-full flex-col items-center justify-between rounded-xl border-white bg-background-light px-2 py-10 md:flex-row md:rounded-none md:border md:px-0 md:py-0">
           <div className="aspect-1/2 z-10 ml-[-1px] box-border hidden rounded-br-full rounded-tr-full border border-l-transparent border-r-white bg-background md:block md:w-1/12" />
           <div className="flex flex-col items-center justify-center md:w-3/12 md:py-10">
             <span className="material-symbols-outlined mt-16 scale-[600%] text-[#ffffff]">
