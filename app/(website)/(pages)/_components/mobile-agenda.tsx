@@ -3,7 +3,7 @@ import data from "@/app/(website)/_data/agenda.json";
 import SessionCard from "@/app/(website)/(pages)/_components/SessionCard";
 import timeRender from "@/app/(website)/_utils/time-render";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function MobileAgenda() {
   const [room, setRoom] = useState("R0");
@@ -30,40 +30,49 @@ export default function MobileAgenda() {
       </motion.div>
       {/* Tab Switch End */}
       {/* Tab Content Start*/}
-      <div className="mt-4">
-        {data.sessions
-          .filter(
-            (session) =>
-              session.room === room || session.broadcast?.includes(room),
-          )
-          .map((session) => (
-            <>
-              <div
-                className="flex h-[1px] w-full items-center text-white drop-shadow-2xl"
-                style={{
-                  gridColumn: "start / end",
-                  gridRow: `timeLine-${session.start} / ${session.end}`,
-                }}
-              >
-                <p>
-                  {session.broadcast || session.room === room
-                    ? timeRender(session.start)
-                    : ""}
-                </p>
-                <div className="ml-6 h-[1px] w-full bg-white"></div>
-              </div>
-              <div className="my-4 ml-16">
-                {session.broadcast ? (
-                  <SessionCard key={session.id} session={session} />
-                ) : (
-                  session.room === room && (
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={room}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5 }}
+          className="mt-4"
+        >
+          {data.sessions
+            .filter(
+              (session) =>
+                session.room === room || session.broadcast?.includes(room),
+            )
+            .map((session) => (
+              <>
+                <div
+                  className="flex h-[1px] w-full items-center text-white drop-shadow-2xl"
+                  style={{
+                    gridColumn: "start / end",
+                    gridRow: `timeLine-${session.start} / ${session.end}`,
+                  }}
+                >
+                  <p>
+                    {session.broadcast || session.room === room
+                      ? timeRender(session.start)
+                      : ""}
+                  </p>
+                  <div className="ml-6 h-[1px] w-full bg-white"></div>
+                </div>
+                <div className="my-4 ml-16">
+                  {session.broadcast ? (
                     <SessionCard key={session.id} session={session} />
-                  )
-                )}
-              </div>
-            </>
-          ))}
-      </div>
+                  ) : (
+                    session.room === room && (
+                      <SessionCard key={session.id} session={session} />
+                    )
+                  )}
+                </div>
+              </>
+            ))}
+        </motion.div>
+      </AnimatePresence>
       {/* Tab Content End*/}
     </div>
   );
