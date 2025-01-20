@@ -43,7 +43,7 @@ export default function Page() {
               </li>
             </ul>
             <LinkButton
-              link={"/website/ticket_dates.ics"}
+              link={"/2025/website/ticket_dates.ics"}
               target="_blank"
               text="加入行事曆"
               className="mt-8 bg-[#9c9c9c] text-[#ffffff] hover:brightness-90 md:w-full md:bg-[#ffffff] md:text-background-light"
