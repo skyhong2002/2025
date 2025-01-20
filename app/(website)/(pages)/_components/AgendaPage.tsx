@@ -20,7 +20,8 @@ export default function AgendaPage({
 const PageContent = ({ openSessionID }: { openSessionID?: string }) => {
   const { sessionIsOpen, setOpenSessionId, setSessionIsOpen, openSessionId } =
     useSession();
-
+  // openSessionID 是從URL query string取得的初始值
+  // openSessionId 是在SessionContext中的state，打開關閉popup時會改變，控制SessionPopup的資料
   useEffect(() => {
     if (openSessionID) setOpenSessionId(openSessionID);
     if (openSessionID) setSessionIsOpen(true);

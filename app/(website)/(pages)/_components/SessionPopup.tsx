@@ -51,6 +51,7 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
       {/* 遮罩 */}
       <div className="fixed inset-0 z-20 h-[100vh] w-[100vw] bg-[black]/30 backdrop-blur-sm" />
       {/* 彈出面板 */}
+      TODO::新的卷軸樣式、彈出動畫
       <div className="fixed left-[50%] top-[50%] z-30 h-[80vh] w-full translate-x-[-50%] translate-y-[-50%] overflow-y-scroll rounded-3xl bg-[#ffffff] p-6 text-black md:w-[90vw] md:p-10">
         <div className="flex flex-col gap-2">
           <div className="flex h-[24px] w-[24px] cursor-pointer items-center justify-center self-end rounded-full bg-[#304878]">
@@ -99,8 +100,6 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
           </div>
 
           <div className="flex flex-col gap-10">
-            {/* 內容 */}
-
             <div className="flex w-full flex-col gap-10 md:flex-row">
               <div className="flex w-full flex-col gap-2 md:w-[65%]">
                 <div className="flex flex-row">

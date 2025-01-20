@@ -70,7 +70,7 @@ const SessionCard = ({ session }: { session: Session }) => {
               return (
                 <span
                   key={tag}
-                  className="mr-1 rounded-xl bg-[#eceff7] p-1 text-xs text-black"
+                  className="my-1 mr-1 rounded-xl bg-[#eceff7] p-1 text-xs text-black"
                 >
                   #{tag}
                 </span>
@@ -83,6 +83,7 @@ const SessionCard = ({ session }: { session: Session }) => {
   );
 };
 
+// 主要的grid layout邏輯 & 區分可否點開
 const CardWrapper = ({
   children,
   session,
