@@ -46,7 +46,12 @@ export default function SponsorCard(brandObj: {
             }}
           >
             <motion.div
-              initial={{ scale: 0.88, opacity: 0, y: 10, filter: "blur(0.35em)" }}
+              initial={{
+                scale: 0.88,
+                opacity: 0,
+                y: 10,
+                filter: "blur(0.35em)",
+              }}
               animate={{ scale: 0.9, opacity: 1, y: 0, filter: "blur(0)" }}
               exit={{ scale: 0.8, opacity: 0, y: 10, filter: "blur(0.3em)" }}
               transition={{ duration: 0.25 }}
