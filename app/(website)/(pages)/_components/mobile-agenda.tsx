@@ -3,24 +3,33 @@ import data from "@/app/(website)/_data/agenda.json";
 import SessionCard from "@/app/(website)/(pages)/_components/SessionCard";
 import timeRender from "@/app/(website)/_utils/time-render";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function MobileAgenda() {
   const [room, setRoom] = useState("R0");
   return (
     <div className="text-white">
-      {/* TODO: Tab switch */}
-      <div className="flex shadow-2xl shadow-indigo-500/40">
+      {/* Tab Switch Start */}
+      <motion.div className="flex shadow-2xl shadow-indigo-500/40" layout>
         {data.rooms.map((rooms, index) => (
-          <button
+          <motion.button
             key={index}
-            className={`basis-1/5 text-center ${room === rooms.id ? "border-b-4" : ""}`}
+            className="relative basis-1/5 text-center"
             onClick={() => setRoom(rooms.id)}
+            layout
           >
+            {room === rooms.id && (
+              <motion.div
+                className="absolute bottom-0 left-0 right-0 h-1 bg-white"
+                layoutId="underline"
+              />
+            )}
             {rooms.id}
-          </button>
+          </motion.button>
         ))}
-      </div>
-      {/* TODO: Content */}
+      </motion.div>
+      {/* Tab Switch End */}
+      {/* Tab Content Start*/}
       <div className="mt-4">
         {data.sessions
           .filter(
@@ -55,6 +64,7 @@ export default function MobileAgenda() {
             </>
           ))}
       </div>
+      {/* Tab Content End*/}
     </div>
   );
 }
