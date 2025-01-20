@@ -7,6 +7,14 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function MobileAgenda() {
   const [room, setRoom] = useState("R0");
+  const [direction, setDirection] = useState(0);
+
+  const handleRoomChange = (newRoom: string) => {
+    const currentIndex = data.rooms.findIndex((r) => r.id === room);
+    const newIndex = data.rooms.findIndex((r) => r.id === newRoom);
+    setDirection(newIndex > currentIndex ? 1 : -1);
+    setRoom(newRoom);
+  };
   return (
     <div className="text-white">
       {/* Tab Switch Start */}
@@ -15,7 +23,7 @@ export default function MobileAgenda() {
           <motion.button
             key={index}
             className="relative basis-1/5 text-center"
-            onClick={() => setRoom(rooms.id)}
+            onClick={() => handleRoomChange(rooms.id)}
             layout
           >
             {room === rooms.id && (
@@ -33,10 +41,10 @@ export default function MobileAgenda() {
       <AnimatePresence mode="wait">
         <motion.div
           key={room}
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: direction === 1 ? 100 : -100 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
+          exit={{ opacity: 0, x: direction === 1 ? -100 : 100 }}
+          transition={{ duration: 0.3 }}
           className="mt-4"
         >
           {data.sessions
