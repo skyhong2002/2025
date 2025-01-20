@@ -22,31 +22,38 @@ export default function MobileAgenda() {
       </div>
       {/* TODO: Content */}
       <div className="mt-4">
-        {data.sessions.map((session) => (
-          <>
-            <div
-              className="flex h-[1px] w-full items-center text-white drop-shadow-2xl"
-              style={{
-                gridColumn: "start / end",
-                gridRow: `timeLine-${session.start} / ${session.end}`,
-              }}
-            >
-              <p>
-                {session.broadcast || session.room === room
-                  ? timeRender(session.start)
-                  : ""}
-              </p>
-              <div className="ml-6 h-[1px] w-full bg-white"></div>
-            </div>
-            {session.broadcast ? (
-              <SessionCard key={session.id} session={session} />
-            ) : (
-              session.room === room && (
-                <SessionCard key={session.id} session={session} />
-              )
-            )}
-          </>
-        ))}
+        {data.sessions
+          .filter(
+            (session) =>
+              session.room === room || session.broadcast?.includes(room),
+          )
+          .map((session) => (
+            <>
+              <div
+                className="flex h-[1px] w-full items-center text-white drop-shadow-2xl"
+                style={{
+                  gridColumn: "start / end",
+                  gridRow: `timeLine-${session.start} / ${session.end}`,
+                }}
+              >
+                <p>
+                  {session.broadcast || session.room === room
+                    ? timeRender(session.start)
+                    : ""}
+                </p>
+                <div className="ml-6 h-[1px] w-full bg-white"></div>
+              </div>
+              <div className="my-4 ml-16">
+                {session.broadcast ? (
+                  <SessionCard key={session.id} session={session} />
+                ) : (
+                  session.room === room && (
+                    <SessionCard key={session.id} session={session} />
+                  )
+                )}
+              </div>
+            </>
+          ))}
       </div>
     </div>
   );
