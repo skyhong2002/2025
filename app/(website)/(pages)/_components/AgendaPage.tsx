@@ -1,18 +1,30 @@
 "use client";
 import DesktopAgenda from "@/app/(website)/(pages)/_components/desktop-agenda";
 import MobileAgenda from "@/app/(website)/(pages)/_components/mobile-agenda";
-import SessionPopup from "../_components/SessionPopup";
-import { useState } from "react";
+import SessionPopup from "./SessionPopup";
+import { SessionProvider, useSession } from "./AgendaContext";
+import { useEffect } from "react";
 
 export default function AgendaPage({
   openSessionID,
 }: {
   openSessionID?: string;
 }) {
-  const [sessionIsOpen, setSessionIsOpen] = useState(
-    openSessionID !== undefined,
+  return (
+    <SessionProvider>
+      <PageContent openSessionID={openSessionID} />
+    </SessionProvider>
   );
-  console.log(setSessionIsOpen);
+}
+
+const PageContent = ({ openSessionID }: { openSessionID?: string }) => {
+  const { sessionIsOpen, setOpenSessionId, setSessionIsOpen, openSessionId } =
+    useSession();
+
+  useEffect(() => {
+    if (openSessionID) setOpenSessionId(openSessionID);
+    if (openSessionID) setSessionIsOpen(true);
+  }, [openSessionID, setOpenSessionId, setSessionIsOpen]);
 
   return (
     <div className="w-full">
@@ -25,7 +37,7 @@ export default function AgendaPage({
           <MobileAgenda />
         </div>
       </div>
-      {sessionIsOpen && <SessionPopup openSessionID={openSessionID} />}
+      {sessionIsOpen && <SessionPopup openSessionId={openSessionId} />}
     </div>
   );
-}
+};
