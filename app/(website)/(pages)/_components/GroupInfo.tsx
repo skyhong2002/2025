@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import MemberInfo from "./member_info";
+import MemberInfo from "./MemberInfo";
 
 interface Group {
   group: {

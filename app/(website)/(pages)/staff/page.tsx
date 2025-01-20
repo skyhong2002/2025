@@ -4,7 +4,7 @@ import TableOfContent from "@/app/cfp/(submission)/_components/table-of-content"
 import TableOfContentMobile from "@/app/cfp/(submission)/_components/table-of-content-mobile";
 import staffJson from "./staff.json";
 import Link from "next/link";
-import GroupInfo from "../_components/group_info";
+import GroupInfo from "../_components/GroupInfo";
 
 export default function Page() {
   const sections = staffJson.map((group) => ({
