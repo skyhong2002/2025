@@ -2,17 +2,18 @@
 import data from "@/app/(website)/_data/agenda.json";
 import SessionCard from "@/app/(website)/(pages)/_components/SessionCard";
 import timeRender from "@/app/(website)/_utils/time-render";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
 
 export default function MobileAgenda() {
   const [room, setRoom] = useState("R0");
-  const [direction, setDirection] = useState(0);
+  const direction = useRef(0);
 
   const handleRoomChange = (newRoom: string) => {
     const currentIndex = data.rooms.findIndex((r) => r.id === room);
     const newIndex = data.rooms.findIndex((r) => r.id === newRoom);
-    setDirection(newIndex > currentIndex ? 1 : -1);
+    direction.current = newIndex > currentIndex ? 1 : -1;
     setRoom(newRoom);
   };
   return (
@@ -41,9 +42,9 @@ export default function MobileAgenda() {
       <AnimatePresence mode="wait">
         <motion.div
           key={room}
-          initial={{ opacity: 0, x: direction === 1 ? 100 : -100 }}
+          initial={{ opacity: 0, x: direction.current === 1 ? 100 : -100 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: direction === 1 ? -100 : 100 }}
+          exit={{ opacity: 0, x: direction.current === 1 ? -100 : 100 }}
           transition={{ duration: 0.3 }}
           className="mt-4"
         >
@@ -53,7 +54,7 @@ export default function MobileAgenda() {
                 session.room === room || session.broadcast?.includes(room),
             )
             .map((session) => (
-              <>
+              <React.Fragment key={session.id}>
                 <div
                   className="flex h-[1px] w-full items-center text-white drop-shadow-2xl"
                   style={{
@@ -77,7 +78,7 @@ export default function MobileAgenda() {
                     )
                   )}
                 </div>
-              </>
+              </React.Fragment>
             ))}
         </motion.div>
       </AnimatePresence>
