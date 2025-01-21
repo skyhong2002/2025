@@ -32,7 +32,7 @@ export const SessionProvider = ({ children }: { children: ReactNode }) => {
 export const useSession = () => {
   const context = useContext(SessionContext);
   if (!context) {
-    throw new Error("useSession  must be used within a NavbarProvider");
+    throw new Error("useSession must be used within a SessionProvider");
   }
   return context;
 };

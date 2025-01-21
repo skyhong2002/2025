@@ -170,7 +170,7 @@ const CardWrapper = ({
   const handleCardClick = () => {
     if (!isLinkable) return;
     setOpenSessionId(session.id);
-    history.pushState(null, "", `/agenda/${session!.id}/`);
+    history.pushState(null, "", `/2025/agenda/${session!.id}/`);
     setSessionIsOpen(true);
   };
 

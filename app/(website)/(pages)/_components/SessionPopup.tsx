@@ -43,7 +43,7 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
 
   const handleClose = () => {
     setSessionIsOpen(false);
-    history.pushState(null, "", `/agenda/`);
+    history.pushState(null, "", `/2025/agenda/`);
   };
 
   return (

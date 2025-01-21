@@ -15,22 +15,22 @@ export async function generateMetadata({
   params: { id: string };
 }): Promise<Metadata> {
   const session = data.sessions.find((x) => x.id === params.id)!;
-  const image = `https://sitcon.org/2024/sessions/${session.id}.png`;
+  const image = `https://sitcon.org/2025/sessions/${session.id}.png`;
   const title = session.zh.title;
   const description = session.zh.description;
   const metadata: Metadata = {
     title,
     authors: [{ name: "SITCON" }],
-    keywords: "SITCON, SITCON 2024",
+    keywords: "SITCON, SITCON 2025",
     description,
-    metadataBase: new URL("https://sitcon.org/2024/"),
+    metadataBase: new URL("https://sitcon.org/2025/"),
     openGraph: {
       type: "website",
       locale: "zh_TW",
-      url: `https://sitcon.org/2024/agenda/${session.id}`,
+      url: `https://sitcon.org/2025/agenda/${session.id}`,
       title,
       description,
-      siteName: "SITCON 2024",
+      siteName: "SITCON 2025",
       images: [
         {
           url: image,
