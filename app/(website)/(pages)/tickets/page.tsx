@@ -43,7 +43,7 @@ export default function Page() {
               </li>
             </ul>
             <LinkButton
-              link={"/website/ticket_dates.ics"}
+              link={"/2025/website/ticket_dates.ics"}
               target="_blank"
               text="加入行事曆"
               className="mt-8 bg-[#9c9c9c] text-[#ffffff] hover:brightness-90 md:w-full md:bg-[#ffffff] md:text-background-light"
@@ -166,13 +166,7 @@ export default function Page() {
           作為學生展現自己的舞台，我們特別期待以學生為主體的稿件，例如：從學生角度出發的經驗分享、技術分享，專題研究成果、獨立研究甘苦談，或探討學生相關議題等等。
           不論是探討技術或輕鬆的分享，任何與資訊科技、電腦技術相關的講題，我們都非常歡迎。
         </p>
-        <p>歡迎於 2024/01/24 前用以下形式的投搞</p>
-        <li>海報投稿：以靜態海報展出學生個人或團隊專案研究作品。</li>
-        <p>歡迎於 2024/01/20 前用以下形式的投搞（已截止）</p>
-        <li>
-          一般議程：10 分鐘與 40 分鐘的議程，帶給會眾知識的洗禮與思想的壯遊。
-        </li>
-        <p>歡迎於 2024/01/20 前用以下形式的投搞（已截止）</p>
+        <p>SITCON 2025 預計徵求三種形式的稿件：</p>
         <li>
           一般議程：SITCON 2025 邀請您將您的精彩經歷以 Presentation 與 Espresso
           兩種形式呈現。Presentation 想邀請您用 40

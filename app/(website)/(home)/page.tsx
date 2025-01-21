@@ -29,22 +29,6 @@ export default function Page() {
               text="支持我們"
               target="_blank"
             />
-        <div className="absolute left-0 right-0 top-1/2 px-10 md:left-10 md:right-auto md:w-2/3"></div>
-      </div>
-      <div className="flex justify-center">
-        <div className="flex w-full max-w-[90%] flex-col justify-center px-4 py-40 lg:max-w-[840px] desktop:max-w-[1120px]">
-          <div className="my-10 flex gap-5 md:justify-end">
-            <LinkButton
-              className="w-full md:w-auto"
-              link="tickets"
-              text="活動報名"
-            />
-            <LinkButton
-              className="w-full md:w-auto"
-              link="https://sitcon.org/donate"
-              text="支持我們"
-              target="_blank"
-            />
           </div>
           <div className="space-y-5">
             <h1 className="text-h2-mobile font-bold md:text-h2">
@@ -54,13 +38,10 @@ export default function Page() {
               Lines of Flight
             </h2>
           </div>
-        </div>
-        <div className="mt-10 flex flex-col gap-7">
-          <Section title="關於 SITCON" subtitle="about SITCON">
-            <p>
-              學生計算機年會（Students’ Information Technology Conference）自
-              2012
-              年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。
+          <div className="mt-12 flex flex-col gap-7">
+            <p className="text-center text-normal font-bold md:text-xl">
+              Il s&apos;agit toujours de libérer la vie là où elle est
+              prisonnière <br /> 這總是關乎到解放生命被禁錮的生命
             </p>
             <p className="brightness-90">
               「Line of
@@ -123,21 +104,7 @@ export default function Page() {
           </div>
           <div className="my-10 flex flex-col justify-end gap-5 md:flex-row">
             <LinkButton
-              link="https://groups.google.com/g/sitcon"
-            <p className="brightness-90">
-              作為學生，我們處在一個迷惘卻充滿熱血的年紀，可以試圖去尋找社會中的裂隙，並透過「自我覺察」來建立屬於自己的價值觀與信念。無論是發掘在螢幕後方的我們，被社群媒體影響的同時遺漏了什麼；或是如何不為了合群或符合社會期待，而去隱藏自己的真實想法以此從眾；甚至是勇敢地成為先鋒，以資訊結合不同領域，打造出多元化的社群生態。讓我們帶著自我覺察的心，去開創一條屬於這個時代的道路。
-            </p>
-          </Section>
-        </div>
-        <div className="my-10 flex flex-col justify-end gap-5 md:flex-row">
-          <LinkButton
-            link="https://forms.gle/rr93tuxJ9m9uStDf9"
-            target="_blank"
-            text="預約跳坑表單"
-          />
-          <div className="flex gap-5">
-            <LinkButton
-              link="https://groups.google.com/g/sitcon"
+              link="https://forms.gle/rr93tuxJ9m9uStDf9"
               target="_blank"
               text="預約跳坑表單"
             />
