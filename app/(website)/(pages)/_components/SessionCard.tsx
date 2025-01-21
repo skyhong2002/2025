@@ -49,13 +49,17 @@ const SessionCard = ({ session }: { session: Session }) => {
         {/* {session.type} 區分不同card*/}
         {(session.type === "Ev" || session.type === "L") && ( // Event or Lightning
           <div className="flex h-full w-full flex-col items-start justify-center md:items-center">
-            <h3 className="text-[20px] font-bold">{session.zh.title}</h3>
+            <h3 className="text-[16px] font-bold md:text-[20px]">
+              {session.zh.title}
+            </h3>
           </div>
         )}
         {session.type === "K" && ( // keynote
           <div className="flex h-full w-full flex-col items-start justify-between md:items-center">
             <div>
-              <h3 className="text-[16px] font-semibold">{session.zh.title}</h3>
+              <h3 className="text-[16px] font-semibold md:text-[20px]">
+                {session.zh.title}
+              </h3>
               <p className="text-[14px]">{speakerNames.join(" / ")}</p>
             </div>
             <div className="">
@@ -72,7 +76,7 @@ const SessionCard = ({ session }: { session: Session }) => {
           session.type === "S") && ( // Espresso, Presentation, U ?, PD ?, Session
           <div className="flex h-full w-full flex-col items-start justify-between md:items-center">
             <div>
-              <h3 className="mb-2 text-[16px] font-semibold">
+              <h3 className="mb-2 text-[16px] font-semibold md:text-[20px]">
                 {session.zh.title}
               </h3>
               <p className="text-[14px]">{speakerNames.join(" / ")}</p>
