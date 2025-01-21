@@ -4,6 +4,7 @@ import data from "@/app/(website)/_data/agenda.json";
 import timeRender from "@/app/(website)/_utils/time-render";
 
 import { useSession } from "./AgendaContext";
+
 type Session = {
   id: string;
   type: string;
@@ -32,53 +33,71 @@ const SessionCard = ({ session }: { session: Session }) => {
     return speaker ? speaker.zh.name : "";
   });
 
+  const calculateMinDiff = (start: string, end: string) => {
+    // input format: "14:45" "15:25"
+    // output format: 40
+    const startHour = parseInt(start.split(":")[0]);
+    const startMin = parseInt(start.split(":")[1]);
+    const endHour = parseInt(end.split(":")[0]);
+    const endMin = parseInt(end.split(":")[1]);
+    return (endHour - startHour) * 60 + (endMin - startMin);
+  };
+
   return (
     <CardWrapper session={session}>
-      {/* {session.type} 區分不同card*/}
-      {(session.type === "Ev" || session.type === "L") && ( // Event or Lightning
-        <div className="flex h-full w-full items-center justify-center">
-          <h3 className="text-[20px] font-bold">{session.zh.title}</h3>
-        </div>
-      )}
-      {session.type === "K" && ( // keynote
-        <div className="flex h-full w-full flex-col items-center justify-between">
-          <div>
-            <h3 className="text-[16px] font-semibold">{session.zh.title}</h3>
-            <p>{speakerNames.join(" / ")}</p>
+      <div className="relative w-full">
+        {/* {session.type} 區分不同card*/}
+        {(session.type === "Ev" || session.type === "L") && ( // Event or Lightning
+          <div className="flex h-full w-full flex-col items-start justify-center md:items-center">
+            <h3 className="text-[20px] font-bold">{session.zh.title}</h3>
           </div>
-          <div className="">
-            <span className="mr-1 rounded-md bg-[#eceff7] p-1 text-xs text-black">
-              #keynote
-            </span>
+        )}
+        {session.type === "K" && ( // keynote
+          <div className="flex h-full w-full flex-col items-start justify-between md:items-center">
+            <div>
+              <h3 className="text-[16px] font-semibold">{session.zh.title}</h3>
+              <p className="text-[14px]">{speakerNames.join(" / ")}</p>
+            </div>
+            <div className="">
+              <span className="mr-1 rounded-md bg-[#eceff7] p-1 text-xs text-black">
+                #keynote
+              </span>
+            </div>
           </div>
-        </div>
-      )}
-      {(session.type === "E" ||
-        session.type === "P" ||
-        session.type === "U" ||
-        session.type === "PD" ||
-        session.type === "S") && ( // Espresso, Presentation, U ?, PD ?, Session
-        <div className="flex h-full w-full flex-col items-start justify-between">
-          <div>
-            <h3 className="mb-2 text-[16px] font-semibold">
-              {session.zh.title}
-            </h3>
-            <p>{speakerNames.join(" / ")}</p>
+        )}
+        {(session.type === "E" ||
+          session.type === "P" ||
+          session.type === "U" ||
+          session.type === "PD" ||
+          session.type === "S") && ( // Espresso, Presentation, U ?, PD ?, Session
+          <div className="flex h-full w-full flex-col items-start justify-between md:items-center">
+            <div>
+              <h3 className="mb-2 text-[16px] font-semibold">
+                {session.zh.title}
+              </h3>
+              <p className="text-[14px]">{speakerNames.join(" / ")}</p>
+            </div>
+            <div className="flex flex-wrap">
+              {session.tags.map((tag) => {
+                return (
+                  <span
+                    key={tag}
+                    className="my-1 mr-1 rounded-xl bg-[#eceff7] p-1 text-xs text-black"
+                  >
+                    #{tag}
+                  </span>
+                );
+              })}
+            </div>
           </div>
-          <div className="flex flex-wrap">
-            {session.tags.map((tag) => {
-              return (
-                <span
-                  key={tag}
-                  className="my-1 mr-1 rounded-xl bg-[#eceff7] p-1 text-xs text-black"
-                >
-                  #{tag}
-                </span>
-              );
-            })}
-          </div>
-        </div>
-      )}
+        )}
+
+        <span className="absolute bottom-0 right-0 text-nowrap text-[12px] md:hidden">
+          {session.broadcast ? "all rooms" : session.room} /{" "}
+          {calculateMinDiff(timeRender(session.start), timeRender(session.end))}{" "}
+          min
+        </span>
+      </div>
     </CardWrapper>
   );
 };
