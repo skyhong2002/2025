@@ -175,7 +175,7 @@ export default function Page() {
             <a href={x.url} target="_blank">
               <img
                 src={"/2025/sponsor/" + x.image}
-                className="mx-auto mb-4 w-full max-w-[300px]"
+                className="mx-auto mb-7 mt-5 w-full max-w-[300px] rounded-lg bg-[#fff] transition"
               />
             </a>
             <p className="my-2">{x.description}</p>
@@ -197,7 +197,7 @@ export default function Page() {
           <a href={x.url} target="_blank">
             <img
               src={"/2025/sponsor/" + x.image}
-              className="mx-auto mb-4 w-full max-w-[300px]"
+              className="mx-auto mb-7 mt-5 w-full max-w-[300px] rounded-lg bg-[#fff] transition"
             />
           </a>
           <p className="my-2">{x.description}</p>
