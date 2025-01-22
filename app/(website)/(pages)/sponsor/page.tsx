@@ -48,8 +48,8 @@ export default function Page() {
         支持我們
       </h1>
       <p>
-        十年以來，SITCON
-        一直秉持著不向與會者收費的原則來舉辦資訊研討會，不僅創造許多學生們交流、教學互長的機會，也帶領無數學子踏入資訊的殿堂。
+        自 2013 年以來，SITCON
+        始終秉持著「不向與會者收費」的初心，致力於推廣學生資訊教育。我們鼓勵參與者跳脫思想框架、發掘潛在的可能性，並為學子們提供寶貴的學習與交流機會，陪伴無數學生踏入資訊領域的殿堂。而在這十餘年裡，我們做到了這些令人驕傲的成果：
       </p>
       <div className="my-4 grid grid-cols-2 gap-4 xl:grid-cols-4">
         <FeatureCard bg="1">
@@ -86,7 +86,7 @@ export default function Page() {
             <div>
               <div>
                 <span className="mr-1 text-2xl lg:text-4xl">
-                  <Counter value={8} />
+                  <Counter value={9} />
                 </span>
                 場
               </div>
@@ -107,7 +107,7 @@ export default function Page() {
       </div>
       <p>
         此外，我們也樂見企業與學生的近距離交流，成為我們的合作夥伴您可以接觸學生資訊人才提升品牌影響力、深入學生群體推廣產品內容，如果您也認同
-        SITCON 的理念，歡迎以行動支持 SITCON 的運作，點擊下方「
+        SITCON 的理念，希望在學生邁向未來的路上提供支持，點擊下方「
         <a
           href="https://sitcon.org/donate"
           target="_blank"
@@ -115,23 +115,19 @@ export default function Page() {
         >
           個人贊助
         </a>
-        」，您的支持將會成為我們的動力，讓更多學生能在舞台上展現自我、讓資訊教育遍及臺灣的每個角落！
-        若您有興趣成為我們的贊助夥伴，歡迎點擊下方「
-        <a
-          href="https://i.sitcon.org/2025cfs-form"
-          target="_blank"
-          className="underline underline-offset-2"
-        >
-          索取贊助徵求書
-        </a>
-        」，了解詳細合作方案，或是利用{" "}
+        」按鈕，，以實際行動支持 SITCON
+        的運作。您的支持不僅能幫助更多學生站上舞台，也能讓資訊教育的種子散播至臺灣的每個角落。
+        <br />
+        <br />
+        若您有興趣成為我們的贊助夥伴，也歡迎點擊下方「索取贊助徵求書」，了解詳細合作方案，或是利用
         <a
           href="mailto:contact@sitcon.org"
-          className="underline underline-offset-2"
+          target="_blank"
+          className="link underline underline-offset-2"
         >
           contact@sitcon.org
         </a>{" "}
-        聯絡我們，商討更多的合作方式！
+        聯絡我們，我們將有專人與您商討更多的合作方式！
       </p>
       <div className="mt-6 flex items-center justify-center gap-6">
         <Button color="blue" url="https://sitcon.org/donate">
