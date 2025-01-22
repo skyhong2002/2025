@@ -2,15 +2,23 @@
 import Button from "./button";
 import Dialog from "./Dialog";
 import { useState } from "react";
-import sponsorData from "./sponsorData";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 import Markdown from "react-markdown";
+
+interface SponsorDataItem {
+  title: string;
+  image: string;
+  description: string;
+  url: string;
+  urls?: { title: string; url: string }[];
+}
+
 export default function SponsorCard({
   data,
   className,
 }: {
-  data: (typeof sponsorData.sponsors)[0]["items"][0];
+  data: SponsorDataItem;
   className?: string;
 }) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
