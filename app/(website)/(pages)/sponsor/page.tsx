@@ -15,7 +15,7 @@ function Sponsors({
   return (
     <div
       className={twMerge(
-        "grid grid-cols-2 gap-4",
+        "grid auto-rows-fr grid-cols-2 gap-4",
         largeSponsor
           ? "md:grid-cols-[repeat(auto-fill,minmax(200px,1fr))]"
           : "md:grid-cols-[repeat(auto-fill,minmax(180px,1fr))]",
