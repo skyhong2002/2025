@@ -11,7 +11,7 @@ export default function Navbar() {
           { link: "/", label: "首頁" },
           { link: "/tickets/", label: "活動報名" },
           { link: "/traffic/", label: "交通方式" },
-          // { link: "/sponsor/", label: "合作夥伴" },
+          // { link: "/2025/sponsor/", label: "合作夥伴" },
         ]}
       />
     </>

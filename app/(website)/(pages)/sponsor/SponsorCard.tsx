@@ -17,7 +17,7 @@ export default function SponsorCard({
   return (
     <>
       <motion.img
-        src={`/sponsor/${data.image}`}
+        src={`/2025/sponsor/${data.image}`}
         className={twMerge(
           "relative mx-auto w-full cursor-pointer rounded transition-all group-hover/sponsor:scale-110",
           className,
@@ -32,7 +32,7 @@ export default function SponsorCard({
             {data.title}
           </div>
           <img
-            src={`/sponsor/${data.image}`}
+            src={`/2025/sponsor/${data.image}`}
             className="mx-auto w-full max-w-[240px] rounded"
             alt={data.title}
           />

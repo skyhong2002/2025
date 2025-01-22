@@ -178,7 +178,7 @@ export default function Page() {
             </div>
             <a href={x.url} target="_blank">
               <img
-                src={"/sponsor/" + x.image}
+                src={"/2025/sponsor/" + x.image}
                 className="mx-auto mb-4 w-full max-w-[300px]"
               />
             </a>
@@ -200,7 +200,7 @@ export default function Page() {
           </div>
           <a href={x.url} target="_blank">
             <img
-              src={"/sponsor/" + x.image}
+              src={"/2025/sponsor/" + x.image}
               className="mx-auto mb-4 w-full max-w-[300px]"
             />
           </a>
