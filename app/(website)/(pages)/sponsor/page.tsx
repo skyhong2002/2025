@@ -111,11 +111,11 @@ export default function Page() {
         <a
           href="https://sitcon.org/donate"
           target="_blank"
-          className="underline underline-offset-2"
+          className="link underline underline-offset-2"
         >
           個人贊助
         </a>
-        」按鈕，，以實際行動支持 SITCON
+        」按鈕，以實際行動支持 SITCON
         的運作。您的支持不僅能幫助更多學生站上舞台，也能讓資訊教育的種子散播至臺灣的每個角落。
         <br />
         <br />
