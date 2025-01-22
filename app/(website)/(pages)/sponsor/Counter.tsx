@@ -32,7 +32,7 @@ export default function Counter({
       springValue.on("change", (latest) => {
         if (ref.current) {
           ref.current.textContent = Intl.NumberFormat("en-US").format(
-            latest.toFixed(0),
+            Number.parseFloat(latest.toFixed(0)),
           );
         }
       }),
