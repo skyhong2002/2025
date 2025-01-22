@@ -37,7 +37,7 @@ export function FeatureCard({
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:opacity-50 group-hover:blur-sm"
         style={{
-          backgroundImage: `url('/statscard/${bg}.jpg')`,
+          backgroundImage: `url('/2025/statscard/${bg}.jpg')`,
           mask: "linear-gradient(180deg, #000 60%, #0000 100%)",
           WebkitMask: "linear-gradient(180deg, #000 60%, #0000 100%)",
         }}
