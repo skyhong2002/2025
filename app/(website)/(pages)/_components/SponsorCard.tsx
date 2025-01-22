@@ -56,7 +56,7 @@ export default function SponsorCard(brandObj: {
               exit={{ scale: 0.8, opacity: 0, y: 10, filter: "blur(0.3em)" }}
               transition={{ duration: 0.25 }}
               onClick={(e) => e.stopPropagation()}
-              className="absolute inset-5 flex flex-col items-center justify-between rounded-xl bg-white p-8 md:static md:max-w-[70%] md:justify-start lg:max-w-[60%]"
+              className="absolute max-md:hidden inset-5 flex flex-col items-center justify-between rounded-xl bg-white p-8 md:static md:max-w-[70%] md:justify-start lg:max-w-[60%]"
             >
               <div className="flex">
                 <h2 className="mb-5 items-start justify-start text-3xl font-bold text-black">

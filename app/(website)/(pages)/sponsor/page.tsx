@@ -3,6 +3,7 @@
 import Image from "next/image";
 import sponsorList from "./sponsors.json";
 import { useRouter } from "next/navigation";
+import SponsorCard from "../_components/SponsorCard";
 
 export default function Page() {
   const router = useRouter();
@@ -231,119 +232,117 @@ export default function Page() {
               深耕級
             </h2>
             <div className="grid grid-cols-2 justify-center gap-x-4 gap-y-[15px] md:grid-cols-5 md:gap-x-5 md:gap-y-[27px]">
-              {sponsorList.level2.map((brand, index) => (
-                <div
-                  key={brand.name || index}
-                  className="flex h-[133px] w-[189px] items-center justify-center rounded-xl bg-white md:h-[205px] md:w-[192px]"
-                >
-                  <div className="relative h-[69px] w-[91px] md:h-[105px] md:w-[160px]">
-                    <Image
-                      src={brand.image}
-                      alt={brand.name}
-                      fill
-                      className="rounded-md"
-                    />
+              {sponsorList.level2.length != 0 &&
+                sponsorList.level2.map((brand, index) => (
+                  <div
+                    key={brand.name || index}
+                    className="flex h-[133px] w-[189px] items-center justify-center rounded-xl bg-white md:h-[205px] md:w-[192px]"
+                  >
+                    <div className="relative h-[69px] w-[91px] md:h-[105px] md:w-[160px]">
+                      <Image
+                        src={brand.image}
+                        alt={brand.name}
+                        fill
+                        className="rounded-md"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
 
           {/* 前瞻級 */}
+
           <div>
             <h2 className="pb-6 text-center text-h2-mobile font-bold md:text-h2">
               前瞻級
             </h2>
             <div className="grid grid-cols-2 justify-center gap-x-4 gap-y-[15px] md:grid-cols-5 md:gap-x-5 md:gap-y-[27px]">
-              {sponsorList.level3.map((brand, index) => (
-                <div
-                  key={brand.name || index}
-                  className="flex h-[133px] w-[189px] items-center justify-center rounded-xl bg-white md:h-[205px] md:w-[192px]"
-                >
-                  <div className="relative h-[69px] w-[91px] md:h-[105px] md:w-[160px]">
-                    <Image
-                      src={brand.image}
-                      alt={brand.name}
-                      fill
-                      className="rounded-md"
-                    />
+              {sponsorList.level3.length != 0 &&
+                sponsorList.level3.map((brand, index) => (
+                  <div
+                    key={brand.name || index}
+                    className="flex h-[133px] w-[189px] items-center justify-center rounded-xl bg-white md:h-[205px] md:w-[192px]"
+                  >
+                    <div className="relative h-[69px] w-[91px] md:h-[105px] md:w-[160px]">
+                      <Image
+                        src={brand.image}
+                        alt={brand.name}
+                        fill
+                        className="rounded-md"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
 
           {/* 新芽級 */}
-          <div>
-            <h2 className="pb-6 text-center text-h2-mobile font-bold md:text-h2">
-              新芽級
-            </h2>
-            <div className="grid grid-cols-2 justify-center gap-x-4 gap-y-[15px] md:grid-cols-5 md:gap-x-5 md:gap-y-[27px]">
-              {sponsorList.level4.map((brand, index) => (
-                <div
-                  key={brand.name || index}
-                  className="flex h-[133px] w-[189px] items-center justify-center rounded-xl bg-white md:h-[205px] md:w-[192px]"
-                >
-                  <div className="relative h-[69px] w-[91px] md:h-[105px] md:w-[160px]">
-                    <Image
-                      src={brand.image}
-                      alt={brand.name}
-                      fill
-                      className="rounded-md"
-                    />
-                  </div>
-                </div>
-              ))}
+          {sponsorList.level4.length != 0 && (
+            <div>
+              <h2 className="pb-6 text-center text-h2-mobile font-bold md:text-h2">
+                新芽級
+              </h2>
+              <div className="grid grid-cols-2 justify-center gap-x-4 gap-y-[15px] md:grid-cols-5 md:gap-x-5 md:gap-y-[27px]">
+                {sponsorList.level4.length != 0 &&
+                  sponsorList.level4.map((brand, index) => (
+                    <div
+                      key={brand.name || index}
+                      className="flex h-[133px] w-[189px] items-center justify-center rounded-xl bg-white md:h-[205px] md:w-[192px]"
+                    >
+                      <div className="relative h-[69px] w-[91px] md:h-[105px] md:w-[160px]">
+                        <Image
+                          src={brand.image}
+                          alt={brand.name}
+                          fill
+                          className="rounded-md"
+                        />
+                      </div>
+                    </div>
+                  ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* 特別感謝 */}
-          <div>
-            <h1 className="pb-6 text-center text-h1-mobile font-bold md:text-h1">
-              特別感謝
-            </h1>
-            <div className="grid grid-cols-2 justify-center gap-x-4 gap-y-[15px] md:grid-cols-5 md:gap-x-5 md:gap-y-[27px]">
-              {sponsorList.special_thanks.map((brand, index) => (
-                <div
-                  key={brand.name || index}
-                  className="flex h-[133px] w-[189px] items-center justify-center rounded-xl bg-white md:h-[205px] md:w-[192px]"
-                >
-                  <div className="relative h-[69px] w-[91px] md:h-[105px] md:w-[160px]">
-                    <Image
-                      src={brand.image}
-                      alt={brand.name}
-                      fill
-                      className="rounded-md"
-                    />
-                  </div>
-                </div>
-              ))}
+          {sponsorList.special_thanks.length > 0 && (
+            <div>
+              <h1 className="pb-6 text-center text-h1-mobile font-bold md:text-h1">
+                特別感謝
+              </h1>
+              <div className="grid grid-cols-2 justify-center gap-x-4 gap-y-4 md:grid-cols-4 md:gap-x-6 md:gap-y-6">
+                {sponsorList.special_thanks.map((brand, index) => (
+                  <SponsorCard key={brand.name || index} brand={brand} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* 媒體夥伴 */}
-          <div>
-            <h1 className="pb-6 text-center text-h1-mobile font-bold md:text-h1">
-              媒體夥伴
-            </h1>
-            <div className="grid grid-cols-2 justify-center gap-x-4 gap-y-[15px] md:grid-cols-5 md:gap-x-5 md:gap-y-[27px]">
-              {sponsorList.media.map((brand, index) => (
-                <div
-                  key={brand.name || index}
-                  className="flex h-[133px] w-[189px] items-center justify-center rounded-xl bg-white md:h-[205px] md:w-[192px]"
-                >
-                  <div className="relative h-[69px] w-[91px] md:h-[105px] md:w-[160px]">
-                    <Image
-                      src={brand.image}
-                      alt={brand.name}
-                      fill
-                      className="rounded-md"
-                    />
+          {sponsorList.media.length > 0 && (
+            <div>
+              <h1 className="pb-6 text-center text-h1-mobile font-bold md:text-h1">
+                媒體夥伴
+              </h1>
+              <div className="grid grid-cols-2 justify-center gap-x-4 gap-y-[15px] md:grid-cols-5 md:gap-x-5 md:gap-y-[27px]">
+                {sponsorList.media.map((brand, index) => (
+                  <div
+                    key={brand.name || index}
+                    className="flex h-[133px] w-[189px] items-center justify-center rounded-xl bg-white md:h-[205px] md:w-[192px]"
+                  >
+                    <div className="relative h-[69px] w-[91px] md:h-[105px] md:w-[160px]">
+                      <Image
+                        src={brand.image}
+                        alt={brand.name}
+                        fill
+                        className="rounded-md"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
