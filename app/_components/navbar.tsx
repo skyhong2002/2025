@@ -30,7 +30,7 @@ export default function Navbar({
   const [isIndex, setIsIndex] = useState(true);
   const pathname = usePathname();
   useLayoutEffect(() => {
-    setIsIndex(pathname === "/cfp/" || pathname === "/");
+    setIsIndex(pathname === "/cfp/");
   }, [pathname]);
   const navBackgroundOpacity = useTransform(scrollY, [0, 100], [0, 1]);
   const navBackground = useMotionTemplate`rgba(39, 48, 77, ${navBackgroundOpacity})`;
