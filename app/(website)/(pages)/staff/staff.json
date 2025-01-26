@@ -13,7 +13,8 @@
         "group": "總召組",
         "name": "康喔",
         "role": "副召",
-        "email": "08b25778f9a9ca3f2591b4e859be426dbd075608d763daf4fdd244d48eb26f13"
+        "email": "08b25778f9a9ca3f2591b4e859be426dbd075608d763daf4fdd244d48eb26f13",
+        "website": "https://kangjw.me/\r"
       }
     ]
   },
@@ -25,7 +26,8 @@
         "group": "行政組",
         "name": "Windless",
         "role": "組長",
-        "email": "5b168d8b83a4f506cf9be7b9b86b7ffc2b7a8dee29e5f6c82f9720764fc05f4d"
+        "email": "5b168d8b83a4f506cf9be7b9b86b7ffc2b7a8dee29e5f6c82f9720764fc05f4d",
+        "website": "https://windless.me\r"
       },
       {
         "group": "行政組",
@@ -92,7 +94,8 @@
         "group": "議程組",
         "name": "蓋蓋",
         "role": "組員",
-        "email": "97876ff9308e0f785360e85e494eaf735af0aeb0231d248ff6550f1b2a2f255c"
+        "email": "97876ff9308e0f785360e85e494eaf735af0aeb0231d248ff6550f1b2a2f255c",
+        "website": "https://skyhong.tw\r"
       },
       {
         "group": "議程組",
@@ -105,12 +108,6 @@
         "name": "陽",
         "role": "組員",
         "email": "e39a4321580c4b313c13d7f42b1c143cf0ea01d625cb2a4014204dc8c97c1838"
-      },
-      {
-        "group": "議程組",
-        "name": "仙草",
-        "role": "組員",
-        "email": "de0d74b34f6768ec34374e7b2a75d07c8f26ec5759a2b866b46f5163f3a3c599"
       },
       {
         "group": "議程組",
@@ -603,7 +600,13 @@
         "role": "組員",
         "email": "491dac16c1dcf517b8211401c380bda4d83e4c316d907dc0502c99766fd2e007"
       },
-      { "group": "紀錄組", "name": "\"夏川\r" },
+      {
+        "group": "紀錄組",
+        "name": "夏川",
+        "role": "組員",
+        "email": "7b6c2dfa7967e9d6747a2cb7d052de230fce4016b1e48e5b856ae72ef293bd78",
+        "website": "https://natsukawataoyuan0707.wordpress.com\r"
+      },
       {
         "group": "紀錄組",
         "name": "餐包",
@@ -917,7 +920,8 @@
         "group": "行銷組",
         "name": "Denny Huang",
         "role": "組員",
-        "email": "eb2a13713db05afd68dafd190254a7bf1d7258aff26b1546641e07afdd3ff2ea"
+        "email": "eb2a13713db05afd68dafd190254a7bf1d7258aff26b1546641e07afdd3ff2ea",
+        "website": "https://denny.one\r"
       },
       {
         "group": "行銷組",
