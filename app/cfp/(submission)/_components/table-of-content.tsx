@@ -41,7 +41,7 @@ export default function TableOfContent({
             target="_blank"
             className="tableContentItem block w-full rounded-md bg-primary px-4 py-2 text-center font-bold text-black hover:bg-foreground max-[1024px]:active:scale-95 min-[1024px]:active:bg-primary"
           >
-            立即投稿
+            投稿已截止
           </Link>
         )}
         <h2 className="mb-3 text-h3 font-extrabold text-foreground">
