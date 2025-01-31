@@ -51,12 +51,12 @@ export default function Navbar({
           backgroundColor: allowFadeEffect ? navBackground : "rgba(39, 48, 77)",
         }}
       >
-        <div className="w-full max-w-[840px] desktop:max-w-[1120px]">
-          <ul className="relative flex w-full items-center justify-between p-4 max-[750px]:justify-center">
+        <div className="w-full max-w-[950px] desktop:max-w-[1230px]">
+          <ul className="relative flex w-full items-center justify-between p-4 [@media(max-width:900px)]:justify-center">
             <Link href={logoHref}>
               <SitconLogo className="text-foreground" />
             </Link>
-            <ul className="flex items-center justify-end gap-8 text-foreground max-[750px]:hidden">
+            <ul className="flex items-center justify-end gap-6 text-foreground [@media(max-width:900px)]:hidden">
               {menuItems.map(({ link, label }) => (
                 <NavbarItem key={link} link={link}>
                   <motion.p
@@ -73,7 +73,7 @@ export default function Navbar({
 
             <AnimatePresence mode="wait">
               <motion.div
-                className="absolute right-4 cursor-pointer justify-self-end md:hidden"
+                className="absolute right-4 cursor-pointer justify-self-end [@media(min-width:900px)]:hidden"
                 onClick={() => handleMenuClick()}
                 initial={{ rotate: 0 }}
                 animate={{
@@ -101,7 +101,7 @@ export default function Navbar({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-[64px] z-10 flex h-[100vh] w-full flex-col items-end gap-16 border-t border-foreground/50 bg-background-light p-6 text-h2 font-bold shadow-lg md:hidden"
+                  className="absolute top-[64px] z-10 flex h-[100vh] w-full flex-col items-end gap-8 border-t border-foreground/50 bg-background-light p-6 text-h3 font-bold shadow-lg md:hidden"
                 >
                   {menuItems.map(({ link, label }, index) => (
                     <NavbarItem key={link} link={link}>
