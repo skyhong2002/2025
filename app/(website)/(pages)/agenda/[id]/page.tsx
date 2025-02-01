@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import data from "@/public/sessions.json";
 // import AgendaPage from "@/app/(website)/(pages)/_components/AgendaPage";
 import SessionPopup from "../../_components/SessionPopup";
+import { AnimatePresence } from "framer-motion";
 
 export function generateStaticParams() {
   const ids = data.sessions
@@ -52,5 +53,9 @@ export async function generateMetadata({
 export default function Page({ params }: { params: { id: string } }) {
   const { id } = params;
 
-  return <SessionPopup openSessionId={id} />;
+  return (
+    <AnimatePresence>
+      <SessionPopup openSessionId={id} />
+    </AnimatePresence>
+  );
 }
