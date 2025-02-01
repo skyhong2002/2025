@@ -3,7 +3,8 @@ import React, { ReactNode } from "react";
 import data from "@/public/sessions.json";
 import timeRender from "@/app/(website)/_utils/time-render";
 
-import { useSession } from "./AgendaContext";
+// import { useSession } from "./AgendaContext";
+import Link from "next/link";
 
 export type Session = {
   id: string;
@@ -114,7 +115,7 @@ const CardWrapper = ({
   children: ReactNode;
   session: Session;
 }) => {
-  const { setSessionIsOpen, setOpenSessionId } = useSession();
+  // const { setSessionIsOpen, setOpenSessionId } = useSession();
   const getRoom = (broadcast: string[] | null, room: string) => {
     if (broadcast === null) {
       switch (room) {
@@ -190,12 +191,6 @@ const CardWrapper = ({
     session.type === "S" ||
     session.type === "K" ||
     session.type === "L";
-  const handleCardClick = () => {
-    if (!isLinkable) return;
-    setOpenSessionId(session.id);
-    history.pushState(null, "", `/2025/agenda/${session!.id}/`);
-    setSessionIsOpen(true);
-  };
 
   return (
     <div
@@ -206,12 +201,14 @@ const CardWrapper = ({
         gridRow: `${startTime} / ${endTime}`,
       }} // grid layout
     >
-      <div
-        className={`flex h-full w-full rounded-lg border border-white border-opacity-50 p-4 ${sessionStyle(session.type)} ${isLinkable && "cursor-pointer"}`}
-        onClick={handleCardClick}
-      >
-        {children}
-      </div>
+      <Link href={`/agenda/${session.id}`}>
+        <div
+          className={`flex h-full w-full rounded-lg border border-white border-opacity-50 p-4 ${sessionStyle(session.type)} ${isLinkable && "cursor-pointer"}`}
+          // onClick={handleCardClick}
+        >
+          {children}
+        </div>
+      </Link>
     </div>
   );
 };

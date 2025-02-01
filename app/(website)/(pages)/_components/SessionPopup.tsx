@@ -1,11 +1,12 @@
 import React from "react";
 import data from "@/public/sessions.json";
-import { useSession } from "./AgendaContext";
+// import { useSession } from "./AgendaContext";
 import timeRender from "@/app/(website)/_utils/time-render";
 import Markdown from "react-markdown";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import Image from "next/image";
 import type { Session } from "@/app/(website)/(pages)/_components/SessionCard";
+import Link from "next/link";
 
 const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
   const session: Session | undefined = data.sessions
@@ -14,7 +15,7 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
         session.start !== null && session.end !== null && session.id !== null,
     )
     .find((session) => session.id === openSessionId);
-  const { setSessionIsOpen } = useSession();
+  // const { setSessionIsOpen } = useSession();
 
   if (!session) return null;
 
@@ -47,26 +48,23 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
     return data.speakers.find((speaker) => speaker.id === speakerId);
   });
 
-  const handleClose = () => {
-    setSessionIsOpen(false);
-    history.pushState(null, "", `/2025/agenda/`);
-  };
-
   return (
     <>
       {/* 遮罩 */}
       <div className="fixed inset-0 z-20 h-[100vh] w-[100vw] bg-[black]/30 backdrop-blur-sm" />
       {/* 彈出面板 */}
-      TODO::新的卷軸樣式、彈出動畫
+      {/* TODO::新的卷軸樣式、彈出動畫 */}
       <div className="fixed left-[50%] top-[50%] z-30 h-[80vh] w-full translate-x-[-50%] translate-y-[-50%] overflow-y-scroll rounded-3xl bg-[#ffffff] p-6 text-black md:w-[90vw] md:p-10">
         <div className="flex flex-col gap-2">
           <div className="flex h-[24px] w-[24px] cursor-pointer items-center justify-center self-end rounded-full bg-[#304878]">
-            <button
-              onClick={handleClose}
-              className="material-symbols-outlined !text-[16px] !font-bold text-[#ffffff]"
-            >
-              close
-            </button>
+            <Link href="/agenda">
+              <button
+                // onClick={handleClose}
+                className="material-symbols-outlined !text-[16px] !font-bold text-[#ffffff]"
+              >
+                close
+              </button>
+            </Link>
           </div>
           <div className="flex max-w-full flex-col gap-3 md:max-w-[60%]">
             <div className="flex items-center gap-2">
