@@ -49,7 +49,7 @@ const SessionCard = ({ session }: { session: Session }) => {
         {/* {session.type} 區分不同card*/}
         {(session.type === "Ev" || session.type === "L") && ( // Event or Lightning
           <div className="flex h-full w-full flex-col items-start justify-center md:items-center">
-            <h3 className="text-[16px] font-bold md:text-[20px]">
+            <h3 className="text-[12px] font-bold md:text-[16px]">
               {session.zh.title}
             </h3>
           </div>
@@ -57,7 +57,7 @@ const SessionCard = ({ session }: { session: Session }) => {
         {session.type === "K" && ( // keynote
           <div className="flex h-full w-full flex-col items-start justify-between md:items-center">
             <div>
-              <h3 className="text-[16px] font-semibold md:text-[20px]">
+              <h3 className="text-[12px] font-semibold md:text-[16px]">
                 {session.zh.title}
               </h3>
               <p className="text-[14px]">{speakerNames.join(" / ")}</p>
@@ -74,9 +74,9 @@ const SessionCard = ({ session }: { session: Session }) => {
           session.type === "U" ||
           session.type === "PD" ||
           session.type === "S") && ( // Espresso, Presentation, U ?, PD ?, Session
-          <div className="flex h-full w-full flex-col items-start justify-between md:items-center">
+          <div className="flex h-full w-full flex-col items-start justify-between md:items-start">
             <div>
-              <h3 className="mb-2 text-[16px] font-semibold md:text-[20px]">
+              <h3 className="mb-2 text-[12px] font-semibold md:text-[16px]">
                 {session.zh.title}
               </h3>
               <p className="text-[14px]">{speakerNames.join(" / ")}</p>
@@ -199,15 +199,19 @@ const CardWrapper = ({
 
   return (
     <div
+      className="z-10 p-2"
       key={session.id}
-      className={`flex h-full w-full rounded-lg border p-4 ${sessionStyle(session.type)} ${isLinkable && "cursor-pointer"}`}
       style={{
         gridColumn: `${startRoom} / ${endRoom}`,
         gridRow: `${startTime} / ${endTime}`,
       }} // grid layout
-      onClick={handleCardClick}
     >
-      {children}
+      <div
+        className={`flex h-full w-full rounded-lg border border-white border-opacity-50 p-4 ${sessionStyle(session.type)} ${isLinkable && "cursor-pointer"}`}
+        onClick={handleCardClick}
+      >
+        {children}
+      </div>
     </div>
   );
 };

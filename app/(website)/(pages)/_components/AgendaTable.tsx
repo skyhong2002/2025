@@ -2,33 +2,6 @@ import React from "react";
 import data from "@/public/sessions.json";
 import SessionCard from "@/app/(website)/(pages)/_components/SessionCard";
 
-// 新的議程表json改變，請改變times的height來調整議程表的高度
-const times = [
-  { id: "t0830", height: "0.5fr" },
-  { id: "t0900", height: "0.5fr" },
-  { id: "t0910", height: "1fr" },
-  { id: "t1000", height: "0.5fr" },
-  { id: "t1005", height: "1fr" },
-  { id: "t1055", height: "0.5fr" },
-  { id: "t1105", height: "1fr" },
-  { id: "t1145", height: "0.01fr" },
-  { id: "t1200", height: "1fr" },
-  { id: "t1230", height: "0.01fr" },
-  { id: "t1245", height: "1fr" },
-  { id: "t1325", height: "0.5fr" },
-  { id: "t1335", height: "1fr" },
-  { id: "t1415", height: "0.5fr" },
-  { id: "t1425", height: "1fr" },
-  { id: "t1435", height: "0.5fr" },
-  { id: "t1445", height: "1fr" },
-  { id: "t1525", height: "0.5fr" },
-  { id: "t1605", height: "1fr" },
-  { id: "t1645", height: "0.5fr" },
-  { id: "t1655", height: "1fr" },
-  { id: "t1745", height: "0.5fr" },
-  { id: "t1755", height: "0.5fr" },
-];
-
 const styleToText = (time: string) => {
   // input time format: "t0830"
   // output style format: "08:30"
@@ -37,54 +10,87 @@ const styleToText = (time: string) => {
 
 export default function DesktopAgenda() {
   const gridTemplateColumns = data.rooms.reduce((acc: string, room) => {
-    return `${acc} [${room.id}] 1fr`;
-  }, "[start] 1fr");
+    return `${acc} [${room.id}] auto`;
+  }, "[start] auto");
   // start R0 R1 R2 R3 S
 
+  function parseTime(time: Date) {
+    return time.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+      timeZone: "Asia/Taipei",
+    });
+  }
+
+  const times = data.sessions
+    .map((session) => [session.start, session.end])
+    .flat(1)
+    .filter((item) => item !== null)
+    .map((item) => new Date(item))
+    .sort()
+    .map((item) => parseTime(item))
+    .filter((item, index, self) => self.indexOf(item) === index)
+    .map((item, index) => ({ id: `t${item.replace(":", "")}`, index }));
+
   const gridTemplateRows = times.reduce((acc: string, time) => {
-    return `${acc} [timeLine-${time.id}] 1px [${time.id}] ${time.height}`;
-  }, "[start] 30px [divider] 1px");
+    return `${acc} [timeLine-${time.id}] 1px [${time.id}] auto`;
+  }, "[start] auto [divider] auto");
   // start divider timeLine-0830 0830 timeLine-1000 1000 ...
 
   return (
     <div
-      className="grid h-full gap-4 text-white"
+      className="grid h-full text-white"
       style={{
         gridTemplateColumns: gridTemplateColumns,
         gridTemplateRows: gridTemplateRows,
       }}
     >
       {/* row1 empty R2 R0 R1 R3 S  */}
-      <div></div>
+      <div className="sticky top-[120px] z-20 border-b border-b-white border-opacity-30 bg-background py-2 text-center text-[24px] font-bold"></div>
       {data.rooms.map((rooms, index) => (
-        <div key={index} className="text-center text-[24px] font-bold">
+        <div
+          key={index}
+          className="sticky top-[120px] z-20 border-b border-b-white border-opacity-30 bg-background py-2 text-center text-[24px] font-bold"
+        >
           {rooms.id}
         </div>
       ))}
       {/* row1 empty R2 R0 R1 R3 S  */}
 
-      {/* full  divider */}
+      {/* empty space */}
       <div
-        className="h-[1px] w-full bg-white"
+        className="h-[1px] w-full py-3"
         style={{
           gridColumn: "start / end",
           gridRow: "divider / t0830",
         }}
       />
-      {/* full divider */}
 
-      {/* all timeLine */}
+      {/* all time without line (?) */}
       {times.map((time) => (
         <div
           key={time.id}
-          className="mt-2 flex h-full w-full items-center text-white"
+          className="flex h-full w-full translate-y-[1px] items-center pb-2 pr-8 text-white"
+          style={{
+            gridColumn: "start / start",
+            gridRow: `timeLine-${time.id} / ${time.id}`,
+          }}
+        >
+          <p>{styleToText(time.id)}</p>
+        </div>
+      ))}
+      {/* all timeline */}
+      {times.map((time) => (
+        <div
+          key={time.id}
+          className="flex h-full w-full translate-y-[1px] items-center pb-2 pl-16 text-white"
           style={{
             gridColumn: "start / end",
             gridRow: `timeLine-${time.id} / ${time.id}`,
           }}
         >
-          <p>{styleToText(time.id)}</p>
-          <hr className="ml-6 w-full bg-white" />
+          <hr className="pointer-events-none w-full bg-white opacity-30" />
         </div>
       ))}
       {/* all timeLine */}
