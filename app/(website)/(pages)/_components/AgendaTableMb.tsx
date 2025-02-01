@@ -6,29 +6,23 @@ import timeRender from "@/app/(website)/_utils/time-render";
 import React from "react";
 
 export default function MobileAgenda() {
-  const allTimes = [
-    "t0830",
-    "t0900",
-    "t0910",
-    "t1000",
-    "t1005",
-    "t1055",
-    "t1105",
-    "t1145",
-    "t1200",
-    "t1245",
-    "t1325",
-    "t1335",
-    "t1415",
-    "t1425",
-    "t1435",
-    "t1445",
-    "t1525",
-    "t1605",
-    "t1645",
-    "t1655",
-    "t1745",
-  ];
+  function parseTime(time: Date) {
+    return time.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+      timeZone: "Asia/Taipei",
+    });
+  }
+
+  const allTimes = data.sessions
+    .map((session) => [session.start, session.end])
+    .flat(1)
+    .filter((item) => item !== null)
+    .map((item) => new Date(item))
+    .sort()
+    .map((item) => parseTime(item))
+    .filter((item, index, self) => self.indexOf(item) === index);
 
   const styleToText = (time: string) => {
     // input time format: "t0830"
@@ -58,9 +52,9 @@ export default function MobileAgenda() {
           <div key={time.text}>
             <div className="flex h-[1px] w-full items-center text-white drop-shadow-2xl">
               <p>{time.text}</p>
-              <hr className="ml-6 w-full bg-white" />
+              <hr className="ml-3 w-full text-white/30" />
             </div>
-            <div className="my-4 ml-16 flex flex-col gap-2">
+            <div className="ml-16 flex flex-col">
               {time.sessions
                 .filter(
                   (session) =>
