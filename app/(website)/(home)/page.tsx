@@ -110,7 +110,7 @@ export default function Page() {
             />
             <div className="flex gap-5">
               <LinkButton
-                link="https://groups.google.com/g/sitcon"
+                link="https://groups.google.com/g/sitcon-general/"
                 target="_blank"
                 text="郵件論壇"
                 className="w-full md:w-auto"

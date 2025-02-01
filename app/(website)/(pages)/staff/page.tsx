@@ -36,7 +36,7 @@ export default function Page() {
           </Link>
           <Link
             className="flex h-[60px] w-full items-center justify-center self-center rounded-full bg-primary text-black transition hover:bg-foreground max-[1024px]:active:scale-95 max-sm:px-3 md:mb-10 md:w-[153px] md:self-start min-[1024px]:active:bg-primary"
-            href="https://groups.google.com/g/sitcon"
+            href="https://groups.google.com/g/sitcon-general/"
             target="_blank"
           >
             郵件論壇
