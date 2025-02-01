@@ -5,6 +5,7 @@ import timeRender from "@/app/(website)/_utils/time-render";
 
 // import { useSession } from "./AgendaContext";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export type Session = {
   id: string;
@@ -57,7 +58,7 @@ const SessionCard = ({ session }: { session: Session }) => {
         )}
         {session.type === "K" && ( // keynote
           <div className="flex h-full w-full flex-col items-start justify-between md:items-center">
-            <div>
+            <div className="flex-col items-center text-center">
               <h3 className="text-[12px] font-semibold md:text-[16px]">
                 {session.zh.title}
               </h3>
@@ -155,7 +156,8 @@ const CardWrapper = ({
   };
 
   const sessionStyle = (type: string) => {
-    const lightStyle = "bg-[#ffffff] text-black";
+    const lightStyle =
+      "bg-[#ffffff] text-black hover:opacity-80 transition-opacity";
     const darkStyle = "bg-[#2c3142] text-white";
     switch (type) {
       case "K":
@@ -183,14 +185,12 @@ const CardWrapper = ({
   const startTime = textToStyle(timeRender(session.start));
   const endTime = textToStyle(timeRender(session.end));
 
+  const linkAbleType = ["E", "P", "U", "PD", "S", "K", "L"];
   const isLinkable =
-    session.type === "E" ||
-    session.type === "P" ||
-    session.type === "U" ||
-    session.type === "PD" ||
-    session.type === "S" ||
-    session.type === "K" ||
-    session.type === "L";
+    linkAbleType.includes(session.type) &&
+    session.zh.title !== "TBA" &&
+    session.speakers.length > 0 &&
+    session.zh.description !== "TBA";
 
   return (
     <div
@@ -201,9 +201,19 @@ const CardWrapper = ({
         gridRow: `${startTime} / ${endTime}`,
       }} // grid layout
     >
-      <Link href={`/agenda/${session.id}`} scroll={false}>
+      <Link
+        href={isLinkable ? `/agenda/${session.id}` : ""}
+        scroll={false}
+        className={cn({
+          "cursor-pointer": isLinkable,
+          "pointer-events-none": !isLinkable,
+        })}
+      >
         <div
-          className={`flex h-full w-full rounded-lg border border-white border-opacity-50 p-4 ${sessionStyle(session.type)} ${isLinkable && "cursor-pointer"}`}
+          className={cn(
+            "flex h-full w-full rounded-lg border border-white border-opacity-50 p-4",
+            sessionStyle(session.type),
+          )}
           // onClick={handleCardClick}
         >
           {children}
