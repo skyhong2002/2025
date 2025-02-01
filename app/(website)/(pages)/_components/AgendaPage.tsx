@@ -3,21 +3,29 @@ import DesktopAgenda from "@/app/(website)/(pages)/_components/AgendaTable";
 import MobileAgenda from "@/app/(website)/(pages)/_components/AgendaTableMb";
 import SessionPopup from "./SessionPopup";
 import { SessionProvider, useSession } from "./AgendaContext";
-import { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 
 export default function AgendaPage({
   openSessionID,
+  children,
 }: {
   openSessionID?: string;
+  children?: ReactNode;
 }) {
   return (
     <SessionProvider>
-      <PageContent openSessionID={openSessionID} />
+      <PageContent openSessionID={openSessionID}>{children}</PageContent>
     </SessionProvider>
   );
 }
 
-const PageContent = ({ openSessionID }: { openSessionID?: string }) => {
+const PageContent = ({
+  openSessionID,
+  children,
+}: {
+  openSessionID?: string;
+  children?: ReactNode;
+}) => {
   const { sessionIsOpen, setOpenSessionId, setSessionIsOpen, openSessionId } =
     useSession();
   // openSessionID 是從URL query string取得的初始值
@@ -38,6 +46,7 @@ const PageContent = ({ openSessionID }: { openSessionID?: string }) => {
           <MobileAgenda />
         </div>
       </div>
+      {children}
       {sessionIsOpen && <SessionPopup openSessionId={openSessionId} />}
     </div>
   );

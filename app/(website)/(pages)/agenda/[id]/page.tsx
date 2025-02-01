@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import data from "@/public/sessions.json";
-import AgendaPage from "@/app/(website)/(pages)/_components/AgendaPage";
+// import AgendaPage from "@/app/(website)/(pages)/_components/AgendaPage";
+import SessionPopup from "../../_components/SessionPopup";
 
 export function generateStaticParams() {
   const ids = data.sessions
@@ -51,5 +52,5 @@ export async function generateMetadata({
 export default function Page({ params }: { params: { id: string } }) {
   const { id } = params;
 
-  return <AgendaPage openSessionID={id} />;
+  return <SessionPopup openSessionId={id} />;
 }

@@ -201,7 +201,7 @@ const CardWrapper = ({
         gridRow: `${startTime} / ${endTime}`,
       }} // grid layout
     >
-      <Link href={`/agenda/${session.id}`}>
+      <Link href={`/agenda/${session.id}`} scroll={false}>
         <div
           className={`flex h-full w-full rounded-lg border border-white border-opacity-50 p-4 ${sessionStyle(session.type)} ${isLinkable && "cursor-pointer"}`}
           // onClick={handleCardClick}

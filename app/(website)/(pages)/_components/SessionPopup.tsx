@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import data from "@/public/sessions.json";
 // import { useSession } from "./AgendaContext";
@@ -57,7 +59,7 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
       <div className="fixed left-[50%] top-[50%] z-30 h-[80vh] w-full translate-x-[-50%] translate-y-[-50%] overflow-y-scroll rounded-3xl bg-[#ffffff] p-6 text-black md:w-[90vw] md:p-10">
         <div className="flex flex-col gap-2">
           <div className="flex h-[24px] w-[24px] cursor-pointer items-center justify-center self-end rounded-full bg-[#304878]">
-            <Link href="/agenda">
+            <Link href="/agenda" scroll={false}>
               <button
                 // onClick={handleClose}
                 className="material-symbols-outlined !text-[16px] !font-bold text-[#ffffff]"
