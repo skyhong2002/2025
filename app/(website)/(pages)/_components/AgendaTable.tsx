@@ -1,5 +1,5 @@
 import React from "react";
-import data from "@/app/(website)/_data/agenda.json";
+import data from "@/public/sessions.json";
 import SessionCard from "@/app/(website)/(pages)/_components/SessionCard";
 
 // 新的議程表json改變，請改變times的height來調整議程表的高度
@@ -89,9 +89,16 @@ export default function DesktopAgenda() {
       ))}
       {/* all timeLine */}
       {/* all sessions */}
-      {data.sessions.map((session) => (
-        <SessionCard key={session.id} session={session} />
-      ))}
+      {data.sessions
+        .filter(
+          (session) =>
+            session.start !== null &&
+            session.end !== null &&
+            session.id !== null,
+        )
+        .map((session) => (
+          <SessionCard key={session.id} session={session} />
+        ))}
     </div>
   );
 }

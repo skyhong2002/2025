@@ -1,13 +1,19 @@
 import React from "react";
-import data from "@/app/(website)/_data/agenda.json";
+import data from "@/public/sessions.json";
 import { useSession } from "./AgendaContext";
 import timeRender from "@/app/(website)/_utils/time-render";
 import Markdown from "react-markdown";
 import { YouTubeEmbed } from "@next/third-parties/google";
 import Image from "next/image";
+import type { Session } from "@/app/(website)/(pages)/_components/SessionCard";
 
 const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
-  const session = data.sessions.find((session) => session.id === openSessionId);
+  const session: Session | undefined = data.sessions
+    .filter(
+      (session) =>
+        session.start !== null && session.end !== null && session.id !== null,
+    )
+    .find((session) => session.id === openSessionId);
   const { setSessionIsOpen } = useSession();
 
   if (!session) return null;
@@ -112,7 +118,7 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
                 </Markdown>
               </div>
               <div className="flex w-full flex-col gap-3 md:w-[35%]">
-                {session.record && (
+                {session.record && typeof session.record === "string" && (
                   <YouTubeEmbed
                     style="border-radius: 20px;"
                     videoid={session.record.replace("https://youtu.be/", "")}

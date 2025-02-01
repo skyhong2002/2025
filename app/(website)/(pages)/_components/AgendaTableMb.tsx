@@ -1,5 +1,5 @@
 "use client";
-import data from "@/app/(website)/_data/agenda.json";
+import data from "@/public/sessions.json";
 import SessionCard from "@/app/(website)/(pages)/_components/SessionCard";
 import timeRender from "@/app/(website)/_utils/time-render";
 
@@ -40,9 +40,14 @@ export default function MobileAgenda() {
     const timeText = styleToText(time);
     return {
       text: timeText,
-      sessions: data.sessions.filter(
-        (session) => timeRender(session.start) === timeText,
-      ),
+      sessions: data.sessions
+        .filter(
+          (session) =>
+            session.start !== null &&
+            session.end !== null &&
+            session.id !== null,
+        )
+        .filter((session) => timeRender(session.start) === timeText),
     };
   });
 
@@ -56,9 +61,16 @@ export default function MobileAgenda() {
               <hr className="ml-6 w-full bg-white" />
             </div>
             <div className="my-4 ml-16 flex flex-col gap-2">
-              {time.sessions.map((session) => (
-                <SessionCard key={session.id} session={session} />
-              ))}
+              {time.sessions
+                .filter(
+                  (session) =>
+                    session.start !== null &&
+                    session.end !== null &&
+                    session.id !== null,
+                )
+                .map((session) => (
+                  <SessionCard key={session.id} session={session} />
+                ))}
             </div>
           </div>
         ))}

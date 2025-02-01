@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import data from "@/app/(website)/_data/agenda.json";
+import data from "@/public/sessions.json";
 import AgendaPage from "@/app/(website)/(pages)/_components/AgendaPage";
 
 export function generateStaticParams() {

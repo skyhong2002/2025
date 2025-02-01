@@ -1,11 +1,11 @@
 "use client";
 import React, { ReactNode } from "react";
-import data from "@/app/(website)/_data/agenda.json";
+import data from "@/public/sessions.json";
 import timeRender from "@/app/(website)/_utils/time-render";
 
 import { useSession } from "./AgendaContext";
 
-type Session = {
+export type Session = {
   id: string;
   type: string;
   room: string;
