@@ -51,6 +51,23 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
     return data.speakers.find((speaker) => speaker.id === speakerId);
   });
 
+  let description = session!.zh.description;
+  const sections = description.split("##");
+
+  let priorKnowledge = "";
+  let targetAudience = "";
+
+  for (const section of sections) {
+    if (section.includes("先備知識")) {
+      priorKnowledge = section.replace(/ 先備知識(\r)?\n/, "");
+      description = description.replaceAll("##" + section, "");
+    }
+    if (section.includes("目標聽眾")) {
+      targetAudience = section.replace(/ 目標聽眾(\r)?\n/, "");
+      description = description.replaceAll("##" + section, "");
+    }
+  }
+
   return (
     <>
       {/* 遮罩 */}
@@ -122,11 +139,25 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
                 <div className="flex w-full flex-col gap-10 md:flex-row">
                   <div className="flex w-full flex-col gap-2 md:w-[65%]">
                     <div className="flex flex-row">
-                      <div className="w-[50%]">目標聽眾</div>
-                      <div className="w-[50%]">先備知識</div>
+                      {targetAudience && (
+                        <div className="flex-1">
+                          <h2 className="mb-2 text-2xl font-bold">目標聽眾</h2>
+                          <Markdown className="prose space-y-4 leading-7 max-md:text-sm">
+                            {targetAudience}
+                          </Markdown>
+                        </div>
+                      )}
+                      {priorKnowledge && (
+                        <div className="flex-1">
+                          <h2 className="mb-2 text-2xl font-bold">先備知識</h2>
+                          <Markdown className="prose space-y-4 leading-7 max-md:text-sm">
+                            {priorKnowledge}
+                          </Markdown>
+                        </div>
+                      )}
                     </div>
-                    <h2 className="text-h3-mobile font-bold">議程介紹：　</h2>
-                    <Markdown className="space-y-4 leading-7 max-md:text-sm">
+                    <h2 className="text-2xl font-bold">議程介紹　</h2>
+                    <Markdown className="prose space-y-4 leading-7 max-md:text-sm">
                       {session.zh.description}
                     </Markdown>
                   </div>
@@ -181,7 +212,7 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
                         <div className="text-2xl font-bold">
                           {speaker?.zh.name}
                         </div>
-                        <Markdown className="space-y-4 leading-7 max-md:text-sm">
+                        <Markdown className="prose space-y-4 leading-7 max-md:text-sm">
                           {speaker?.zh.bio}
                         </Markdown>
                       </div>
