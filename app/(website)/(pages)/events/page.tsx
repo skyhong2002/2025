@@ -1,258 +1,181 @@
 "use client";
 
-import TableOfContent from "@/app/cfp/(submission)/_components/table-of-content";
-import TableOfContentMobile from "@/app/cfp/(submission)/_components/table-of-content-mobile";
-import Link from "next/link";
+import { ReactNode } from "react";
 
 export default function Page() {
-  const sections = [
-    { id: "guide", title: "導遊團" },
-    { id: "project_angel", title: "天使計畫" },
-    { id: "whiteboard", title: "白板大戰" },
-    { id: "lightning_talk", title: "Lightning Talk 閃電秀" },
-    { id: "poster", title: "靜態海報展" },
-    { id: "cafeteria", title: "咖啡廳" },
-    { id: "agenda", title: "開放式議程" },
-    { id: "geocaching", title: "大地遊戲" },
-  ];
-
   return (
     <div className="flex items-start py-8 text-normal-mobile md:text-normal">
-      <div className="mr-12 w-full">
+      <div className="w-full">
         <h1 className="mb-4 text-h1-mobile font-bold md:mb-12 md:text-h1">
           年會活動
         </h1>
 
-        <TableOfContentMobile theme="light" sections={sections} submitUrl="" />
+        <EventSection id="geocaching" title="大地遊戲">
+          沒有議程的時候不知道要做什麼嗎？想跟現場攤位互動卻又不知道從什麼話題開始？別擔心！快點打開
+          OPass 參加大地遊戲吧！
+          <br />
+          <br />
+          今年的大地遊戲結合 SITCON 2025 年會主題「Lines of Flight
+          逃逸路線」。在遊戲中，你將透過收集「板塊碎片」，建構專屬於你的逃逸路線，破解關卡，贏取積分，並有機會帶回
+          SITCON 2025 精心準備的超讚紀念品！
+          <br />
+          <br />
+          【如何獲得板塊碎片？】
+          <br />
+          🤝
+          與贊助商互動：與贊助商交流，你將可以獲取拼圖碎片，讓你快速地完成逃逸路線，挑戰更高的積分！
+          <br />
+          🎤
+          參加年會活動：不論是參加指南針計畫、導遊團還是其他精彩活動，通通有機會獲得拼圖碎片～
+          <br />
+          🔍
+          探索會場：你可以四處探索，找尋散落於會場的拼圖碎片，還可以找到各式各樣的道具來助你一臂之力。
+          <br />
+          獲得越多積分、中獎機率越高！快點拿起手機，開始規劃你的逃逸路線吧！
+        </EventSection>
 
-        <h2 className="mt-8 text-h2-mobile font-semibold md:text-h2">
-          你是第一次參加 SITCON 年會嗎？
-        </h2>
-        <section
-          id="guide"
-          className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
-        >
-          <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">導遊團</h3>
-            <img
-              className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
-              src="/website/guide.png"
-              alt="導遊團"
-            />
-          </div>
-          <div className="col-span-2 sm:p-4">
-            <h3 className="text-[26px] font-normal max-sm:hidden">導遊團</h3>
-            <p className="mt-4 leading-[200%]">
-              在這個人潮洶湧的 SITCON
-              年會中，是否感到有些迷茫呢？您是否還在猶豫該往哪個方向前進呢？
-              <br />
-              別擔心，在導遊團集合地可以看到拿著 SITCON 旗子的導遊，跟著 SITCON
-              導遊的腳步，帶領你前往社群攤位、走訪靜態海報展、咖啡廳，讓您更瞭解
-              SITCON 的各個面向以及運作模式。
-              <br />
-              導遊團會分為<span className="text-[#36FF62]">上午團</span>以及
-              <span className="text-[#36FF62]">
-                下午團
-              </span>，上午團的時間為{" "}
-              <span className="text-[#36FF62]">11:00 到 11:40</span>
-              ，集合地點是 3F 白板區旁。下午團的時間為{" "}
-              <span className="text-[#36FF62]">14:40 到 15:20</span>{" "}
-              ，集合地點是 2F 咖啡廳 ＆ 靜態海報展旁。
-              <br />
-              趕快來參加導遊團，與新朋友一同揭開年會的精彩面紗！
-            </p>
-          </div>
-        </section>
-        <section
-          id="project_angel"
-          className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
-        >
-          <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">天使計劃</h3>
-            <img
-              className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
-              src="/website/guide.png"
-              alt="導遊團"
-            />
-          </div>
-          <div className="col-span-2 sm:p-4">
-            <h3 className="text-[26px] font-normal max-sm:hidden">天使計劃</h3>
-            <p className="mt-4 leading-[200%]">
-              無論你是初次踏足
-              SITCON，還是熟悉的老朋友，都誠摯地邀請你參與天使計畫！
-              <br />
-              天使計畫提供一個交流的平台，讓大家彼此分享和探索。不論你是擁有豐富經驗的老手，還是對科技充滿好奇心的新手，都能在這裡找到共鳴。我們會根據雙方提供的資料進行配對，你可以選擇一對一交流，亦可與多位與會者一齊參與。鼓勵初心者主動與天使交流，並藉此機會，讓天使和初心者，甚至初心者之間相互啟發，更深入了解這場年會。
-              <br />
-              天使計畫不僅是指引之旅，更是共同成長的機會。無論你是天使還是初心者，每個人都能在這裡找到屬於自己的位置，攜手創造一個開放、互相學習的環境。
-            </p>
-          </div>
-        </section>
-        <h2 className="mt-10 text-h2-mobile font-semibold md:text-h2">
-          有話想跟大家說，想要分享你的想法嗎？
-        </h2>
-        <section
-          id="whiteboard"
-          className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
-        >
-          <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">白板大戰</h3>
-            <img
-              className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
-              src="/website/guide.png"
-              alt="導遊團"
-            />
-          </div>
-          <div className="col-span-2 sm:p-4">
-            <h3 className="text-[26px] font-normal max-sm:hidden">白板大戰</h3>
-            <p className="mt-4 leading-[200%]">
-              【歡迎進行和諧的鬥爭！】各種教派百家爭鳴的今天，是時候一決高下了。
-              <br />
-              誠摯邀請您至三樓留言區，以筆墨加入這場沒有硝煙的戰爭。
-              <br />
-              我們以「白板大戰」做為號召，圍繞多個主題展開討論。希望大家藉由閱讀和書寫，以輕鬆歡快的氣氛進行傾聽和對話。
-              <br />
-              歡迎在白板上各抒己見，向敵方發出友善的攻擊。
-            </p>
-          </div>
-        </section>
-        <section
-          id="lightning_talk"
-          className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
-        >
-          <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">
-              Lightning Talk 閃電秀
-            </h3>
-            <img
-              className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
-              src="/website/guide.png"
-              alt="導遊團"
-            />
-          </div>
-          <div className="col-span-2 sm:p-4">
-            <h3 className="text-[26px] font-normal max-sm:hidden">
-              Lightning Talk 閃電秀
-            </h3>
-            <p className="mt-4 leading-[200%]">
-              你知道 Lightning Talk 為什麼有 Lightning
-              這個詞嗎？因為這是像閃電一樣短的演講！
-              <br />
-              在今年，我們希望講者可以讓聽眾更瞭解講述的內容，於是我們將原先的三分鐘延長到了五分鐘！但不變的是，一旦超時的話……會被直接切斷訊號，聽起來是不是非常刺激有趣呢？
-              <br />
-              躍躍欲試了嗎？Lightning Talk
-              閃電秀將於年會當天早上開放報名，並於所有議程結束後、閉幕前進行演講，一起來期待這次會出現怎麼樣令人興奮、期待又新奇的內容吧！
-            </p>
-          </div>
-        </section>
-        <section
-          id="poster"
-          className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
-        >
-          <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">靜態海報展</h3>
-            <img
-              className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
-              src="/website/guide.png"
-              alt="導遊團"
-            />
-          </div>
-          <div className="col-span-2 sm:p-4">
-            <h3 className="text-[26px] font-normal max-sm:hidden">
-              靜態海報展
-            </h3>
-            <p className="mt-4 leading-[200%]">
-              這是 SITCON 2024
-              的新嘗試！我們提供學生們一個展現自我的舞台，讓大家可以透過靜態海報展發表自己做的研究，同時也能和志同道合的同學當面交流想法，碰撞出知識的火花！
-              <br />
-              中午 11:35
-              左右開始，各海報的講者將會出現在海報旁邊和大家交流，可以對感興趣的海報進行提問，順便認識厲害的講者們。熱愛探索新知的你，千萬不能錯過這場學術派對的行列！
-            </p>
-            <div className="mt-4 flex md:justify-end">
-              <Link
-                className="flex h-[40px] w-full items-center justify-center self-center rounded-full bg-[#6CA7D2] text-black transition hover:bg-foreground max-[1024px]:active:scale-95 max-sm:px-3 sm:w-[190px] md:w-[153px] md:self-start min-[1024px]:active:bg-primary"
-                href="/poster"
-                target="_blank"
-              >
-                查看線上海報
-              </Link>
-            </div>
-          </div>
-        </section>
-        <section
-          id="cafeteria"
-          className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
-        >
-          <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">咖啡廳</h3>
-            <img
-              className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
-              src="/website/guide.png"
-              alt="導遊團"
-            />
-          </div>
-          <div className="col-span-2 sm:p-4">
-            <h3 className="text-[26px] font-normal max-sm:hidden">咖啡廳</h3>
-            <p className="mt-4 leading-[200%]">
-              想與來自四面八方的與會者進行交流嗎？還是想繼續討論剛剛精彩的議程嗎？抑或是想要有個地方好好休息呢？那麼歡迎來到
-              SITCON
-              咖啡廳。在這裡，我們提供悠閒的環境、舒適的空間，以及不可或缺的動力來源☕️，讓各個需求的與會者都能在這裡找到屬於自己的小天地，無論你是想與人聊天、討論，或是在一整天豐富的行程中想稍微喘口氣，甚至是在這裡腦力激盪出一項專案，我們都歡迎！
-            </p>
-          </div>
-        </section>
-        <section
-          id="agenda"
-          className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
-        >
-          <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">開放式議程</h3>
-            <img
-              className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
-              src="/website/guide.png"
-              alt="導遊團"
-            />
-          </div>
-          <div className="col-span-2 sm:p-4">
-            <h3 className="text-[26px] font-normal max-sm:hidden">
-              開放式議程
-            </h3>
-            <p className="mt-4 leading-[200%]">
-              在追求創新的時代，我們為講者提供了開放式議程這個選項，跳脫講者對聽眾單向陳述式的演講，開放式議程更加強調主講者和與會者的雙向交流。SITCON
-              作為學生展現自己的舞台，我們期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是一同探討學生相關議題等。
-            </p>
-          </div>
-        </section>
-        <h2 className="mt-20 text-h2-mobile font-semibold md:text-h2">
-          議程之間不知道要幹嘛嗎？
-        </h2>
-        <section
-          id="geocaching"
-          className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
-        >
-          <div className="col-span-1 justify-center">
-            <h3 className="mb-4 text-[22px] font-bold sm:hidden">大地遊戲</h3>
-            <img
-              className="w-full rounded-lg object-cover max-sm:max-h-[210px] sm:h-full sm:rounded-l-lg"
-              src="/website/guide.png"
-              alt="導遊團"
-            />
-          </div>
-          <div className="col-span-2 sm:p-4">
-            <h3 className="text-[26px] font-normal max-sm:hidden">大地遊戲</h3>
-            <p className="mt-4 leading-[200%]">
-              第一次參加
-              SITCON，還沒進入狀況嗎？今年有各式各樣的活動，除了精彩議程，還有靜態海報展、咖啡廳和攤位等等，還摸不著頭緒要先去哪裡逛逛嗎？還在猶豫該怎麼規劃最充實的時間利用嗎？別擔心！快點進
-              OPass「迷因拼圖」開始遊戲就對啦！
-              <br />
-              今年的大地遊戲，我們將 SITCON 2024
-              諸多年會相關活動都融合進了「迷因拼圖」遊戲中！邀請您來一同參與，邊玩邊破解今年所有有趣活動。除此之外，達成指定任務條件後，還可以至三樓大會服務台兌換
-              SITCON 2024 紀念禮品抽獎券哦～
-              <br />
-              完成越多任務、中獎機率越高！快點開始遊戲吧 {`(ﾉ>ω<)ﾉ`}
-            </p>
-          </div>
-        </section>
+        <EventSection id="compass" title="指南針計畫">
+          期待在年會中結交更多志趣相投的夥伴嗎? 歡迎參與指南針計畫！
+          <br />
+          <br />
+          指南針計畫為大家提供彼此交流的機會，旨在幫助你找到志同道合的夥伴，一同探討共同感興趣的主題。不論你是擁有豐富經驗的老手，還是對科技充滿好奇心的新手，都能在這裡找到共鳴。
+          <br />
+          <br />
+          我們會根據你提供的資料，為你匹配合適的夥伴組成小組，讓你能與志同道合的夥伴們暢快的談天說地。在年會期間，你可以和小組成員一起參加現場多樣化的活動，也能在午餐時進行一場輕鬆的聚會，無論是分享彼此經驗、交流不同觀點，還是圍繞年會中的議程深入討論，都將是一段充滿收穫的經歷。
+          <br />
+          <br />
+          無論你是初來乍到的新人，還是資訊領域的老鳥，每個人都能在這裡找到屬於自己的團隊，攜手創造一個開放、互相交流學習的環境。期待你的熱情參與，讓
+          SITCON 2025 更加精彩！
+        </EventSection>
+
+        <EventSection id="guide" title="導遊團">
+          在這個人潮洶湧的 SITCON
+          年會中，是否感到有些迷茫呢？你是否還在猶豫該往哪個方向前進呢？別擔心，就讓資深導遊
+          aka 歷屆總召帶領你探索 SITCON 年會現場！
+          <br />
+          <br />
+          在導遊團集合地可以看到拿著 SITCON 旗子的導遊，跟著 SITCON
+          導遊的腳步，帶領你前往社群攤位、走訪靜態海報展、咖啡廳，讓您更瞭解
+          SITCON 的各個面向以及運作模式。
+          <br />
+          <br />
+          導遊團共有上午兩團及下午兩團，時長約 40 分鐘，詳細資訊如下：
+          <br />
+          <br />
+          <ScheduleTable />
+          <br />
+          趕快來參加導遊團，與新朋友一同揭開年會的精彩面紗！
+        </EventSection>
+
+        <EventSection id="lightning_talk" title="閃電講">
+          有自己的精彩內容想和大家分享，卻來不及投稿嗎？那麼，歡迎參加 SITCON
+          2025
+          閃電講！閃電講將提供八位手腳最快的會眾五分鐘的時間與與會者們暢所欲言的分享你的專案或想法！{" "}
+          <br />
+          <br />
+          在年會當天上午 10:00 開始至下午
+          15:30，歡迎前往白板區的指定白板投稿參與。投稿的方式十分簡單！一但開放投稿，你就可以到白板區選擇一個空的順位，然後在白板上寫下你的演講標題和投稿者的名字（例如：「我在
+          SITCON 2025 的趣事分享 by
+          OsGa」），但名額只有八個，且每人限投一次，要搶要快！完成投稿後，請掃描白板區旁的表單，補充更多投稿資訊，例如標題、投稿者名稱及主題大綱。建議你可以事先準備好這些內容，以確保過程順利！
+          <br />
+          <br />
+          參與者需要注意幾點事項。首先，投稿完成後，請於下午 16:40 準時到 R0 3F
+          的右側集合，並攜帶你的演講設備，屆時會有議程組的夥伴在現場協助。每位講者的演講時間限制為五分鐘，我們將取八位投稿者上台分享，因此順位採取先搶先贏的方式，並且每人僅限投稿一次。我們希望保持活動的多樣性和趣味性，因此不接受過於商業化的投稿，若商業內容超過十秒，畫面將會被直接切斷。
+          <br />
+          <br />
+          邀請你透過這個難得的機會，讓你在 SITCON 年會上與更多人交流與分享！
+        </EventSection>
+
+        <EventSection id="whiteboard" title="白板大戰">
+          在多元觀點交織的時代，是時候點燃靈感的火花了。
+          <br />
+          <br />
+          我們誠摯邀請你前往三樓白板區，用你的創意和觀點加入這場精彩絕倫的對話之戰。
+          <br />
+          <br />
+          我們以「白板大戰」做為號召，圍繞多個有趣話題展開討論。在輕鬆愉快的氛圍中，用文字交流思想、分享觀點，創造更多的火花！
+          <br />
+          <br />
+          快來白板上揮灑你的想法，向不同的觀點提出友善的挑戰，共同完成這場思想的盛宴吧！
+        </EventSection>
+
+        <EventSection id="whiteboard" title="咖啡廳">
+          剛剛的精彩議程讓你意猶未盡？想與來自各地的會眾交流卻不知如何開始？還是需要一個地方讓自己放鬆片刻？歡迎來到
+          SITCON 2025 咖啡廳！ <br />
+          <br />
+          這裡不僅是一杯好咖啡的歸屬地，更是滿足多樣需求的多功能空間。你可以在
+          <span className="font-bold">二樓北側電梯廳</span>
+          找到這個溫馨的角落，無論你是討論創新點子、拓展人脈，還是簡單地想喘口氣，咖啡廳都能滿足你的需求。
+          <br />
+          <br />
+          在咖啡廳，你可以享受到：
+          <br />
+          <br />
+          💬
+          <span className="font-bold"> 輕鬆交流的氛圍</span>
+          ：和志同道合的朋友暢聊剛剛的議程亮點，結識更多來自不同背景的夥伴，拓展視野、碰撞靈感。
+          <br />☕<span className="font-bold"> 釋放壓力的暖心時刻</span>
+          ：舒適的環境，搭配一杯香氣濃郁的咖啡，讓你在忙碌之中獲得片刻安寧，重整能量再出發。
+          <br />
+          💡
+          <span className="font-bold"> 創意火花的激盪</span>
+          ：與來自各領域的夥伴分享想法、腦力激盪，讓創新的可能性無限延伸，也許下一個大計劃就在這裡誕生！
+          <br />
+          <br />
+          無論你是討論、交流、放鬆，還是開啟新的計畫，咖啡廳都歡迎你的蒞臨！快來一杯咖啡，享受屬於你的美好時光吧！
+        </EventSection>
       </div>
-      <TableOfContent theme="light" sections={sections} submitUrl="" />
+      {/* <TableOfContent theme="light" sections={sections} submitUrl="" /> */}
     </div>
+  );
+}
+
+function EventSection({
+  id,
+  title,
+  children,
+}: {
+  id: string;
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <section
+      id={id}
+      className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
+    >
+      <div className="col-span-3 sm:p-4">
+        <h3 className="text-[26px] font-bold max-sm:hidden">{title}</h3>
+        <p className="mt-4 leading-[200%]">{children}</p>
+      </div>
+    </section>
+  );
+}
+
+function ScheduleTable() {
+  const schedule = [
+    { time: "上午", location: "11:00 在 3F 白板區旁" },
+    { time: "上午", location: "11:10 在 4F 紀念品攤旁" },
+    { time: "下午", location: "14:40 在 3F 白板區旁" },
+    { time: "下午", location: "14:50 在 4F 紀念品攤旁" },
+  ];
+
+  return (
+    <table className="w-full border-collapse border border-foreground">
+      <thead>
+        <tr className="border border-foreground">
+          <th className="border border-foreground p-2 text-left">時間</th>
+          <th className="border border-foreground p-2 text-left">集合地點</th>
+        </tr>
+      </thead>
+      <tbody>
+        {schedule.map((item, index) => (
+          <tr key={index} className="border border-foreground">
+            <td className="border border-foreground p-2">{item.time}</td>
+            <td className="border border-foreground p-2">{item.location}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
