@@ -17,7 +17,7 @@ export default function DesktopAgenda() {
   });
 
   const gridTemplateColumns = rooms.reduce((acc: string, room) => {
-    return `${acc} [${room.id}] auto`;
+    return `${acc} [${room.id}] 1fr `;
   }, "[start] auto");
   // start R0 R1 R2 R3 S
 
