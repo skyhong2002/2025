@@ -43,7 +43,7 @@ export default function Navbar({
   // console.log(pathname);
   const allowFadeEffect = isIndex && !showMenu;
   return (
-    <nav className="fixed left-0 right-0 top-0 z-20 flex justify-center">
+    <nav className="fixed left-0 right-0 top-0 z-30 flex justify-center">
       <motion.div
         className="flex w-full items-center justify-center transition"
         style={{
