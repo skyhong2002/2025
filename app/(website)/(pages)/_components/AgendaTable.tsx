@@ -9,7 +9,14 @@ const styleToText = (time: string) => {
 };
 
 export default function DesktopAgenda() {
-  const gridTemplateColumns = data.rooms.reduce((acc: string, room) => {
+  const roomOrder = ["R2", "R0", "R1", "R3", "S"];
+
+  const rooms = data.rooms.sort((a, b) => {
+    // return 0;
+    return roomOrder.indexOf(a.id) - roomOrder.indexOf(b.id);
+  });
+
+  const gridTemplateColumns = rooms.reduce((acc: string, room) => {
     return `${acc} [${room.id}] auto`;
   }, "[start] auto");
   // start R0 R1 R2 R3 S
@@ -36,6 +43,11 @@ export default function DesktopAgenda() {
   const gridTemplateRows = times.reduce((acc: string, time) => {
     return `${acc} [timeLine-${time.id}] 1px [${time.id}] auto`;
   }, "[start] auto [divider] auto");
+
+  function getNextRoom(room: string) {
+    const roomIndex = roomOrder.indexOf(room);
+    return roomOrder[roomIndex + 1];
+  }
   // start divider timeLine-0830 0830 timeLine-1000 1000 ...
 
   return (
@@ -48,12 +60,16 @@ export default function DesktopAgenda() {
     >
       {/* row1 empty R2 R0 R1 R3 S  */}
       <div className="sticky top-[70px] z-20 border-b border-b-white border-opacity-30 bg-background py-2 text-center text-[24px] font-bold"></div>
-      {data.rooms.map((rooms, index) => (
+      {rooms.map((room, index) => (
         <div
           key={index}
+          style={{
+            gridColumn: room.id + " / " + getNextRoom(room.id),
+            gridRow: "start / divider",
+          }}
           className="sticky top-[70px] z-20 border-b border-b-white border-opacity-30 bg-background py-2 text-center text-[24px] font-bold"
         >
-          {rooms.id}
+          {room.id}
         </div>
       ))}
       {/* row1 empty R2 R0 R1 R3 S  */}

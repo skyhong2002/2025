@@ -117,34 +117,25 @@ const CardWrapper = ({
   session: Session;
 }) => {
   // const { setSessionIsOpen, setOpenSessionId } = useSession();
+  const roomOrder = ["R2", "R0", "R1", "R3", "S", "end"];
+
   const getRoom = (broadcast: string[] | null, room: string) => {
+    function getNextRoom(room: string) {
+      const roomIndex = roomOrder.indexOf(room);
+      return roomOrder[roomIndex + 1];
+    }
     if (broadcast === null) {
-      switch (room) {
-        case "R0":
-          return ["R0", "R1"];
-        case "R1":
-          return ["R1", "R2"];
-        case "R2":
-          return ["R2", "R3"];
-        case "R3":
-          return ["R3", "S"];
-        case "S":
-          return ["S", "S"];
-      }
+      const roomIndex = roomOrder.indexOf(room);
+      return [room, getNextRoom(roomOrder[roomIndex])];
     }
     if (broadcast) {
-      switch (broadcast[broadcast.length - 1]) {
-        case "R0":
-          return [broadcast[0], "R1"];
-        case "R1":
-          return [broadcast[0], "R2"];
-        case "R2":
-          return [broadcast[0], "R3"];
-        case "R3":
-          return [broadcast[0], "S"];
-        case "S":
-          return [broadcast[0], "end"];
-      }
+      const orderedBroadcast = broadcast.sort((a, b) =>
+        roomOrder.indexOf(a) > roomOrder.indexOf(b) ? 1 : -1,
+      );
+      return [
+        orderedBroadcast[0],
+        getNextRoom(orderedBroadcast[orderedBroadcast.length - 1]),
+      ];
     }
     return ["", ""];
   };
