@@ -1,0 +1,25 @@
+{
+    "level1": [
+        {
+            "name": "Sponsor",
+            "image": "https://placehold.co/160x105",
+            "url": "Sponsor"
+        }
+    ],
+    "level2": [],
+    "level3": [],
+    "level4": [],
+    "special_thanks": [
+        {
+            "name": "NAF 商城",
+            "image": "/website/sponsor/special_thanks/naf.svg",
+            "url": "https://nafstore.net"
+        },
+        {
+            "name": "CheapServer",
+            "image": "/website/sponsor/special_thanks/cheapserver.png",
+            "url": "https://cheapserver.tw/"
+        }
+    ],
+    "media": []
+}

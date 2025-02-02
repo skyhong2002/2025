@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import Typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
@@ -41,8 +42,11 @@ const config: Config = {
         accent: "#BDB3FF",
         "accent-light": "#d4cdff",
       },
+      aspectRatio: {
+        "1/2": "1 / 2",
+      },
     },
   },
-  plugins: [],
+  plugins: [Typography],
 };
 export default config;

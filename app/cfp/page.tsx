@@ -29,7 +29,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row gap-3 pb-3">
                   <p className="whitespace-nowrap text-nowrap text-6xl font-semibold text-[#FFFFFF] sm:text-8xl">
-                    徵稿開始
+                    徵稿結束
                   </p>
                 </div>
                 <div className="flex flex-row gap-3 py-2 sm:py-5">

@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-background;
+}
+
+.from2013-bg {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("/2025/cfp/about/1.jpg") no-repeat center center;
+}
+
+@media (max-width: 640px) {
+  .closeTouch-bg {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("/2025/cfp/about/2.jpg") no-repeat center center;
+  }
+}
+
+.hero {
+  animation: heroFadeIn 2s forwards ease-in-out;
+  background: url("/2025/cfp/theme/hero.jpg") no-repeat center center;
+}
+
+.hero-content {
+  animation: heroContentFadeIn 2s forwards ease-in-out;
+}
+
+@keyframes heroContentFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0.1;
+    background-size: 100% 100%;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 0.5;
+    background-size: 110% 110%;
+    filter: blur(0px);
+  }
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 點擊目錄滑動效果 */
+}
+
+.tableContentItem {
+  display: block;
+  transition: 0.4s;
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 12px;
+  width: 100%;
+  ::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #c9e6ff;
+    bottom: 6px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+  }
+  :hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.currentTableContentItem {
+  display: block;
+  transition: 0.4s;
+  font-size: 14px;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 12px;
+  width: 100%;
+  transform-origin: right;
+  ::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #c9e6ff;
+    bottom: 6px;
+    left: 0;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+}
+
+.material-icons-big {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 64px; /* Preferred icon size
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.hightlight {
+  @apply text-accent;
+  font-size: bold;
+}
+
+.subTitle {
+  /* text-lg font-extrabold */
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.listItem {
+  /* pl-[22px] -indent-[22px] */
+  padding-left: 22px;
+  text-indent: -22px;
+}
+
+.link {
+  @apply cursor-pointer text-primary underline;
+}
+
+/* class use in submission-format */
+.required {
+  @apply bg-primary text-background;
+}
+.optional {
+  @apply border-2 border-dashed border-primary border-opacity-30;
+}
+.public {
+  @apply border-2 border-primary border-opacity-30;
+}
+
+.exclamation-mark {
+  animation: exclamation-mark-shake 1s infinite;
+}
+
+@keyframes exclamation-mark-shake {
+  0% {
+    transform: rotate(0deg);
+    color: #bdb3ff;
+  }
+  10% {
+    transform: rotate(10deg);
+    color: #ddd8ff;
+  }
+  20% {
+    transform: rotate(-10deg);
+    color: #ddd8ff;
+  }
+  30% {
+    transform: rotate(5deg);
+    color: #ddd8ff;
+  }
+  40% {
+    transform: rotate(0deg);
+    color: #ddd8ff;
+  }
+  100% {
+    transform: rotate(0deg);
+    color: #bdb3ff;
+  }
+}
+
+.dashLine {
+  width: 1px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to top,
+    white 0%,
+    white 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
