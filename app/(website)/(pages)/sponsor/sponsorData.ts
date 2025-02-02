@@ -64,24 +64,6 @@ export default {
       description: "很便宜的 Minecraft 伺服器託管",
       url: "https://cheapserver.tw/",
     },
-    {
-      title: "中央研究院資訊服務處",
-      image: "its.png",
-      description: "",
-      url: "https://its.sinica.edu.tw/",
-    },
-    {
-      title: "HackMD",
-      image: "hackmd.png",
-      description: "",
-      url: "https://hackmd.io/",
-    },
-    {
-      title: "iCHEF 資廚",
-      image: "ichef.png",
-      description: "",
-      url: "https://www.ichefpos.com/zh-tw",
-    },
   ],
   mediaPartners: [],
 };
