@@ -3,15 +3,25 @@ import Image from "next/image";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { TriangleAlert } from "lucide-react";
+
+import Svg2F from "@/public/image/2F.svg";
+import Svg3F from "@/public/image/3F.svg";
+import Svg4F from "@/public/image/4F.svg";
 
 type Floor = "2F" | "3F" | "4F";
 export default function Page() {
   const [Floor, setFloor] = useState<Floor>("2F");
 
-  const options: Array<{ label: string; value: Floor; number: string }> = [
-    { label: "2F", value: "2F", number: "2" },
-    { label: "3F", value: "3F", number: "3" },
-    { label: "4F", value: "4F", number: "4" },
+  const options: Array<{
+    label: string;
+    value: Floor;
+    number: string;
+    image: string;
+  }> = [
+    { label: "2F", value: "2F", number: "2", image: Svg2F.src },
+    { label: "3F", value: "3F", number: "3", image: Svg3F.src },
+    { label: "4F", value: "4F", number: "4", image: Svg4F.src },
   ];
 
   return (
@@ -24,14 +34,8 @@ export default function Page() {
           <h1 className="flex-none self-start text-h1-mobile font-bold md:text-h1">
             會場地圖
           </h1>
-          <div className="ml-4 flex flex-1">
-            <Image
-              src={"/2025/icon/caution.svg"}
-              width={30}
-              height={30}
-              alt="caution icon"
-              className="my-auto"
-            />
+          <div className="ml-4 flex flex-1 items-center gap-1">
+            <TriangleAlert size={30} className="my-auto text-[#EB5757]" />
             <p className="my-auto pl-1 text-xl font-bold">緊急避難圖</p>
           </div>
         </div>
@@ -58,7 +62,7 @@ export default function Page() {
       </section>
       <div className="flex max-h-[740px] w-full">
         <Image
-          src={`/2025/image/${Floor}.svg`}
+          src={options.find((option) => option.value === Floor)?.image ?? ""}
           alt={`${Floor} Floor Image`}
           width={1024}
           height={768}
