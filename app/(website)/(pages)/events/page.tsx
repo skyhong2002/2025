@@ -31,6 +31,7 @@ export default function Page() {
           🔍
           探索會場：你可以四處探索，找尋散落於會場的拼圖碎片，還可以找到各式各樣的道具來助你一臂之力。
           <br />
+          <br />
           獲得越多積分、中獎機率越高！快點拿起手機，開始規劃你的逃逸路線吧！
         </EventSection>
 
@@ -142,10 +143,10 @@ function EventSection({
   return (
     <section
       id={id}
-      className="mt-6 sm:relative sm:grid sm:grid-cols-3 sm:rounded-lg sm:border-[1px] sm:border-[#FFFFFF] sm:border-opacity-50 sm:bg-background-light"
+      className="mt-6 rounded-lg border-[1px] border-[#FFFFFF] border-opacity-50 bg-background-light sm:relative sm:grid sm:grid-cols-3"
     >
-      <div className="col-span-3 sm:p-4">
-        <h3 className="text-[26px] font-bold max-sm:hidden">{title}</h3>
+      <div className="col-span-3 p-4">
+        <h3 className="text-[26px] font-bold">{title}</h3>
         <p className="mt-4 leading-[200%]">{children}</p>
       </div>
     </section>
