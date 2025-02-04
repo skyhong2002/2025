@@ -172,7 +172,12 @@ export default function MemberInfo(memberObj: Member) {
                   : "onClick"
             }
             variants={outside}
-            onClick={() => window.open(member.website, "_blank")}
+            onClick={() =>
+              window.open(
+                `${member.website?.startsWith("http") ? member.website : `http://${member.website}`}`,
+                "_blank",
+              )
+            }
             className={`relative h-20 w-20 overflow-hidden rounded-full`}
           >
             <motion.img
