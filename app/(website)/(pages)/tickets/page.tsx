@@ -93,7 +93,7 @@ export default function Page() {
             <LinkButton
               link={"https://hackmd.io/@SITCON/H18WacxQ1x"}
               target="_blank"
-              text="立即取得"
+              text="申請截止"
               className="ml-[-4px] md:mr-4 md:w-full"
             />
           </div>
@@ -149,7 +149,7 @@ export default function Page() {
             <LinkButton
               link={"https://ocf.tw/p/oscvpass/"}
               target="_blank"
-              text="立即取得"
+              text="申請截止"
               className="ml-[-4px] md:mr-4 md:w-full"
             />
           </div>
