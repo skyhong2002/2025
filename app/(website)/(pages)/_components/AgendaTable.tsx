@@ -51,76 +51,78 @@ export default function DesktopAgenda() {
   // start divider timeLine-0830 0830 timeLine-1000 1000 ...
 
   return (
-    <div
-      className="grid h-full text-white"
-      style={{
-        gridTemplateColumns: gridTemplateColumns,
-        gridTemplateRows: gridTemplateRows,
-      }}
-    >
-      {/* row1 empty R2 R0 R1 R3 S  */}
-      <div className="sticky top-[70px] z-20 border-b border-b-white border-opacity-30 bg-background py-2 text-center text-[24px] font-bold"></div>
-      {rooms.map((room, index) => (
-        <div
-          key={index}
-          style={{
-            gridColumn: room.id + " / " + getNextRoom(room.id),
-            gridRow: "start / divider",
-          }}
-          className="sticky top-[70px] z-20 border-b border-b-white border-opacity-30 bg-background py-2 text-center text-[24px] font-bold"
-        >
-          {room.id}
-        </div>
-      ))}
-      {/* row1 empty R2 R0 R1 R3 S  */}
-
-      {/* empty space */}
+    <div className="md:container lg:px-12">
       <div
-        className="h-[1px] w-full py-3"
+        className="mx-auto grid h-full text-white"
         style={{
-          gridColumn: "start / end",
-          gridRow: "divider / t0830",
+          gridTemplateColumns: gridTemplateColumns,
+          gridTemplateRows: gridTemplateRows,
         }}
-      />
+      >
+        {/* row1 empty R2 R0 R1 R3 S  */}
+        <div className="sticky top-[70px] z-20 border-b border-b-white border-opacity-30 bg-background py-2 text-center text-[24px] font-bold"></div>
+        {rooms.map((room, index) => (
+          <div
+            key={index}
+            style={{
+              gridColumn: room.id + " / " + getNextRoom(room.id),
+              gridRow: "start / divider",
+            }}
+            className="sticky top-[70px] z-20 border-b border-b-white border-opacity-30 bg-background py-2 text-center text-[24px] font-bold"
+          >
+            {room.id}
+          </div>
+        ))}
+        {/* row1 empty R2 R0 R1 R3 S  */}
 
-      {/* all time without line (?) */}
-      {times.map((time) => (
+        {/* empty space */}
         <div
-          key={time.id}
-          className="flex h-full w-full translate-y-[1px] items-center pb-2 pr-8 text-white"
-          style={{
-            gridColumn: "start / start",
-            gridRow: `timeLine-${time.id} / ${time.id}`,
-          }}
-        >
-          <p>{styleToText(time.id)}</p>
-        </div>
-      ))}
-      {/* all timeline */}
-      {times.map((time) => (
-        <div
-          key={time.id}
-          className="flex h-full w-full translate-y-[1px] items-center pb-2 pl-16 text-white"
+          className="h-[1px] w-full py-3"
           style={{
             gridColumn: "start / end",
-            gridRow: `timeLine-${time.id} / ${time.id}`,
+            gridRow: "divider / t0830",
           }}
-        >
-          <hr className="pointer-events-none w-full bg-white opacity-30" />
-        </div>
-      ))}
-      {/* all timeLine */}
-      {/* all sessions */}
-      {data.sessions
-        .filter(
-          (session) =>
-            session.start !== null &&
-            session.end !== null &&
-            session.id !== null,
-        )
-        .map((session) => (
-          <SessionCard key={session.id} session={session} />
+        />
+
+        {/* all time without line (?) */}
+        {times.map((time) => (
+          <div
+            key={time.id}
+            className="flex h-full w-full translate-y-[1px] items-center pb-2 pr-8 text-white"
+            style={{
+              gridColumn: "start / start",
+              gridRow: `timeLine-${time.id} / ${time.id}`,
+            }}
+          >
+            <p>{styleToText(time.id)}</p>
+          </div>
         ))}
+        {/* all timeline */}
+        {times.map((time) => (
+          <div
+            key={time.id}
+            className="flex h-full w-full translate-y-[1px] items-center pb-2 pl-16 text-white"
+            style={{
+              gridColumn: "start / end",
+              gridRow: `timeLine-${time.id} / ${time.id}`,
+            }}
+          >
+            <hr className="pointer-events-none w-full bg-white opacity-30" />
+          </div>
+        ))}
+        {/* all timeLine */}
+        {/* all sessions */}
+        {data.sessions
+          .filter(
+            (session) =>
+              session.start !== null &&
+              session.end !== null &&
+              session.id !== null,
+          )
+          .map((session) => (
+            <SessionCard key={session.id} session={session} />
+          ))}
+      </div>
     </div>
   );
 }
