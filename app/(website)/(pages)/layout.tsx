@@ -9,12 +9,12 @@ export default function Layout({ children }: { children: ReactNode }) {
   const isAgendaPage = pathname.startsWith("/agenda");
 
   return (
-    <div className="flex w-full justify-center bg-background text-foreground">
+    <div className="flex w-full justify-center bg-background px-2 text-foreground lg:px-4">
       <div
         className={cn(
-          "flex w-full max-w-[90%] flex-col justify-center px-4 py-40",
+          "flex w-full max-w-[90%] flex-col justify-center py-40",
           isAgendaPage
-            ? "desktop:max-w-[1220px]"
+            ? "md:container"
             : "lg:max-w-[840px] desktop:max-w-[1120px]",
         )}
       >

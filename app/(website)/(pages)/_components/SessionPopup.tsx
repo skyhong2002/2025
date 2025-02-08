@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import data from "@/public/sessions.json";
 // import { useSession } from "./AgendaContext";
 import timeRender from "@/app/(website)/_utils/time-render";
@@ -10,6 +10,8 @@ import Image from "next/image";
 import type { Session } from "@/app/(website)/(pages)/_components/SessionCard";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
+import useClickOutside from "@/hooks/useClickOutside";
+import { useRouter } from "next/navigation";
 
 const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
   const session: Session | undefined = data.sessions
@@ -18,7 +20,14 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
         session.start !== null && session.end !== null && session.id !== null,
     )
     .find((session) => session.id === openSessionId);
-  // const { setSessionIsOpen } = useSession();
+
+  const dialogElement = useRef<HTMLDivElement>(null);
+
+  const router = useRouter();
+
+  useClickOutside(dialogElement, () => {
+    router.push("/agenda", { scroll: false });
+  });
 
   if (!session) return null;
 
@@ -81,11 +90,12 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
         {/* 彈出面板 */}
         {/* TODO::新的卷軸樣式、彈出動畫 */}
         <motion.div
+          ref={dialogElement}
           initial={{ opacity: 0, scale: 0.8, y: "-50%", x: "-50%" }}
           animate={{ opacity: 1, scale: 1, y: "-50%", x: "-50%" }}
           transition={{ duration: 0.5, ease: "easeInOut", type: "spring" }}
           exit={{ opacity: 0, scale: 0.8, y: "-50%", x: "-50%" }}
-          className="fixed left-[50%] top-[50%] z-50 h-[90%] w-[90%] translate-x-[-50%] translate-y-[-50%] overflow-y-scroll rounded-3xl bg-[#ffffff] p-6 text-black md:h-[80vh] md:w-[90vw] md:p-10 desktop:max-w-[1220px]"
+          className="no-scrollbar no-scrollbar fixed left-[50%] top-[50%] z-50 h-[90%] w-[90%] max-w-[1024px] translate-x-[-50%] translate-y-[-50%] overflow-y-scroll rounded-3xl bg-[#ffffff] p-6 text-black md:h-[80vh] md:w-[90vw] md:p-10"
         >
           <div className="relative">
             <div className="flex flex-col gap-2">

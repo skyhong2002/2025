@@ -41,7 +41,18 @@ export default function MobileAgenda() {
             session.end !== null &&
             session.id !== null,
         )
-        .filter((session) => timeRender(session.start) === timeText),
+        .filter((session) => timeRender(session.start) === timeText)
+        .filter((session, index) => {
+          const otherSessionLikeThis = data.sessions.findIndex(
+            (otherSession) =>
+              otherSession.start === session.start &&
+              otherSession.id !== session.id &&
+              otherSession.zh.title === session.zh.title &&
+              otherSession.zh.description === session.zh.description,
+          );
+
+          return otherSessionLikeThis === -1 || otherSessionLikeThis === index;
+        }),
     };
   });
 
