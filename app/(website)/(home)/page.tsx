@@ -1,22 +1,46 @@
+"use client";
+
 import { ReactNode } from "react";
 import heroImage from "./_assets/hero.png";
+import heroImageMobile from "./_assets/hero-mobile.png";
 import Link from "next/link";
 import LinkButton from "../_components/linkButton";
+import useMediaQuery from "@/hooks/use-media-query";
+import { cn } from "@/lib/utils";
 
 export default function Page() {
+  const { isMobile } = useMediaQuery();
   return (
     <div className="mb-28 w-full leading-8 text-foreground">
       <div
         style={{
-          backgroundImage: `url(${heroImage.src})`,
+          backgroundImage: isMobile
+            ? `url(${heroImageMobile.src})`
+            : `url(${heroImage.src})`,
           backgroundSize: "cover",
         }}
-        className="mx-auto mb-[-25%] aspect-[3/2] w-full max-w-[1920px] bg-top bg-no-repeat min-[1900px]:mb-[-20%] min-[2300px]:mb-[-15%]"
+        className={cn(
+          "mx-auto mb-[-25%] w-full max-w-[1920px] bg-top bg-no-repeat min-[1900px]:mb-[-20%] min-[2300px]:mb-[-15%]",
+          isMobile ? "aspect-[1/1.06]" : "aspect-[3/2]",
+        )}
       >
         <div className="absolute left-0 right-0 top-1/2 px-10 md:left-10 md:right-auto md:w-2/3"></div>
       </div>
       <div className="flex justify-center">
-        <div className="flex w-full max-w-[90%] flex-col justify-center px-4 py-40 lg:max-w-[840px] desktop:max-w-[1120px]">
+        <div
+          className={cn(
+            "flex w-full max-w-[90%] flex-col justify-center px-4 lg:max-w-[840px] desktop:max-w-[1120px]",
+            isMobile ? "py-24" : "py-40",
+          )}
+        >
+          <div className="flex flex-col gap-3">
+            <h2 className="text-center text-h2-mobile font-bold md:hidden">
+              2025 / 3 / 8
+            </h2>
+            <h2 className="text-center text-h2-mobile font-bold md:hidden">
+              中央研究院人文社會科學館
+            </h2>
+          </div>
           <div className="my-10 flex gap-5 md:justify-end">
             <LinkButton
               className="w-full md:w-auto md:px-12 md:py-3 md:text-xl"
