@@ -166,7 +166,7 @@ const CardWrapper = ({
       case "L":
         return lightStyle;
       case "S":
-        return darkStyle;
+        return lightStyle;
       default:
         return "";
     }
