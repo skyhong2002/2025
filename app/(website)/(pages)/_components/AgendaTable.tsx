@@ -41,7 +41,7 @@ export default function DesktopAgenda() {
     .map((item, index) => ({ id: `t${item.replace(":", "")}`, index }));
 
   const gridTemplateRows = times.reduce((acc: string, time) => {
-    return `${acc} [timeLine-${time.id}] 1px [${time.id}] auto`;
+    return `${acc} [timeLine-${time.id}] 1px [${time.id}] minmax(40px, auto)`;
   }, "[start] auto [divider] auto");
 
   function getNextRoom(room: string) {
