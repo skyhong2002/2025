@@ -64,34 +64,31 @@ const SessionCard = ({ session }: { session: Session }) => {
         {/* {session.type} 區分不同card*/}
         {session.type === "Ev" && ( // Event or Lightning
           <div className="flex h-full w-full flex-col items-start justify-center md:items-center">
-            <h3 className="text-[12px] font-bold md:text-[16px]">
-              {session.zh.title}
-            </h3>
+            <h3 className="font-bold md:text-normal">{session.zh.title}</h3>
           </div>
         )}
-        {session.type === "K" ||
-          (session.type === "L" && ( // keynote
-            <div className="flex h-full w-full flex-col items-start justify-between gap-4 md:items-center">
-              <div className="flex-col items-center text-center">
-                <h3 className="text-[12px] font-semibold md:text-[16px]">
-                  {session.zh.title}
-                </h3>
-                <p className="text-[14px]">{speakerNames.join(" / ")}</p>
-              </div>
-              <div className="">
-                {tags.map((tag) => {
-                  return (
-                    <span
-                      key={tag}
-                      className="my-1 mr-1 rounded-xl bg-[#eceff7] p-1 text-xs text-black"
-                    >
-                      #{tag}
-                    </span>
-                  );
-                })}
-              </div>
+        {(session.type === "K" || session.type === "L") && ( // keynote
+          <div className="flex h-full w-full flex-col items-start justify-between gap-4 md:items-center">
+            <div className="flex-col items-center text-center">
+              <h3 className="font-semibold md:text-normal">
+                {session.zh.title}
+              </h3>
+              <p className="text-[14px]">{speakerNames.join(" / ")}</p>
             </div>
-          ))}
+            <div className="">
+              {tags.map((tag) => {
+                return (
+                  <span
+                    key={tag}
+                    className="my-1 mr-1 rounded-xl bg-[#eceff7] p-1 text-xs text-black"
+                  >
+                    #{tag}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        )}
         {(session.type === "E" ||
           session.type === "P" ||
           session.type === "U" ||
@@ -99,7 +96,7 @@ const SessionCard = ({ session }: { session: Session }) => {
           session.type === "S") && ( // Espresso, Presentation, U ?, PD ?, Session
           <div className="flex h-full w-full flex-col items-start justify-between gap-4 md:items-start">
             <div>
-              <h3 className="mb-2 text-[12px] font-semibold md:text-[16px]">
+              <h3 className="mb-2 font-semibold md:text-normal">
                 {session.zh.title}
               </h3>
               <p className="text-[14px]">{speakerNames.join(" / ")}</p>

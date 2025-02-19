@@ -12,10 +12,10 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div className="flex w-full justify-center bg-background px-2 text-foreground lg:px-4">
       <div
         className={cn(
-          "flex w-full max-w-[90%] flex-col justify-center py-40",
+          "flex w-full flex-col justify-center py-40",
           isAgendaPage
-            ? "md:container"
-            : "lg:max-w-[840px] desktop:max-w-[1120px]",
+            ? "pl-5 pr-2 lg:container"
+            : "max-w-[90%] lg:max-w-[840px] desktop:max-w-[1120px]",
         )}
       >
         {children}

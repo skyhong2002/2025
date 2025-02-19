@@ -51,7 +51,7 @@ export default function DesktopAgenda() {
   // start divider timeLine-0830 0830 timeLine-1000 1000 ...
 
   return (
-    <div className="md:container lg:px-12">
+    <div className="lg:container lg:px-12">
       <div
         className="mx-auto grid h-full text-white"
         style={{
@@ -88,7 +88,7 @@ export default function DesktopAgenda() {
         {times.map((time) => (
           <div
             key={time.id}
-            className="flex h-full w-full translate-y-[1px] items-center pb-2 pr-8 text-white"
+            className="flex h-full w-full translate-y-[1px] items-center pb-2 pr-6 text-white lg:pr-8 xl:pr-10"
             style={{
               gridColumn: "start / start",
               gridRow: `timeLine-${time.id} / ${time.id}`,
