@@ -39,3 +39,5 @@ next-env.d.ts
 dist
 
 public/sessions.json
+
+*.swp
