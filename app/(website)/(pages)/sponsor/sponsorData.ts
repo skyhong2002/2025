@@ -31,7 +31,15 @@ export default {
     },
     {
       title: "深耕級",
-      items: [],
+      items: [
+        {
+          title: "可立可 KlickKlack Communications",
+          image: "klickklack.png",
+          description:
+            "可立可服務涵蓋：連結 Connectivity、協作 Collaboration、合規 Compliance 三大面向，以兼具韌性與彈性的服務賦能企業，協助企業隨著規模擴大而成長，運用新世代的科技工具和管理模式來減輕企業的負擔，使企業不僅可以實現數位轉型，還可達到資安合規的目標，並享受前所未有的服務體驗。",
+          url: "https://www.kkco.com.tw/",
+        },
+      ],
     },
     {
       title: "前瞻級",
