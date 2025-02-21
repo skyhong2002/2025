@@ -144,7 +144,7 @@ export default function Page() {
         SITCON 學生計算機年會籌備團隊
       </div>
       <img
-        src="https://sitcon.org/2024/website/SITCON_green.svg"
+        src="/2025/sponsor/sitcon.png"
         className="mx-auto mb-8 mt-6 w-full max-w-[300px] rounded-lg bg-[#fff] p-4"
       />
       <p className="my-2">
