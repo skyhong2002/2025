@@ -27,7 +27,15 @@ export default {
   sponsors: [
     {
       title: "領航級",
-      items: [],
+      items: [ 
+        {
+          title: "LINE",
+          image: "line.png",
+          description:
+            "總部位於日本的LINE以「拉近你我的距離」為企業使命，透過多元的行動服務與內容，致力將人們、資訊與社會緊密連結。自2011年6月以通訊軟體的型態推出，現更推展其多元的全球生態系，並將觸角延伸至人工智慧、金融科技等領域，積極實現「智慧入口」的願景，2021年3月，LINE與日本規模最大的網路科技集團之一Z Holdings 正式整併，未來也將持續提供用戶享有最即時、便利的行動生活。",
+          url: "https://techblog.lycorp.co.jp/zh-hant/search?q=intern",
+        },
+      ],
     },
     {
       title: "深耕級",
@@ -43,7 +51,15 @@ export default {
     },
     {
       title: "前瞻級",
-      items: [],
+      items: [
+        {
+          title: "社團法人台灣駭客協會",
+          image: "hit.png",
+          description:
+            "社團法人台灣駭客協會 (HIT) 致力於透過研討會、競賽、教育訓練等各種形式推廣資訊安全。在眾多活動中，最讓人期待的資安年度盛會：HITCON Community (CMT) ，將於今年 8/15（五）- 8/16（六）舉辦，後續相關消息將持續於 HITCON 粉絲專頁公告。同時，為協助台灣資安社群發展，協會推出「台灣資安社群補助計畫」，若有相關需求，歡迎至協會官網提出申請。",
+          url: "https://hacker.org.tw/",
+        },
+      ],
     },
     {
       title: "新芽級",
@@ -54,6 +70,27 @@ export default {
           description:
             "ZUSO 如梭世代為臺灣本土的資安服務業者，專注於提供紅隊演練、滲透測試及顧問服務。我們擁有超過 10 年在駭客攻擊手法研究與威脅風險分析的豐富經驗，為眾多知名企業提供高品質服務，致力於為客戶建構堅實的安全防線，並量身打造專屬的資安解決方案。自公司成立以來，我們始終堅守初衷－持續深耕臺灣的資安人才培育。期望透過提供實習機會，為臺灣資安領域注入新活力與能量，推動產業的長遠發展。",
           url: "https://zuso.ai",
+        },
+        {
+          title: "財團法人合勤基金會",
+          image: "zyxel.png",
+          description:
+            "合勤基金會以發揚合勤投控及合勤科技、兆勤科技、盟創科技等子公司之共同信念：力行社會公益及推動創新創業為出發點，並以鼓勵創新、支持創業、培育優秀人才與善盡社會責任四大面向為主軸，推展相關活動，期望成為火種，拋磚引玉的展現回饋社會的企業精神。",
+          url: "https://www.facebook.com/zyxelfoundation/",
+        },
+        {
+          title: "奧義智慧科技",
+          image: "cycraft.png",
+          description:
+            "奧義智慧科技是一家專注於 AI 自動化技術的資安科技公司，研發自動化威脅曝險管理平台「XCockpit」，提供一站式的全方位自動化資安防護。",
+          url: "https://www.cycraft.com/",
+        },
+        {
+          title: "HKCOTA",
+          image: "hkcota.png",
+          description:
+            "HKCOTA 自 2014 年於香港成立，是香港政府認可的非牟利教育慈善團體 (Reg.# 91/13580)。我們希望透過不同活動，向學生、草根階層、在職及有需要的人士，教育及推廣開放標準、自由及開放軟體、開放硬體、開放資料，以及共享創意授權的概念。",
+          url: "https://hkcota.org/",
         },
       ],
     },
@@ -77,6 +114,12 @@ export default {
       image: "its.png",
       description: "",
       url: "https://its.sinica.edu.tw/",
+    },
+    {
+      title: "SITCON x HK",
+      image: "sitcon-x-hk.png",
+      description: "以學生為本、由香港學生自發舉辦，香港學生資訊科技聯會（SITCON x HK），給予學生們一個用自身力量實踐夢想的舞台。同時也是 SITCON 的姐妹年會。",
+      url: "https://hk.sitcon.org/",
     },
   ],
   mediaPartners: [],
