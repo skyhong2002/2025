@@ -121,6 +121,12 @@ export default {
       description: "以學生為本、由香港學生自發舉辦，香港學生資訊科技聯會（SITCON x HK），給予學生們一個用自身力量實踐夢想的舞台。同時也是 SITCON 的姐妹年會。",
       url: "https://hk.sitcon.org/",
     },
+    {
+      title: "個人贊助",
+      image: "individual.png",
+      description: "感謝個人贊助者，因為有你們的支持，SITCON 得以持續推動資訊教育與開源精神：\n\n　\n\n林＊淵、吳＊漢、林＊祥、鄭＊霖、d****x、傅＊雅、張＊懷、鄭＊仁",
+      url: "https://sitcon.org/donate",
+    },
   ],
   mediaPartners: [],
 };
