@@ -27,12 +27,12 @@ export default {
   sponsors: [
     {
       title: "領航級",
-      items: [ 
+      items: [
         {
           title: "LINE",
           image: "line.png",
           description:
-            "總部位於日本的LINE以「拉近你我的距離」為企業使命，透過多元的行動服務與內容，致力將人們、資訊與社會緊密連結。自2011年6月以通訊軟體的型態推出，現更推展其多元的全球生態系，並將觸角延伸至人工智慧、金融科技等領域，積極實現「智慧入口」的願景，2021年3月，LINE與日本規模最大的網路科技集團之一Z Holdings 正式整併，未來也將持續提供用戶享有最即時、便利的行動生活。",
+            "總部位於日本的LINE以「拉近你我的距離」\n\n為企業使命，透過多元的行動服務與內容，致力將人們、資訊與社會緊密連結。自2011年6月以通訊軟體的型態推出，現更推展其多元的全球生態系，並將觸角延伸至人工智慧、金融科技等領域，積極實現「智慧入口」的願景，2021年3月，LINE與日本規模最大的網路科技集團之一Z Holdings 正式整併，未來也將持續提供用戶享有最即時、便利的行動生活。",
           url: "https://techblog.lycorp.co.jp/zh-hant/search?q=intern",
         },
       ],
@@ -92,6 +92,13 @@ export default {
             "HKCOTA 自 2014 年於香港成立，是香港政府認可的非牟利教育慈善團體 (Reg.# 91/13580)。我們希望透過不同活動，向學生、草根階層、在職及有需要的人士，教育及推廣開放標準、自由及開放軟體、開放硬體、開放資料，以及共享創意授權的概念。",
           url: "https://hkcota.org/",
         },
+        {
+          title: "祐生研究基金會",
+          image: "archilife.png",
+          description:
+            "祐生研究基金會長期推動建築與環境領域的知識密度提升與人才培養，亦贊助國內開源論壇及獨立遊戲開發者之資訊分享聚會，期能促進國內相關社群之發展。",
+          url: "https://www.archilife.org/",
+        },
       ],
     },
   ],
@@ -118,8 +125,15 @@ export default {
     {
       title: "SITCON x HK",
       image: "sitcon-x-hk.png",
-      description: "以學生為本、由香港學生自發舉辦，香港學生資訊科技聯會（SITCON x HK），給予學生們一個用自身力量實踐夢想的舞台。同時也是 SITCON 的姐妹年會。",
+      description:
+        "以學生為本、由香港學生自發舉辦，香港學生資訊科技聯會（SITCON x HK），給予學生們一個用自身力量實踐夢想的舞台。同時也是 SITCON 的姐妹年會。",
       url: "https://hk.sitcon.org/",
+    },
+    {
+      title: "HackMD",
+      image: "hackmd.png",
+      description: "",
+      url: "https://hackmd.io/",
     },
     {
       title: "個人贊助",
