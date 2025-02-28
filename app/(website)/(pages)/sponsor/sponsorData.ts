@@ -106,6 +106,13 @@ export default {
             "配合政府產業及教育政策，掌握產業發展及人才需求，為企業造就優秀數位及語文實作能力的人才，並以數位科技協助政府及企業數位轉型，並確保安全及品質。",
           url: "https://www.csf.org.tw/",
         },
+        {
+          title: "五之神製作所、麵屋雞金",
+          image: "gonokami.png",
+          description:
+            "五之神製作所、麵屋雞金 長期受到各位好朋友的照顧，我們非常感激，大家以後繼續支持喔。",
+          url: "https://www.facebook.com/gonokamitw",
+        },
       ],
     },
   ],
@@ -141,6 +148,18 @@ export default {
       image: "hackmd.png",
       description: "",
       url: "https://hackmd.io/",
+    },
+    {
+      title: "iCHEF 資廚",
+      image: "ichef.png",
+      description: "",
+      url: "https://www.ichefpos.com/zh-tw",
+    },
+    {
+      title: "問路傳媒 DL MEDIA",
+      image: "dl-media.png",
+      description: "市場上唯一可以規模合作財經科技商案的媒體品牌",
+      url: "https://portaly.cc/catelu",
     },
     {
       title: "個人贊助",
