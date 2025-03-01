@@ -155,10 +155,10 @@ function EventSection({
 
 function ScheduleTable() {
   const schedule = [
-    { time: "上午", location: "11:00 在 3F 白板區旁" },
-    { time: "上午", location: "11:10 在 4F 紀念品攤旁" },
-    { time: "下午", location: "14:40 在 3F 白板區旁" },
-    { time: "下午", location: "14:50 在 4F 紀念品攤旁" },
+    { time: "上午 11:00", location: "在 3F 白板區旁" },
+    { time: "上午 11:10", location: "在 4F 紀念品攤旁" },
+    { time: "下午 14:40", location: "在 3F 白板區旁" },
+    { time: "下午 14:50", location: "在 4F 紀念品攤旁" },
   ];
 
   return (
@@ -166,7 +166,9 @@ function ScheduleTable() {
       <thead>
         <tr className="border border-foreground">
           <th className="border border-foreground p-2 text-left">時間</th>
-          <th className="border border-foreground p-2 text-left">集合地點</th>
+          <th className="border border-foreground p-2 text-left">
+            出發地點（請提早 10 分鐘集合）
+          </th>
         </tr>
       </thead>
       <tbody>
