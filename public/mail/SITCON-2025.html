@@ -1,50 +1,79 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SITCON 2025</title>
-    <!--[if !mso]><!-->
-    <style type="text/css">
-        @media only screen and (max-width: 600px) {
-            .container {
-                padding-left: 15px !important;
-                padding-right: 15px !important;
-            }
-            .header-image {
-                width: 100% !important;
-                height: auto !important;
-            }
-            .title {
-                font-size: 28px !important;
-            }
-            .content-box {
-                padding: 15px !important;
-            }
-            .social-icon {
-                margin: 0 5px !important;
-            }
-            h1 {
-                font-size: 28px !important;
-            }
-            h2 {
-                font-size: 24px !important;
-            }
-            .footer-text {
-                display: block !important;
-                width: 100% !important;
-            }
-        }
-    </style>
-    <!--<![endif]-->
-    <!--[if mso]>
-    <style type="text/css">
-        table {border-collapse: collapse;}
-        .container {width: 600px;}
-        body, table, td, p, a, li, blockquote {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;}
-    </style>
-    <![endif]-->
-</head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITCON 2025 行前通知信</title>
+<style type="text/css">
+    .scroll-indicator { 
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;           /* 固定寬度 */
+      height: 80px;          /* 固定高度，與寬度相同 */
+      font-size: 2.5em;      /* 調整 icon 大小 */
+      color: #333;
+      cursor: pointer;
+      z-index: 1000;
+      border: 4px solid #333; /* 4px 邊框 */
+      border-radius: 50%;     /* 50% 產生圓形 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: bounce 2s infinite;
+      background-color: #fff;  /* 可選背景色 */
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+
+	@media only screen and (max-width: 600px){
+		.container{
+			padding-left:15px !important;
+			padding-right:15px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		.header-image{
+			width:100% !important;
+			height:auto !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		.title{
+			font-size:28px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		.content-box{
+			padding:15px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		.social-icon{
+			margin:0 5px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		h1{
+			font-size:28px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		h2{
+			font-size:24px !important;
+		}
+
+}	@media only screen and (max-width: 600px){
+		.footer-text{
+			display:block !important;
+			width:100% !important;
+		}
+
+}</style></head>
 <body style="margin: 0; padding: 0; background-color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; min-height: 100vh; position: relative;">
     <!-- Main Container Table -->
     <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF">
@@ -54,7 +83,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                     <tr>
                         <td align="center" style="padding: 0;">
-                            <img src="https://sitcon.org/2025/mail/background.png" alt="header image" width="100%" style="display: block; width: 100%; height: auto;" class="header-image" />
+                            <img src="https://sitcon.org/2025/mail/background.png" alt="header image" width="100%" style="display: block; width: 100%; height: auto;" class="header-image">
                         </td>
                     </tr>
                 </table>
@@ -77,7 +106,7 @@
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                 <tr>
                                     <td style="color: #151B2E; line-height: 1.6;">
-                                        <p style="margin: 8px 0;">Hi {{ nickname }}，</p>
+                                        <p style="margin: 8px 0;">Hi *|NAME|*，</p>
                                         <p style="margin: 8px 0;">很高興能在 SITCON 2025 看到您！年會即將在下週六（03/08）揭開序幕，若您臨時有事無法來到現場一起共襄盛舉，請至 <a href="https://www.facebook.com/groups/sitcon.tw/posts/7818984468226644/" style="color: #0DC93F; text-decoration: underline; text-underline-offset: 3px;">官方換票樓</a> 將您的票券釋出，讓其他有興趣參與但沒有票的朋友也能有機會一起參加活動。</p>
                                         <p style="margin: 8px 0;">我們整理了一些實用的資訊，還請花 5 分鐘詳細閱讀：</p>
                                     </td>
@@ -96,7 +125,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px;">
                                             <tr>
                                                 <td width="72" valign="bottom">
-                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Transportation Icon" width="72" height="72" style="display: block;" />
+                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Transportation Icon" width="72" height="72" style="display: block;">
                                                 </td>
                                                 <td valign="bottom" style="padding-left: 10px;">
                                                     <h1 style="color: #151B2E; margin: 0; padding-bottom: 0; font-size: 36px;">交通</h1>
@@ -134,7 +163,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px;">
                                             <tr>
                                                 <td width="72" valign="bottom">
-                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Check-in Icon" width="72" height="72" style="display: block;" />
+                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Check-in Icon" width="72" height="72" style="display: block;">
                                                 </td>
                                                 <td valign="bottom" style="padding-left: 10px;">
                                                     <h1 style="color: #151B2E; margin: 0; padding-bottom: 0; font-size: 36px;">報到</h1>
@@ -149,18 +178,20 @@
                                     <td style="padding-bottom: 20px;">
                                         <div style="border: 1px solid #27304D; border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; padding: 24px; color: #151B2E; word-wrap: break-word; overflow-wrap: break-word;">
                                             <h2 style="color: #151B2E; font-size: 32px; margin: 0; margin-bottom: 24px;">1. 報到時間及方式</h2>
-                                            <p style="margin: 8px 0; line-height: 1.6;">年會將於早上 <span style="color: #0DC93F; font-weight: bold;">8 點半</span> 開始領取迎賓袋，活動於 <span style="color: #0DC93F; font-weight: bold;">9 點</span> 準時開始。在到達會場後，連上年會現場的 Wi-Fi，即可用「<a href="https://opass.app" style="color: #0DC93F; text-decoration: underline; text-underline-offset: 3px;">OPass</a>」App 進行報到，並到會場四樓依工作人員指示排隊領取迎賓袋。</p>
-                                            <p style="margin: 8px 0; line-height: 1.6;">十點半後請到三樓服務台領取迎賓袋。</p>
+                                            <p style="margin: 8px 0; line-height: 1.6;">年會將於早上 <span style="color: #0DC93F; font-weight: bold;">8 點半</span> 開始領取迎賓袋，活動於 <span style="color: #0DC93F; font-weight: bold;">9 點</span> 準時開始。在到達會場後，連上年會現場的 Wi-Fi，即可用「<a href="https://opass.app" style="color: #0DC93F; text-decoration: underline; text-underline-offset: 3px;">OPass</a>」App 進行報到，並到會場四樓依工作人員指示排隊領取迎賓袋。十點半後請到三樓服務台領取迎賓袋。</p>
 
                                             <p style="margin: 8px 0; line-height: 1.6;">請透過以下專屬連結下載、啟動 OPass：</p>
-                                            <div style="color: #0DC93F; padding: 8px 0; display: block;">{{ App Link }}</div>
+                                            <div style="color: #0DC93F; padding: 8px 0; display: block;">*|INVITER|*</div>
+
+                                            <p style="margin: 8px 0; line-height: 1.6;">若上方專屬連結不起作用，請下載 OPass 並手動輸入驗證碼（Token）：</p>
+                                            <div style="color: #0DC93F; padding: 8px 0; display: block;">*|TOKEN|*</div>
 
                                             <p style="margin: 8px 0; line-height: 1.6;">若您無法使用 App 報到，請向服務台的工作人員出示 KKTIX 提供的 QR code 以完成手動報到。</p>
 
                                             <!-- Notice Box -->
                                             <div style="margin: 16px 0; border: 1px solid #0DC93F; border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; background-color: rgba(74, 229, 74, 0.1); padding: 16px 24px;">
                                                 <p style="margin: 4px 0; color: #151B2E;">請注意：</p>
-                                                <p style="margin: 4px 0; padding-left: 15px; color: #151B2E;">&#8226; 請務必在領取迎賓袋前再依工作人員指示按下領取按鈕</p>
+                                                <p style="margin: 4px 0; padding-left: 15px; color: #151B2E;">&#8226; 請務必在領取迎賓袋前，再依工作人員指示按下領取按鈕。</p>
                                                 <p style="margin: 4px 0; padding-left: 15px; color: #151B2E;">&#8226; 迎賓袋內有您的識別證，必須領取並且配戴後才能進入會議廳內。</p>
                                                 <p style="margin: 4px 0; padding-left: 15px; color: #151B2E;">&#8226; 若您於 09:30 後才完成報到，恕不提供便當。</p>
                                             </div>
@@ -184,7 +215,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px;">
                                             <tr>
                                                 <td width="72" valign="bottom">
-                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Activities Icon" width="72" height="72" style="display: block;" />
+                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Activities Icon" width="72" height="72" style="display: block;">
                                                 </td>
                                                 <td valign="bottom" style="padding-left: 10px;">
                                                     <h1 style="color: #151B2E; margin: 0; padding-bottom: 0; font-size: 36px;">年會活動</h1>
@@ -242,6 +273,7 @@
                                             <h2 style="color: #151B2E; font-size: 32px; margin: 0; margin-bottom: 24px; margin-top: 30px;">8. 咖啡廳</h2>
                                             <p style="margin: 8px 0; line-height: 1.6;">剛剛的精彩議程讓你意猶未盡？想與來自各地的會眾交流卻又不知如何開始？還是需要一個地方讓自己放鬆片刻？歡迎來到 SITCON 2025 咖啡廳！</p>
                                             <p style="margin: 8px 0; line-height: 1.6;">這裡不僅是一杯好咖啡的歸屬地，更是滿足多樣需求的多功能空間。你可以在<span style="color: #0DC93F; font-weight: bold;">二樓北側電梯廳</span>找到這個溫馨的角落，無論你是討論創新點子、拓展人脈，還是簡單地想喘口氣，咖啡廳都能滿足你的需求。</p>
+                                            <p style="margin: 8px 0; line-height: 1.6;">除此之外，今年在咖啡廳還會舉辦「與講者有約」活動，歡迎在午餐和點心時段帶著你的食物前來咖啡廳，和講者們面對面交流，進一步了解講者的分享內容！</p>
                                             <p style="margin: 8px 0; line-height: 1.6;">無論你是討論、交流、放鬆，還是開啟新的計畫，咖啡廳都歡迎你的蒞臨！快來一杯咖啡，享受屬於你的美好時光吧！</p>
                                         </div>
                                     </td>
@@ -260,7 +292,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px;">
                                             <tr>
                                                 <td width="72" valign="bottom">
-                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Materials Icon" width="72" height="72" style="display: block;" />
+                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Materials Icon" width="72" height="72" style="display: block;">
                                                 </td>
                                                 <td valign="bottom" style="padding-left: 10px;">
                                                     <h1 style="color: #151B2E; margin: 0; padding-bottom: 0; font-size: 36px;">會前資料</h1>
@@ -295,7 +327,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px;">
                                             <tr>
                                                 <td width="72" valign="bottom">
-                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Food Icon" width="72" height="72" style="display: block;" />
+                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Food Icon" width="72" height="72" style="display: block;">
                                                 </td>
                                                 <td valign="bottom" style="padding-left: 10px;">
                                                     <h1 style="color: #151B2E; margin: 0; padding-bottom: 0; font-size: 36px;">食物</h1>
@@ -312,13 +344,13 @@
                                             <p style="margin: 8px 0; line-height: 1.6;">為了讓大家能愉快的交流，年會為各位準備了午餐與各式點心。場地內除了用餐區以外，皆禁止飲食，只能帶<span style="color: #0DC93F; font-weight: bold;">有蓋水瓶</span>進出，還請各位多多配合了 (´・ω・`)</p>
 
                                             <h2 style="color: #151B2E; font-size: 32px; margin: 0; margin-bottom: 24px; margin-top: 30px;">1. 午餐</h2>
-                                            <p style="margin: 8px 0; line-height: 1.6;">美味的午餐將從上午 <span style="color: #0DC93F; font-weight: bold;">11:15</span> 開始，於 4F 國際會議廳 (R0) 後方兩側的轉角處發放；<span style="color: #0DC93F; font-weight: bold;">素食</span>則在 4F 北側領取，請各位不要跑錯囉！</p>
+                                            <p style="margin: 8px 0; line-height: 1.6;">美味的午餐將從 <span style="color: #0DC93F; font-weight: bold;">上午 11:15</span> 開始，於 4F 國際會議廳 (R0) 後方兩側的轉角處發放；<span style="color: #0DC93F; font-weight: bold;">素食</span>則在 4F 北側領取，請各位不要跑錯囉！</p>
                                             <p style="margin: 8px 0; line-height: 1.6;">領餐時，請準備好您的 OPass App，等待工作人員指示後，按下按鈕領取午餐。</p>
                                             <p style="margin: 8px 0; line-height: 1.6;">（若您報到時未使用 App，請出示手動報到時取得的午餐券）</p>
                                             <p style="margin: 8px 0; line-height: 1.6;">領取完午餐可至 4F 走廊旁的戶外用餐區用餐～</p>
 
                                             <h2 style="color: #151B2E; font-size: 32px; margin: 0; margin-bottom: 24px; margin-top: 30px;">2. 點心</h2>
-                                            <p style="margin: 8px 0; line-height: 1.6;"><span style="color: #0DC93F; font-weight: bold;">下午 3 點 25 分</span>開始，4F 兩側的社群攤位走廊上將提供精緻茶點，您可以在享用下午茶的同時，與現場的會眾以及攤位交流。</p>
+                                            <p style="margin: 8px 0; line-height: 1.6;"><span style="color: #0DC93F; font-weight: bold;">下午 15:25</span> 開始，4F 兩側的社群攤位走廊上將提供精緻茶點，您可以在享用下午茶的同時，與現場的會眾以及攤位交流。</p>
                                             <p style="margin: 8px 0; line-height: 1.6;">如果您有環保餐具，也請別忘記隨身攜帶，為地球盡一份心力。</p>
                                         </div>
                                     </td>
@@ -337,7 +369,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px;">
                                             <tr>
                                                 <td width="72" valign="bottom">
-                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Internet Icon" width="72" height="72" style="display: block;" />
+                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Internet Icon" width="72" height="72" style="display: block;">
                                                 </td>
                                                 <td valign="bottom" style="padding-left: 10px;">
                                                     <h1 style="color: #151B2E; margin: 0; padding-bottom: 0; font-size: 36px;">網路</h1>
@@ -373,7 +405,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px;">
                                             <tr>
                                                 <td width="72" valign="bottom">
-                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Lost and Found Icon" width="72" height="72" style="display: block;" />
+                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Lost and Found Icon" width="72" height="72" style="display: block;">
                                                 </td>
                                                 <td valign="bottom" style="padding-left: 10px;">
                                                     <h1 style="color: #151B2E; margin: 0; padding-bottom: 0; font-size: 36px;">遺失物</h1>
@@ -408,7 +440,7 @@
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 20px;">
                                             <tr>
                                                 <td width="72" valign="bottom">
-                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Other Icon" width="72" height="72" style="display: block;" />
+                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="Other Icon" width="72" height="72" style="display: block;">
                                                 </td>
                                                 <td valign="bottom" style="padding-left: 10px;">
                                                     <h1 style="color: #151B2E; margin: 0; padding-bottom: 0; font-size: 36px;">其他</h1>
@@ -445,22 +477,22 @@
                         <td style="padding-bottom: 20px;">
                             <div style="border: 1px solid #27304D; border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; padding: 12px; text-align: center; margin: 25px 0 0 0;">
                                 <a href="https://sitcon.org/twitter" style="text-decoration: none; display: inline-block; margin: 0 12px;">
-                                    <img src="https://sitcon.org/2025/mail/twitter.png" alt="Twitter" width="24" height="24" style="border: none;" />
+                                    <img src="https://sitcon.org/2025/mail/twitter.png" alt="Twitter" width="24" height="24" style="border: none;">
                                 </a>
                                 <a href="https://sitcon.org/fb" style="text-decoration: none; display: inline-block; margin: 0 12px;">
-                                    <img src="https://sitcon.org/2025/mail/facebook.png" alt="Facebook" width="24" height="24" style="border: none;" />
+                                    <img src="https://sitcon.org/2025/mail/facebook.png" alt="Facebook" width="24" height="24" style="border: none;">
                                 </a>
                                 <a href="https://sitcon.org/flickr" style="text-decoration: none; display: inline-block; margin: 0 12px;">
-                                    <img src="https://sitcon.org/2025/mail/flickr.png" alt="Flickr" width="24" height="24" style="border: none;" />
+                                    <img src="https://sitcon.org/2025/mail/flickr.png" alt="Flickr" width="24" height="24" style="border: none;">
                                 </a>
                                 <a href="https://sitcon.org/instagram" style="text-decoration: none; display: inline-block; margin: 0 12px;">
-                                    <img src="https://sitcon.org/2025/mail/instagram.png" alt="Instagram" width="24" height="24" style="border: none;" />
+                                    <img src="https://sitcon.org/2025/mail/instagram.png" alt="Instagram" width="24" height="24" style="border: none;">
                                 </a>
                                 <a href="https://sitcon.org/tg" style="text-decoration: none; display: inline-block; margin: 0 12px;">
-                                    <img src="https://sitcon.org/2025/mail/telegram.png" alt="Telegram" width="24" height="24" style="border: none;" />
+                                    <img src="https://sitcon.org/2025/mail/telegram.png" alt="Telegram" width="24" height="24" style="border: none;">
                                 </a>
                                 <a href="https://sitcon.org/yt" style="text-decoration: none; display: inline-block; margin: 0 12px;">
-                                    <img src="https://sitcon.org/2025/mail/youtube.png" alt="YouTube" width="24" height="24" style="border: none;" />
+                                    <img src="https://sitcon.org/2025/mail/youtube.png" alt="YouTube" width="24" height="24" style="border: none;">
                                 </a>
                             </div>
                         </td>
@@ -479,7 +511,7 @@
                                                     <span style="color: #151B2E;">SITCON 2025</span>
                                                 </td>
                                                 <td style="padding: 0 8px;">
-                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="SITCON Logo" width="24" height="24" style="display: inline-block; vertical-align: middle;" />
+                                                    <img src="https://sitcon.org/2025/mail/run.png" alt="SITCON Logo" width="24" height="24" style="display: inline-block; vertical-align: middle;">
                                                 </td>
                                                 <td style="padding: 0 8px;" class="footer-text">
                                                     <span style="color: #151B2E;">Lines of Flight</span>
@@ -492,8 +524,9 @@
                         </td>
                     </tr>
                 </table>
-                
-                <!-- 為了確保Gmail手機版顯示完整，添加額外的空白墊底 -->
+                <div class="scroll-indicator">
+                    &#x2193;
+                </div>                <!-- 為了確保Gmail手機版顯示完整，添加額外的空白墊底 -->
                 <div style="height: 50px;"></div>
             </td>
         </tr>
