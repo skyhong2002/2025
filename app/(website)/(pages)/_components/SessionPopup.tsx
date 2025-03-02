@@ -181,6 +181,34 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
                         )}
                       />
                     )}
+                    <div className="flex flex-row justify-between gap-2">
+                      <button
+                        onClick={() => {
+                          if (session.qa) window.open(session.qa, "_blank");
+                        }}
+                        className="flex-grow text-nowrap rounded-full bg-[#B9D3E6] px-3 py-2 text-center text-[16px] font-bold transition-colors hover:bg-[#A1C7E0]"
+                      >
+                        即時提問
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (session.slide)
+                            window.open(session.slide, "_blank");
+                        }}
+                        className="flex-grow text-nowrap rounded-full bg-[#B9D3E6] px-3 py-2 text-center text-[16px] font-bold transition-colors hover:bg-[#A1C7E0]"
+                      >
+                        簡報連結
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (session.co_write)
+                            window.open(session.co_write, "_blank");
+                        }}
+                        className="flex-grow text-nowrap rounded-full bg-[#B9D3E6] px-3 py-2 text-center text-[16px] font-bold transition-colors hover:bg-[#A1C7E0]"
+                      >
+                        共筆連結
+                      </button>
+                    </div>
                   </div>
                 </div>
 
