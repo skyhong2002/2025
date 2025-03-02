@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { TriangleAlert, CircleX, ArrowUpRight } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import rehypeExternalLinks from "rehype-external-links";
@@ -116,6 +116,7 @@ export default function Page() {
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          exit={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{
             opacity: isVisible ? 1 : 0,
             scale: isVisible ? 1 : 0.95,
@@ -229,7 +230,7 @@ export default function Page() {
         </div>
       </section>
       <div className="w-full gap-8 md:flex">
-        <div className="sticky top-[84px] z-10 max-h-[740px] w-full rounded-3xl bg-black bg-opacity-10 backdrop-blur-lg venue_desktop:bg-opacity-0">
+        <div className="venue_desktop:bg-opacity-0 sticky top-[84px] z-10 max-h-[740px] w-full rounded-3xl bg-black bg-opacity-10 backdrop-blur-lg">
           <Image
             src={options.find((option) => option.value === Floor)?.image ?? ""}
             alt={`${Floor} Floor Image`}
@@ -240,14 +241,14 @@ export default function Page() {
         </div>
 
         <div className="mt-8 w-full">
-          <div className="grid grid-cols-1 gap-6 lg:gap-2 venue_desktop:grid-cols-2">
+          <div className="venue_desktop:grid-cols-2 grid grid-cols-1 gap-6 lg:gap-2">
             {currentVenueData.map((venue) => (
               <div
                 key={venue.number}
-                className="flex cursor-pointer space-x-4 rounded-lg p-2 shadow-lg transition-colors hover:bg-slate-900"
+                className="flex cursor-pointer items-center space-x-4 rounded-lg p-2 shadow-lg transition-colors hover:bg-slate-800"
                 onClick={() => setSelectedVenue(venue)}
               >
-                <div className="mb-2 flex items-center gap-2">
+                <div className="flex items-center gap-2">
                   <span className="flex h-12 w-12 items-center justify-center rounded-md border border-green-400 px-2 py-2 text-3xl font-semibold text-green-400">
                     {venue.number}
                   </span>
@@ -264,20 +265,22 @@ export default function Page() {
         </div>
       </div>
 
-      {selectedVenue && (
-        <Popup
-          isOpen={!!selectedVenue}
-          onClose={() => setSelectedVenue(null)}
-          title={selectedVenue.title}
-          content={selectedVenue.description}
-          number={selectedVenue.number}
-          url={
-            "url" in selectedVenue &&
-            typeof selectedVenue.url === "string" &&
-            selectedVenue.url
-          }
-        />
-      )}
+      <AnimatePresence>
+        {selectedVenue && (
+          <Popup
+            isOpen={!!selectedVenue}
+            onClose={() => setSelectedVenue(null)}
+            title={selectedVenue.title}
+            content={selectedVenue.description}
+            number={selectedVenue.number}
+            url={
+              "url" in selectedVenue &&
+              typeof selectedVenue.url === "string" &&
+              selectedVenue.url
+            }
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
