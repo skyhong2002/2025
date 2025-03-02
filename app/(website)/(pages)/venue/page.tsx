@@ -106,7 +106,7 @@ export default function Page() {
               rel="https://sitcon.org/2025/venue"
               className="bg-blue-600 mb-4 flex items-center justify-center py-2 text-center text-sky-500"
             >
-              更多資訊
+              前往網站
               <ArrowUpRight />
             </a>
           )}
@@ -167,26 +167,27 @@ export default function Page() {
             {currentVenueData.map((venue) => (
               <div
                 key={venue.number}
-                className="cursor-pointer rounded-lg p-6 shadow-lg transition-colors hover:bg-slate-900"
+                className="cursor-pointer rounded-lg p-6 shadow-lg transition-colors hover:bg-slate-900 flex space-x-4"
                 onClick={() => setSelectedVenue(venue)}
               >
                 <div className="mb-2 flex items-center gap-2">
-                  <span className="inline-block rounded-full bg-[#B9D3E6] px-3 py-1 text-sm font-semibold text-black">
+                  <span className="inline-block rounded-md border-green-400 border px-3 py-3 text-3xl font-semibold text-green-400">
                     {venue.number}
                   </span>
-                  <h3 className="text-xl font-bold">{venue.title}</h3>
                 </div>
-                <p className="text-gray-300">
-                  {venue.description.slice(0, 20)}
-                  {venue.description.length > 20 && "..."}
-                </p>
+                <div>
+                  <h3 className="text-lg">{venue.title}</h3>
+                  <p className="text-zinc-400">
+                    {venue.description.slice(0, 20)}
+                    {venue.description.length > 20 && "..."}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Render a single popup for the selected venue */}
       {selectedVenue && (
         <Popup
           isOpen={!!selectedVenue}
