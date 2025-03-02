@@ -12,6 +12,10 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import useClickOutside from "@/hooks/useClickOutside";
 import { useRouter } from "next/navigation";
+import sessions from "@/public/sessions.json";
+
+const sessionTypes = sessions.session_types;
+const allTags = sessions.tags;
 
 const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
   const session: Session | undefined = data.sessions
@@ -30,27 +34,6 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
   });
 
   if (!session) return null;
-
-  const getSessionName = (type: string) => {
-    switch (type) {
-      case "K":
-        return "Keynote";
-      case "P":
-        return "Presentation";
-      case "E":
-        return "Espresso";
-      case "S":
-        return "合作議程";
-      case "PD":
-        return "論壇";
-      case "U":
-        return "開放式議程";
-      case "L":
-        return "Lightning Talk";
-      default:
-        return "";
-    }
-  };
 
   const getTimeText = (start: string, end: string) => {
     return `${timeRender(start)} - ${timeRender(end)}`;
@@ -111,17 +94,23 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
               <div className="flex max-w-full flex-col gap-3 md:max-w-[60%]">
                 <div className="flex items-center gap-2">
                   <h2 className="self-start text-[20px] font-medium md:self-center">
-                    {getSessionName(session.type)}
+                    {
+                      sessionTypes.find((type) => type.id === session.type)?.zh
+                        .name
+                    }
                   </h2>
                   <div className="flex flex-row gap-2">
-                    {session.tags.map((tag) => (
-                      <span
-                        className="rounded-full bg-[#D9D9D9] px-3 py-1.5 text-[12px]"
-                        key={tag}
-                      >
-                        #{tag}
-                      </span>
-                    ))}
+                    {session.tags
+                      .map((tag) => allTags.find((t) => t.id === tag)?.zh.name)
+                      .filter((tag) => tag !== "")
+                      .map((tag) => (
+                        <span
+                          className="rounded-full bg-[#D9D9D9] px-3 py-1.5 text-[12px]"
+                          key={tag}
+                        >
+                          #{tag}
+                        </span>
+                      ))}
                   </div>
                 </div>
                 <h1 className="text-h2-mobile font-bold md:text-h2">
@@ -145,7 +134,7 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-10">
+              <div className="flex flex-col gap-0 md:gap-10">
                 <div className="flex w-full flex-col gap-10 md:flex-row">
                   <div className="flex w-full flex-col gap-2 md:w-[65%]">
                     <div className="flex flex-row">
@@ -158,7 +147,7 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
                         </div>
                       )}
                       {priorKnowledge && (
-                        <div className="flex-1">
+                        <div className="mb-10 mt-5 flex-1">
                           <h2 className="mb-2 text-2xl font-bold">先備知識</h2>
                           <Markdown className="prose space-y-4 leading-7 max-md:text-sm">
                             {priorKnowledge}
@@ -168,7 +157,7 @@ const SessionPopup = ({ openSessionId }: { openSessionId: string | null }) => {
                     </div>
                     <h2 className="text-2xl font-bold">議程介紹　</h2>
                     <Markdown className="prose space-y-4 leading-7 max-md:text-sm">
-                      {session.zh.description}
+                      {description}
                     </Markdown>
                   </div>
                   <div className="flex w-full flex-col gap-3 md:w-[35%]">

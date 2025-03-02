@@ -2,6 +2,7 @@
 import React, { ReactNode } from "react";
 import data from "@/public/sessions.json";
 import timeRender from "@/app/(website)/_utils/time-render";
+import sessions from "@/public/sessions.json";
 
 // import { useSession } from "./AgendaContext";
 import Link from "next/link";
@@ -28,16 +29,8 @@ export type Session = {
   "": null;
 };
 
-export const sessionTypeTranslation: Record<string, string> = {
-  K: "Keynote",
-  E: "Espresso",
-  P: "Presentation",
-  U: "開放式議程",
-  PD: "論壇",
-  S: "合作議程",
-  Ev: "Event",
-  L: "Lightning Talk",
-};
+const sessionTypes = sessions.session_types;
+const allTags = sessions.tags;
 
 const SessionCard = ({ session }: { session: Session }) => {
   // translate session.speaker[i] to data.speaker[speaker[i]].name
@@ -46,7 +39,12 @@ const SessionCard = ({ session }: { session: Session }) => {
     return speaker ? speaker.zh.name : "";
   });
 
-  const tags = [...session.tags, sessionTypeTranslation[session.type]];
+  const tags = [
+    ...session.tags.map(
+      (tag) => allTags.find((t) => t.id === tag)?.zh.name || "",
+    ),
+    sessionTypes.find((type) => type.id === session.type)?.zh.name || "",
+  ].filter((tag) => tag !== "");
 
   const calculateMinDiff = (start: string, end: string) => {
     // input format: "14:45" "15:25"
