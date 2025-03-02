@@ -167,19 +167,18 @@ export default function Page() {
             {currentVenueData.map((venue) => (
               <div
                 key={venue.number}
-                className="cursor-pointer rounded-lg p-6 shadow-lg transition-colors hover:bg-slate-900 flex space-x-4"
+                className="flex cursor-pointer space-x-4 rounded-lg p-6 shadow-lg transition-colors hover:bg-slate-900"
                 onClick={() => setSelectedVenue(venue)}
               >
                 <div className="mb-2 flex items-center gap-2">
-                  <span className="inline-block rounded-md border-green-400 border px-3 py-3 text-3xl font-semibold text-green-400">
-                    {venue.number}
-                  </span>
+                <span className="border border-green-400 rounded-md px-2 py-2 text-3xl font-semibold text-green-400 h-12 w-12 flex items-center justify-center">
+                  {venue.number}
+                </span>
                 </div>
                 <div>
-                  <h3 className="text-lg">{venue.title}</h3>
-                  <p className="text-zinc-400">
-                    {venue.description.slice(0, 20)}
-                    {venue.description.length > 20 && "..."}
+                  <h3 className="text-lg w-60 truncate">{venue.title}</h3>
+                  <p className="text-zinc-400 w-60 truncate text-sm">
+                    {venue.description}
                   </p>
                 </div>
               </div>
