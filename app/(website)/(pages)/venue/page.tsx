@@ -10,12 +10,22 @@ import Svg3F from "@/public/image/3F.svg";
 import Svg4F from "@/public/image/4F.svg";
 import venueData from "./venueData";
 
+// Define the Venue interface
+interface Venue {
+  number: string;
+  title: string;
+  description: string;
+  url?: string;
+}
+
 export default function Page() {
   const [Floor, setFloor] = useState<Floor>("2F");
-  const [showPopup, setShowPopup] = useState(false);
+  const [selectedVenue, setSelectedVenue] = useState<Venue | null>(null);
 
-  const openPopup = () => setShowPopup(true);
-  const closePopup = () => setShowPopup(false);
+  // Reset selected venue when floor changes
+  useEffect(() => {
+    setSelectedVenue(null);
+  }, [Floor]);
 
   type Floor = "2F" | "3F" | "4F";
   type VenueDataKey = keyof typeof venueData;
@@ -36,7 +46,7 @@ export default function Page() {
   )?.number;
 
   const currentVenueData = currentFloorNumber
-    ? venueData[currentFloorNumber as unknown as VenueDataKey]
+    ? (venueData[currentFloorNumber as unknown as VenueDataKey] as Venue[])
     : [];
 
   interface PopupProps {
@@ -167,8 +177,8 @@ export default function Page() {
             {currentVenueData.map((venue) => (
               <div
                 key={venue.number}
-                className="rounded-lg p-6 shadow-lg transition-colors hover:bg-slate-900"
-                onClick={openPopup}
+                className="cursor-pointer rounded-lg p-6 shadow-lg transition-colors hover:bg-slate-900"
+                onClick={() => setSelectedVenue(venue)}
               >
                 <div className="mb-2 flex items-center gap-2">
                   <span className="inline-block rounded-full bg-[#B9D3E6] px-3 py-1 text-sm font-semibold text-black">
@@ -180,20 +190,26 @@ export default function Page() {
                   {venue.description.slice(0, 20)}
                   {venue.description.length > 20 && "..."}
                 </p>
-                <Popup
-                  isOpen={showPopup}
-                  onClose={closePopup}
-                  title={venue.title}
-                  content={venue.description}
-                  url={
-                    "url" in venue && typeof venue.url === "string" && venue.url
-                  }
-                />
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Render a single popup for the selected venue */}
+      {selectedVenue && (
+        <Popup
+          isOpen={!!selectedVenue}
+          onClose={() => setSelectedVenue(null)}
+          title={selectedVenue.title}
+          content={selectedVenue.description}
+          url={
+            "url" in selectedVenue &&
+            typeof selectedVenue.url === "string" &&
+            selectedVenue.url
+          }
+        />
+      )}
     </div>
   );
 }
