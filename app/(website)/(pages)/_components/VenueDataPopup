@@ -1,0 +1,10 @@
+                {/* {"url" in venue && typeof venue.url === "string" && (
+                  <a
+                    href={venue.url as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-block text-[#B9D3E6] hover:underline"
+                  >
+                    瀏覽網站 →
+                  </a>
+                )} */}

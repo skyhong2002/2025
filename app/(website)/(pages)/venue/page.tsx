@@ -8,10 +8,13 @@ import { TriangleAlert } from "lucide-react";
 import Svg2F from "@/public/image/2F.svg";
 import Svg3F from "@/public/image/3F.svg";
 import Svg4F from "@/public/image/4F.svg";
+import venueData from "./venueData";
 
-type Floor = "2F" | "3F" | "4F";
 export default function Page() {
   const [Floor, setFloor] = useState<Floor>("2F");
+
+  type Floor = "2F" | "3F" | "4F";
+  type VenueDataKey = keyof typeof venueData;
 
   const options: Array<{
     label: string;
@@ -23,6 +26,14 @@ export default function Page() {
     { label: "3F", value: "3F", number: "3", image: Svg3F.src },
     { label: "4F", value: "4F", number: "4", image: Svg4F.src },
   ];
+
+  const currentFloorNumber = options.find(
+    (option) => option.value === Floor,
+  )?.number;
+
+  const currentVenueData = currentFloorNumber
+    ? venueData[currentFloorNumber as unknown as VenueDataKey]
+    : [];
 
   return (
     <div className="flex w-full flex-col items-start justify-center gap-12 text-[#ffffff]">
@@ -60,14 +71,38 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <div className="flex max-h-[740px] w-full">
-        <Image
-          src={options.find((option) => option.value === Floor)?.image ?? ""}
-          alt={`${Floor} Floor Image`}
-          width={1024}
-          height={768}
-          className="mx-auto"
-        />
+      <div className="flex w-full flex-col gap-8">
+        <div className="max-h-[740px] w-full">
+          <Image
+            src={options.find((option) => option.value === Floor)?.image ?? ""}
+            alt={`${Floor} Floor Image`}
+            width={1024}
+            height={768}
+            className="mx-auto"
+          />
+        </div>
+
+        <div className="mt-8 w-full">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+            {currentVenueData.map((venue) => (
+              <div
+                key={venue.number}
+                className="rounded-lg p-6 shadow-lg transition-colors hover:bg-slate-900"
+              >
+                <div className="mb-2 flex items-center gap-2">
+                  <span className="inline-block rounded-full bg-[#B9D3E6] px-3 py-1 text-sm font-semibold text-black">
+                    {venue.number}
+                  </span>
+                  <h3 className="text-xl font-bold">{venue.title}</h3>
+                </div>
+                <p className="text-gray-300">
+                  {venue.description.slice(0, 20)}
+                  {venue.description.length > 20 && "..."}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
