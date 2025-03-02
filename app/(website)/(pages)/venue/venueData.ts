@@ -30,6 +30,13 @@ export default {
         "在 LINE 上收到可疑的轉傳訊息，就先傳到 @cofacts 來看看網友怎麼說吧！這是個 2016 年持續至今的開源專案，蒐集 LINE 上的可疑訊息，並由網友擔任查核協作者，在 https://cofacts.tw 上面撰寫查核回應。查核成果以 CC BY-SA 釋出，讓研究者、智庫、媒體與有興趣的任何人取用。",
     },
     {
+      number: "4",
+      title: "SITCON",
+      url: "https://sitcon.org",
+      description:
+        "學生計算機年會（Students’ Information Technology Conference）自 2012 年發起，以學生為本、由學生自發舉辦，長期投身學生資訊教育與推廣開源精神，希望引領更多學子踏入資訊的殿堂，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發，達到「學以致用、教學相長」的實際展現。 ",
+    },
+    {
       number: "5",
       title: "Ruby Taiwan",
       url: "https://www.facebook.com/RubyJamTW",
