@@ -58,7 +58,14 @@ export default function Page() {
     url?: string | boolean;
   }
 
-  const Popup = ({ isOpen, onClose, content, title, number, url }: PopupProps) => {
+  const Popup = ({
+    isOpen,
+    onClose,
+    content,
+    title,
+    number,
+    url,
+  }: PopupProps) => {
     // Handle ESC key press to close popup
     useEffect(() => {
       const handleEscKey = (event: { keyCode: number }) => {
@@ -78,24 +85,26 @@ export default function Page() {
     if (!isOpen) return null;
 
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black backdrop-blur bg-opacity-10 transition-all duration-300">
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-10 backdrop-blur transition-all duration-300">
         <div className="mx-4 w-full max-w-xl overflow-hidden rounded-3xl bg-[#FFFFFF] text-black shadow-lg">
-          <div className="flex items-center justify-between p-4 mt-3 mx-4">
-            <h3 className="text-lg font-medium">{number}. {title}</h3>
+          <div className="mx-4 mt-3 flex items-center justify-between p-4">
+            <h3 className="text-lg font-medium">
+              {number}. {title}
+            </h3>
             <button
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700 focus:outline-none"
             >
-            <CircleX />
+              <CircleX />
             </button>
           </div>
-          <div className="p-4 mx-4 text-zinc-700">{content}</div>
+          <div className="mx-4 p-4 text-zinc-700">{content}</div>
           {typeof url === "string" && (
             <a
               href={url}
               target="_blank"
               rel="https://sitcon.org/2025/venue"
-              className="bg-blue-600 flex py-2 text-center text-sky-500 mb-4 items-center justify-center"
+              className="bg-blue-600 mb-4 flex items-center justify-center py-2 text-center text-sky-500"
             >
               更多資訊
               <ArrowUpRight />
