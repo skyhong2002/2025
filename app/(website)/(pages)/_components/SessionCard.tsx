@@ -99,26 +99,30 @@ const SessionCard = ({ session }: { session: Session }) => {
               </h3>
               <p className="text-[14px]">{speakerNames.join(" / ")}</p>
             </div>
-            <div className="flex flex-wrap">
-              {tags.map((tag) => {
-                return (
-                  <span
-                    key={tag}
-                    className="my-1 mr-1 rounded-xl bg-[#eceff7] p-1 text-xs text-black"
-                  >
-                    #{tag}
-                  </span>
-                );
-              })}
+            <div className="flex w-full items-end justify-between">
+              <div className="flex flex-wrap">
+                {tags.map((tag) => {
+                  return (
+                    <span
+                      key={tag}
+                      className="my-1 mr-1 rounded-xl bg-[#eceff7] p-1 text-xs text-black"
+                    >
+                      #{tag}
+                    </span>
+                  );
+                })}
+              </div>
+              <span className="text-nowrap text-[12px] md:hidden">
+                {session.broadcast ? "all rooms" : session.room} /{" "}
+                {calculateMinDiff(
+                  timeRender(session.start),
+                  timeRender(session.end),
+                )}{" "}
+                min
+              </span>
             </div>
           </div>
         )}
-
-        <span className="absolute bottom-0 right-0 text-nowrap text-[12px] md:hidden">
-          {session.broadcast ? "all rooms" : session.room} /{" "}
-          {calculateMinDiff(timeRender(session.start), timeRender(session.end))}{" "}
-          min
-        </span>
       </div>
     </CardWrapper>
   );
