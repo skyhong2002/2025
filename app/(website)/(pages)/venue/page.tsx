@@ -200,7 +200,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <div className="w-full gap-8 lg:flex">
+      <div className="w-full gap-8 md:flex">
         <div className="sticky top-[84px] z-10 max-h-[740px] w-full rounded-3xl bg-black bg-opacity-10 backdrop-blur-lg venue_desktop:bg-opacity-0">
           <Image
             src={options.find((option) => option.value === Floor)?.image ?? ""}
