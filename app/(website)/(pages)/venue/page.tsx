@@ -201,15 +201,15 @@ export default function Page() {
         </div>
       </section>
       <div className="w-full gap-8 lg:flex">
-      <div className="sticky top-[84px] z-10 max-h-[740px] w-full bg-black bg-opacity-10 backdrop-blur-lg rounded-3xl venue_desktop:bg-opacity-0">
-        <Image
-          src={options.find((option) => option.value === Floor)?.image ?? ""}
-          alt={`${Floor} Floor Image`}
-          width={1024}
-          height={768}
-          className="mx-auto"
-        />
-      </div>
+        <div className="sticky top-[84px] z-10 max-h-[740px] w-full rounded-3xl bg-black bg-opacity-10 backdrop-blur-lg venue_desktop:bg-opacity-0">
+          <Image
+            src={options.find((option) => option.value === Floor)?.image ?? ""}
+            alt={`${Floor} Floor Image`}
+            width={1024}
+            height={768}
+            className="mx-auto"
+          />
+        </div>
 
         <div className="mt-8 w-full">
           <div className="grid grid-cols-1 gap-6 lg:gap-2 venue_desktop:grid-cols-2">
