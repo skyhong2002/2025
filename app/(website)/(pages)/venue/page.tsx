@@ -151,7 +151,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <div className="flex w-full flex-col gap-8">
+      <div className="lg:flex w-full gap-8">
         <div className="max-h-[740px] w-full">
           <Image
             src={options.find((option) => option.value === Floor)?.image ?? ""}
@@ -163,11 +163,11 @@ export default function Page() {
         </div>
 
         <div className="mt-8 w-full">
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 venue_desktop:grid-cols-2 lg:gap-2">
             {currentVenueData.map((venue) => (
               <div
                 key={venue.number}
-                className="flex cursor-pointer space-x-4 rounded-lg p-6 shadow-lg transition-colors hover:bg-slate-900"
+                className="flex cursor-pointer space-x-4 rounded-lg p-2 shadow-lg transition-colors hover:bg-slate-900"
                 onClick={() => setSelectedVenue(venue)}
               >
                 <div className="mb-2 flex items-center gap-2">
