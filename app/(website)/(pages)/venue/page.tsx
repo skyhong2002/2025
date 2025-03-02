@@ -4,6 +4,9 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { TriangleAlert, CircleX, ArrowUpRight } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import rehypeExternalLinks from "rehype-external-links";
+import remarkGfm from "remark-gfm";
 
 import Svg2F from "@/public/image/2F.svg";
 import Svg3F from "@/public/image/3F.svg";
@@ -50,7 +53,7 @@ export default function Page() {
   interface PopupProps {
     isOpen: boolean;
     onClose: () => void;
-    content: React.ReactNode;
+    content: string;
     title: string;
     number: string;
     url?: string | boolean;
@@ -140,7 +143,27 @@ export default function Page() {
             transition={{ duration: 0.3, delay: 0.1 }}
             className="mx-4 p-4 text-zinc-700"
           >
-            {content}
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[
+                [
+                  rehypeExternalLinks,
+                  { target: "_blank", rel: ["noopener", "noreferrer"] },
+                ],
+              ]}
+              components={{
+                a: ({ ...props }) => (
+                  <a
+                    {...props}
+                    style={{ color: "#1177dd", textDecoration: "underline" }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                ),
+              }}
+            >
+              {content}
+            </ReactMarkdown>
           </motion.div>
           {typeof url === "string" && (
             <motion.a
@@ -176,7 +199,12 @@ export default function Page() {
           </h1>
           <div className="ml-4 flex flex-1 items-center gap-1">
             <TriangleAlert size={30} className="my-auto text-[#EB5757]" />
-            <p className="my-auto pl-1 text-xl font-bold">緊急避難圖</p>
+            <a
+              href="https://hackmd.io/@SITCON/H1J2-d3y6"
+              className="my-auto pl-1 text-xl font-bold"
+            >
+              緊急避難圖
+            </a>
           </div>
         </div>
       </section>
