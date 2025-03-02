@@ -10,7 +10,6 @@ import Svg3F from "@/public/image/3F.svg";
 import Svg4F from "@/public/image/4F.svg";
 import venueData from "./venueData";
 
-// Define the Venue interface
 interface Venue {
   number: string;
   title: string;
@@ -22,7 +21,6 @@ export default function Page() {
   const [Floor, setFloor] = useState<Floor>("2F");
   const [selectedVenue, setSelectedVenue] = useState<Venue | null>(null);
 
-  // Reset selected venue when floor changes
   useEffect(() => {
     setSelectedVenue(null);
   }, [Floor]);
@@ -57,7 +55,7 @@ export default function Page() {
     number: string;
     url?: string | boolean;
   }
-
+  
   const Popup = ({
     isOpen,
     onClose,
@@ -66,51 +64,102 @@ export default function Page() {
     number,
     url,
   }: PopupProps) => {
-    // Handle ESC key press to close popup
+    const [isVisible, setIsVisible] = useState(false);
+  
+    useEffect(() => {
+      if (isOpen) {
+        const timer = setTimeout(() => setIsVisible(true), 10);
+        return () => clearTimeout(timer);
+      } else {
+        setIsVisible(false);
+      }
+    }, [isOpen]);
+  
     useEffect(() => {
       const handleEscKey = (event: { keyCode: number }) => {
         if (event.keyCode === 27 && isOpen) {
           onClose();
         }
       };
-
+  
       window.addEventListener("keydown", handleEscKey);
-
+  
       return () => {
         window.removeEventListener("keydown", handleEscKey);
       };
     }, [isOpen, onClose]);
-
-    // If not open, don't render anything
+  
+    useEffect(() => {
+      const handleOutsideClick = (e: MouseEvent) => {
+        const target = e.target as HTMLElement;
+        if (isOpen && target.classList.contains('popup-backdrop')) {
+          onClose();
+        }
+      };
+      
+      window.addEventListener('mousedown', handleOutsideClick);
+      return () => window.removeEventListener('mousedown', handleOutsideClick);
+    }, [isOpen, onClose]);
+  
     if (!isOpen) return null;
-
+  
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-10 backdrop-blur transition-all duration-300">
-        <div className="mx-4 w-full max-w-xl overflow-hidden rounded-3xl bg-[#FFFFFF] text-black shadow-lg">
+      <div 
+        className={`fixed inset-0 z-50 flex items-center justify-center popup-backdrop transition-all duration-300 ${
+          isVisible 
+            ? "bg-black bg-opacity-10 backdrop-blur" 
+            : "bg-black bg-opacity-0 backdrop-blur-none"
+        }`}
+      >
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ 
+            opacity: isVisible ? 1 : 0, 
+            scale: isVisible ? 1 : 0.95,
+            y: isVisible ? 0 : 20
+          }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          className="mx-4 w-full max-w-xl overflow-hidden rounded-3xl bg-[#FFFFFF] text-black shadow-lg"
+        >
           <div className="mx-4 mt-3 flex items-center justify-between p-4">
             <h3 className="text-lg font-medium">
               {number}. {title}
             </h3>
-            <button
+            <motion.button
               onClick={onClose}
+              whileHover={{ rotate: 90, scale: 1.1 }}
+              transition={{ duration: 0.2 }}
               className="text-gray-500 hover:text-gray-700 focus:outline-none"
             >
               <CircleX />
-            </button>
+            </motion.button>
           </div>
-          <div className="mx-4 p-4 text-zinc-700">{content}</div>
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+            className="mx-4 p-4 text-zinc-700"
+          >
+            {content}
+          </motion.div>
           {typeof url === "string" && (
-            <a
+            <motion.a
               href={url}
               target="_blank"
-              rel="https://sitcon.org/2025/venue"
-              className="bg-blue-600 mb-4 flex items-center justify-center py-2 text-center text-sky-500"
+              rel="noopener noreferrer"
+              whileHover={{ y: -2 }}
+              className="group mb-4 flex items-center justify-center py-2 text-center text-sky-500 transition-colors duration-200 hover:text-sky-600"
             >
               前往網站
-              <ArrowUpRight />
-            </a>
+              <motion.span
+                whileHover={{ x: 3, y: -3 }}
+                transition={{ duration: 0.2 }}
+              >
+                <ArrowUpRight className="ml-1" />
+              </motion.span>
+            </motion.a>
           )}
-        </div>
+        </motion.div>
       </div>
     );
   };
@@ -151,7 +200,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <div className="lg:flex w-full gap-8">
+      <div className="w-full gap-8 lg:flex">
         <div className="max-h-[740px] w-full">
           <Image
             src={options.find((option) => option.value === Floor)?.image ?? ""}
@@ -163,7 +212,7 @@ export default function Page() {
         </div>
 
         <div className="mt-8 w-full">
-          <div className="grid grid-cols-1 gap-6 venue_desktop:grid-cols-2 lg:gap-2">
+          <div className="grid grid-cols-1 gap-6 lg:gap-2 venue_desktop:grid-cols-2">
             {currentVenueData.map((venue) => (
               <div
                 key={venue.number}
