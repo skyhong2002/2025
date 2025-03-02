@@ -91,6 +91,17 @@ export default function Page() {
             </button>
           </div>
           <div className="p-4">{content}</div>
+          {typeof url === "string" && (
+            <a
+              href={url}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-blue-600 block py-2 text-center text-white"
+            >
+              More Information
+            </a>
+          )}
+
           <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
             <button
               onClick={onClose}
