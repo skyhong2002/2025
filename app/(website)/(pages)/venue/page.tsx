@@ -55,7 +55,7 @@ export default function Page() {
     number: string;
     url?: string | boolean;
   }
-  
+
   const Popup = ({
     isOpen,
     onClose,
@@ -65,7 +65,7 @@ export default function Page() {
     url,
   }: PopupProps) => {
     const [isVisible, setIsVisible] = useState(false);
-  
+
     useEffect(() => {
       if (isOpen) {
         const timer = setTimeout(() => setIsVisible(true), 10);
@@ -74,49 +74,49 @@ export default function Page() {
         setIsVisible(false);
       }
     }, [isOpen]);
-  
+
     useEffect(() => {
       const handleEscKey = (event: { keyCode: number }) => {
         if (event.keyCode === 27 && isOpen) {
           onClose();
         }
       };
-  
+
       window.addEventListener("keydown", handleEscKey);
-  
+
       return () => {
         window.removeEventListener("keydown", handleEscKey);
       };
     }, [isOpen, onClose]);
-  
+
     useEffect(() => {
       const handleOutsideClick = (e: MouseEvent) => {
         const target = e.target as HTMLElement;
-        if (isOpen && target.classList.contains('popup-backdrop')) {
+        if (isOpen && target.classList.contains("popup-backdrop")) {
           onClose();
         }
       };
-      
-      window.addEventListener('mousedown', handleOutsideClick);
-      return () => window.removeEventListener('mousedown', handleOutsideClick);
+
+      window.addEventListener("mousedown", handleOutsideClick);
+      return () => window.removeEventListener("mousedown", handleOutsideClick);
     }, [isOpen, onClose]);
-  
+
     if (!isOpen) return null;
-  
+
     return (
-      <div 
-        className={`fixed inset-0 z-50 flex items-center justify-center popup-backdrop transition-all duration-300 ${
-          isVisible 
-            ? "bg-black bg-opacity-10 backdrop-blur" 
+      <div
+        className={`popup-backdrop fixed inset-0 z-50 flex items-center justify-center transition-all duration-300 ${
+          isVisible
+            ? "bg-black bg-opacity-10 backdrop-blur"
             : "bg-black bg-opacity-0 backdrop-blur-none"
         }`}
       >
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          animate={{ 
-            opacity: isVisible ? 1 : 0, 
+          animate={{
+            opacity: isVisible ? 1 : 0,
             scale: isVisible ? 1 : 0.95,
-            y: isVisible ? 0 : 20
+            y: isVisible ? 0 : 20,
           }}
           transition={{ duration: 0.2, ease: "easeOut" }}
           className="mx-4 w-full max-w-xl overflow-hidden rounded-3xl bg-[#FFFFFF] text-black shadow-lg"
@@ -134,7 +134,7 @@ export default function Page() {
               <CircleX />
             </motion.button>
           </div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.1 }}
