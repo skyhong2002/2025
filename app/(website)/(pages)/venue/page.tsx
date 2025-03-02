@@ -171,13 +171,13 @@ export default function Page() {
                 onClick={() => setSelectedVenue(venue)}
               >
                 <div className="mb-2 flex items-center gap-2">
-                <span className="border border-green-400 rounded-md px-2 py-2 text-3xl font-semibold text-green-400 h-12 w-12 flex items-center justify-center">
-                  {venue.number}
-                </span>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-md border border-green-400 px-2 py-2 text-3xl font-semibold text-green-400">
+                    {venue.number}
+                  </span>
                 </div>
                 <div>
-                  <h3 className="text-lg w-60 truncate">{venue.title}</h3>
-                  <p className="text-zinc-400 w-60 truncate text-sm">
+                  <h3 className="w-60 truncate text-lg">{venue.title}</h3>
+                  <p className="w-60 truncate text-sm text-zinc-400">
                     {venue.description}
                   </p>
                 </div>
