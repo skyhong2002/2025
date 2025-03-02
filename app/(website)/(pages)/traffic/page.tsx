@@ -543,7 +543,7 @@ const PublicDiagram = () => {
                 <span className="material-symbols-outlined !text-[48px]">
                   directions_railway
                 </span>
-                <p className="text-[12px]">南港站覽館站</p>
+                <p className="text-[12px]">南港展覽館站</p>
               </div>
             </div>
             <div className="relative flex w-max items-center">
